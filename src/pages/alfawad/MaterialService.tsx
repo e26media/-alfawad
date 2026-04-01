@@ -8,7 +8,7 @@ const MaterialService = () => {
       <AlfawadPageHeader 
         title="Material Trading & Supply" 
         breadcrumbs={[
-          { label: "Our Services", path: "/alfawad/services/technical-manpower" },
+          { label: "Our Services", path: "/AL FAWAD/services/technical-manpower" },
           { label: "Material Service" }
         ]} 
         bgImage="https://images.unsplash.com/photo-1589182332152-4752b04c8f2b?q=80&w=2670&auto=format&fit=crop"
@@ -31,7 +31,7 @@ const MaterialService = () => {
               <div className="w-24 h-1.5 bg-alfawad-primary mb-6" />
 
               <p className="text-gray-700 leading-relaxed text-lg mb-4">
-                ALFAWAD operates a dedicated commercial trading division supporting massive Kingdom-wide projects. We hold direct strategic partnerships with major global manufacturers, guaranteeing the direct procurement, immediate stock supply, and logistical delivery of high-grade industrial materials.
+                AL FAWAD operates a dedicated commercial trading division supporting massive Kingdom-wide projects. We hold direct strategic partnerships with major global manufacturers, guaranteeing the direct procurement, immediate stock supply, and logistical delivery of high-grade industrial materials.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
@@ -99,3 +99,6 @@ const MaterialService = () => {
 };
 
 export default MaterialService;
+
+
+

@@ -32,7 +32,7 @@ const AlfawadPageHeader = ({
         
         {/* Breadcrumbs */}
         <div className="flex items-center gap-2 text-sm md:text-base font-semibold text-gray-300">
-          <Link to="/alfawad" className="hover:text-alfawad-primary transition-colors">Home</Link>
+          <Link to="/AL FAWAD" className="hover:text-alfawad-primary transition-colors">Home</Link>
           {breadcrumbs.map((crumb, index) => (
             <div key={index} className="flex items-center gap-2">
               <ChevronRight className="w-4 h-4 text-alfawad-primary" />
@@ -55,3 +55,6 @@ const AlfawadPageHeader = ({
 };
 
 export default AlfawadPageHeader;
+
+
+

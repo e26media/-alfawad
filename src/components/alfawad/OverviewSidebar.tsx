@@ -2,11 +2,11 @@ import { Link, useLocation } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 
 const OVERVIEW_LINKS = [
-  { label: "Introduction", path: "/alfawad/introduction" },
-  { label: "Chairman Message", path: "/alfawad/chairman-message" },
-  { label: "Vision & Mission", path: "/alfawad/vision-mission" },
-  { label: "Quality Policy", path: "/alfawad/quality-policy" },
-  { label: "Environment & Safety Policy", path: "/alfawad/environment-safety" },
+  { label: "Introduction", path: "/AL FAWAD/introduction" },
+  { label: "Chairman Message", path: "/AL FAWAD/chairman-message" },
+  { label: "Vision & Mission", path: "/AL FAWAD/vision-mission" },
+  { label: "Quality Policy", path: "/AL FAWAD/quality-policy" },
+  { label: "Environment & Safety Policy", path: "/AL FAWAD/environment-safety" },
 ];
 
 const OverviewSidebar = () => {
@@ -53,3 +53,6 @@ const OverviewSidebar = () => {
 };
 
 export default OverviewSidebar;
+
+
+

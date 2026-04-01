@@ -8,7 +8,7 @@ const TechnicalManpower = () => {
       <AlfawadPageHeader 
         title="Technical Manpower Service" 
         breadcrumbs={[
-          { label: "Our Services", path: "/alfawad/services/technical-manpower" },
+          { label: "Our Services", path: "/AL FAWAD/services/technical-manpower" },
           { label: "Technical Manpower" }
         ]} 
         bgImage="https://images.unsplash.com/photo-1541888082424-eb5467551061?q=80&w=2670&auto=format&fit=crop"
@@ -31,7 +31,7 @@ const TechnicalManpower = () => {
               <div className="w-24 h-1.5 bg-alfawad-primary mb-6" />
 
               <p className="text-gray-700 leading-relaxed text-lg">
-                ALFAWAD possesses an extensive and dynamic database of highly skilled professionals and craftsmen. We understand that the backbone of any successful industrial project is its workforce. Thus, we provide pre-vetted, certified, and experienced manpower ready to deploy across the Kingdom for both short-term rapid plant shutdowns and long-term mega-construction projects.
+                AL FAWAD possesses an extensive and dynamic database of highly skilled professionals and craftsmen. We understand that the backbone of any successful industrial project is its workforce. Thus, we provide pre-vetted, certified, and experienced manpower ready to deploy across the Kingdom for both short-term rapid plant shutdowns and long-term mega-construction projects.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-6">
@@ -106,3 +106,6 @@ const TechnicalManpower = () => {
 };
 
 export default TechnicalManpower;
+
+
+

@@ -7,7 +7,7 @@ const VisionMission = () => {
       <AlfawadPageHeader 
         title="Vision & Mission" 
         breadcrumbs={[
-          { label: "Overview", path: "/alfawad/introduction" },
+          { label: "Overview", path: "/AL FAWAD/introduction" },
           { label: "Vision & Mission" }
         ]} 
         bgImage="https://images.unsplash.com/photo-1541888082424-eb5467551061?q=80&w=2670&auto=format&fit=crop"
@@ -101,3 +101,6 @@ const VisionMission = () => {
 };
 
 export default VisionMission;
+
+
+

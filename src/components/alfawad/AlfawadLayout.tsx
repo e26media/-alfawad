@@ -19,3 +19,6 @@ const AlfawadLayout = ({ children }: AlfawadLayoutProps) => {
 };
 
 export default AlfawadLayout;
+
+
+

@@ -2,11 +2,11 @@ import { Link, useLocation } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 
 const SERVICE_LINKS = [
-  { label: "Technical Manpower", path: "/alfawad/services/technical-manpower" },
-  { label: "Heavy Equipment", path: "/alfawad/services/heavy-equipment" },
-  { label: "Project Support", path: "/alfawad/services/project-support" },
-  { label: "Project Management", path: "/alfawad/services/project-management" },
-  { label: "Material Service", path: "/alfawad/services/material-service" },
+  { label: "Technical Manpower", path: "/AL FAWAD/services/technical-manpower" },
+  { label: "Heavy Equipment", path: "/AL FAWAD/services/heavy-equipment" },
+  { label: "Project Support", path: "/AL FAWAD/services/project-support" },
+  { label: "Project Management", path: "/AL FAWAD/services/project-management" },
+  { label: "Material Service", path: "/AL FAWAD/services/material-service" },
 ];
 
 const ServiceSidebar = () => {
@@ -44,7 +44,7 @@ const ServiceSidebar = () => {
       <div className="bg-alfawad-primary rounded-lg shadow-lg p-6 text-white text-center flex flex-col items-center gap-4">
         <h4 className="text-xl font-black uppercase">Need Support?</h4>
         <p className="text-sm font-medium text-white/90">Contact our technical sales team for custom project quotes.</p>
-        <Link to="/alfawad/contact" className="bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-md uppercase text-sm font-bold w-full transition-colors flex items-center justify-center">
+        <Link to="/AL FAWAD/contact" className="bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-md uppercase text-sm font-bold w-full transition-colors flex items-center justify-center">
           Contact Us
         </Link>
       </div>
@@ -53,3 +53,6 @@ const ServiceSidebar = () => {
 };
 
 export default ServiceSidebar;
+
+
+

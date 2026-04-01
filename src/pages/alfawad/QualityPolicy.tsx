@@ -8,7 +8,7 @@ const QualityPolicy = () => {
       <AlfawadPageHeader 
         title="Quality Policy" 
         breadcrumbs={[
-          { label: "Overview", path: "/alfawad/introduction" },
+          { label: "Overview", path: "/AL FAWAD/introduction" },
           { label: "Quality Policy" }
         ]} 
         bgImage="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2671&auto=format&fit=crop"
@@ -27,7 +27,7 @@ const QualityPolicy = () => {
 
               <div className="bg-red-50 border-l-4 border-alfawad-primary p-6 rounded-r-lg">
                 <p className="text-gray-800 text-lg font-medium italic">
-                  "At ALFAWAD Engineering & Construction, Quality is not merely a benchmark; it is the fundamental fabric of our corporate identity and operational execution."
+                  "At AL FAWAD Engineering & Construction, Quality is not merely a benchmark; it is the fundamental fabric of our corporate identity and operational execution."
                 </p>
               </div>
 
@@ -72,3 +72,6 @@ const QualityPolicy = () => {
 };
 
 export default QualityPolicy;
+
+
+

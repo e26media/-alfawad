@@ -11,7 +11,7 @@ const ProjectManagement = () => {
       <AlfawadPageHeader 
         title="Project Management Service" 
         breadcrumbs={[
-          { label: "Our Services", path: "/alfawad/services/technical-manpower" },
+          { label: "Our Services", path: "/AL FAWAD/services/technical-manpower" },
           { label: "Project Management" }
         ]} 
         bgImage="https://images.unsplash.com/photo-1541888082424-eb5467551061?q=80&w=2670&auto=format&fit=crop"
@@ -34,7 +34,7 @@ const ProjectManagement = () => {
               <div className="w-24 h-1.5 bg-alfawad-primary mb-6" />
 
               <p className="text-gray-700 leading-relaxed text-lg mb-8">
-                ALFAWAD delivers specialized project management interventions tailored for critical industrial components. Our highly trained technical teams handle extreme-pressure, high-risk industrial requirements ranging from industrial hydro-blasting to structural fireproofing systems ensuring plant longevity and uncompromising safety.
+                AL FAWAD delivers specialized project management interventions tailored for critical industrial components. Our highly trained technical teams handle extreme-pressure, high-risk industrial requirements ranging from industrial hydro-blasting to structural fireproofing systems ensuring plant longevity and uncompromising safety.
               </p>
 
               {/* Tab Navigation */}
@@ -143,3 +143,6 @@ const ProjectManagement = () => {
 };
 
 export default ProjectManagement;
+
+
+

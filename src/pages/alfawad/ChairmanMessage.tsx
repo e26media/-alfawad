@@ -7,7 +7,7 @@ const ChairmanMessage = () => {
       <AlfawadPageHeader 
         title="Chairman Message" 
         breadcrumbs={[
-          { label: "Overview", path: "/alfawad/introduction" },
+          { label: "Overview", path: "/AL FAWAD/introduction" },
           { label: "Chairman Message" }
         ]} 
         bgImage="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2671&auto=format&fit=crop"
@@ -36,7 +36,7 @@ const ChairmanMessage = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-4">
                       <div className="text-white">
-                        <p className="font-black text-lg uppercase tracking-wider">Ahmed Fawad Bawzid</p>
+                        <p className="font-black text-lg uppercase tracking-wider">AL FAWAD</p>
                         <p className="text-[#ff6b66] text-xs font-bold uppercase tracking-widest mt-1">Founder & Chairman</p>
                       </div>
                     </div>
@@ -49,7 +49,7 @@ const ChairmanMessage = () => {
                   </span>
                   
                   <p className="text-lg text-gray-900 font-medium">
-                    "Welcome to ALFAWAD Engineering & Construction. Since our inception, we have dedicated ourselves to becoming a cornerstone in the Kingdom's industrial development sector."
+                    "Welcome to AL FAWAD Engineering & Construction. Since our inception, we have dedicated ourselves to becoming a cornerstone in the Kingdom's industrial development sector."
                   </p>
 
                   <p>
@@ -57,7 +57,7 @@ const ChairmanMessage = () => {
                   </p>
                   
                   <p>
-                    Saudi Arabia’s Vision 2030 has catalyzed unprecedented industrial growth. At ALFAWAD, we have proactively aligned our strategic infrastructure to support these monumental national ambitions. Whether it is deploying highly technical manpower or executing complex mechanical infrastructure projects, our objective remains singular: delivering excellence without exception.
+                    Saudi Arabia’s Vision 2030 has catalyzed unprecedented industrial growth. At AL FAWAD, we have proactively aligned our strategic infrastructure to support these monumental national ambitions. Whether it is deploying highly technical manpower or executing complex mechanical infrastructure projects, our objective remains singular: delivering excellence without exception.
                   </p>
 
                   <p>
@@ -65,12 +65,12 @@ const ChairmanMessage = () => {
                   </p>
                   
                   <p className="italic text-gray-500 border-l-2 border-alfawad-primary pl-4">
-                    I invite you to explore our comprehensive range of services and experience the ALFAWAD standard—where your vision meets our passion for execution.
+                    I invite you to explore our comprehensive range of services and experience the AL FAWAD standard—where your vision meets our passion for execution.
                   </p>
 
                   <div className="mt-4 pt-4 border-t border-gray-100">
                     <img src="#" alt="Signature" className="h-12 opacity-0" /> {/* Placeholder for real signature if applicable */}
-                    <p className="text-sm font-bold text-gray-900 uppercase tracking-widest mt-2 border-b-2 border-alfawad-primary inline-block pb-1">Ahmed Fawad Bawzid</p>
+                    <p className="text-sm font-bold text-gray-900 uppercase tracking-widest mt-2 border-b-2 border-alfawad-primary inline-block pb-1">AL FAWAD</p>
                   </div>
                 </div>
               </div>
@@ -85,3 +85,6 @@ const ChairmanMessage = () => {
 };
 
 export default ChairmanMessage;
+
+
+

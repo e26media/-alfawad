@@ -7,7 +7,7 @@ const Overview = () => {
       <AlfawadPageHeader 
         title="Overview" 
         breadcrumbs={[
-          { label: "Overview", path: "/alfawad/overview" },
+          { label: "Overview", path: "/AL FAWAD/overview" },
         ]} 
         bgImage="https://images.unsplash.com/photo-1541888082424-eb5467551061?q=80&w=2670&auto=format&fit=crop"
       />
@@ -24,7 +24,7 @@ const Overview = () => {
               </h2>
 
               <p className="text-gray-700 leading-relaxed text-lg mb-4">
-                ALFAWAD Engineering & Construction represents a leading construction and industrial services organization operating extensively throughout the Kingdom of Saudi Arabia. We deliver turn-key industrial solutions spanning across major technical execution divisions. 
+                AL FAWAD Engineering & Construction represents a leading construction and industrial services organization operating extensively throughout the Kingdom of Saudi Arabia. We deliver turn-key industrial solutions spanning across major technical execution divisions. 
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-4">
@@ -58,3 +58,6 @@ const Overview = () => {
 };
 
 export default Overview;
+
+
+

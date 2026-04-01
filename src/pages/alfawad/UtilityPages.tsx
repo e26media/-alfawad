@@ -9,7 +9,7 @@ export const Brochure = () => (
         <h2 className="text-3xl font-black text-gray-900 uppercase">Download Company Profile</h2>
         <p className="text-gray-600 max-w-xl">Get a comprehensive overview of our capabilities, fleet strength, and project management philosophies in our official corporate brochure.</p>
         <button className="flex items-center gap-3 bg-alfawad-primary hover:bg-[#c42924] text-white font-bold uppercase tracking-widest py-4 px-8 rounded mt-4 transition-colors shadow-md">
-          <Download className="w-5 h-5" /> ALFAWAD Profile 2026 (PDF)
+          <Download className="w-5 h-5" /> AL FAWAD Profile 2026 (PDF)
         </button>
       </div>
     </section>
@@ -87,7 +87,7 @@ export const Career = () => (
       <div className="flex flex-col gap-8 w-full">
         <div className="text-center mb-10">
           <h2 className="text-4xl font-black text-gray-900 uppercase">Join Our Dynamic Team</h2>
-          <p className="text-gray-600 mt-4 text-lg">ALFAWAD is constantly looking for skilled professionals to drive our operational excellence across the Kingdom.</p>
+          <p className="text-gray-600 mt-4 text-lg">AL FAWAD is constantly looking for skilled professionals to drive our operational excellence across the Kingdom.</p>
         </div>
         
         <div className="bg-red-50 border-l-4 border-alfawad-primary p-6 rounded-r-lg mb-8">
@@ -120,7 +120,7 @@ export const Career = () => (
             <div className="absolute top-0 right-0 w-32 h-32 bg-alfawad-primary rounded-bl-full opacity-20" />
             <h3 className="text-2xl font-black text-white uppercase text-center mb-4 relative z-10">Direct Email Application</h3>
             <p className="text-gray-400 text-center mb-6 relative z-10">If you cannot process your application via the robust form, directly forward your CV packet to our Human Resources terminal.</p>
-            <a href="mailto:hr@alfawad.com" className="text-alfawad-primary font-black text-xl hover:text-white transition-colors border-b-2 border-alfawad-primary pb-1 relative z-10">hr@alfawad.com</a>
+            <a href="mailto:hr@AL FAWAD.com" className="text-alfawad-primary font-black text-xl hover:text-white transition-colors border-b-2 border-alfawad-primary pb-1 relative z-10">hr@AL FAWAD.com</a>
           </div>
         </div>
 
@@ -128,3 +128,6 @@ export const Career = () => (
     </section>
   </div>
 );
+
+
+

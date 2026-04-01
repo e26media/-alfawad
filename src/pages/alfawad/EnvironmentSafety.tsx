@@ -8,7 +8,7 @@ const EnvironmentSafety = () => {
       <AlfawadPageHeader 
         title="Environment & Safety Policy" 
         breadcrumbs={[
-          { label: "Overview", path: "/alfawad/introduction" },
+          { label: "Overview", path: "/AL FAWAD/introduction" },
           { label: "Environment & Safety Policy" }
         ]} 
         bgImage="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2671&auto=format&fit=crop"
@@ -32,12 +32,12 @@ const EnvironmentSafety = () => {
               <div className="bg-alfawad-primary text-white p-6 rounded-lg shadow-md mb-4 flex gap-4 items-start">
                 <ShieldAlert className="w-8 h-8 shrink-0 mt-1 text-white/80" />
                 <p className="text-lg font-bold leading-relaxed">
-                  "Safety is NOT just a priority. Safety is our core value. Priorities can change; core values do not. ALFAWAD is committed to achieving ZERO harm to our people, perfectly encapsulated in our 'Safety is our NO.1 Priority' initiative."
+                  "Safety is NOT just a priority. Safety is our core value. Priorities can change; core values do not. AL FAWAD is committed to achieving ZERO harm to our people, perfectly encapsulated in our 'Safety is our NO.1 Priority' initiative."
                 </p>
               </div>
 
               <p className="text-gray-700 leading-relaxed text-lg mb-4">
-                At ALFAWAD Engineering & Construction, the health and safety of our employees, clients, contractors, and the communities surrounding our strategic operations is paramount. Our operational integrity depends unconditionally on ensuring a safe working environment and maintaining robust ecological preservation.
+                At AL FAWAD Engineering & Construction, the health and safety of our employees, clients, contractors, and the communities surrounding our strategic operations is paramount. Our operational integrity depends unconditionally on ensuring a safe working environment and maintaining robust ecological preservation.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
@@ -92,3 +92,6 @@ const EnvironmentSafety = () => {
 };
 
 export default EnvironmentSafety;
+
+
+

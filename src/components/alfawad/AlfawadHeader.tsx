@@ -3,6 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
+import mainlogo from "@/assets/logo-alfawad.png";
+
 const navLinks = [
   { label: "Home", path: "/alfawad" },
   {
@@ -59,7 +61,7 @@ const AlfawadHeader = () => {
           {/* Exact Logo Match */}
           <Link to="/alfawad" className="flex-shrink-0 z-50">
             <img 
-              src="https://alfawad.com/images/top-logo.svg" 
+              src={mainlogo} 
               alt="AL FAWAD Engineering & Construction" 
               className="h-10 md:h-12 lg:h-14 w-auto object-contain"
             />
@@ -208,3 +210,4 @@ const AlfawadHeader = () => {
 };
 
 export default AlfawadHeader;
+

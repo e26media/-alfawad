@@ -104,7 +104,7 @@ const AlfawadFooter = () => {
 
         {/* Small Bottom Bar (Copyright usually goes here if applicable) */}
         <div className="border-t border-gray-800 mt-20 pt-6 text-center text-sm text-[#777777]">
-          &copy; {new Date().getFullYear()} ALFAWAD Engineering & Construction. All Rights Reserved.
+          &copy; {new Date().getFullYear()} AL FAWAD Engineering & Construction. All Rights Reserved.
         </div>
       </footer>
     </div>
@@ -112,3 +112,6 @@ const AlfawadFooter = () => {
 };
 
 export default AlfawadFooter;
+
+
+

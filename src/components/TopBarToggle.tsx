@@ -24,7 +24,8 @@ export default function TopBarToggle() {
             !isAlfawad ? "text-white" : "text-gray-400 hover:text-gray-200"
           }`}
         >
-          Clean Pro
+          
+Cleaning
         </Link>
         <Link
           to="/alfawad"
@@ -32,7 +33,7 @@ export default function TopBarToggle() {
             isAlfawad ? "text-white" : "text-gray-400 hover:text-gray-200"
           }`}
         >
-          Alfawad
+          Engineering
         </Link>
       </div>
     </div>

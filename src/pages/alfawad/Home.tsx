@@ -6,9 +6,9 @@ export default function AlfawadHome() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const HERO_SLIDES = [
-    { image: "https://alfawad.com/images/slider/1.jpg" },
-    { image: "https://alfawad.com/images/slider/2.jpg" },
-    { image: "https://alfawad.com/images/slider/3.jpg" },
+    { image: "https://AL FAWAD.com/images/slider/1.jpg" },
+    { image: "https://AL FAWAD.com/images/slider/2.jpg" },
+    { image: "https://AL FAWAD.com/images/slider/3.jpg" },
   ];
 
   useEffect(() => {
@@ -52,7 +52,7 @@ export default function AlfawadHome() {
             <div className="mt-[100px] md:mt-[150px] flex flex-col">
               <span className="text-[18px] md:text-[24px] font-semibold text-gray-800">مؤسسة أحمد فؤاد عاشور بوزيد للمقاولات العامة</span>
               <span className="text-[22px] md:text-[34px] font-black uppercase text-gray-800">
-                AHMED FAWAD BAWZID EST.
+                AL FAWAD EST.
               </span>
             </div>
           </div>
@@ -80,7 +80,7 @@ export default function AlfawadHome() {
               <span className="w-8 h-8 rounded bg-[#0077b5] text-white flex items-center justify-center font-bold text-sm cursor-pointer">IN</span>
               <span className="w-8 h-8 rounded bg-[#1da1f2] text-white flex items-center justify-center font-bold text-lg cursor-pointer">tw</span>
             </div>
-            <span className="font-bold text-lg mt-1 text-black">alfawadksa</span>
+            <span className="font-bold text-lg mt-1 text-black">AL FAWADksa</span>
           </div> */}
         </div>
 
@@ -111,7 +111,7 @@ export default function AlfawadHome() {
                   <span className="text-blue-500 absolute -left-2 z-0 opacity-50">/</span><span className="relative z-10">A</span><span className="bg-red-500 h-2 w-full absolute bottom-4"></span>
                 </div>
                 <div className="flex flex-col justify-center mt-2">
-                  <span className="text-sm font-bold text-black tracking-widest uppercase">ALFAWAD</span>
+                  <span className="text-sm font-bold text-black tracking-widest uppercase">AL FAWAD</span>
                   <h2 className="text-[28px] md:text-[34px] font-semibold text-black leading-none">
                     Engineering & Construction
                   </h2>
@@ -123,7 +123,7 @@ export default function AlfawadHome() {
               </h3>
               
               <p className="text-[#a5a5a5] leading-[30px] text-[17px] font-normal w-[95%]">
-                Welcome to the world of ALFAWAD Engineering & Constructions where you aspire and we build!. AL FAWAD is the leading construction establishment with ISO 9001:2015 Quality Management System and ISO 140001:2015 Environmental Management System.
+                Welcome to the world of AL FAWAD Engineering & Constructions where you aspire and we build!. AL FAWAD is the leading construction establishment with ISO 9001:2015 Quality Management System and ISO 140001:2015 Environmental Management System.
               </p>
 
               <div className="flex items-center gap-6 mt-4 border-b border-gray-200 pb-8 w-full max-w-[400px]">
@@ -147,7 +147,7 @@ export default function AlfawadHome() {
             <div className="lg:w-1/2 flex items-center justify-end">
               <div className="w-full max-w-[600px] h-[450px] relative overflow-hidden bg-gray-200 shadow-xl">
                  <img 
-                  src="https://alfawad.com/images/slider/2.jpg" 
+                  src="https://AL FAWAD.com/images/slider/2.jpg" 
                   alt="Engineer" 
                   className="w-full h-full object-cover"
                 />
@@ -256,3 +256,6 @@ export default function AlfawadHome() {
     </div>
   );
 }
+
+
+

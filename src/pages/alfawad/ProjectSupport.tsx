@@ -11,7 +11,7 @@ const ProjectSupport = () => {
       <AlfawadPageHeader 
         title="Project Support Service" 
         breadcrumbs={[
-          { label: "Our Services", path: "/alfawad/services/technical-manpower" },
+          { label: "Our Services", path: "/AL FAWAD/services/technical-manpower" },
           { label: "Project Support" }
         ]} 
         bgImage="https://images.unsplash.com/photo-1541888082424-eb5467551061?q=80&w=2670&auto=format&fit=crop"
@@ -34,7 +34,7 @@ const ProjectSupport = () => {
               <div className="w-24 h-1.5 bg-alfawad-primary mb-6" />
 
               <p className="text-gray-700 leading-relaxed text-lg mb-8">
-                ALFAWAD operates as a robust multi-disciplinary project support contractor. Our experienced construction management team seamlessly integrates into your existing operational matrix, executing massive technical workloads with extreme precision. We manage Civil, Mechanical, and Electrical support contracts safely and on time.
+                AL FAWAD operates as a robust multi-disciplinary project support contractor. Our experienced construction management team seamlessly integrates into your existing operational matrix, executing massive technical workloads with extreme precision. We manage Civil, Mechanical, and Electrical support contracts safely and on time.
               </p>
 
               {/* Tab Navigation */}
@@ -109,3 +109,6 @@ const ProjectSupport = () => {
 };
 
 export default ProjectSupport;
+
+
+

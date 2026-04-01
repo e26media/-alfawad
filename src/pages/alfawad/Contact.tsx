@@ -20,7 +20,7 @@ const Contact = () => {
             <h2 className="text-4xl font-black text-gray-900 mt-2 uppercase">We're Here To Help</h2>
             <div className="w-24 h-1 bg-alfawad-primary mx-auto mt-6" />
             <p className="text-gray-600 mt-6 text-lg">
-              Whether you need strategic project management, emergency project support, or specialized technical manpower. Reach out to ALFAWAD today.
+              Whether you need strategic project management, emergency project support, or specialized technical manpower. Reach out to AL FAWAD today.
             </p>
           </div>
 
@@ -64,9 +64,9 @@ const Contact = () => {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 uppercase tracking-widest mb-2">Emails</h3>
                   <p className="text-gray-600 leading-relaxed font-medium">
-                    info@alfawad.com<br />
-                    sales@alfawad.com<br />
-                    support@alfawad.com
+                    info@AL FAWAD.com<br />
+                    sales@AL FAWAD.com<br />
+                    support@AL FAWAD.com
                   </p>
                 </div>
               </div>
@@ -142,7 +142,7 @@ const Contact = () => {
                   allowFullScreen={false} 
                   loading="lazy" 
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Alfawad Headquarters Jubail"
+                  title="AL FAWAD Headquarters Jubail"
                 ></iframe>
               </div>
 
@@ -156,3 +156,6 @@ const Contact = () => {
 };
 
 export default Contact;
+
+
+

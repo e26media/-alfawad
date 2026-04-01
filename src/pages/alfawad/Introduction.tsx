@@ -7,7 +7,7 @@ const Introduction = () => {
       <AlfawadPageHeader 
         title="Introduction" 
         breadcrumbs={[
-          { label: "Overview", path: "/alfawad/introduction" },
+          { label: "Overview", path: "/AL FAWAD/introduction" },
           { label: "Introduction" }
         ]} 
       />
@@ -24,7 +24,7 @@ const Introduction = () => {
               </h2>
 
               <p className="text-gray-700 leading-relaxed text-lg">
-                <strong className="text-gray-900">ALFAWAD Engineering & Construction</strong> represents one of the premier construction and industrial service organizations in the Kingdom of Saudi Arabia. We have successfully developed a dynamic, fully integrated infrastructure that enables us to handle massive construction and plant maintenance operations with uncompromising efficiency.
+                <strong className="text-gray-900">AL FAWAD Engineering & Construction</strong> represents one of the premier construction and industrial service organizations in the Kingdom of Saudi Arabia. We have successfully developed a dynamic, fully integrated infrastructure that enables us to handle massive construction and plant maintenance operations with uncompromising efficiency.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-6">
@@ -45,7 +45,7 @@ const Introduction = () => {
               </h3>
               
               <p className="text-gray-600 leading-relaxed">
-                With extensive industry experience spanning diverse sectors, ALFAWAD offers complete industrial solutions in Civil, Mechanical, and Electrical instrumentation. Our rapid growth is attributed to our highly skilled workforce, experienced management, and a robust fleet of heavy equipment machinery. We have meticulously cultivated our resources to ensure that every project phase—from initial design and material procurement to final execution and commissioning—is managed flawlessly.
+                With extensive industry experience spanning diverse sectors, AL FAWAD offers complete industrial solutions in Civil, Mechanical, and Electrical instrumentation. Our rapid growth is attributed to our highly skilled workforce, experienced management, and a robust fleet of heavy equipment machinery. We have meticulously cultivated our resources to ensure that every project phase—from initial design and material procurement to final execution and commissioning—is managed flawlessly.
               </p>
 
               <p className="text-gray-600 leading-relaxed mt-2">
@@ -74,3 +74,6 @@ const Introduction = () => {
 };
 
 export default Introduction;
+
+
+

@@ -21,7 +21,7 @@ const HeavyEquipment = () => {
       <AlfawadPageHeader 
         title="Heavy Equipment Service" 
         breadcrumbs={[
-          { label: "Our Services", path: "/alfawad/services/technical-manpower" },
+          { label: "Our Services", path: "/AL FAWAD/services/technical-manpower" },
           { label: "Heavy Equipment" }
         ]} 
         bgImage="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?q=80&w=2670&auto=format&fit=crop"
@@ -44,7 +44,7 @@ const HeavyEquipment = () => {
               <div className="w-24 h-1.5 bg-alfawad-primary mb-6" />
 
               <p className="text-gray-700 leading-relaxed text-lg">
-                ALFAWAD operates one of the most comprehensive and modern heavy equipment fleets in the Eastern Province. Recognizing that equipment reliability directly corresponds to project timelines, we have heavily invested in late-model machinery backed by an aggressive, uncompromising preventive maintenance protocol.
+                AL FAWAD operates one of the most comprehensive and modern heavy equipment fleets in the Eastern Province. Recognizing that equipment reliability directly corresponds to project timelines, we have heavily invested in late-model machinery backed by an aggressive, uncompromising preventive maintenance protocol.
               </p>
 
               <div className="my-8">
@@ -97,3 +97,6 @@ const HeavyEquipment = () => {
 };
 
 export default HeavyEquipment;
+
+
+
