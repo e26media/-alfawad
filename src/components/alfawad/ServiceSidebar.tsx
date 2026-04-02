@@ -2,49 +2,53 @@ import { Link, useLocation } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 
 const SERVICE_LINKS = [
-  { label: "Technical Manpower", path: "/AL FAWAD/services/technical-manpower" },
-  { label: "Heavy Equipment", path: "/AL FAWAD/services/heavy-equipment" },
-  { label: "Project Support", path: "/AL FAWAD/services/project-support" },
-  { label: "Project Management", path: "/AL FAWAD/services/project-management" },
-  { label: "Material Service", path: "/AL FAWAD/services/material-service" },
+  { label: "TECHNICAL MANPOWER", path: "/alfawad/services/technical-manpower" },
+  { label: "HEAVY EQUIPMENT", path: "/alfawad/services/heavy-equipment" },
+  { label: "PROJECT SUPPORT", path: "/alfawad/services/project-support" },
+  { label: "PROJECT MANAGEMENT", path: "/alfawad/services/project-management" },
+  { label: "MATERIAL SERVICE", path: "/alfawad/services/material-service" },
 ];
 
 const ServiceSidebar = () => {
   const location = useLocation();
 
   return (
-    <div className="w-full lg:w-1/3 xl:w-1/4">
+    <div className="w-full lg:w-1/3 xl:w-1/4 shrink-0">
       {/* Sidebar Navigation */}
-      <div className="bg-white rounded-lg shadow-lg border border-gray-100 overflow-hidden mb-8">
-        <h3 className="bg-gray-900 text-white font-bold uppercase text-lg px-6 py-4 flex items-center justify-between">
-          Our Services <div className="w-2 h-2 rounded-full bg-alfawad-primary" />
+      <div className="bg-white shadow-xl border border-gray-100 overflow-hidden mb-8">
+        <h3 className="bg-[#1c1c1c] text-white font-black uppercase text-[18px] px-8 py-5 flex items-center justify-between tracking-tighter">
+          Our Services <div className="w-2.5 h-2.5 rounded-full bg-alfawad-primary" />
         </h3>
         <ul className="flex flex-col">
-          {SERVICE_LINKS.map((link) => (
-            <li key={link.path} className="border-b border-gray-100 last:border-0">
-              <Link
-                to={link.path}
-                className={`flex items-center justify-between px-6 py-4 transition-all uppercase text-sm font-bold group ${
-                  location.pathname === link.path
-                    ? "bg-red-50 font-bold text-alfawad-primary border-l-4 border-alfawad-primary"
-                    : "text-gray-600 hover:bg-gray-50 hover:text-alfawad-primary border-l-4 border-transparent hover:border-red-200"
-                }`}
-              >
-                {link.label}
-                <ChevronRight className={`w-4 h-4 transition-transform ${
-                  location.pathname === link.path ? "text-alfawad-primary" : "text-gray-400 group-hover:translate-x-1 group-hover:text-alfawad-primary"
-                }`} />
-              </Link>
-            </li>
-          ))}
+          {SERVICE_LINKS.map((link) => {
+            const isActive = location.pathname === link.path;
+            return (
+              <li key={link.path} className="border-b border-gray-100 last:border-0">
+                <Link
+                  to={link.path}
+                  className={`flex items-center justify-between px-8 py-5 transition-all text-[14px] font-black tracking-tight group ${
+                    isActive
+                      ? "text-alfawad-primary bg-gray-50"
+                      : "text-gray-600 hover:bg-gray-50 hover:text-alfawad-primary"
+                  }`}
+                >
+                  {link.label}
+                  <ChevronRight className={`w-4 h-4 transition-transform ${
+                    isActive ? "text-alfawad-primary" : "text-gray-300 group-hover:translate-x-1 group-hover:text-alfawad-primary"
+                  }`} />
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </div>
 
       {/* Contact CTA */}
-      <div className="bg-alfawad-primary rounded-lg shadow-lg p-6 text-white text-center flex flex-col items-center gap-4">
-        <h4 className="text-xl font-black uppercase">Need Support?</h4>
-        <p className="text-sm font-medium text-white/90">Contact our technical sales team for custom project quotes.</p>
-        <Link to="/AL FAWAD/contact" className="bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-md uppercase text-sm font-bold w-full transition-colors flex items-center justify-center">
+      <div className="bg-alfawad-primary p-8 text-white text-center flex flex-col items-center gap-6 shadow-2xl relative overflow-hidden group">
+        <div className="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-bl-full transition-transform group-hover:scale-150" />
+        <h4 className="text-xl font-black uppercase tracking-tighter relative z-10 leading-none">Need Support? <br/> Get a Quote</h4>
+        <p className="text-white/80 text-sm font-bold relative z-10 leading-relaxed uppercase tracking-wider">Talk to our experts</p>
+        <Link to="/alfawad/contact" className="bg-black text-white px-8 py-4 font-black uppercase text-xs tracking-widest w-full transition-all hover:bg-white hover:text-black relative z-10 shadow-lg hover:-translate-y-1 block text-center">
           Contact Us
         </Link>
       </div>
@@ -53,6 +57,7 @@ const ServiceSidebar = () => {
 };
 
 export default ServiceSidebar;
+
 
 
 

@@ -4,7 +4,6 @@ import { useLocation } from "react-router-dom";
 
 const WhatsAppButton = () => {
   const location = useLocation();
-  if (location.pathname.startsWith('/alfawad')) return null;
 
   return (
     <motion.a

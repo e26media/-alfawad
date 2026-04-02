@@ -1,99 +1,96 @@
-import AlfawadPageHeader from "../../components/alfawad/AlfawadPageHeader";
+import { Link } from "react-router-dom";
+import { ChevronRight, Target, Shield, Users, Award, Zap, Heart } from "lucide-react";
 import OverviewSidebar from "../../components/alfawad/OverviewSidebar";
 
 const VisionMission = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50">
-      <AlfawadPageHeader 
-        title="Vision & Mission" 
-        breadcrumbs={[
-          { label: "Overview", path: "/AL FAWAD/introduction" },
-          { label: "Vision & Mission" }
-        ]} 
-        bgImage="https://images.unsplash.com/photo-1541888082424-eb5467551061?q=80&w=2670&auto=format&fit=crop"
-      />
+    <div className="flex flex-col min-h-screen bg-white font-muli">
+      
+      {/* Premium Header Banner Section - Refined for Vision 2030 Design */}
+      <section className="relative w-full h-[450px] md:h-[550px] overflow-hidden flex items-center">
+        <div className="absolute inset-0 bg-[#b68a41]/75 z-10" />
+        <img 
+          src="https://alfawad.com/images/1.jpg" 
+          alt="Vision 2030 Background" 
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] relative z-20 flex flex-col items-center justify-center text-center pt-20">
+           <div className="w-full text-white">
+              <h1 className="text-[45px] md:text-[75px] font-black leading-[0.9] mb-6 uppercase tracking-tighter text-white drop-shadow-2xl">
+                VISION <br /> & MISSION
+              </h1>
+              <div className="w-24 h-2 bg-white mb-8 mx-auto" />
+              <div className="flex items-center justify-center gap-3 text-[14px] md:text-[16px] font-black text-white/95 uppercase tracking-[0.2em]">
+                <Link to="/alfawad" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
+                <ChevronRight className="w-4 h-4 text-white/50" />
+                <span className="text-white/70">Overview</span>
+                <ChevronRight className="w-4 h-4 text-white/50" />
+                <span className="text-white">Vision & Mission</span>
+              </div>
+           </div>
+        </div>
+      </section>
 
-      <section className="py-16">
-        <div className="container mx-auto px-4 max-w-7xl flex flex-col lg:flex-row gap-12">
-          
-          <OverviewSidebar />
+      <section className="py-24 bg-[#f4f5f6]">
+        <div className="container mx-auto px-4 lg:px-12 max-w-[1400px]">
+          <div className="flex flex-col lg:flex-row gap-16">
+            
+            <OverviewSidebar />
 
-          <div className="w-full lg:w-2/3 xl:w-3/4 flex flex-col gap-10">
-
-            {/* Vision Segment */}
-            <div className="bg-white p-8 md:p-12 rounded-lg shadow-sm border border-gray-100 flex flex-col gap-6 relative overflow-hidden group">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-red-50 rounded-bl-full -z-10 transition-transform group-hover:scale-150 duration-700 ease-out" />
+            <div className="w-full lg:w-3/4 flex flex-col gap-12">
               
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-14 h-14 bg-alfawad-primary rounded-lg flex items-center justify-center text-white shrink-0 shadow-lg">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
-                </div>
-                <h2 className="text-3xl font-black text-gray-900 uppercase">
-                  Our Vision
-                </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                 {/* Vision Segment */}
+                 <div className="bg-white p-12 shadow-xl border border-gray-100 relative overflow-hidden group hover:-translate-y-2 transition-all duration-500">
+                    <div className="absolute top-0 right-0 w-24 h-24 bg-alfawad-primary/10 rounded-bl-full transition-transform group-hover:scale-150" />
+                    <Target className="w-16 h-16 text-alfawad-primary mb-8" />
+                    <h2 className="text-3xl font-black text-black uppercase tracking-tighter mb-6">Our Vision</h2>
+                    <p className="text-[#666666] leading-relaxed text-lg font-medium italic">
+                      "To be the premier engineering, construction and project management organization by achieving extraordinary results for our customers, building satisfying careers for our people, and earning a fair return on the value we deliver."
+                    </p>
+                 </div>
+
+                 {/* Mission Segment */}
+                 <div className="bg-black p-12 shadow-xl relative overflow-hidden group hover:-translate-y-2 transition-all duration-500">
+                    <div className="absolute top-0 right-0 w-24 h-24 bg-white/5 rounded-bl-full transition-transform group-hover:scale-150" />
+                    <Award className="w-16 h-16 text-alfawad-primary mb-8" />
+                    <h2 className="text-3xl font-black text-white uppercase tracking-tighter mb-6">Our Mission</h2>
+                    <p className="text-white/70 leading-relaxed text-lg font-medium italic">
+                      "Achieving excellence and high level of efficiency in all our domains through creating high value for our customers based on the highest degree of performance and quality."
+                    </p>
+                 </div>
               </div>
 
-              <p className="text-gray-700 leading-relaxed text-lg font-medium border-l-4 border-alfawad-primary pl-6 py-2">
-                "To emerge as the premier construction and industrial service provider in the Kingdom of Saudi Arabia, driving sustainable infrastructure development while consistently exceeding the highest global standards in safety, quality, and operational excellence."
-              </p>
-              
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                {[
-                  "Market Leadership in execution",
-                  "Unparalleled client satisfaction",
-                  "Continuous innovation in engineering",
-                  "Zero-incident safety culture"
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-gray-600">
-                    <div className="w-2 h-2 rounded-full bg-alfawad-primary shrink-0" />
-                    <span className="font-semibold text-sm uppercase">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+              {/* Core Principles */}
+              <div className="bg-white p-8 md:p-16 shadow-xl border border-gray-100">
+                 <div className="flex flex-col border-l-8 border-alfawad-primary pl-8 mb-12">
+                    <span className="text-alfawad-primary font-black text-[14px] uppercase tracking-[0.4em] mb-2">Our Driving Values</span>
+                    <h2 className="text-[32px] md:text-[45px] font-black text-black leading-tight uppercase tracking-tighter">
+                      Core Principles
+                    </h2>
+                 </div>
 
-            {/* Mission Segment */}
-            <div className="bg-white p-8 md:p-12 rounded-lg shadow-sm border border-gray-100 flex flex-col gap-6 relative overflow-hidden group">
-              <div className="absolute top-0 left-0 w-32 h-32 bg-gray-100 rounded-br-full -z-10 transition-transform group-hover:scale-150 duration-700 ease-out" />
-              
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-14 h-14 bg-gray-900 rounded-lg flex items-center justify-center text-alfawad-primary shrink-0 shadow-lg">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
-                </div>
-                <h2 className="text-3xl font-black text-gray-900 uppercase">
-                  Our Mission
-                </h2>
+                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    {[
+                      { title: "Quality", icon: < Shield className="w-8 h-8" />, desc: "Maintaining focus on consistently providing quality products and services." },
+                      { title: "Customers", icon: < Users className="w-8 h-8" />, desc: "Establishing strong relationships and tailoring solutions to ensure satisfaction." },
+                      { title: "Teamwork", icon: < Heart className="w-8 h-8" />, desc: "We don't work as one person... we work together as a team." },
+                      { title: "Integrity", icon: < Award className="w-8 h-8" />, desc: "Our actions are consistent with our values and principles." },
+                      { title: "Commitment", icon: < Zap className="w-8 h-8" />, desc: "Proactive in finding the best solutions for our clients to achieve their goals." },
+                      { title: "Safety", icon: < Shield className="w-8 h-8" />, desc: "Safety is not an option; it is our top priority for everyone's well-being." },
+                    ].map((item, i) => (
+                      <div key={i} className="flex flex-col gap-4 border-b border-gray-100 pb-8 hover:border-alfawad-primary transition-colors cursor-default group">
+                         <div className="text-alfawad-primary group-hover:scale-110 transition-transform">{item.icon}</div>
+                         <h3 className="text-xl font-black text-black uppercase">{item.title}</h3>
+                         <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+                      </div>
+                    ))}
+                 </div>
               </div>
 
-              <p className="text-gray-700 leading-relaxed text-lg font-medium border-l-4 border-gray-900 pl-6 py-2">
-                "Our mission is to continually deliver comprehensive, turn-key industrial solutions by mobilizing unparalleled technical expertise, deploying modern heavy equipment, and enforcing rigorous project management frameworks to support robust industrial expansion."
-              </p>
-
-              <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg mt-4">
-                <h4 className="font-bold text-gray-900 uppercase mb-4 border-b border-gray-200 pb-2">Key Operational Objectives</h4>
-                <ul className="flex flex-col gap-3">
-                  <li className="flex items-start gap-3">
-                    <span className="text-alfawad-primary font-bold">01.</span>
-                    <span className="text-gray-600 text-sm">To attract, retain, and develop highly skilled manpower capable of executing complex technical requirements under strict timelines.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-alfawad-primary font-bold">02.</span>
-                    <span className="text-gray-600 text-sm">To maintain an exceptionally maintained fleet of heavy equipment machinery maximizing uptime and productivity.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-alfawad-primary font-bold">03.</span>
-                    <span className="text-gray-600 text-sm">To strictly enforce Environment, Health, and Safety protocols protecting our workforce and fulfilling environmental responsibilities.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-alfawad-primary font-bold">04.</span>
-                    <span className="text-gray-600 text-sm">To align operations with the Kingdom's strategic Vision 2030 through constant capability upgrades and technological integration.</span>
-                  </li>
-                </ul>
-              </div>
             </div>
 
           </div>
-
         </div>
       </section>
     </div>
@@ -101,6 +98,7 @@ const VisionMission = () => {
 };
 
 export default VisionMission;
+
 
 
 

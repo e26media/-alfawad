@@ -99,7 +99,7 @@ const Footer = () => {
 
     <div className="border-t border-primary/10 py-5">
       <div className="container mx-auto px-4 text-center text-sm opacity-50">
-        Copyright © {new Date().getFullYear()} Clean Pro, All Rights Reserved.
+        Copyright © {new Date().getFullYear()} Lamiya Al Khaleej, All Rights Reserved.
       </div>
     </div>
   </footer>

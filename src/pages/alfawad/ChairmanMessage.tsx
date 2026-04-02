@@ -1,83 +1,97 @@
-import AlfawadPageHeader from "../../components/alfawad/AlfawadPageHeader";
+import { Link } from "react-router-dom";
+import { ChevronRight } from "lucide-react";
 import OverviewSidebar from "../../components/alfawad/OverviewSidebar";
 
 const ChairmanMessage = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50">
-      <AlfawadPageHeader 
-        title="Chairman Message" 
-        breadcrumbs={[
-          { label: "Overview", path: "/AL FAWAD/introduction" },
-          { label: "Chairman Message" }
-        ]} 
-        bgImage="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2671&auto=format&fit=crop"
-      />
+    <div className="flex flex-col min-h-screen bg-white font-muli">
+      
+      {/* Premium Header Banner Section - Refined for Vision 2030 Design */}
+      <section className="relative w-full h-[450px] md:h-[550px] overflow-hidden flex items-center">
+        <div className="absolute inset-0 bg-[#b68a41]/75 z-10" />
+        <img 
+          src="https://alfawad.com/images/1.jpg" 
+          alt="Vision 2030 Background" 
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] relative z-20 flex flex-col items-center justify-center text-center pt-20">
+           <div className="w-full text-white">
+              <h1 className="text-[45px] md:text-[75px] font-black leading-[0.9] mb-6 uppercase tracking-tighter text-white drop-shadow-2xl">
+                CHAIRMAN <br /> MESSAGE
+              </h1>
+              <div className="w-24 h-2 bg-white mb-8 mx-auto" />
+              <div className="flex items-center justify-center gap-3 text-[14px] md:text-[16px] font-black text-white/95 uppercase tracking-[0.2em]">
+                <Link to="/alfawad" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
+                <ChevronRight className="w-4 h-4 text-white/50" />
+                <span className="text-white/70">Overview</span>
+                <ChevronRight className="w-4 h-4 text-white/50" />
+                <span className="text-white">Chairman Message</span>
+              </div>
+           </div>
+        </div>
+      </section>
 
-      <section className="py-16">
-        <div className="container mx-auto px-4 max-w-7xl flex flex-col lg:flex-row gap-12">
-          
-          <OverviewSidebar />
+      <section className="py-24 bg-[#f4f5f6]">
+        <div className="container mx-auto px-4 lg:px-12 max-w-[1400px]">
+          <div className="flex flex-col lg:flex-row gap-16">
+            
+            <OverviewSidebar />
 
-          <div className="w-full lg:w-2/3 xl:w-3/4">
-            <div className="bg-white p-8 md:p-12 rounded-lg shadow-sm border border-gray-100 flex flex-col gap-8 relative">
-              <h2 className="text-3xl font-black text-gray-900 uppercase relative inline-block after:content-[''] after:absolute after:-bottom-3 after:left-0 after:w-16 after:h-1.5 after:bg-alfawad-primary">
-                Message from our Chairman
-              </h2>
-
-              <div className="flex flex-col md:flex-row gap-10 items-start mt-6">
+            <div className="w-full lg:w-3/4">
+              <div className="bg-white p-8 md:p-16 shadow-xl border border-gray-100 relative overflow-hidden group">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-alfawad-primary/5 rounded-bl-full -mr-16 -mt-16 transition-all duration-700 group-hover:scale-150" />
                 
-                {/* Chairman Placeholder */}
-                <div className="w-full md:w-1/3 shrink-0 flex flex-col gap-4">
-                  <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-xl border-4 border-gray-100 relative grayscale hover:grayscale-0 transition-all duration-500">
-                    <img 
-                      src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=987&auto=format&fit=crop" 
-                      alt="Chairman" 
-                      className="w-full h-full object-cover" 
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-4">
-                      <div className="text-white">
-                        <p className="font-black text-lg uppercase tracking-wider">AL FAWAD</p>
-                        <p className="text-[#ff6b66] text-xs font-bold uppercase tracking-widest mt-1">Founder & Chairman</p>
-                      </div>
+                <div className="flex flex-col gap-12">
+                  <div className="flex flex-col border-l-8 border-alfawad-primary pl-8">
+                    <span className="text-alfawad-primary font-black text-[14px] uppercase tracking-[0.4em] mb-2">A Word From Leadership</span>
+                    <h2 className="text-[32px] md:text-[45px] font-black text-black leading-tight uppercase tracking-tighter">
+                      Chairman's Message
+                    </h2>
+                  </div>
+
+                  <div className="flex flex-col md:flex-row gap-12 items-start">
+                    <div className="w-full md:w-1/3 shrink-0">
+                       <div className="relative aspect-[3/4] overflow-hidden shadow-2xl skew-y-1 hover:skew-y-0 transition-transform duration-500">
+                          <img 
+                            src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=987&auto=format&fit=crop" 
+                            className="w-full h-full object-cover grayscale brightness-90 hover:grayscale-0 hover:brightness-100 transition-all duration-700" 
+                            alt="Chairman"
+                          />
+                          <div className="absolute bottom-0 left-0 right-0 bg-alfawad-primary p-4 text-center">
+                             <span className="text-white font-black uppercase text-sm tracking-widest">AL FAWAD CHAIRMAN</span>
+                          </div>
+                       </div>
+                    </div>
+
+                    <div className="w-full md:w-2/3 flex flex-col gap-8">
+                       <div className="text-6xl text-alfawad-primary/20 font-serif -mb-10 leading-none">“</div>
+                       <p className="text-[20px] md:text-[22px] font-bold text-black leading-relaxed italic">
+                         "The past years, since commencement of ALFAWAD Engineering & Construction, were really remarkable for us that brought our establishment noticeable growth and very favorable developments."
+                       </p>
+                       
+                       <div className="text-[#666666] leading-[36px] text-[18px] font-medium flex flex-col gap-6">
+                         <p>
+                           ALFAWAD Engineering & Construction is expert in providing skilled & semi-skilled Human resources & Rental equipment, industrial services and material supply to various industries in construction, oil & gas, Petrochemicals for new and existing projects and also to maintenance work.
+                         </p>
+                         <p>
+                           Sincerely reflecting the vision of its owners and executive management, AL FAWAD engineering & construction maintains development policy that reflect our mission; achieving excellence and high level of efficiency in all our domains through creating high value for our customers based on the highest degree of performance and quality.
+                         </p>
+                         <p>
+                           We recognize that our strength lies entirely in our people. Therefore, maintaining stringent safety standards and fostering a culture of continuous learning and operational efficiency is our highest priority at all times.
+                         </p>
+                       </div>
+
+                       <div className="mt-8 pt-8 border-t border-gray-100 flex flex-col gap-2">
+                          <div className="text-black font-black uppercase tracking-[0.2em] text-lg">AHMED FAWAD BAWZID</div>
+                          <div className="text-alfawad-primary font-bold uppercase tracking-widest text-sm">Founder & Chairman</div>
+                       </div>
                     </div>
                   </div>
                 </div>
-
-                <div className="w-full justify-center md:w-2/3 flex flex-col gap-6 text-gray-700 leading-relaxed">
-                  <span className="text-6xl text-red-200 absolute top-24 right-8 font-serif leading-none italic opacity-30 select-none">
-                    "
-                  </span>
-                  
-                  <p className="text-lg text-gray-900 font-medium">
-                    "Welcome to AL FAWAD Engineering & Construction. Since our inception, we have dedicated ourselves to becoming a cornerstone in the Kingdom's industrial development sector."
-                  </p>
-
-                  <p>
-                    It gives me immense pride to look back at our journey. Our continuous expansion is a direct testament to our unflinching commitment to quality, the relentless dedication of our expert teams, and, most importantly, the enduring trust our clients place in our capabilities.
-                  </p>
-                  
-                  <p>
-                    Saudi Arabia’s Vision 2030 has catalyzed unprecedented industrial growth. At AL FAWAD, we have proactively aligned our strategic infrastructure to support these monumental national ambitions. Whether it is deploying highly technical manpower or executing complex mechanical infrastructure projects, our objective remains singular: delivering excellence without exception.
-                  </p>
-
-                  <p>
-                    We recognize that our strength lies entirely in our people. Therefore, maintaining stringent safety standards and fostering a culture of continuous learning and operational efficiency is our highest priority at all times.
-                  </p>
-                  
-                  <p className="italic text-gray-500 border-l-2 border-alfawad-primary pl-4">
-                    I invite you to explore our comprehensive range of services and experience the AL FAWAD standard—where your vision meets our passion for execution.
-                  </p>
-
-                  <div className="mt-4 pt-4 border-t border-gray-100">
-                    <img src="#" alt="Signature" className="h-12 opacity-0" /> {/* Placeholder for real signature if applicable */}
-                    <p className="text-sm font-bold text-gray-900 uppercase tracking-widest mt-2 border-b-2 border-alfawad-primary inline-block pb-1">AL FAWAD</p>
-                  </div>
-                </div>
               </div>
-
             </div>
-          </div>
 
+          </div>
         </div>
       </section>
     </div>
@@ -85,6 +99,7 @@ const ChairmanMessage = () => {
 };
 
 export default ChairmanMessage;
+
 
 
 

@@ -70,7 +70,9 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
         alfawad: {
-          primary: "#df3b36",
+          primary: "#b68a41",
+          accent: "#ffea99",
+          white: "#ffffff",
           gray: "#777777",
           dark: "#1c1c1c"
         }
@@ -113,6 +115,10 @@ export default {
         "fade-in": "fade-in 0.5s ease-out forwards",
         "marquee": "marquee 40s linear infinite",
         "float": "float 6s ease-in-out infinite",
+      },
+      boxShadow: {
+        'alfawad': '20px 20px 0px 0px #B68A41',
+        'alfawad-md': '30px 30px 0px 0px #B68A41',
       },
     },
   },

@@ -1,133 +1,299 @@
-import AlfawadPageHeader from "../../components/alfawad/AlfawadPageHeader";
-import { Download } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Download, ChevronRight, Users, Briefcase, Mail, Send, Award, FileText } from "lucide-react";
 
 export const Brochure = () => (
-  <div className="flex flex-col min-h-screen bg-gray-50">
-    <AlfawadPageHeader title="Our Brochure" breadcrumbs={[{ label: "Brochure" }]} />
-    <section className="py-20 flex justify-center container mx-auto px-4 max-w-4xl">
-      <div className="bg-white p-12 rounded-xl shadow-lg border border-gray-100 flex flex-col items-center text-center gap-6 w-full">
-        <h2 className="text-3xl font-black text-gray-900 uppercase">Download Company Profile</h2>
-        <p className="text-gray-600 max-w-xl">Get a comprehensive overview of our capabilities, fleet strength, and project management philosophies in our official corporate brochure.</p>
-        <button className="flex items-center gap-3 bg-alfawad-primary hover:bg-[#c42924] text-white font-bold uppercase tracking-widest py-4 px-8 rounded mt-4 transition-colors shadow-md">
-          <Download className="w-5 h-5" /> AL FAWAD Profile 2026 (PDF)
-        </button>
+  <div className="flex flex-col min-h-screen bg-white font-muli">
+    {/* Premium Header Banner Section - Refined for Vision 2030 Design */}
+    <section className="relative w-full h-[450px] md:h-[550px] overflow-hidden flex items-center">
+      <div className="absolute inset-0 bg-alfawad-primary/75 z-10" />
+      <img 
+        src="https://alfawad.com/images/1.jpg" 
+        alt="Brochure Background" 
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+        <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] relative z-20 flex flex-col items-center justify-center text-center pt-20">
+           <div className="w-full text-white">
+              <h1 className="text-[45px] md:text-[75px] font-black leading-[0.9] mb-6 uppercase tracking-tighter text-white drop-shadow-2xl">
+                COMPANY <br /> BROCHURE
+              </h1>
+              <div className="w-24 h-2 bg-white mb-8 mx-auto" />
+              <div className="flex items-center justify-center gap-3 text-[14px] md:text-[16px] font-black text-white/95 uppercase tracking-[0.2em]">
+                <Link to="/alfawad" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
+                <ChevronRight className="w-4 h-4 text-white/50" />
+                <span className="text-white">Brochure</span>
+              </div>
+           </div>
+        </div>
+    </section>
+
+    <section className="py-24 bg-[#f4f5f6]">
+      <div className="container mx-auto px-4 lg:px-12 max-w-[1000px]">
+        <div className="bg-white p-12 md:p-20 shadow-xl border border-gray-100 flex flex-col items-center text-center gap-10 relative overflow-hidden group">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-alfawad-primary/5 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-150" />
+          <div className="w-24 h-24 bg-gray-900 rounded-full flex items-center justify-center text-alfawad-primary shadow-2xl">
+             <FileText className="w-10 h-10" />
+          </div>
+          <div className="flex flex-col gap-6">
+            <h2 className="text-[32px] md:text-[40px] font-black text-black uppercase tracking-tighter leading-none">Download Corporate Profile</h2>
+            <p className="text-[#666666] text-lg font-medium leading-relaxed max-w-2xl">
+              Get a comprehensive overview of our multi-disciplinary capabilities, modern fleet strength, and specialized project management philosophies in our official corporate brochure.
+            </p>
+          </div>
+          <button className="flex items-center gap-4 bg-black hover:bg-alfawad-primary text-white font-black uppercase tracking-widest py-6 px-12 rounded mt-4 transition-all shadow-2xl hover:-translate-y-1">
+            <Download className="w-6 h-6" /> AL FAWAD PROFILE 2026 (PDF)
+          </button>
+        </div>
       </div>
     </section>
   </div>
 );
 
-export const ClientsGallery = () => (
-  <div className="flex flex-col min-h-screen bg-gray-50">
-    <AlfawadPageHeader title="Our Clients" breadcrumbs={[{ label: "Clients" }]} bgImage="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2670&auto=format&fit=crop" />
-    <section className="py-20 container mx-auto px-4 max-w-7xl">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl font-black text-gray-900 uppercase">Trusted By Industry Leaders</h2>
-        <div className="w-24 h-1 bg-alfawad-primary mx-auto mt-6" />
-      </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-        {[1,2,3,4,5,6,7,8,9,10,11,12].map((num) => (
-          <div key={num} className="bg-white h-32 rounded-lg shadow-sm border border-gray-100 flex items-center justify-center grayscale hover:grayscale-0 transition-all hover:shadow-md cursor-pointer group p-8">
-            <span className="font-black text-gray-300 group-hover:text-alfawad-primary text-xl tracking-widest uppercase">LOGO {num}</span>
+export const ClientsGallery = () => {
+  const clients = [
+    { name: "Alfanar", logo: "https://alfawad.com/images/client-logo/alfanar.jpg" },
+    { name: "CTCI", logo: "https://alfawad.com/images/client-logo/CTCI.jpg" },
+    { name: "Daeha", logo: "https://alfawad.com/images/client-logo/daeha.jpg" },
+    { name: "Daelim", logo: "https://alfawad.com/images/client-logo/daelim.jpg" },
+    { name: "Daewoo", logo: "https://alfawad.com/images/client-logo/daewoo.jpg" },
+    { name: "GS E&C", logo: "https://alfawad.com/images/client-logo/gs-E&C.jpg" },
+    { name: "Hyundai", logo: "https://alfawad.com/images/client-logo/hyundai.jpg" },
+    { name: "Meedco", logo: "https://alfawad.com/images/client-logo/meedco.jpg" },
+    { name: "Nesma Trading", logo: "https://alfawad.com/images/client-logo/nesma-trading.jpg" },
+    { name: "Olayan", logo: "https://alfawad.com/images/client-logo/olayan.jpg" },
+    { name: "Petro Rabigh", logo: "https://alfawad.com/images/client-logo/petro-rabigh.jpg" },
+    { name: "Power China", logo: "https://alfawad.com/images/client-logo/power%20china.jpg" },
+    { name: "SABIC", logo: "https://alfawad.com/images/client-logo/SABIC.jpg" },
+    { name: "Saudi Aramco", logo: "https://alfawad.com/images/client-logo/saudi-aramco.jpg" },
+    { name: "Saudi Electricity", logo: "https://alfawad.com/images/client-logo/Saudi-electricity.jpg" },
+    { name: "Sepco", logo: "https://alfawad.com/images/client-logo/sepco.jpg" },
+    { name: "Sungchang", logo: "https://alfawad.com/images/client-logo/sungchang.jpg" },
+    { name: "TCC-1", logo: "https://alfawad.com/images/client-logo/TCC-1.jpg" },
+    { name: "Akon", logo: "https://alfawad.com/images/client-logo/akon.jpg" },
+    { name: "Hadeed", logo: "https://alfawad.com/images/client-logo/hadeed.jpg" },
+  ];
+
+  return (
+    <div className="flex flex-col min-h-screen bg-white font-muli">
+      {/* Premium Header Banner Section - Refined for Vision 2030 Design */}
+      <section className="relative w-full h-[450px] md:h-[550px] overflow-hidden flex items-center">
+        <div className="absolute inset-0 bg-alfawad-primary/75 z-10" />
+        <img 
+          src="https://alfawad.com/images/1.jpg" 
+          alt="Clients Background" 
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+          <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] relative z-20 flex flex-col items-center justify-center text-center pt-20">
+             <div className="w-full text-white">
+                <h1 className="text-[45px] md:text-[75px] font-black leading-[0.9] mb-6 uppercase tracking-tighter text-white drop-shadow-2xl">
+                  OUR <br /> CLIENTS
+                </h1>
+                <div className="w-24 h-2 bg-white mb-8 mx-auto" />
+                <div className="flex items-center justify-center gap-3 text-[14px] md:text-[16px] font-black text-white/95 uppercase tracking-[0.2em]">
+                  <Link to="/alfawad" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
+                  <ChevronRight className="w-4 h-4 text-white/50" />
+                  <span className="text-white">Clients</span>
+                </div>
+             </div>
           </div>
-        ))}
-      </div>
-    </section>
-  </div>
-);
+      </section>
+
+      <section className="py-24 bg-[#f4f5f6]">
+        <div className="container mx-auto px-4 lg:px-12 max-w-[1400px]">
+          <div className="text-center mb-20 flex flex-col items-center">
+             <span className="text-alfawad-primary font-black text-[14px] uppercase tracking-[0.4em] mb-4">Partnering with Leaders</span>
+             <h2 className="text-[36px] md:text-[55px] font-black text-black uppercase tracking-tighter leading-none mb-6">
+               Trusted By Major Corporations
+             </h2>
+             <div className="w-24 h-1 bg-gray-300" />
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+            {clients.map((client, i) => (
+              <div key={i} className="bg-white h-52 shadow-sm border border-gray-100 flex flex-col items-center justify-center p-6 group hover:shadow-2xl hover:border-alfawad-primary transition-all duration-500 cursor-pointer text-center gap-4 relative overflow-hidden bg-gradient-to-b from-white to-gray-50">
+                <div className="w-full h-24 flex items-center justify-center relative z-10">
+                  <img 
+                    src={client.logo} 
+                    alt={client.name} 
+                    className="max-w-full max-h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-110" 
+                  />
+                </div>
+                <div className="flex flex-col items-center gap-2 relative z-10">
+                  <div className="w-8 h-[2px] bg-gray-200 group-hover:w-16 group-hover:bg-alfawad-primary transition-all duration-500" />
+                  <span className="font-black text-[#555555] group-hover:text-black text-[13px] tracking-[0.15em] uppercase transition-colors duration-500">{client.name}</span>
+                </div>
+                
+                {/* Decorative background element */}
+                <div className="absolute -bottom-10 -right-10 w-24 h-24 bg-alfawad-primary/5 rounded-full group-hover:scale-150 transition-transform duration-700" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
 
 export const Enquiry = () => (
-  <div className="flex flex-col min-h-screen bg-gray-50">
-    <AlfawadPageHeader title="Submit Enquiry" breadcrumbs={[{ label: "Enquiry" }]} />
-    <section className="py-20 flex justify-center container mx-auto px-4 max-w-4xl">
-      <div className="bg-white p-8 md:p-12 rounded-xl shadow-lg border border-gray-100 w-full">
-        <h2 className="text-3xl font-black text-gray-900 uppercase mb-8 border-l-4 border-alfawad-primary pl-4">Request a Proposal</h2>
-        <form className="flex flex-col gap-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="flex flex-col gap-2">
-              <label className="text-sm font-bold text-gray-600 uppercase">Company Name</label>
-              <input type="text" className="bg-gray-50 border border-gray-200 rounded p-3 focus:border-alfawad-primary focus:outline-none" />
-            </div>
-            <div className="flex flex-col gap-2">
-              <label className="text-sm font-bold text-gray-600 uppercase">Contact Person</label>
-              <input type="text" className="bg-gray-50 border border-gray-200 rounded p-3 focus:border-alfawad-primary focus:outline-none" />
-            </div>
+  <div className="flex flex-col min-h-screen bg-white font-muli">
+    {/* Premium Header Banner Section - Refined for Vision 2030 Design */}
+    <section className="relative w-full h-[450px] md:h-[550px] overflow-hidden flex items-center">
+      <div className="absolute inset-0 bg-alfawad-primary/75 z-10" />
+      <img 
+        src="https://alfawad.com/images/1.jpg" 
+        alt="Enquiry Background" 
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+        <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] relative z-20 flex flex-col items-center justify-center text-center pt-20">
+           <div className="w-full text-white">
+              <h1 className="text-[45px] md:text-[75px] font-black leading-[0.9] mb-6 uppercase tracking-tighter text-white drop-shadow-2xl">
+                GET IN <br /> TOUCH
+              </h1>
+              <div className="w-24 h-2 bg-white mb-8 mx-auto" />
+              <div className="flex items-center justify-center gap-3 text-[14px] md:text-[16px] font-black text-white/95 uppercase tracking-[0.2em]">
+                <Link to="/alfawad" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
+                <ChevronRight className="w-4 h-4 text-white/50" />
+                <span className="text-white">Enquiry</span>
+              </div>
+           </div>
+        </div>
+    </section>
+
+    <section className="py-24 bg-[#f4f5f6]">
+      <div className="container mx-auto px-4 lg:px-12 max-w-[1000px]">
+        <div className="bg-white p-12 md:p-20 shadow-2xl border border-gray-100 relative">
+          <div className="flex flex-col border-l-8 border-alfawad-primary pl-8 mb-12">
+             <span className="text-alfawad-primary font-black text-[14px] uppercase tracking-[0.4em] mb-2">Partner with us</span>
+             <h2 className="text-[32px] md:text-[45px] font-black text-black leading-tight uppercase tracking-tighter">Submit Enquiry</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="flex flex-col gap-2">
-              <label className="text-sm font-bold text-gray-600 uppercase">Email Address</label>
-              <input type="email" className="bg-gray-50 border border-gray-200 rounded p-3 focus:border-alfawad-primary focus:outline-none" />
+
+          <form className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="flex flex-col gap-3">
+              <label className="text-[12px] font-black text-gray-500 uppercase tracking-widest">Full Name</label>
+              <input type="text" className="bg-gray-50 border-b-2 border-gray-200 p-4 focus:border-alfawad-primary focus:outline-none font-bold transition-all" placeholder="Enter your name" />
             </div>
-            <div className="flex flex-col gap-2">
-              <label className="text-sm font-bold text-gray-600 uppercase">Service Category</label>
-              <select className="bg-gray-50 border border-gray-200 rounded p-3 focus:border-alfawad-primary focus:outline-none">
-                <option>Technical Manpower Supply</option>
-                <option>Heavy Equipment Rental</option>
-                <option>Project Suppport (Civil/Mech)</option>
+            <div className="flex flex-col gap-3">
+              <label className="text-[12px] font-black text-gray-500 uppercase tracking-widest">Company Name</label>
+              <input type="text" className="bg-gray-50 border-b-2 border-gray-200 p-4 focus:border-alfawad-primary focus:outline-none font-bold transition-all" placeholder="Your organization" />
+            </div>
+            <div className="flex flex-col gap-3">
+              <label className="text-[12px] font-black text-gray-500 uppercase tracking-widest">Email Address</label>
+              <input type="email" className="bg-gray-50 border-b-2 border-gray-200 p-4 focus:border-alfawad-primary focus:outline-none font-bold transition-all" placeholder="email@example.com" />
+            </div>
+            <div className="flex flex-col gap-3">
+              <label className="text-[12px] font-black text-gray-500 uppercase tracking-widest">Service Interested</label>
+              <select className="bg-gray-50 border-b-2 border-gray-200 p-4 focus:border-alfawad-primary focus:outline-none font-bold transition-all appearance-none">
+                <option>Technical Manpower</option>
+                <option>Heavy Equipment</option>
+                <option>Project Support</option>
                 <option>Material Sourcing</option>
               </select>
             </div>
-          </div>
-          <div className="flex flex-col gap-2">
-            <label className="text-sm font-bold text-gray-600 uppercase">Project Details</label>
-            <textarea rows={5} className="bg-gray-50 border border-gray-200 rounded p-3 focus:border-alfawad-primary focus:outline-none resize-none" />
-          </div>
-          <button className="bg-gray-900 text-white font-bold uppercase px-8 py-4 rounded hover:bg-alfawad-primary transition-colors w-max">
-            Submit Enquiry
-          </button>
-        </form>
+            <div className="flex flex-col gap-3 md:col-span-2">
+              <label className="text-[12px] font-black text-gray-500 uppercase tracking-widest">Project Requirements</label>
+              <textarea rows={5} className="bg-gray-50 border-b-2 border-gray-200 p-4 focus:border-alfawad-primary focus:outline-none font-bold transition-all resize-none" placeholder="Describe your project needs..." />
+            </div>
+            <div className="md:col-span-2 pt-4">
+              <button className="bg-black text-white px-12 py-5 font-black uppercase text-sm tracking-[0.2em] hover:bg-alfawad-primary transition-all shadow-xl flex items-center gap-4 group">
+                Send Enquiry <Send className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
   </div>
 );
 
 export const Career = () => (
-  <div className="flex flex-col min-h-screen bg-gray-50">
-    <AlfawadPageHeader title="Career Opportunities" breadcrumbs={[{ label: "Career" }]} bgImage="https://images.unsplash.com/photo-1541888082424-eb5467551061?q=80&w=2670&auto=format&fit=crop" />
-    <section className="py-20 flex justify-center container mx-auto px-4 max-w-5xl">
-      <div className="flex flex-col gap-8 w-full">
-        <div className="text-center mb-10">
-          <h2 className="text-4xl font-black text-gray-900 uppercase">Join Our Dynamic Team</h2>
-          <p className="text-gray-600 mt-4 text-lg">AL FAWAD is constantly looking for skilled professionals to drive our operational excellence across the Kingdom.</p>
+  <div className="flex flex-col min-h-screen bg-white font-muli">
+    {/* Premium Header Banner Section - Refined for Vision 2030 Design */}
+    <section className="relative w-full h-[450px] md:h-[550px] overflow-hidden flex items-center">
+      <div className="absolute inset-0 bg-alfawad-primary/75 z-10" />
+      <img 
+        src="https://alfawad.com/images/1.jpg" 
+        alt="Career Background" 
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+        <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] relative z-20 flex flex-col items-center justify-center text-center pt-20">
+           <div className="w-full text-white">
+              <h1 className="text-[45px] md:text-[75px] font-black leading-[0.9] mb-6 uppercase tracking-tighter text-white drop-shadow-2xl">
+                JOIN OUR <br /> TEAM
+              </h1>
+              <div className="w-24 h-2 bg-white mb-8 mx-auto" />
+              <div className="flex items-center justify-center gap-3 text-[14px] md:text-[16px] font-black text-white/95 uppercase tracking-[0.2em]">
+                <Link to="/alfawad" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
+                <ChevronRight className="w-4 h-4 text-white/50" />
+                <span className="text-white">Careers</span>
+              </div>
+           </div>
         </div>
-        
-        <div className="bg-red-50 border-l-4 border-alfawad-primary p-6 rounded-r-lg mb-8">
-          <p className="text-red-800 font-bold uppercase tracking-wider">Current Priority Openings: <span className="text-gray-900 font-black">HSE Officers</span> | <span className="text-gray-900 font-black">QC Inspectors</span> | <span className="text-gray-900 font-black">Pipe Fabricators</span></p>
-        </div>
+    </section>
 
-        <div className="bg-white p-8 md:p-12 rounded-xl shadow-lg border border-gray-100 flex flex-col lg:flex-row gap-12">
-          <div className="w-full lg:w-1/2 flex flex-col gap-6">
-            <h3 className="text-2xl font-black text-gray-900 uppercase mb-4">Submit Resume</h3>
-            
-            <div className="flex flex-col gap-2">
-              <label className="text-sm font-bold text-gray-600 uppercase">Full Name</label>
-              <input type="text" className="bg-gray-50 border border-gray-200 rounded p-3 focus:border-alfawad-primary focus:outline-none" />
-            </div>
-            <div className="flex flex-col gap-2">
-              <label className="text-sm font-bold text-gray-600 uppercase">Position Applied For</label>
-              <input type="text" className="bg-gray-50 border border-gray-200 rounded p-3 focus:border-alfawad-primary focus:outline-none" />
-            </div>
-            <div className="flex flex-col gap-2">
-              <label className="text-sm font-bold text-gray-600 uppercase">Upload Resume (PDF/Word)</label>
-              <input type="file" className="block w-full text-sm text-gray-500 file:mr-4 file:py-3 file:px-6 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-red-50 file:text-[#c42924] hover:file:bg-red-100 border border-gray-200 rounded cursor-pointer" />
-            </div>
-            
-            <button className="bg-alfawad-primary text-white font-bold uppercase px-8 py-4 rounded hover:bg-gray-900 transition-colors w-full mt-4">
-              Apply Now
-            </button>
+    <section className="py-24 bg-[#f4f5f6]">
+      <div className="container mx-auto px-4 lg:px-12 max-w-[1200px]">
+        <div className="flex flex-col gap-16">
+          <div className="text-center flex flex-col items-center">
+            <span className="text-alfawad-primary font-black text-[14px] uppercase tracking-[0.4em] mb-4">Building Futures</span>
+            <h2 className="text-[36px] md:text-[55px] font-black text-black uppercase tracking-tighter leading-none mb-6">Drive Your Career Forward</h2>
+            <p className="text-[#666666] text-xl font-medium max-w-3xl leading-relaxed">AL FAWAD is constantly looking for dedicated professionals who thrive on challenge and operational excellence.</p>
           </div>
           
-          <div className="w-full lg:w-1/2 flex flex-col justify-center items-center p-8 bg-gray-900 rounded-xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-alfawad-primary rounded-bl-full opacity-20" />
-            <h3 className="text-2xl font-black text-white uppercase text-center mb-4 relative z-10">Direct Email Application</h3>
-            <p className="text-gray-400 text-center mb-6 relative z-10">If you cannot process your application via the robust form, directly forward your CV packet to our Human Resources terminal.</p>
-            <a href="mailto:hr@AL FAWAD.com" className="text-alfawad-primary font-black text-xl hover:text-white transition-colors border-b-2 border-alfawad-primary pb-1 relative z-10">hr@AL FAWAD.com</a>
+          <div className="bg-black text-white p-12 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 border-l-[12px] border-alfawad-primary">
+             <div className="flex flex-col gap-2">
+                <span className="text-alfawad-primary font-black uppercase tracking-[0.2em] text-sm">Now Hiring</span>
+                <h3 className="text-2xl font-black uppercase tracking-tighter">HSE Officers | QC Inspectors | Rigger Specialists</h3>
+             </div>
+             <Link to="/alfawad/contact" className="bg-white text-black px-10 py-4 font-black uppercase text-xs tracking-widest hover:bg-alfawad-primary hover:text-white transition-all whitespace-nowrap">Apply Today</Link>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 bg-white p-12 md:p-20 shadow-xl border border-gray-100 relative overflow-hidden group">
+            <div className="flex flex-col gap-8">
+              <div className="flex flex-col border-l-8 border-alfawad-primary pl-8">
+                <h3 className="text-[28px] font-black text-black uppercase tracking-tighter">Submit Application</h3>
+              </div>
+              
+              <div className="flex flex-col gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                   <div className="flex flex-col gap-2">
+                      <label className="text-[11px] font-black text-gray-500 uppercase tracking-[0.2em]">Full Name</label>
+                      <input type="text" className="bg-gray-50 border-b-2 border-gray-200 p-3 focus:border-alfawad-primary focus:outline-none font-bold" />
+                   </div>
+                   <div className="flex flex-col gap-2">
+                      <label className="text-[11px] font-black text-gray-500 uppercase tracking-[0.2em]">Contact No.</label>
+                      <input type="text" className="bg-gray-50 border-b-2 border-gray-200 p-3 focus:border-alfawad-primary focus:outline-none font-bold" />
+                   </div>
+                </div>
+                <div className="flex flex-col gap-2">
+                   <label className="text-[11px] font-black text-gray-500 uppercase tracking-[0.2em]">Application For Position</label>
+                   <input type="text" className="bg-gray-50 border-b-2 border-gray-200 p-3 focus:border-alfawad-primary focus:outline-none font-bold" />
+                </div>
+                <div className="flex flex-col gap-2">
+                   <label className="text-[11px] font-black text-gray-500 uppercase tracking-[0.2em]">Attach CV (PDF Only)</label>
+                   <input type="file" className="bg-gray-50 border-dashed border-2 border-gray-200 p-8 text-sm font-bold text-gray-400 text-center cursor-pointer hover:border-alfawad-primary transition-all" />
+                </div>
+                <button className="bg-black text-white px-12 py-5 font-black uppercase text-sm tracking-[0.2em] hover:bg-alfawad-primary transition-all shadow-xl">
+                  Submit Resume
+                </button>
+              </div>
+            </div>
+
+            <div className="bg-gray-900 p-12 text-white flex flex-col justify-center items-center text-center gap-8 relative">
+               <div className="w-20 h-20 bg-alfawad-primary rounded-full flex items-center justify-center mb-4">
+                  <Mail className="w-8 h-8 text-black" />
+               </div>
+               <h3 className="text-[26px] font-black uppercase tracking-tighter">Direct Submission</h3>
+               <p className="text-white/60 font-bold leading-relaxed">
+                  Avoid the wait. Forward your comprehensive CV packet directly to our strategic human resources mailbox.
+               </p>
+               <a href="mailto:info@lamiyaalkhaleej.com" className="text-alfawad-primary font-black text-[22px] tracking-tight hover:text-white transition-colors border-b-2 border-alfawad-primary pb-1">info@lamiyaalkhaleej.com</a>
+            </div>
           </div>
         </div>
-
       </div>
     </section>
   </div>
 );
+
 
 
 

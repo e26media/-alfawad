@@ -45,40 +45,32 @@ const AlfawadNavbar = () => {
   };
 
   return (
-    <nav className="bg-alfawad-primary text-white shadow-lg sticky top-0 z-50">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center h-20">
+    <nav className="bg-white text-black shadow-md sticky top-0 z-50">
+      <div className="container mx-auto px-4 lg:px-8 max-w-[1400px]">
+        <div className="flex justify-between items-center h-24">
           
           {/* Logo / Brand */}
           <Link to="/alfawad" className="flex items-center gap-3">
-            <div className="bg-white text-alfawad-primary font-bold p-2 px-4 rounded-md tracking-wider">
-              ALFAWAD
-            </div>
+            <img 
+              src="/src/assets/mainlogo.jpg" 
+              alt="LAMIYA AL KHALEEJ AL ITTEHAD" 
+              className="h-16 md:h-20 w-auto object-contain brightness-110" 
+            />
           </Link>
 
-          {/* Clean Pro Return Toggle */}
-          <div className="hidden lg:flex items-center absolute left-1/2 -translate-x-1/2 bg-black/20 p-1 rounded-lg">
-            <Link to="/" className="px-4 py-1.5 text-xs font-semibold rounded-md text-white/70 hover:text-white transition-colors">
-              Clean Pro
-            </Link>
-            <span className="px-4 py-1.5 text-xs font-semibold rounded-md bg-white text-alfawad-primary shadow-sm">
-              Alfawad
-            </span>
-          </div>
-
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-2">
             {ALFAWAD_LINKS.map((link) => (
               <div key={link.name} className="relative group">
                 {link.dropdown ? (
-                  <button className="flex items-center gap-1 px-3 py-2 text-sm font-medium hover:bg-alfawad-dark rounded-md transition-colors">
-                    {link.name} <ChevronDown className="w-4 h-4 ml-1 opacity-70" />
+                  <button className="flex items-center gap-1 px-3 py-2 text-[13px] font-black uppercase tracking-tighter hover:text-alfawad-primary transition-colors">
+                    {link.name} <ChevronDown className="w-3 h-3 opacity-50" />
                   </button>
                 ) : (
                   <Link
                     to={link.path!}
-                    className={`px-3 py-2 text-sm font-medium hover:bg-alfawad-dark rounded-md transition-colors ${
-                      location.pathname === link.path ? "bg-alfawad-dark font-bold" : ""
+                    className={`px-3 py-2 text-[13px] font-black uppercase tracking-tighter hover:text-alfawad-primary transition-colors ${
+                      location.pathname === link.path ? "text-alfawad-primary" : ""
                     }`}
                   >
                     {link.name}
@@ -87,12 +79,12 @@ const AlfawadNavbar = () => {
 
                 {/* Dropdown Menu */}
                 {link.dropdown && (
-                  <div className="absolute top-full left-0 mt-2 w-64 bg-white text-gray-800 shadow-xl rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100 py-2">
+                  <div className="absolute top-full left-0 mt-0 w-64 bg-white text-gray-800 shadow-2xl rounded-sm opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border-t-2 border-alfawad-primary py-2 z-50">
                     {link.dropdown.map((sublink) => (
                       <Link
                         key={sublink.path}
                         to={sublink.path}
-                        className="block px-4 py-2 text-sm hover:bg-red-50 hover:text-alfawad-primary transition-colors"
+                        className="block px-6 py-3 text-[12px] font-bold uppercase tracking-wider hover:bg-gray-50 hover:text-alfawad-primary transition-colors border-b border-gray-50 last:border-0"
                       >
                         {sublink.name}
                       </Link>
@@ -101,11 +93,25 @@ const AlfawadNavbar = () => {
                 )}
               </div>
             ))}
+
+            {/* Social Icons Right */}
+            <div className="flex items-center gap-4 ml-6 pl-6 border-l border-gray-200">
+               <a href="#" className="text-gray-400 hover:text-blue-600 transition-colors"><span className="text-sm font-black">f</span></a>
+               <a href="#" className="text-gray-400 hover:text-pink-500 transition-colors"><span className="text-sm font-black">IG</span></a>
+               <a href="#" className="text-gray-400 hover:text-blue-700 transition-colors"><span className="text-sm font-black">IN</span></a>
+               <a href="#" className="text-gray-400 hover:text-black transition-colors"><span className="text-sm font-black">X</span></a>
+            </div>
+          </div>
+
+          <div className="hidden lg:flex items-center ml-4">
+             <Link to="/" className="text-[10px] font-bold bg-gray-100 text-gray-500 px-3 py-1.5 rounded-full hover:bg-alfawad-primary hover:text-white transition-all uppercase">
+               Exit Alfawad
+             </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 text-white hover:bg-alfawad-dark rounded-md"
+            className="lg:hidden p-2 text-black hover:bg-gray-100 rounded-md"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

@@ -50,9 +50,7 @@ const Contact = () => {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 uppercase tracking-widest mb-2">Phones</h3>
                   <p className="text-gray-600 leading-relaxed font-medium">
-                    +966 50 123 4567<br />
-                    +966 13 888 9999<br />
-                    +966 13 888 7777 (Fax)
+                    966 XXXXXXXX
                   </p>
                 </div>
               </div>
@@ -64,9 +62,7 @@ const Contact = () => {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 uppercase tracking-widest mb-2">Emails</h3>
                   <p className="text-gray-600 leading-relaxed font-medium">
-                    info@AL FAWAD.com<br />
-                    sales@AL FAWAD.com<br />
-                    support@AL FAWAD.com
+                    info@lamiyaalkhaleej.com
                   </p>
                 </div>
               </div>
