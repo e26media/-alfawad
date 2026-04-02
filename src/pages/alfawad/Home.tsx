@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ChevronRight, Settings, Users, Truck, Wrench, Shield, CheckCircle } from "lucide-react";
 import { useEffect, useState } from "react";
+import { AlfawadNews } from "../../components/alfawad/AlfawadNews";
 
 export default function AlfawadHome() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -322,7 +323,7 @@ export default function AlfawadHome() {
          <div className="absolute inset-0 bg-alfawad-primary/40 z-10" />
          
          <div className="relative z-20 flex flex-col items-center">
-            <button className="w-16 h-16 md:w-24 md:h-24 rounded-full bg-alfawad-primary flex items-center justify-center mb-6 md:mb-10 shadow-[0_0_50px_rgba(223,59,54,0.6)] hover:scale-110 transition-transform group">
+            <button className="w-16 h-16 md:w-24 md:h-24 rounded-full bg-alfawad-primary flex items-center justify-center mb-6 md:mb-10 shadow-[0_0_50px_rgba(182,138,65,0.6)] hover:scale-110 transition-transform group">
                <div className="w-0 h-0 border-t-[8px] md:border-t-[12px] border-t-transparent border-l-[14px] md:border-l-[20px] border-l-white border-b-[8px] md:border-b-[12px] border-b-transparent ml-1.5 md:ml-2 group-hover:scale-110 transition-all"></div>
             </button>
             <h2 className="text-[32px] md:text-[70px] font-black text-white uppercase tracking-tighter leading-tight mb-4">
@@ -429,32 +430,7 @@ export default function AlfawadHome() {
       </section>
 
       {/* News & Updates Section */}
-      <section className="bg-alfawad-primary text-white py-16 md:py-32 relative overflow-visible">
-        <div className="container mx-auto px-4 lg:px-12 max-w-[1400px]">
-          <h2 className="text-[32px] md:text-[55px] font-black mb-12 md:mb-20 uppercase tracking-tighter leading-tight">
-            News & Updates
-          </h2>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="aspect-[4/5] bg-white group overflow-hidden shadow-2xl relative z-10 md:translate-y-20">
-                <img 
-                  src={`https://images.unsplash.com/photo-${1500000000000 + i * 100000}?q=80&w=600&auto=format&fit=crop`} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" 
-                  alt="News"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 md:p-8">
-                   <span className="text-alfawad-primary font-black text-xs tracking-widest uppercase mb-2">Industry Report</span>
-                   <h4 className="text-white font-black text-base md:text-lg leading-tight uppercase">Latest Innovations in Industrial Engineering 2024</h4>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      
-      {/* Spacer for overlapping news images */}
-      <div className="h-24 md:h-48 bg-[#f4f5f6] w-full"></div>
+      <AlfawadNews />
 
     </div>
   );
