@@ -2,11 +2,11 @@ import { Link, useLocation } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 
 const OVERVIEW_LINKS = [
-  { label: "INTRODUCTION", path: "/introduction" },
-  { label: "CHAIRMAN MESSAGE", path: "/chairman-message" },
-  { label: "VISION & MISSION", path: "/vision-mission" },
-  { label: "QUALITY POLICY", path: "/quality-policy" },
-  { label: "ENVIRONMENT & SAFETY POLICY", path: "/environment-safety" },
+  { label: "INTRODUCTION", path: "/industrial/introduction" },
+  { label: "CHAIRMAN MESSAGE", path: "/industrial/chairman-message" },
+  { label: "VISION & MISSION", path: "/industrial/vision-mission" },
+  { label: "QUALITY POLICY", path: "/industrial/quality-policy" },
+  { label: "ENVIRONMENT & SAFETY POLICY", path: "/industrial/environment-safety" },
 ];
 
 const OverviewSidebar = () => {
