@@ -14,14 +14,14 @@ const VisionMission = () => {
           alt="Vision 2030 Background" 
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] relative z-20 flex flex-col items-center justify-center text-center pt-20">
+        <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] relative z-20 flex flex-col items-center justify-center text-center pt-32 md:pt-48">
            <div className="w-full text-white">
               <h1 className="text-[45px] md:text-[75px] font-black leading-[0.9] mb-6 uppercase tracking-tighter text-white drop-shadow-2xl">
                 VISION <br /> & MISSION
               </h1>
               <div className="w-24 h-2 bg-white mb-8 mx-auto" />
               <div className="flex items-center justify-center gap-3 text-[14px] md:text-[16px] font-black text-white/95 uppercase tracking-[0.2em]">
-                <Link to="/alfawad" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
+                <Link to="/" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
                 <ChevronRight className="w-4 h-4 text-white/50" />
                 <span className="text-white/70">Overview</span>
                 <ChevronRight className="w-4 h-4 text-white/50" />
@@ -46,7 +46,7 @@ const VisionMission = () => {
                     <Target className="w-16 h-16 text-alfawad-primary mb-8" />
                     <h2 className="text-3xl font-black text-black uppercase tracking-tighter mb-6">Our Vision</h2>
                     <p className="text-[#666666] leading-relaxed text-lg font-medium italic">
-                      "To be the premier engineering, construction and project management organization by achieving extraordinary results for our customers, building satisfying careers for our people, and earning a fair return on the value we deliver."
+                      "To become one of the most respected and reliable contracting and industrial service providers in Saudi Arabia, recognized for excellence in manpower services, equipment solutions, and project support with strong safety and quality performance."
                     </p>
                  </div>
 
@@ -56,7 +56,7 @@ const VisionMission = () => {
                     <Award className="w-16 h-16 text-alfawad-primary mb-8" />
                     <h2 className="text-3xl font-black text-white uppercase tracking-tighter mb-6">Our Mission</h2>
                     <p className="text-white/70 leading-relaxed text-lg font-medium italic">
-                      "Achieving excellence and high level of efficiency in all our domains through creating high value for our customers based on the highest degree of performance and quality."
+                      "Our mission is to provide professional contracting support solutions by delivering qualified manpower, reliable equipment fleet, quality-based service execution, and safe operations."
                     </p>
                  </div>
               </div>
@@ -72,12 +72,11 @@ const VisionMission = () => {
 
                  <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                     {[
-                      { title: "Quality", icon: < Shield className="w-8 h-8" />, desc: "Maintaining focus on consistently providing quality products and services." },
-                      { title: "Customers", icon: < Users className="w-8 h-8" />, desc: "Establishing strong relationships and tailoring solutions to ensure satisfaction." },
-                      { title: "Teamwork", icon: < Heart className="w-8 h-8" />, desc: "We don't work as one person... we work together as a team." },
-                      { title: "Integrity", icon: < Award className="w-8 h-8" />, desc: "Our actions are consistent with our values and principles." },
-                      { title: "Commitment", icon: < Zap className="w-8 h-8" />, desc: "Proactive in finding the best solutions for our clients to achieve their goals." },
-                      { title: "Safety", icon: < Shield className="w-8 h-8" />, desc: "Safety is not an option; it is our top priority for everyone's well-being." },
+                      { title: "Integrity", icon: <Shield className="w-8 h-8" />, desc: "We conduct business with honesty, transparency, and fairness." },
+                      { title: "Quality", icon: <Award className="w-8 h-8" />, desc: "We follow structured quality standards to ensure consistent service performance." },
+                      { title: "Safety", icon: <Shield className="w-8 h-8" />, desc: "We prioritize health and safety above everything." },
+                      { title: "Customer Commitment", icon: <Users className="w-8 h-8" />, desc: "We focus on meeting client expectations and ensuring smooth project execution." },
+                      { title: "Teamwork", icon: <Heart className="w-8 h-8" />, desc: "We build strong internal teams and collaborative client partnerships." },
                     ].map((item, i) => (
                       <div key={i} className="flex flex-col gap-4 border-b border-gray-100 pb-8 hover:border-alfawad-primary transition-colors cursor-default group">
                          <div className="text-alfawad-primary group-hover:scale-110 transition-transform">{item.icon}</div>

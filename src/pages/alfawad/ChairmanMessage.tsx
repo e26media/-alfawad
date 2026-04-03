@@ -14,14 +14,14 @@ const ChairmanMessage = () => {
           alt="Vision 2030 Background" 
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] relative z-20 flex flex-col items-center justify-center text-center pt-20">
+        <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] relative z-20 flex flex-col items-center justify-center text-center pt-32 md:pt-48">
            <div className="w-full text-white">
               <h1 className="text-[45px] md:text-[75px] font-black leading-[0.9] mb-6 uppercase tracking-tighter text-white drop-shadow-2xl">
                 CHAIRMAN <br /> MESSAGE
               </h1>
               <div className="w-24 h-2 bg-white mb-8 mx-auto" />
               <div className="flex items-center justify-center gap-3 text-[14px] md:text-[16px] font-black text-white/95 uppercase tracking-[0.2em]">
-                <Link to="/alfawad" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
+                <Link to="/" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
                 <ChevronRight className="w-4 h-4 text-white/50" />
                 <span className="text-white/70">Overview</span>
                 <ChevronRight className="w-4 h-4 text-white/50" />
@@ -52,11 +52,11 @@ const ChairmanMessage = () => {
                   <div className="flex flex-col md:flex-row gap-12 items-start">
                     <div className="w-full md:w-1/3 shrink-0">
                        <div className="relative aspect-[3/4] overflow-hidden shadow-2xl skew-y-1 hover:skew-y-0 transition-transform duration-500">
-                          <img 
+                          {/* <img 
                             src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=987&auto=format&fit=crop" 
                             className="w-full h-full object-cover grayscale brightness-90 hover:grayscale-0 hover:brightness-100 transition-all duration-700" 
                             alt="Chairman"
-                          />
+                          /> */}
                           <div className="absolute bottom-0 left-0 right-0 bg-alfawad-primary p-4 text-center">
                              <span className="text-white font-black uppercase text-sm tracking-widest">AL FAWAD CHAIRMAN</span>
                           </div>
@@ -66,24 +66,24 @@ const ChairmanMessage = () => {
                     <div className="w-full md:w-2/3 flex flex-col gap-8">
                        <div className="text-6xl text-alfawad-primary/20 font-serif -mb-10 leading-none">“</div>
                        <p className="text-[20px] md:text-[22px] font-bold text-black leading-relaxed italic">
-                         "The past years, since commencement of ALFAWAD Engineering & Construction, were really remarkable for us that brought our establishment noticeable growth and very favorable developments."
+                         "Welcome to Lamiya Al Kahleej General Contracting. We are proud to be a growing service provider in Saudi Arabia delivering high-quality contracting and industrial support services."
                        </p>
                        
                        <div className="text-[#666666] leading-[36px] text-[18px] font-medium flex flex-col gap-6">
                          <p>
-                           ALFAWAD Engineering & Construction is expert in providing skilled & semi-skilled Human resources & Rental equipment, industrial services and material supply to various industries in construction, oil & gas, Petrochemicals for new and existing projects and also to maintenance work.
+                           Our company was established with a clear vision: to provide reliable solutions to the construction and industrial sector by combining skilled manpower, modern equipment resources, and professional project support.
                          </p>
                          <p>
-                           Sincerely reflecting the vision of its owners and executive management, AL FAWAD engineering & construction maintains development policy that reflect our mission; achieving excellence and high level of efficiency in all our domains through creating high value for our customers based on the highest degree of performance and quality.
+                           Over the years, we have gained valuable experience in serving clients across different industries, particularly in the Eastern Province and Riyadh region. Our growth has been possible because of our dedication to customer satisfaction, commitment to safety, and continuous improvement culture.
                          </p>
                          <p>
-                           We recognize that our strength lies entirely in our people. Therefore, maintaining stringent safety standards and fostering a culture of continuous learning and operational efficiency is our highest priority at all times.
+                           We believe every project is built on trust. Our mission is to strengthen client relationships by delivering timely services, maintaining quality standards, and ensuring safety at every stage of execution. As we continue to expand, we remain committed to innovation, workforce development, and maintaining international standards in all our operations.
                          </p>
                        </div>
 
                        <div className="mt-8 pt-8 border-t border-gray-100 flex flex-col gap-2">
-                          <div className="text-black font-black uppercase tracking-[0.2em] text-lg">AHMED FAWAD BAWZID</div>
-                          <div className="text-alfawad-primary font-bold uppercase tracking-widest text-sm">Founder & Chairman</div>
+                          <div className="text-black font-black uppercase tracking-[0.2em] text-lg">Chairman / Managing Director</div>
+                          <div className="text-alfawad-primary font-bold uppercase tracking-widest text-sm">Lamiya Al Kahleej General Contracting</div>
                        </div>
                     </div>
                   </div>

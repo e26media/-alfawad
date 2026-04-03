@@ -24,7 +24,7 @@ const ProjectSupport = () => {
               </h1>
               <div className="w-24 h-2 bg-white mb-8 mx-auto" />
               <div className="flex items-center justify-center gap-3 text-[14px] md:text-[16px] font-black text-white/95 uppercase tracking-[0.2em]">
-                <Link to="/alfawad" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
+                <Link to="/" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
                 <ChevronRight className="w-4 h-4 text-white/50" />
                 <span className="text-white/70">Services</span>
                 <ChevronRight className="w-4 h-4 text-white/50" />
@@ -45,115 +45,118 @@ const ProjectSupport = () => {
                  <div className="absolute top-0 right-0 w-32 h-32 bg-alfawad-primary/5 rounded-bl-full -mr-16 -mt-16 transition-all duration-700 group-hover:scale-150" />
                  
                  <div className="flex flex-col gap-8">
-                   <div className="flex flex-col border-l-8 border-alfawad-primary pl-8">
-                     <span className="text-alfawad-primary font-black text-[14px] uppercase tracking-[0.4em] mb-2">Operational Backbone</span>
-                     <h2 className="text-[32px] md:text-[45px] font-black text-black leading-tight uppercase tracking-tighter">
-                       Project Support Services
-                     </h2>
-                   </div>
+                    <div className="flex flex-col border-l-8 border-alfawad-primary pl-8">
+                      <span className="text-alfawad-primary font-black text-[14px] uppercase tracking-[0.4em] mb-2">Operational Backbone</span>
+                      <h2 className="text-[32px] md:text-[45px] font-black text-black leading-tight uppercase tracking-tighter">
+                        Construction Support Services
+                      </h2>
+                    </div>
 
-                   <p className="text-[20px] md:text-[22px] font-bold text-black leading-relaxed italic border-b border-gray-100 pb-8">
-                     We provide comprehensive support across civil, mechanical, and electrical engineering domains to keep your projects on track.
-                   </p>
+                    <p className="text-[20px] md:text-[22px] font-bold text-black leading-relaxed italic border-b border-gray-100 pb-8">
+                      We provide comprehensive support across civil, mechanical, and electrical engineering domains to keep your projects on track.
+                    </p>
 
-                   <div className="text-[#666666] leading-[36px] text-[18px] font-medium flex flex-col gap-6">
-                     <p>
-                       Al Fawad is a multi-disciplinary support contractor with vast experience in supporting large-scale construction and maintenance projects in the Kingdom. Our technical teams are equipped to handle complex challenges across various industrial sectors.
-                     </p>
-                   </div>
+                    <div className="text-[#666666] leading-[36px] text-[18px] font-medium flex flex-col gap-6">
+                      <p>
+                        Lamiya Al Kahleej General Contracting offers multi-disciplinary construction support services. We assist primary contractors and industrial clients by executing specific project scopes with precision and reliability.
+                      </p>
+                    </div>
 
-                   {/* Tabs Component */}
-                   <div className="mt-4">
-                      <div className="flex gap-4 border-b border-gray-100 pb-4 mb-8">
-                        {["Civil", "Mechanical", "Electrical"].map((tab) => (
-                          <button 
-                            key={tab}
-                            onClick={() => setActiveTab(tab)}
-                            className={`text-sm font-black uppercase tracking-widest px-6 py-3 transition-all ${
-                              activeTab === tab ? "bg-black text-white" : "bg-gray-100 text-gray-500 hover:bg-alfawad-primary hover:text-white"
-                            }`}
-                          >
-                            {tab}
-                          </button>
-                        ))}
-                      </div>
+                    {/* Tabs Component */}
+                    <div className="mt-4">
+                       <div className="flex gap-4 border-b border-gray-100 pb-4 mb-8">
+                         {["Civil", "Mechanical", "Electrical"].map((tab) => (
+                           <button 
+                             key={tab}
+                             onClick={() => setActiveTab(tab)}
+                             className={`text-sm font-black uppercase tracking-widest px-6 py-3 transition-all ${
+                               activeTab === tab ? "bg-black text-white" : "bg-gray-100 text-gray-500 hover:bg-alfawad-primary hover:text-white"
+                             }`}
+                           >
+                             {tab}
+                           </button>
+                         ))}
+                       </div>
 
-                      <div className="bg-gray-50 p-10 border border-gray-100 min-h-[300px]">
-                        {activeTab === "Civil" && (
-                          <div className="animate-in fade-in duration-500 flex flex-col gap-6">
-                             <div className="flex items-center gap-4">
-                               <Settings className="w-8 h-8 text-alfawad-primary" />
-                               <h3 className="text-2xl font-black uppercase tracking-tighter">Civil & Structural</h3>
-                             </div>
-                             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                               {[
-                                 "Earthworks & Mass Excavation",
-                                 "Industrial Foundations & Piling",
-                                 "Concrete Paving & Asphalt Works",
-                                 "Structural Steel Erection",
-                                 "Trenching & Duct-banks"
-                               ].map((item, i) => (
-                                 <li key={i} className="flex items-center gap-3 text-black font-bold uppercase text-[13px] tracking-tight border-b border-gray-200 pb-3">
-                                   <div className="w-2 h-2 rounded-full bg-alfawad-primary" /> {item}
-                                 </li>
-                               ))}
-                             </ul>
-                          </div>
-                        )}
-                        {activeTab === "Mechanical" && (
-                          <div className="animate-in fade-in duration-500 flex flex-col gap-6">
-                             <div className="flex items-center gap-4">
-                               <Wrench className="w-8 h-8 text-alfawad-primary" />
-                               <h3 className="text-2xl font-black uppercase tracking-tighter">Mechanical Works</h3>
-                             </div>
-                             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                               {[
-                                 "Piping Spool Fabrication",
-                                 "Tie-ins & Modifications",
-                                 "Equipment Maintenance",
-                                 "Hydro-testing & Pre-comm",
-                                 "Painting & Insulation"
-                               ].map((item, i) => (
-                                 <li key={i} className="flex items-center gap-3 text-black font-bold uppercase text-[13px] tracking-tight border-b border-gray-200 pb-3">
-                                   <div className="w-2 h-2 rounded-full bg-alfawad-primary" /> {item}
-                                 </li>
-                               ))}
-                             </ul>
-                          </div>
-                        )}
-                        {activeTab === "Electrical" && (
-                          <div className="animate-in fade-in duration-500 flex flex-col gap-6">
-                             <div className="flex items-center gap-4">
-                               <Zap className="w-8 h-8 text-alfawad-primary" />
-                               <h3 className="text-2xl font-black uppercase tracking-tighter">Electrical & Instrument</h3>
-                             </div>
-                             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                               {[
-                                 "Cable Tray Installation",
-                                 "HV/MV Cable Pulling",
-                                 "Switchgear Installation",
-                                 "Instrument Calibration",
-                                 "Substation Upgrades"
-                               ].map((item, i) => (
-                                 <li key={i} className="flex items-center gap-3 text-black font-bold uppercase text-[13px] tracking-tight border-b border-gray-200 pb-3">
-                                   <div className="w-2 h-2 rounded-full bg-alfawad-primary" /> {item}
-                                 </li>
-                               ))}
-                             </ul>
-                          </div>
-                        )}
-                      </div>
-                   </div>
+                       <div className="bg-gray-50 p-10 border border-gray-100 min-h-[300px]">
+                         {activeTab === "Civil" && (
+                           <div className="animate-in fade-in duration-500 flex flex-col gap-6">
+                              <div className="flex items-center gap-4">
+                                <Settings className="w-8 h-8 text-alfawad-primary" />
+                                <h3 className="text-2xl font-black uppercase tracking-tighter">Civil & Structural</h3>
+                              </div>
+                              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                                {[
+                                  "Earthworks & Mass Excavation",
+                                  "Concrete Works & Foundations",
+                                  "Site Grading & Leveling",
+                                  "Trenching & Backfilling",
+                                  "Industrial Flooring & Paving",
+                                  "Structural Steel Erection Assistance"
+                                ].map((item, i) => (
+                                  <li key={i} className="flex items-center gap-3 text-black font-bold uppercase text-[13px] tracking-tight border-b border-gray-200 pb-3">
+                                    <div className="w-2 h-2 rounded-full bg-alfawad-primary" /> {item}
+                                  </li>
+                                ))}
+                              </ul>
+                           </div>
+                         )}
+                         {activeTab === "Mechanical" && (
+                           <div className="animate-in fade-in duration-500 flex flex-col gap-6">
+                              <div className="flex items-center gap-4">
+                                <Wrench className="w-8 h-8 text-alfawad-primary" />
+                                <h3 className="text-2xl font-black uppercase tracking-tighter">Mechanical Works</h3>
+                              </div>
+                              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                                {[
+                                  "Piping Fabrication & Installation Support",
+                                  "Equipment Installation & Alignment",
+                                  "Industrial Tank Maintenance Assistance",
+                                  "Steel Structural Work",
+                                  "Painting & Coating Services",
+                                  "Firefighting System Installation Support"
+                                ].map((item, i) => (
+                                  <li key={i} className="flex items-center gap-3 text-black font-bold uppercase text-[13px] tracking-tight border-b border-gray-200 pb-3">
+                                    <div className="w-2 h-2 rounded-full bg-alfawad-primary" /> {item}
+                                  </li>
+                                ))}
+                              </ul>
+                           </div>
+                         )}
+                         {activeTab === "Electrical" && (
+                           <div className="animate-in fade-in duration-500 flex flex-col gap-6">
+                              <div className="flex items-center gap-4">
+                                <Zap className="w-8 h-8 text-alfawad-primary" />
+                                <h3 className="text-2xl font-black uppercase tracking-tighter">Electrical & Instrument</h3>
+                              </div>
+                              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                                {[
+                                  "Cable Pulling & Termination",
+                                  "Cable Tray Installation",
+                                  "Lighting & Power System Support",
+                                  "Instrument & Control Panel Installation",
+                                  "Earthing & Grounding Systems",
+                                  "Substation Support Activities"
+                                ].map((item, i) => (
+                                  <li key={i} className="flex items-center gap-3 text-black font-bold uppercase text-[13px] tracking-tight border-b border-gray-200 pb-3">
+                                    <div className="w-2 h-2 rounded-full bg-alfawad-primary" /> {item}
+                                  </li>
+                                ))}
+                              </ul>
+                           </div>
+                         )}
+                       </div>
+                    </div>
 
-                   <div className="mt-8 bg-black p-12 flex flex-col md:flex-row items-center gap-10">
-                      <ShieldCheck className="w-20 h-20 text-alfawad-primary" />
-                      <div className="text-white flex-1">
-                         <h4 className="text-2xl font-black uppercase mb-4 tracking-tighter">Reliable Infrastructure Support</h4>
-                         <p className="text-white/60 leading-relaxed font-bold">
-                            Our team seamlessly integrates with your existing workflows to provide reliable technical support and ensure project success.
-                         </p>
-                      </div>
-                   </div>
+                    <div className="mt-8 bg-black p-12 flex flex-col md:flex-row items-center gap-10">
+                       <ShieldCheck className="w-20 h-20 text-alfawad-primary" />
+                       <div className="text-white flex-1">
+                          <h4 className="text-2xl font-black uppercase mb-4 tracking-tighter">Reliable Infrastructure Support</h4>
+                          <p className="text-white/60 leading-relaxed font-bold">
+                             Our team is dedicated to supporting your project vision with quality execution and professional site management.
+                          </p>
+                       </div>
+                    </div>
                  </div>
               </div>
             </div>

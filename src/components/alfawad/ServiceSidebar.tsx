@@ -2,11 +2,11 @@ import { Link, useLocation } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 
 const SERVICE_LINKS = [
-  { label: "TECHNICAL MANPOWER", path: "/alfawad/services/technical-manpower" },
-  { label: "HEAVY EQUIPMENT", path: "/alfawad/services/heavy-equipment" },
-  { label: "PROJECT SUPPORT", path: "/alfawad/services/project-support" },
-  { label: "PROJECT MANAGEMENT", path: "/alfawad/services/project-management" },
-  { label: "MATERIAL SERVICE", path: "/alfawad/services/material-service" },
+  { label: "TECHNICAL MANPOWER", path: "/services/technical-manpower" },
+  { label: "HEAVY EQUIPMENT", path: "/services/heavy-equipment" },
+  { label: "PROJECT SUPPORT", path: "/services/project-support" },
+  { label: "PROJECT MANAGEMENT", path: "/services/project-management" },
+  { label: "MATERIAL SERVICE", path: "/services/material-service" },
 ];
 
 const ServiceSidebar = () => {
@@ -23,7 +23,7 @@ const ServiceSidebar = () => {
           {SERVICE_LINKS.map((link) => {
             const isActive = location.pathname === link.path;
             return (
-              <li key={link.path} className="border-b border-gray-100 last:border-0">
+              <li key={link.path} className="border-b border-gray-100 last:border-0 ">
                 <Link
                   to={link.path}
                   className={`flex items-center justify-between px-8 py-5 transition-all text-[14px] font-black tracking-tight group ${
@@ -48,7 +48,7 @@ const ServiceSidebar = () => {
         <div className="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-bl-full transition-transform group-hover:scale-150" />
         <h4 className="text-xl font-black uppercase tracking-tighter relative z-10 leading-none">Need Support? <br/> Get a Quote</h4>
         <p className="text-white/80 text-sm font-bold relative z-10 leading-relaxed uppercase tracking-wider">Talk to our experts</p>
-        <Link to="/alfawad/contact" className="bg-black text-white px-8 py-4 font-black uppercase text-xs tracking-widest w-full transition-all hover:bg-white hover:text-black relative z-10 shadow-lg hover:-translate-y-1 block text-center">
+        <Link to="/contact" className="bg-black text-white px-8 py-4 font-black uppercase text-xs tracking-widest w-full transition-all hover:bg-white hover:text-black relative z-10 shadow-lg hover:-translate-y-1 block text-center">
           Contact Us
         </Link>
       </div>

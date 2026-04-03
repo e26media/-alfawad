@@ -22,7 +22,7 @@ const AlfawadFooter = () => {
       {/* Floating Buttons */}
       <div className="fixed bottom-6 right-6 z-[60] flex flex-col gap-3">
         <a
-          href="https://wa.me/966000000000"
+          href="https://wa.me/966501007079"
           target="_blank"
           rel="noreferrer"
           className="w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-transform cursor-pointer"
@@ -46,9 +46,9 @@ const AlfawadFooter = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-10 mb-16">
             <Link to="/alfawad" className="block max-w-[220px]">
               <img
-                src="/src/assets/mainlogo.jpg"
-                alt="LAMIYA Logo"
-                className="w-full h-auto object-contain"
+                src="/lamiya-logo.png"
+                alt="Lamiya Al Khaleej"
+                className="w-full h-auto object-contain max-h-24"
               />
             </Link>
 
@@ -107,7 +107,7 @@ const AlfawadFooter = () => {
                   <div className="w-8 h-8 flex items-center justify-center border border-white/40 rounded-sm">
                     <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M20 22.621l-3.521-6.759c-.645.277-1.111.917-1.882.252l-2.83-2.428c-.782-.671-.131-1.113.253-1.883l-6.759-3.522c-.383.771-1.045 1.258-1.815.597l-2.831-2.429c-.771-.661-.253-1.314.131-2.085l3.52-6.759c.771-.383 1.341-.273 2.012.302l2.831 2.429c.671.575.253 1.242-.131 2.013l6.759 3.521c.383-.771 1.045-1.242 1.815-.567l2.83 2.429c.771.661.254 1.314-.13 2.085z" /></svg>
                   </div>
-                  <span className="text-[16px] font-black tracking-tight">966 XXXXXXXX</span>
+                  <span className="text-[16px] font-black tracking-tight"> +966 XXXXXXXX</span>
                 </div>
               </div>
             </div>

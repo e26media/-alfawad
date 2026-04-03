@@ -24,7 +24,7 @@ const ProjectManagement = () => {
               </h1>
               <div className="w-24 h-2 bg-white mb-8 mx-auto" />
               <div className="flex items-center justify-center gap-3 text-[14px] md:text-[16px] font-black text-white/95 uppercase tracking-[0.2em]">
-                <Link to="/alfawad" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
+                <Link to="/" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
                 <ChevronRight className="w-4 h-4 text-white/50" />
                 <span className="text-white/70">Services</span>
                 <ChevronRight className="w-4 h-4 text-white/50" />
@@ -45,122 +45,57 @@ const ProjectManagement = () => {
                  <div className="absolute top-0 right-0 w-32 h-32 bg-alfawad-primary/5 rounded-bl-full -mr-16 -mt-16 transition-all duration-700 group-hover:scale-150" />
                  
                  <div className="flex flex-col gap-8">
-                   <div className="flex flex-col border-l-8 border-alfawad-primary pl-8">
-                     <span className="text-alfawad-primary font-black text-[14px] uppercase tracking-[0.4em] mb-2">Delivery Focused</span>
-                     <h2 className="text-[32px] md:text-[45px] font-black text-black leading-tight uppercase tracking-tighter">
-                       Management & Interventions
-                     </h2>
-                   </div>
+                    <div className="flex flex-col border-l-8 border-alfawad-primary pl-8">
+                      <span className="text-alfawad-primary font-black text-[14px] uppercase tracking-[0.4em] mb-2">Delivery Focused</span>
+                      <h2 className="text-[32px] md:text-[45px] font-black text-black leading-tight uppercase tracking-tighter">
+                        Project Management & Supervision
+                      </h2>
+                    </div>
 
-                   <p className="text-[20px] md:text-[22px] font-bold text-black leading-relaxed italic border-b border-gray-100 pb-8">
-                     Our project management services ensure that industrial operations are executed safely, efficiently, and according to global benchmarks.
-                   </p>
+                    <p className="text-[20px] md:text-[22px] font-bold text-black leading-relaxed italic border-b border-gray-100 pb-8">
+                      At Lamiya Al Kahleej General Contracting, we offer professional project management and site supervision services to ensure that every project is completed with efficiency, safety, and quality.
+                    </p>
 
-                   <div className="text-[#666666] leading-[36px] text-[18px] font-medium flex flex-col gap-6">
-                     <p>
-                       Al Fawad provides expert project management teams capable of overseeing complex industrial shutdowns, turnarounds, and mega-construction projects. We specialize in high-risk technical interventions that require specialized skills and advanced equipment.
-                     </p>
-                   </div>
+                    <div className="text-[#666666] leading-[36px] text-[18px] font-medium flex flex-col gap-6">
+                      <p>
+                        We understand that project success depends on coordination and control. Our management teams work closely with clients and contractors to monitor site activities, track progress, and ensure that work is being executed according to project specifications and timelines.
+                      </p>
+                    </div>
 
-                   {/* Tabs Component */}
-                   <div className="mt-4">
-                      <div className="flex gap-4 border-b border-gray-100 pb-4 mb-8 flex-wrap">
-                        {["Management", "Fire Protection", "Industrial Cleaning"].map((tab) => (
-                          <button 
-                            key={tab}
-                            onClick={() => setActiveTab(tab)}
-                            className={`text-sm font-black uppercase tracking-widest px-6 py-3 transition-all ${
-                              activeTab === tab ? "bg-black text-white" : "bg-gray-100 text-gray-500 hover:bg-alfawad-primary hover:text-white"
-                            }`}
-                          >
-                            {tab}
-                          </button>
-                        ))}
-                      </div>
+                    {/* Quality List */}
+                    <div className="mt-4 bg-gray-50 p-10 border border-gray-100">
+                       <h3 className="text-2xl font-black uppercase tracking-tighter mb-8 text-alfawad-primary">Core Management Services</h3>
+                       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+                          {[
+                            "Planning & Scheduling",
+                            "Site Supervision & Progress Monitoring",
+                            "Quality Control & Inspection",
+                            "Resource Management",
+                            "Safety Management (HSE Oversight)",
+                            "Client Liaison & Reporting"
+                          ].map((item, i) => (
+                            <div key={i} className="flex items-start gap-4">
+                               <div className="w-6 h-6 rounded-full bg-alfawad-primary/10 flex items-center justify-center shrink-0 mt-1">
+                                  <div className="w-2 h-2 rounded-full bg-alfawad-primary" />
+                               </div>
+                               <p className="text-gray-600 font-bold uppercase tracking-tight text-sm">{item}</p>
+                            </div>
+                          ))}
+                       </div>
+                    </div>
 
-                      <div className="bg-gray-50 p-10 border border-gray-100 min-h-[300px]">
-                        {activeTab === "Management" && (
-                          <div className="animate-in fade-in duration-500 flex flex-col gap-6">
-                             <div className="flex items-center gap-4">
-                               <Briefcase className="w-8 h-8 text-alfawad-primary" />
-                               <h3 className="text-2xl font-black uppercase tracking-tighter">Project Execution</h3>
-                             </div>
-                             <p className="text-gray-600 font-medium">Expert oversight of project lifecycles using advanced tracking and reporting metrics.</p>
-                             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
-                               {[
-                                 "Planning & Estimation",
-                                 "Procurement Strategy",
-                                 "Risk Assessment & Mitigation",
-                                 "QA/QC Compliance Audits",
-                                 "Turnaround Management"
-                               ].map((item, i) => (
-                                 <li key={i} className="flex items-center gap-3 text-black font-bold uppercase text-[13px] tracking-tight border-b border-gray-200 pb-3">
-                                   <div className="w-2 h-2 rounded-full bg-alfawad-primary" /> {item}
-                                 </li>
-                               ))}
-                             </ul>
-                          </div>
-                        )}
-                        {activeTab === "Fire Protection" && (
-                          <div className="animate-in fade-in duration-500 flex flex-col gap-6">
-                             <div className="flex items-center gap-4">
-                               <Shield className="w-8 h-8 text-alfawad-primary" />
-                               <h3 className="text-2xl font-black uppercase tracking-tighter">Passive Fire Protection</h3>
-                             </div>
-                             <p className="text-gray-600 font-medium">Specialized HC-rated hydrocarbon fireproofing for critical steel structures and vessels.</p>
-                             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
-                               {[
-                                 "Intumescent Coatings",
-                                 "Cementitious Applications",
-                                 "Fire Stopping & Sealing",
-                                 "Structural Steel Protection",
-                                 "Compliance Certification"
-                               ].map((item, i) => (
-                                 <li key={i} className="flex items-center gap-3 text-black font-bold uppercase text-[13px] tracking-tight border-b border-gray-200 pb-3">
-                                   <div className="w-2 h-2 rounded-full bg-alfawad-primary" /> {item}
-                                 </li>
-                               ))}
-                             </ul>
-                          </div>
-                        )}
-                        {activeTab === "Industrial Cleaning" && (
-                          <div className="animate-in fade-in duration-500 flex flex-col gap-6">
-                             <div className="flex items-center gap-4">
-                               <Droplets className="w-8 h-8 text-alfawad-primary" />
-                               <h3 className="text-2xl font-black uppercase tracking-tighter">Hydroblasting & Jetting</h3>
-                             </div>
-                             <p className="text-gray-600 font-medium">High-pressure cleanings solutions for heat exchangers, vessels, and industrial tanks.</p>
-                             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
-                               {[
-                                 "UHP Water Jetting (40K PSI)",
-                                 "Tube Bundle Cleaning",
-                                 "Automated Tank Internal Cleaning",
-                                 "Descaling & Polymer Removal",
-                                 "Hydro-demolition Services"
-                               ].map((item, i) => (
-                                 <li key={i} className="flex items-center gap-3 text-black font-bold uppercase text-[13px] tracking-tight border-b border-gray-200 pb-3">
-                                   <div className="w-2 h-2 rounded-full bg-alfawad-primary" /> {item}
-                                 </li>
-                               ))}
-                             </ul>
-                          </div>
-                        )}
-                      </div>
-                   </div>
-
-                   <div className="mt-8 bg-black p-12 flex flex-col md:flex-row items-center gap-10">
-                      <BarChart className="w-20 h-20 text-alfawad-primary" />
-                      <div className="text-white flex-1">
-                         <h4 className="text-2xl font-black uppercase mb-4 tracking-tighter">Data-Driven Management</h4>
-                         <p className="text-white/60 leading-relaxed font-bold">
-                            We use advanced project control systems to monitor progress and maintain transparency with our clients throughout the project lifecycle.
-                         </p>
-                      </div>
-                   </div>
+                    <div className="mt-8 bg-black p-12 flex flex-col md:flex-row items-center gap-10">
+                       <BarChart className="w-20 h-20 text-alfawad-primary" />
+                       <div className="text-white flex-1">
+                          <h4 className="text-2xl font-black uppercase mb-4 tracking-tighter">Efficiency Driven</h4>
+                          <p className="text-white/60 leading-relaxed font-bold">
+                             Our approach is to minimize risks and maximize output through structured supervision and efficient project control methods.
+                          </p>
+                       </div>
+                    </div>
                  </div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -169,7 +104,3 @@ const ProjectManagement = () => {
 };
 
 export default ProjectManagement;
-
-
-
-

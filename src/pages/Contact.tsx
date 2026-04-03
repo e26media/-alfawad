@@ -1,47 +1,63 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle, Smartphone, Globe, ArrowRight } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import AnimatedSection from "@/components/AnimatedSection";
+import SEO from "@/components/SEO";
 
 const contactInfo = [
-  { icon: Phone, label: "Phone", value: "0501007079", href: "tel:0501007079" },
-  { icon: Mail, label: "Email", value: "info@cleanproksa.com", href: "mailto:info@cleanproksa.com" },
-  { icon: MapPin, label: "Address", value: "8562 Al Tasni, An Nahdah District, Near Hira Street Jeddah 23523, Saudi Arabia" },
-  { icon: Clock, label: "Working Hours", value: "Sun–Thu: 8AM–6PM" },
+  { icon: Smartphone, label: "Direct Phone", value: "+966 XXXXXXXX", href: "tel:+966501007079" },
+  { icon: Mail, label: "Email Address", value: "info@lamiyaalkhaleej.com", href: "mailto:info@lamiyaalkhaleej.com" },
+  { icon: Globe, label: "Service Areas", value: "Riyadh, Jeddah, Dammam, Khobar, Mecca, Medina, and all KSA" },
+  { icon: Clock, label: "Business Hours", value: "Sat–Thu: 8:00 AM – 10:00 PM, Fri: Appointment Based" },
 ];
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <div className="pt-20">
-      <section className="section-padding bg-muted">
-        <div className="container mx-auto">
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl mx-auto text-center">
-            <h1 className="text-3xl md:text-5xl font-heading font-bold mb-4">Contact Us</h1>
-            <p className="text-muted-foreground text-lg">Have a question or need a quote? We'd love to hear from you.</p>
+    <div className="pt-32 md:pt-40 font-muli bg-white overflow-x-hidden">
+      <SEO
+        title="Contact Us | Lamiya Al Kahleej Company - Professional Support in KSA"
+        description="Get in touch with Lamiya Al Kahleej Company for fast booking and professional support for cleaning, AC, and pest control services across Saudi Arabia."
+      />
+
+      {/* Header */}
+      <section className="relative py-24 md:py-40 bg-black overflow-hidden text-center">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-alfawad-primary opacity-10 rounded-full blur-[100px] -mr-[250px] -mt-[250px]" />
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8 }}>
+            <span className="text-alfawad-primary font-black text-[12px] uppercase tracking-[0.4em] mb-6 block">Get In Touch</span>
+            <h1 className="text-[40px] md:text-[80px] font-black text-white leading-none uppercase tracking-tighter mb-8 italic">Contact Us</h1>
+            <div className="w-24 h-2 bg-alfawad-primary mx-auto mb-10" />
+            <p className="text-white/60 text-xl font-medium max-w-2xl mx-auto uppercase tracking-widest leading-relaxed">
+              Book professional services today and let our experts handle the rest.
+            </p>
           </motion.div>
         </div>
       </section>
 
-      <section className="section-padding">
-        <div className="container mx-auto">
-          <div className="grid lg:grid-cols-5 gap-10">
-            <div className="lg:col-span-2 space-y-4">
+      <section className="py-24 md:py-32">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="grid lg:grid-cols-5 gap-20">
+            <div className="lg:col-span-2 space-y-8">
+              <AnimatedSection>
+                <h3 className="text-3xl font-black text-black uppercase tracking-tighter mb-10 italic">Office Details</h3>
+              </AnimatedSection>
+
               {contactInfo.map((info, i) => (
                 <AnimatedSection key={i} delay={i * 0.1}>
-                  <div className="bg-muted rounded-xl p-5 flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full teal-bg flex items-center justify-center flex-shrink-0">
-                      <info.icon className="w-5 h-5 text-primary-foreground" />
+                  <div className="bg-[#fcfcfc] p-10 flex items-start gap-8 border-l-8 border-transparent hover:border-alfawad-primary transition-all duration-500 hover:shadow-2xl group">
+                    <div className="w-14 h-14 bg-black text-white flex items-center justify-center flex-shrink-0 group-hover:bg-alfawad-primary transition-colors">
+                      <info.icon className="w-6 h-6" />
                     </div>
                     <div>
-                      <div className="text-xs text-muted-foreground uppercase tracking-wider mb-1">{info.label}</div>
+                      <div className="text-[11px] font-black text-gray-400 uppercase tracking-[0.4em] mb-3">{info.label}</div>
                       {info.href ? (
-                        <a href={info.href} className="font-medium text-sm hover:text-primary transition-colors">{info.value}</a>
+                        <a href={info.href} className="text-lg font-black text-black uppercase tracking-tighter hover:text-alfawad-primary transition-colors">{info.value}</a>
                       ) : (
-                        <div className="font-medium text-sm">{info.value}</div>
+                        <div className="text-lg font-black text-black uppercase tracking-tighter leading-tight">{info.value}</div>
                       )}
                     </div>
                   </div>
@@ -49,16 +65,17 @@ const Contact = () => {
               ))}
 
               <AnimatedSection delay={0.4}>
-                <div className="rounded-xl overflow-hidden mt-4">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3710.8!2d39.19!3d21.54!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDMyJzI0LjAiTiAzOcKwMTEnMjQuMCJF!5e0!3m2!1sen!2ssa!4v1"
-                    width="100%"
-                    height="200"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    title="Clean Pro KSA Location"
-                  />
+                <div className="bg-black text-white p-10 mt-12 relative overflow-hidden group">
+                  <div className="absolute top-0 right-0 p-10 opacity-10 group-hover:scale-150 transition-all duration-700">
+                    <MapPin className="w-20 h-20 text-alfawad-primary" />
+                  </div>
+                  <h4 className="text-xl font-black uppercase tracking-tighter mb-6 italic">Visit Our Headquarters</h4>
+                  <p className="text-white/60 font-medium uppercase tracking-widest text-[11px] leading-loose mb-8">
+                    8562 Al Tasni, An Nahdah District, <br /> Jeddah 23523, Kingdom of Saudi Arabia.
+                  </p>
+                  <a href="#" target="_blank" className="text-alfawad-primary font-black uppercase tracking-widest text-xs flex items-center gap-3 hover:text-white transition-colors group/link">
+                    Get Directions <ArrowRight className="w-4 h-4 translate-x-0 group-hover/link:translate-x-2 transition-transform" />
+                  </a>
                 </div>
               </AnimatedSection>
             </div>
@@ -66,38 +83,44 @@ const Contact = () => {
             <div className="lg:col-span-3">
               <AnimatedSection>
                 {submitted ? (
-                  <div className="bg-muted rounded-2xl p-12 text-center">
-                    <CheckCircle className="w-16 h-16 text-primary mx-auto mb-4" />
-                    <h3 className="text-2xl font-heading font-bold mb-2">Message Sent!</h3>
-                    <p className="text-muted-foreground">We'll get back to you within 24 hours.</p>
+                  <div className="bg-[#f8f9fa] p-16 md:p-32 text-center border-t-[12px] border-alfawad-primary shadow-2xl relative overflow-hidden">
+                    <div className="absolute top-0 right-0 p-10 opacity-5 -mr-5 -mt-5">
+                      <CheckCircle className="w-40 h-40" />
+                    </div>
+                    <CheckCircle className="w-24 h-24 text-alfawad-primary mx-auto mb-10 scale-125" />
+                    <h3 className="text-4xl font-black text-black mb-6 uppercase tracking-tighter italic">Message Transmitted</h3>
+                    <p className="text-gray-500 text-lg font-bold uppercase tracking-[0.2em] max-w-sm mx-auto mb-12">Thank you! We will get back to you within 24 hours with a solution.</p>
+                    <button onClick={() => setSubmitted(false)} className="bg-black text-white px-12 py-5 font-black uppercase tracking-widest text-sm hover:shadow-2xl transition-all">Back to Contact Form</button>
                   </div>
                 ) : (
-                  <form onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }} className="bg-muted rounded-2xl p-8 md:p-10 space-y-5">
-                    <h3 className="text-xl font-heading font-bold mb-2">Send us a message</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                      <div>
-                        <label className="text-sm font-medium mb-1.5 block">Name *</label>
-                        <Input placeholder="Your name" required className="bg-background" />
+                  <form onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }} className="bg-[#fcfcfc] p-10 md:p-16 space-y-10 shadow-[40px_40px_0px_0px_#f8f9fa] border-t-8 border-black">
+                    <h3 className="text-3xl font-black text-black mb-4 uppercase tracking-tighter italic">Send Pro Inquiry</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                      <div className="space-y-3">
+                        <label className="text-[11px] font-black uppercase tracking-[0.4em] text-gray-400">Your Full Name *</label>
+                        <Input placeholder="E.G. ABDULLAH SAUD" required className="bg-white rounded-none border-gray-200 focus:border-alfawad-primary h-14 font-black text-xs uppercase" />
                       </div>
-                      <div>
-                        <label className="text-sm font-medium mb-1.5 block">Phone</label>
-                        <Input placeholder="05X XXX XXXX" type="tel" className="bg-background" />
+                      <div className="space-y-3">
+                        <label className="text-[11px] font-black uppercase tracking-[0.4em] text-gray-400">Mobile Number *</label>
+                        <Input placeholder=" +966 XXXXXXXX" type="tel" required className="bg-white rounded-none border-gray-200 focus:border-alfawad-primary h-14 font-black text-xs" />
                       </div>
                     </div>
-                    <div>
-                      <label className="text-sm font-medium mb-1.5 block">Email *</label>
-                      <Input placeholder="your@email.com" type="email" required className="bg-background" />
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                      <div className="space-y-3">
+                        <label className="text-[11px] font-black uppercase tracking-[0.4em] text-gray-400">Email Address</label>
+                        <Input placeholder="YOUR@EMAIL.COM" type="email" className="bg-white rounded-none border-gray-200 focus:border-alfawad-primary h-14 font-black text-xs" />
+                      </div>
+                      <div className="space-y-3">
+                        <label className="text-[11px] font-black uppercase tracking-[0.4em] text-gray-400">Service Required</label>
+                        <Input placeholder="E.G. DEEP CLEANING" className="bg-white rounded-none border-gray-200 focus:border-alfawad-primary h-14 font-black text-xs uppercase" />
+                      </div>
                     </div>
-                    <div>
-                      <label className="text-sm font-medium mb-1.5 block">Subject</label>
-                      <Input placeholder="How can we help?" className="bg-background" />
+                    <div className="space-y-3">
+                      <label className="text-[11px] font-black uppercase tracking-[0.4em] text-gray-400">Message / Requirements *</label>
+                      <Textarea placeholder="DESCRIBE YOUR REQUEST..." rows={6} required className="bg-white rounded-none border-gray-200 focus:border-alfawad-primary font-black text-xs py-4 uppercase" />
                     </div>
-                    <div>
-                      <label className="text-sm font-medium mb-1.5 block">Message *</label>
-                      <Textarea placeholder="Your message..." rows={5} required className="bg-background" />
-                    </div>
-                    <button type="submit" className="cta-teal px-8 py-3 text-sm w-full flex items-center justify-center gap-2">
-                      Send Message <Send className="w-4 h-4" />
+                    <button type="submit" className="bg-black text-white px-10 py-6 text-sm font-black uppercase tracking-widest w-full hover:bg-alfawad-primary transition-all flex items-center justify-center gap-4 shadow-2xl group">
+                      Send Secure Message <Send className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                     </button>
                   </form>
                 )}

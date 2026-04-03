@@ -21,7 +21,7 @@ const Overview = () => {
               </h1>
               <div className="w-24 h-2 bg-white mb-8 mx-auto" />
               <div className="flex items-center justify-center gap-3 text-[14px] md:text-[16px] font-black text-white/95 uppercase tracking-[0.2em]">
-                <Link to="/alfawad" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
+                <Link to="/" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
                 <ChevronRight className="w-4 h-4 text-white/50" />
                 <span className="text-white">Overview</span>
               </div>

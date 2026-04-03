@@ -11,14 +11,14 @@ export const Brochure = () => (
         alt="Brochure Background" 
         className="absolute inset-0 w-full h-full object-cover"
       />
-        <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] relative z-20 flex flex-col items-center justify-center text-center pt-20">
+        <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] relative z-20 flex flex-col items-center justify-center text-center pt-32 md:pt-48">
            <div className="w-full text-white">
               <h1 className="text-[45px] md:text-[75px] font-black leading-[0.9] mb-6 uppercase tracking-tighter text-white drop-shadow-2xl">
                 COMPANY <br /> BROCHURE
               </h1>
               <div className="w-24 h-2 bg-white mb-8 mx-auto" />
               <div className="flex items-center justify-center gap-3 text-[14px] md:text-[16px] font-black text-white/95 uppercase tracking-[0.2em]">
-                <Link to="/alfawad" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
+                  <Link to="/" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
                 <ChevronRight className="w-4 h-4 text-white/50" />
                 <span className="text-white">Brochure</span>
               </div>
@@ -40,7 +40,7 @@ export const Brochure = () => (
             </p>
           </div>
           <button className="flex items-center gap-4 bg-black hover:bg-alfawad-primary text-white font-black uppercase tracking-widest py-6 px-12 rounded mt-4 transition-all shadow-2xl hover:-translate-y-1">
-            <Download className="w-6 h-6" /> AL FAWAD PROFILE 2026 (PDF)
+            <Download className="w-6 h-6" /> LAMIYA AL KAHLEEJ PROFILE 2026 (PDF)
           </button>
         </div>
       </div>
@@ -82,14 +82,14 @@ export const ClientsGallery = () => {
           alt="Clients Background" 
           className="absolute inset-0 w-full h-full object-cover"
         />
-          <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] relative z-20 flex flex-col items-center justify-center text-center pt-20">
+          <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] relative z-20 flex flex-col items-center justify-center text-center pt-32 md:pt-48">
              <div className="w-full text-white">
                 <h1 className="text-[45px] md:text-[75px] font-black leading-[0.9] mb-6 uppercase tracking-tighter text-white drop-shadow-2xl">
                   OUR <br /> CLIENTS
                 </h1>
                 <div className="w-24 h-2 bg-white mb-8 mx-auto" />
                 <div className="flex items-center justify-center gap-3 text-[14px] md:text-[16px] font-black text-white/95 uppercase tracking-[0.2em]">
-                  <Link to="/alfawad" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
+                    <Link to="/" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
                   <ChevronRight className="w-4 h-4 text-white/50" />
                   <span className="text-white">Clients</span>
                 </div>
@@ -102,7 +102,7 @@ export const ClientsGallery = () => {
           <div className="text-center mb-20 flex flex-col items-center">
              <span className="text-alfawad-primary font-black text-[14px] uppercase tracking-[0.4em] mb-4">Partnering with Leaders</span>
              <h2 className="text-[36px] md:text-[55px] font-black text-black uppercase tracking-tighter leading-none mb-6">
-               Trusted By Major Corporations
+               Our Professional Clients
              </h2>
              <div className="w-24 h-1 bg-gray-300" />
           </div>
@@ -143,14 +143,14 @@ export const Enquiry = () => (
         alt="Enquiry Background" 
         className="absolute inset-0 w-full h-full object-cover"
       />
-        <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] relative z-20 flex flex-col items-center justify-center text-center pt-20">
+        <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] relative z-20 flex flex-col items-center justify-center text-center pt-32 md:pt-48">
            <div className="w-full text-white">
               <h1 className="text-[45px] md:text-[75px] font-black leading-[0.9] mb-6 uppercase tracking-tighter text-white drop-shadow-2xl">
                 GET IN <br /> TOUCH
               </h1>
               <div className="w-24 h-2 bg-white mb-8 mx-auto" />
               <div className="flex items-center justify-center gap-3 text-[14px] md:text-[16px] font-black text-white/95 uppercase tracking-[0.2em]">
-                <Link to="/alfawad" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
+                  <Link to="/" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
                 <ChevronRight className="w-4 h-4 text-white/50" />
                 <span className="text-white">Enquiry</span>
               </div>
@@ -214,14 +214,14 @@ export const Career = () => (
         alt="Career Background" 
         className="absolute inset-0 w-full h-full object-cover"
       />
-        <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] relative z-20 flex flex-col items-center justify-center text-center pt-20">
+        <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] relative z-20 flex flex-col items-center justify-center text-center pt-32 md:pt-48">
            <div className="w-full text-white">
               <h1 className="text-[45px] md:text-[75px] font-black leading-[0.9] mb-6 uppercase tracking-tighter text-white drop-shadow-2xl">
                 JOIN OUR <br /> TEAM
               </h1>
               <div className="w-24 h-2 bg-white mb-8 mx-auto" />
               <div className="flex items-center justify-center gap-3 text-[14px] md:text-[16px] font-black text-white/95 uppercase tracking-[0.2em]">
-                <Link to="/alfawad" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
+                  <Link to="/" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
                 <ChevronRight className="w-4 h-4 text-white/50" />
                 <span className="text-white">Careers</span>
               </div>
@@ -235,7 +235,7 @@ export const Career = () => (
           <div className="text-center flex flex-col items-center">
             <span className="text-alfawad-primary font-black text-[14px] uppercase tracking-[0.4em] mb-4">Building Futures</span>
             <h2 className="text-[36px] md:text-[55px] font-black text-black uppercase tracking-tighter leading-none mb-6">Drive Your Career Forward</h2>
-            <p className="text-[#666666] text-xl font-medium max-w-3xl leading-relaxed">AL FAWAD is constantly looking for dedicated professionals who thrive on challenge and operational excellence.</p>
+            <p className="text-[#666666] text-xl font-medium max-w-3xl leading-relaxed">Lamiya Al Kahleej General Contracting is constantly looking for dedicated professionals who thrive on challenge and operational excellence.</p>
           </div>
           
           <div className="bg-black text-white p-12 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 border-l-[12px] border-alfawad-primary">

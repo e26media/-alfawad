@@ -2,11 +2,11 @@ import { Link, useLocation } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 
 const OVERVIEW_LINKS = [
-  { label: "INTRODUCTION", path: "/alfawad/introduction" },
-  { label: "CHAIRMAN MESSAGE", path: "/alfawad/chairman-message" },
-  { label: "VISION & MISSION", path: "/alfawad/vision-mission" },
-  { label: "QUALITY POLICY", path: "/alfawad/quality-policy" },
-  { label: "ENVIRONMENT & SAFETY POLICY", path: "/alfawad/environment-safety" },
+  { label: "INTRODUCTION", path: "/introduction" },
+  { label: "CHAIRMAN MESSAGE", path: "/chairman-message" },
+  { label: "VISION & MISSION", path: "/vision-mission" },
+  { label: "QUALITY POLICY", path: "/quality-policy" },
+  { label: "ENVIRONMENT & SAFETY POLICY", path: "/environment-safety" },
 ];
 
 const OverviewSidebar = () => {
@@ -15,7 +15,7 @@ const OverviewSidebar = () => {
   return (
     <div className="w-full lg:w-1/3 xl:w-1/4">
       {/* Sidebar Navigation */}
-      <div className="bg-white shadow-xl border border-gray-100 overflow-hidden mb-8">
+      <div className="bg-white shadow-xl border border-gray-100 overflow-hidden mb-8 ">
         <h3 className="bg-[#1c1c1c] text-white font-black uppercase text-[18px] px-8 py-5 flex items-center justify-between tracking-tighter">
           Overview <div className="w-2.5 h-2.5 rounded-full bg-alfawad-primary" />
         </h3>
@@ -23,7 +23,7 @@ const OverviewSidebar = () => {
           {OVERVIEW_LINKS.map((link) => {
             const isActive = location.pathname === link.path;
             return (
-              <li key={link.path} className="border-b border-gray-100 last:border-0">
+              <li key={link.path} className="border-b border-gray-100 last:border-0 ">
                 <Link
                   to={link.path}
                   className={`flex items-center justify-between px-8 py-5 transition-all text-[14px] font-black tracking-tight group ${

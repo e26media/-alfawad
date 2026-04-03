@@ -63,7 +63,7 @@ export default function AlfawadHome() {
     <div className="flex flex-col min-h-screen font-muli bg-[#f4f5f6] overflow-x-hidden">
       
       {/* Hero Section */}
-      <section className="relative w-full h-[550px] sm:h-[650px] md:h-[90vh] min-h-[500px] bg-white overflow-hidden flex items-center">
+      <section className="relative w-full h-[550px] sm:h-[650px] md:h-[90vh] min-h-[500px] bg-white overflow-hidden flex items-center pt-28 md:pt-40">
         {/* Main Background Images */}
         {HERO_SLIDES.map((slide, index) => (
           <div 
@@ -82,25 +82,22 @@ export default function AlfawadHome() {
         ))}
 
         <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] relative z-10 flex h-full items-center">
-          <div className="flex flex-col gap-2 max-w-2xl mt-12 md:mt-0">
+          <div className="flex flex-col gap-2 max-w-2xl mt-10 md:mt-20">
             {HERO_SLIDES.map((slide, index) => (
               <div 
                 key={index}
                 className={`transition-all duration-700 transform ${index === currentSlide ? "translate-y-0 opacity-100 block" : "translate-y-4 opacity-0 hidden"}`}
               >
                 <h1 className="text-[34px] sm:text-[45px] md:text-[75px] font-black text-black leading-[1.0] uppercase tracking-tighter mb-4">
-                  {slide.heading} <br />
-                  <span className="text-alfawad-primary">{slide.subheading}</span>
+                  Lamiya Al Kahleej <br />
+                  <span className="text-alfawad-primary">General Contracting</span>
                 </h1>
-                {slide.description && (
-                  <p 
-                    className="text-[14px] sm:text-[18px] md:text-[24px] font-extrabold text-gray-800 mt-2 tracking-wide uppercase leading-tight max-w-sm md:max-w-none"
-                    dangerouslySetInnerHTML={{ __html: slide.description }}
-                  />
-                )}
+                <p className="text-[14px] sm:text-[18px] md:text-[24px] font-extrabold text-gray-800 mt-2 tracking-wide uppercase leading-tight max-w-sm md:max-w-[700px]">
+                  Trusted Contracting & Industrial Service Provider in Saudi Arabia
+                </p>
                 
                 <div className="mt-8 md:mt-12 flex items-center">
-                  <Link to="/alfawad/contact" className="bg-alfawad-primary hover:bg-black text-white px-10 py-4 font-black uppercase tracking-widest flex items-center justify-center gap-3 transition-all text-sm md:text-base w-full sm:w-auto shadow-lg hover:-translate-y-1">
+                  <Link to="/contact" className="bg-alfawad-primary hover:bg-black text-white px-10 py-4 font-black uppercase tracking-widest flex items-center justify-center gap-3 transition-all text-sm md:text-base w-full sm:w-auto shadow-lg hover:-translate-y-1">
                     GET IN TOUCH <span className="text-xl leading-none">&rarr;</span>
                   </Link>
                 </div>
@@ -108,9 +105,9 @@ export default function AlfawadHome() {
             ))}
             
             <div className="mt-12 md:mt-[80px] flex flex-col border-l-4 border-alfawad-primary pl-4 md:pl-6">
-              <span className="text-[13px] md:text-[20px] font-bold text-gray-900 mb-1 leading-tight">مؤسسة أحمد فؤاد باشور بوزيد للمقاولات العامة</span>
+              <span className="text-[13px] md:text-[20px] font-bold text-gray-900 mb-1 leading-tight">مؤسسة لمياء الخليج للمقاولات العامة</span>
               <span className="text-[19px] md:text-[38px] font-black uppercase text-gray-900 leading-none tracking-tighter">
-                AHMED FAWAD BAWZID EST.
+                Lamiya Al Kahleej Gen. Cont.
               </span>
             </div>
           </div>
@@ -155,38 +152,35 @@ export default function AlfawadHome() {
             <div className="lg:w-[55%] flex flex-col gap-6 justify-center">
               <div className="flex items-start gap-4 md:gap-6 border-b border-gray-300 pb-8 md:pb-10 mb-2 md:mb-6">
                 <div className="flex flex-col justify-center pt-1 md:pt-2">
-                  <span className="text-[10px] md:text-[12px] font-black text-gray-500 tracking-[0.3em] uppercase mb-1">CONTRACTING EST.</span>
+                  <span className="text-[10px] md:text-[12px] font-black text-gray-500 tracking-[0.3em] uppercase mb-1">GENERAL CONTRACTING</span>
                   <h2 className="text-[20px] md:text-[34px] font-black text-black leading-[1.1] uppercase tracking-tighter">
-                    LAMIYA AL KHALEEJ <br/> AL ITTEHAD
+                    Lamiya Al Kahleej <br/> General Contracting
                   </h2>
                 </div>
               </div>
 
               <h3 className="text-[18px] md:text-[24px] font-black text-alfawad-primary mt-2 md:mt-4 uppercase tracking-tight">
-                ESTABLISHMENT FOR GENERAL CONTRACTING
+                LEADING SAUDI-BASED CONTRACTING FIRM
               </h3>
-              <h4 className="text-[18px] md:text-[26px] font-black text-black mt-1 md:mt-2 leading-tight">
-                Trusted builders for your dream projects experience, passion & more!
-              </h4>
               
               <p className="text-[#666666] leading-[28px] md:leading-[32px] text-[16px] md:text-[18px] font-medium">
-                Welcome to the world of AL FAWAD Engineering & Constructions where you aspire and we build!. AL FAWAD is the leading construction establishment with ISO 9001:2015 Quality Management System and ISO 140001:2015 Environmental Management System.
+                Lamiya Al Kahleej General Contracting is a leading Saudi-based contracting and industrial support services provider delivering reliable manpower, equipment rental, construction support, material supply, and project management services across the Kingdom of Saudi Arabia. We proudly serve clients in Al Khobar, Jubail, Dammam, and Riyadh, supporting various sectors such as Oil & Gas, Petrochemical, Industrial Plants, Civil Infrastructure, Mechanical & Electrical Projects, and Facility Maintenance.
               </p>
 
               <div className="flex items-center gap-6 mt-4 md:mt-6 border-b border-gray-200 pb-8 md:pb-10 w-full max-w-[450px]">
                 <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
                   <img src="https://alfawad.com/images/font.jpg" alt="Signature" className="h-10 md:h-12 object-contain" />
                   <div className="text-alfawad-primary font-black text-[13px] md:text-[15px] uppercase tracking-widest leading-none">
-                    Technical Operation Manager
+                    Chairman / Managing Director
                   </div>
                 </div>
               </div>
 
-              <Link to="/alfawad/introduction" className="flex items-center gap-4 mt-2 md:mt-4 group w-max">
+              <Link to="/introduction" className="flex items-center gap-4 mt-2 md:mt-4 group w-max">
                 <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border-2 border-alfawad-primary flex items-center justify-center transition-all group-hover:bg-alfawad-primary">
                   <div className="w-2 h-2 rounded-full bg-alfawad-primary group-hover:bg-white transition-all"></div>
                 </div>
-                <span className="text-[16px] md:text-[18px] font-black text-black uppercase tracking-tighter group-hover:text-alfawad-primary transition-colors">For More to Read</span>
+                <span className="text-[16px] md:text-[18px] font-black text-black uppercase tracking-tighter group-hover:text-alfawad-primary transition-colors">Know Our Story</span>
               </Link>
             </div>
 
@@ -231,7 +225,7 @@ export default function AlfawadHome() {
           <div className="text-center mb-12 md:mb-20 flex flex-col items-center px-4">
              <span className="text-alfawad-primary font-black text-[12px] md:text-[14px] uppercase tracking-[0.4em] mb-3 md:mb-4">Our Services</span>
              <h2 className="text-[28px] sm:text-[36px] md:text-[55px] font-black text-black uppercase tracking-tighter leading-tight mb-4 md:mb-6">
-               Where Passion Meets Productivity
+                Where Passion Meets Productivity
              </h2>
              <div className="w-20 md:w-24 h-1 bg-gray-200" />
           </div>
@@ -266,7 +260,7 @@ export default function AlfawadHome() {
                    <p className="text-gray-500 text-sm md:text-base font-medium leading-relaxed mb-6 md:mb-8">
                      {service.desc}
                    </p>
-                   <Link to={`/alfawad/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`} className="mt-auto flex items-center gap-2 text-black font-black uppercase text-[12px] md:text-[14px] tracking-widest group-hover:gap-4 transition-all">
+                   <Link to={`/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`} className="mt-auto flex items-center gap-2 text-black font-black uppercase text-[12px] md:text-[14px] tracking-widest group-hover:gap-4 transition-all">
                      Read More <ChevronRight className="w-5 h-5 text-alfawad-primary" />
                    </Link>
                 </div>
@@ -288,7 +282,7 @@ export default function AlfawadHome() {
                   <p className="text-white/90 text-[16px] md:text-[18px] leading-relaxed font-bold mb-8 md:mb-10">
                     Our Project Management team supports you in the execution of your projects from the initial request to the design and delivery...
                   </p>
-                  <Link to="/alfawad/services/project-support" className="bg-white text-alfawad-primary px-6 md:px-8 py-3 md:py-4 font-black uppercase tracking-widest text-xs md:text-sm hover:bg-black hover:text-white transition-all transform hover:-translate-y-1 inline-block">
+                  <Link to="/services/project-support" className="bg-white text-alfawad-primary px-6 md:px-8 py-3 md:py-4 font-black uppercase tracking-widest text-xs md:text-sm hover:bg-black hover:text-white transition-all transform hover:-translate-y-1 inline-block">
                     Know More
                   </Link>
                </div>
@@ -304,7 +298,7 @@ export default function AlfawadHome() {
                        </li>
                      ))}
                   </ul>
-                  <Link to="/alfawad/services/project-management" className="bg-white text-alfawad-primary px-6 md:px-8 py-3 md:py-4 font-black uppercase tracking-widest text-xs md:text-sm hover:bg-black hover:text-white transition-all transform hover:-translate-y-1 inline-block">
+                  <Link to="/services/project-management" className="bg-white text-alfawad-primary px-6 md:px-8 py-3 md:py-4 font-black uppercase tracking-widest text-xs md:text-sm hover:bg-black hover:text-white transition-all transform hover:-translate-y-1 inline-block">
                     Know More
                   </Link>
                </div>
@@ -351,24 +345,24 @@ export default function AlfawadHome() {
             
             {[
               { 
-                title: "Support Services", 
-                icon: <Settings className="w-10 h-10 md:w-12 md:h-12" />,
-                desc: "We aim to provide services at reasonable prices & in a timely manner."
+                title: "Fast Mobilization", 
+                icon: <Truck className="w-10 h-10 md:w-12 md:h-12" />,
+                desc: "Quick mobilization of manpower and equipment to site."
               },
               { 
-                title: "Team Work", 
+                title: "Skilled Workforce", 
                 icon: <Users className="w-10 h-10 md:w-12 md:h-12" />,
-                desc: "We don't work as one person... we work together as a team."
+                desc: "Qualified technical and non-technical workforce categories."
               },
               { 
-                title: "Integrity", 
+                title: "Modern Fleet", 
+                icon: <Settings className="w-10 h-10 md:w-12 md:h-12" />,
+                desc: "Up-to-date equipment fleet with regular maintenance."
+              },
+              { 
+                title: "Safety First", 
                 icon: <Shield className="w-10 h-10 md:w-12 md:h-12" />,
-                desc: "Our actions are consistent with our values and principles."
-              },
-              { 
-                title: "Commitment", 
-                icon: <CheckCircle className="w-10 h-10 md:w-12 md:h-12" />,
-                desc: "We are proactive in finding the best solutions for our clients to achieve their goals."
+                desc: "Strict adherence to HSE and environmental regulations."
               },
             ].map((item, i) => (
               <div key={i} className="bg-white p-8 md:p-12 h-full flex flex-col shadow-sm group relative transition-all duration-500 transform hover:-translate-y-2 border-b-4 border-transparent hover:border-alfawad-primary">
@@ -396,7 +390,7 @@ export default function AlfawadHome() {
                   Trusted By Industry Leaders
                 </h2>
              </div>
-             <Link to="/alfawad/clients" className="text-black font-black uppercase text-[14px] tracking-widest border-b-2 border-alfawad-primary pb-1 hover:text-alfawad-primary transition-all">
+             <Link to="/clients" className="text-black font-black uppercase text-[14px] tracking-widest border-b-2 border-alfawad-primary pb-1 hover:text-alfawad-primary transition-all">
                 View All Clients
              </Link>
           </div>
