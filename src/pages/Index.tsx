@@ -51,12 +51,12 @@ const Index = () => {
 
   return (
     <div className="flex flex-col min-h-screen font-muli bg-white overflow-x-hidden">
-      <SEO 
-        title="Lamiya Al Kahleej Company | Cleaning, AC & Pest Control Services in KSA" 
-        description="Lamiya Al Kahleej Company provides deep cleaning, sanitization, AC cleaning, duct cleaning, pest control, and water tank disinfection services across Saudi Arabia." 
+      <SEO
+        title="Lamiya Al Kahleej Company | Cleaning, AC & Pest Control Services in KSA"
+        description="Lamiya Al Kahleej Company provides deep cleaning, sanitization, AC cleaning, duct cleaning, pest control, and water tank disinfection services across Saudi Arabia."
       />
       {/* Hero Section */}
-      <section className="relative min-h-[600px] md:min-h-[85vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[600px] md:min-h-[85vh] flex items-center overflow-hidden mt-5">
         <div
           className="absolute inset-0 bg-cover bg-center transition-transform duration-[10000ms] hover:scale-110"
           style={{ backgroundImage: `url(${heroBg})` }}
@@ -101,25 +101,25 @@ const Index = () => {
         {/* Floating Icons for Desktop */}
         <div className="absolute bottom-0 left-0 right-0 z-20 bg-gradient-to-t from-black/50 to-transparent pb-10">
           <div className="container mx-auto px-4">
-             <div className="flex overflow-x-auto gap-8 no-scrollbar pb-4 md:justify-center">
-                {heroServices.slice(0, 7).map((service, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.5 + i * 0.1 }}
-                  >
-                    <Link to={service.path} className="flex flex-col items-center group min-w-[100px]">
-                      <div className="w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/10 flex items-center justify-center group-hover:bg-alfawad-primary group-hover:border-alfawad-primary transition-all duration-500 mb-3 group-hover:-translate-y-2 group-hover:shadow-[0_15px_30px_rgba(182,138,65,0.4)]">
-                        <service.icon className="w-8 h-8 text-white" />
-                      </div>
-                      <span className="text-[10px] font-black text-white/70 uppercase tracking-widest text-center leading-tight group-hover:text-alfawad-primary transition-colors whitespace-pre-line">
-                        {service.title}
-                      </span>
-                    </Link>
-                  </motion.div>
-                ))}
-             </div>
+            <div className="flex overflow-x-auto gap-8 no-scrollbar pb-4 md:justify-center">
+              {heroServices.slice(0, 7).map((service, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5 + i * 0.1 }}
+                >
+                  <Link to={service.path} className="flex flex-col items-center group min-w-[100px]">
+                    <div className="w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/10 flex items-center justify-center group-hover:bg-alfawad-primary group-hover:border-alfawad-primary transition-all duration-500 mb-3 group-hover:-translate-y-2 group-hover:shadow-[0_15px_30px_rgba(182,138,65,0.4)]">
+                      <service.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <span className="text-[10px] font-black text-white/70 uppercase tracking-widest text-center leading-tight group-hover:text-alfawad-primary transition-colors whitespace-pre-line">
+                      {service.title}
+                    </span>
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -127,22 +127,22 @@ const Index = () => {
       {/* Trust Badges Bar */}
       <section className="bg-black py-8 border-y border-white/5">
         <div className="container mx-auto px-4 flex flex-wrap justify-center md:justify-between items-center gap-8 opacity-50 grayscale hover:grayscale-0 transition-all">
-           <div className="flex items-center gap-3 text-white">
-             <ShieldCheck className="w-6 h-6 text-alfawad-primary" />
-             <span className="text-[12px] font-black uppercase tracking-widest">Certified Technicians</span>
-           </div>
-           <div className="flex items-center gap-3 text-white">
-             <Clock className="w-6 h-6 text-alfawad-primary" />
-             <span className="text-[12px] font-black uppercase tracking-widest">On-Time Service</span>
-           </div>
-           <div className="flex items-center gap-3 text-white">
-             <BadgeCheck className="w-6 h-6 text-alfawad-primary" />
-             <span className="text-[12px] font-black uppercase tracking-widest">Guaranteed Quality</span>
-           </div>
-           <div className="flex items-center gap-3 text-white">
-             <MapPin className="w-6 h-6 text-alfawad-primary" />
-             <span className="text-[12px] font-black uppercase tracking-widest">Coverage Across KSA</span>
-           </div>
+          <div className="flex items-center gap-3 text-white">
+            <ShieldCheck className="w-6 h-6 text-alfawad-primary" />
+            <span className="text-[12px] font-black uppercase tracking-widest">Certified Technicians</span>
+          </div>
+          <div className="flex items-center gap-3 text-white">
+            <Clock className="w-6 h-6 text-alfawad-primary" />
+            <span className="text-[12px] font-black uppercase tracking-widest">On-Time Service</span>
+          </div>
+          <div className="flex items-center gap-3 text-white">
+            <BadgeCheck className="w-6 h-6 text-alfawad-primary" />
+            <span className="text-[12px] font-black uppercase tracking-widest">Guaranteed Quality</span>
+          </div>
+          <div className="flex items-center gap-3 text-white">
+            <MapPin className="w-6 h-6 text-alfawad-primary" />
+            <span className="text-[12px] font-black uppercase tracking-widest">Coverage Across KSA</span>
+          </div>
         </div>
       </section>
 
@@ -158,7 +158,7 @@ const Index = () => {
                 </div>
                 <div className="absolute -bottom-10 -right-10 bg-black text-white p-10 hidden md:block">
                   <div className="text-5xl font-black text-alfawad-primary mb-2">15+</div>
-                  <div className="text-xs font-black uppercase tracking-[0.2em] leading-relaxed">Years of Industry <br/> Excellence in KSA</div>
+                  <div className="text-xs font-black uppercase tracking-[0.2em] leading-relaxed">Years of Industry <br /> Excellence in KSA</div>
                 </div>
               </div>
             </AnimatedSection>
@@ -177,7 +177,7 @@ const Index = () => {
               </div>
               <Link to="/about" className="group flex items-center gap-6">
                 <div className="w-16 h-16 rounded-full border-2 border-black flex items-center justify-center transition-all group-hover:bg-black group-hover:scale-110">
-                   <ArrowRight className="w-6 h-6 group-hover:text-white transition-colors" />
+                  <ArrowRight className="w-6 h-6 group-hover:text-white transition-colors" />
                 </div>
                 <span className="text-lg font-black uppercase tracking-tighter text-black">Read Our Full Story</span>
               </Link>
@@ -200,7 +200,7 @@ const Index = () => {
               </Link>
             </AnimatedSection>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1">
             {popularServices.map((service, i) => (
               <Link
@@ -214,10 +214,10 @@ const Index = () => {
                   className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-10 flex flex-col justify-end">
-                   <span className="text-alfawad-primary text-[10px] font-black uppercase tracking-[0.3em] mb-2 opacity-0 group-hover:opacity-100 transition-opacity translate-y-4 group-hover:translate-y-0 duration-500">Expert Service</span>
-                   <h3 className="text-2xl font-black uppercase tracking-tighter mb-4 translate-y-8 group-hover:translate-y-0 transition-transform duration-500">{service.title}</h3>
-                   <div className="w-10 h-1 bg-alfawad-primary mb-6 transition-all group-hover:w-full" />
-                   <span className="text-xs font-black uppercase tracking-widest opacity-0 group-hover:opacity-60 transition-opacity">Learn More &rarr;</span>
+                  <span className="text-alfawad-primary text-[10px] font-black uppercase tracking-[0.3em] mb-2 opacity-0 group-hover:opacity-100 transition-opacity translate-y-4 group-hover:translate-y-0 duration-500">Expert Service</span>
+                  <h3 className="text-2xl font-black uppercase tracking-tighter mb-4 translate-y-8 group-hover:translate-y-0 transition-transform duration-500">{service.title}</h3>
+                  <div className="w-10 h-1 bg-alfawad-primary mb-6 transition-all group-hover:w-full" />
+                  <span className="text-xs font-black uppercase tracking-widest opacity-0 group-hover:opacity-60 transition-opacity">Learn More &rarr;</span>
                 </div>
               </Link>
             ))}
@@ -230,8 +230,8 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <AnimatedSection>
-               <h2 className="text-[40px] md:text-[60px] font-black text-black leading-[1] uppercase tracking-tighter mb-10">
-                Not Just a <br/> Cleaning <br/> <span className="text-alfawad-primary">Company.</span>
+              <h2 className="text-[40px] md:text-[60px] font-black text-black leading-[1] uppercase tracking-tighter mb-10">
+                Not Just a <br /> Cleaning <br /> <span className="text-alfawad-primary">Company.</span>
               </h2>
               <p className="text-gray-500 text-lg mb-12 font-medium max-w-lg">
                 We are a complete hygiene and maintenance solution provider that understands Saudi living standards and customer expectations.
@@ -246,8 +246,8 @@ const Index = () => {
                   "Affordable annual maintenance packages",
                   "Customer satisfaction guaranteed",
                 ].map((item, i) => (
-                  <motion.div 
-                    key={i} 
+                  <motion.div
+                    key={i}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.1 }}
@@ -261,23 +261,23 @@ const Index = () => {
                 ))}
               </div>
             </AnimatedSection>
-            
+
             <AnimatedSection delay={0.3}>
-               <div className="relative">
-                  <div className="aspect-square bg-cream relative z-10 p-12 overflow-hidden group">
-                     <div className="absolute inset-0 bg-alfawad-primary opacity-0 group-hover:opacity-10 transition-opacity" />
-                     <div className="relative z-20 h-full flex flex-col justify-center">
-                        <Star className="w-16 h-16 text-alfawad-primary mb-10 fill-alfawad-primary" />
-                        <h3 className="text-4xl font-black text-black uppercase tracking-tighter mb-10 leading-tight">Professional Standards in Every Step</h3>
-                        <p className="text-gray-600 font-bold leading-relaxed mb-10">We focus on professional-grade equipment, eco-friendly chemicals, and highly trained technicians to deliver exceptional results every time across the Kingdom.</p>
-                        <div className="flex gap-4">
-                           <div className="px-6 py-3 bg-black text-white text-[10px] font-black uppercase tracking-widest">ISO Certified</div>
-                           <div className="px-6 py-3 bg-white text-black border border-black/10 text-[10px] font-black uppercase tracking-widest">Premium Quality</div>
-                        </div>
-                     </div>
+              <div className="relative">
+                <div className="aspect-square bg-cream relative z-10 p-12 overflow-hidden group">
+                  <div className="absolute inset-0 bg-alfawad-primary opacity-0 group-hover:opacity-10 transition-opacity" />
+                  <div className="relative z-20 h-full flex flex-col justify-center">
+                    <Star className="w-16 h-16 text-alfawad-primary mb-10 fill-alfawad-primary" />
+                    <h3 className="text-4xl font-black text-black uppercase tracking-tighter mb-10 leading-tight">Professional Standards in Every Step</h3>
+                    <p className="text-gray-600 font-bold leading-relaxed mb-10">We focus on professional-grade equipment, eco-friendly chemicals, and highly trained technicians to deliver exceptional results every time across the Kingdom.</p>
+                    <div className="flex gap-4">
+                      <div className="px-6 py-3 bg-black text-white text-[10px] font-black uppercase tracking-widest">ISO Certified</div>
+                      <div className="px-6 py-3 bg-white text-black border border-black/10 text-[10px] font-black uppercase tracking-widest">Premium Quality</div>
+                    </div>
                   </div>
-                  <div className="absolute -top-10 -right-10 w-64 h-64 border-[20px] border-alfawad-primary/10 -z-0" />
-               </div>
+                </div>
+                <div className="absolute -top-10 -right-10 w-64 h-64 border-[20px] border-alfawad-primary/10 -z-0" />
+              </div>
             </AnimatedSection>
           </div>
         </div>
@@ -287,44 +287,44 @@ const Index = () => {
       <section className="relative py-20 md:py-32 bg-black border-y border-white/5 overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-alfawad-primary/5 blur-[120px] rounded-full" />
         <div className="container mx-auto px-4 relative z-10 h-full flex items-center">
-           <div className="grid grid-cols-3 w-full gap-4 md:gap-20">
-              <div className="flex flex-col items-center">
-                 <div className="text-3xl md:text-7xl font-black text-alfawad-primary tracking-tighter"><AnimatedCounter end={1200} suffix="+" duration={2} /></div>
-                 <div className="text-[10px] md:text-sm font-black text-white/50 uppercase tracking-[0.3em] mt-4">Happy Clients</div>
-              </div>
-              <div className="flex flex-col items-center">
-                 <div className="text-3xl md:text-7xl font-black text-white tracking-tighter"><AnimatedCounter end={100} suffix="%" duration={2} /></div>
-                 <div className="text-[10px] md:text-sm font-black text-alfawad-primary uppercase tracking-[0.3em] mt-4 leading-tight text-center">Clean <br className="md:hidden" /> Guarantee</div>
-              </div>
-              <div className="flex flex-col items-center">
-                 <div className="text-3xl md:text-7xl font-black text-alfawad-primary tracking-tighter"><AnimatedCounter end={48} suffix="/7" duration={2} /></div>
-                 <div className="text-[10px] md:text-sm font-black text-white/50 uppercase tracking-[0.3em] mt-4 leading-tight text-center">Fast <br className="md:hidden" /> Response</div>
-              </div>
-           </div>
+          <div className="grid grid-cols-3 w-full gap-4 md:gap-20">
+            <div className="flex flex-col items-center">
+              <div className="text-3xl md:text-7xl font-black text-alfawad-primary tracking-tighter"><AnimatedCounter end={1200} suffix="+" duration={2} /></div>
+              <div className="text-[10px] md:text-sm font-black text-white/50 uppercase tracking-[0.3em] mt-4">Happy Clients</div>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="text-3xl md:text-7xl font-black text-white tracking-tighter"><AnimatedCounter end={100} suffix="%" duration={2} /></div>
+              <div className="text-[10px] md:text-sm font-black text-alfawad-primary uppercase tracking-[0.3em] mt-4 leading-tight text-center">Clean <br className="md:hidden" /> Guarantee</div>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="text-3xl md:text-7xl font-black text-alfawad-primary tracking-tighter"><AnimatedCounter end={48} suffix="/7" duration={2} /></div>
+              <div className="text-[10px] md:text-sm font-black text-white/50 uppercase tracking-[0.3em] mt-4 leading-tight text-center">Fast <br className="md:hidden" /> Response</div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Client Logos Marquee */}
       <section className="py-24 bg-white border-y border-gray-100 overflow-hidden">
         <div className="container mx-auto px-4 mb-16 text-center">
-           <span className="text-alfawad-primary font-black text-[12px] uppercase tracking-[0.5em] mb-4 block">Official Partners</span>
-           <h2 className="text-3xl font-black text-black uppercase tracking-tighter">Trusted By Industry Leaders</h2>
+          <span className="text-alfawad-primary font-black text-[12px] uppercase tracking-[0.5em] mb-4 block">Official Partners</span>
+          <h2 className="text-3xl font-black text-black uppercase tracking-tighter">Trusted By Industry Leaders</h2>
         </div>
         <div className="flex overflow-hidden group">
-           <motion.div 
-             animate={{ x: ["0%", "-50%"] }} 
-             transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-             className="flex gap-20 items-center justify-center min-w-full"
-           >
-              {[...clientLogos, ...clientLogos].map((logo, i) => (
-                <img 
-                  key={i} 
-                  src={logo} 
-                  alt="Client Logo" 
-                  className="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100" 
-                />
-              ))}
-           </motion.div>
+          <motion.div
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+            className="flex gap-20 items-center justify-center min-w-full"
+          >
+            {[...clientLogos, ...clientLogos].map((logo, i) => (
+              <img
+                key={i}
+                src={logo}
+                alt="Client Logo"
+                className="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100"
+              />
+            ))}
+          </motion.div>
         </div>
       </section>
 
@@ -337,17 +337,17 @@ const Index = () => {
             <div className="w-20 h-2 bg-alfawad-primary" />
           </div>
           <div className="bg-white p-12 md:p-20 shadow-2xl relative">
-             <div className="absolute top-0 right-0 p-8 opacity-5">
-                <MapPin className="w-32 h-32" />
-             </div>
-             <div className="grid md:grid-cols-4 gap-6 text-center">
-                {["Riyadh", "Jeddah", "Dammam", "Al Khobar", "Dhahran", "Jubail", "Al Ahsa", "Taif", "Mecca", "Medina", "Tabuk", "Najran", "Hail", "Qassim"].map((city, i) => (
-                  <div key={i} className="py-3 border-b border-gray-100 font-black text-xs uppercase tracking-widest text-gray-400 hover:text-black transition-colors">{city}</div>
-                ))}
-             </div>
-             <p className="mt-12 text-center text-gray-500 font-bold uppercase tracking-tighter text-sm">
-                And all nearby areas across the Kingdom of Saudi Arabia.
-             </p>
+            <div className="absolute top-0 right-0 p-8 opacity-5">
+              <MapPin className="w-32 h-32" />
+            </div>
+            <div className="grid md:grid-cols-4 gap-6 text-center">
+              {["Riyadh", "Jeddah", "Dammam", "Al Khobar", "Dhahran", "Jubail", "Al Ahsa", "Taif", "Mecca", "Medina", "Tabuk", "Najran", "Hail", "Qassim"].map((city, i) => (
+                <div key={i} className="py-3 border-b border-gray-100 font-black text-xs uppercase tracking-widest text-gray-400 hover:text-black transition-colors">{city}</div>
+              ))}
+            </div>
+            <p className="mt-12 text-center text-gray-500 font-bold uppercase tracking-tighter text-sm">
+              And all nearby areas across the Kingdom of Saudi Arabia.
+            </p>
           </div>
         </div>
       </section>
@@ -355,36 +355,36 @@ const Index = () => {
       {/* Testimonials */}
       <section className="py-24 md:py-32 bg-white">
         <div className="container mx-auto px-4">
-           <div className="grid lg:grid-cols-3 gap-20 items-center">
-              <div>
-                 <span className="text-alfawad-primary font-black text-[12px] uppercase tracking-[0.5em] mb-4 block">Feedback</span>
-                 <h2 className="text-5xl font-black text-black uppercase tracking-tighter mb-8 leading-[1.1]">What Our <br/> Clients <br/> Think.</h2>
-                 <p className="text-gray-500 font-medium mb-10">Join over 1,200+ satisfied customers across Saudi Arabia who trust our premium cleaning and maintenance services.</p>
-                 <div className="flex gap-4">
-                    <button onClick={() => setCurrentTestimonial((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1))} className="w-12 h-12 rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-white transition-all">
-                       <ChevronLeft className="w-5 h-5" />
-                    </button>
-                    <button onClick={() => setCurrentTestimonial((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1))} className="w-12 h-12 rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-white transition-all">
-                       <ChevronRight className="w-5 h-5" />
-                    </button>
-                 </div>
+          <div className="grid lg:grid-cols-3 gap-20 items-center">
+            <div>
+              <span className="text-alfawad-primary font-black text-[12px] uppercase tracking-[0.5em] mb-4 block">Feedback</span>
+              <h2 className="text-5xl font-black text-black uppercase tracking-tighter mb-8 leading-[1.1]">What Our <br /> Clients <br /> Think.</h2>
+              <p className="text-gray-500 font-medium mb-10">Join over 1,200+ satisfied customers across Saudi Arabia who trust our premium cleaning and maintenance services.</p>
+              <div className="flex gap-4">
+                <button onClick={() => setCurrentTestimonial((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1))} className="w-12 h-12 rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-white transition-all">
+                  <ChevronLeft className="w-5 h-5" />
+                </button>
+                <button onClick={() => setCurrentTestimonial((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1))} className="w-12 h-12 rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-white transition-all">
+                  <ChevronRight className="w-5 h-5" />
+                </button>
               </div>
-              <div className="lg:col-span-2">
-                 <div className="bg-[#f8f9fa] p-12 md:p-20 relative min-h-[400px] flex flex-col justify-center border-l-8 border-alfawad-primary">
-                    <div className="text-alfawad-primary text-8xl font-serif absolute top-10 left-10 opacity-10">"</div>
-                    <AnimatedSection key={currentTestimonial}>
-                      <Star className="w-8 h-8 text-alfawad-primary mb-8 fill-alfawad-primary" />
-                      <p className="text-2xl md:text-3xl font-black text-black leading-snug mb-10 tracking-tighter">
-                        {testimonials[currentTestimonial].text}
-                      </p>
-                      <div className="flex items-center gap-4">
-                         <div className="w-10 h-[2px] bg-alfawad-primary" />
-                         <span className="font-black text-black uppercase tracking-[0.2em] text-xs">{testimonials[currentTestimonial].name}</span>
-                      </div>
-                    </AnimatedSection>
-                 </div>
+            </div>
+            <div className="lg:col-span-2">
+              <div className="bg-[#f8f9fa] p-12 md:p-20 relative min-h-[400px] flex flex-col justify-center border-l-8 border-alfawad-primary">
+                <div className="text-alfawad-primary text-8xl font-serif absolute top-10 left-10 opacity-10">"</div>
+                <AnimatedSection key={currentTestimonial}>
+                  <Star className="w-8 h-8 text-alfawad-primary mb-8 fill-alfawad-primary" />
+                  <p className="text-2xl md:text-3xl font-black text-black leading-snug mb-10 tracking-tighter">
+                    {testimonials[currentTestimonial].text}
+                  </p>
+                  <div className="flex items-center gap-4">
+                    <div className="w-10 h-[2px] bg-alfawad-primary" />
+                    <span className="font-black text-black uppercase tracking-[0.2em] text-xs">{testimonials[currentTestimonial].name}</span>
+                  </div>
+                </AnimatedSection>
               </div>
-           </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -398,7 +398,7 @@ const Index = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-[45px] md:text-[80px] font-black uppercase tracking-tighter leading-none mb-10">
-              Ready for a <br className="hidden md:block"/> <span className="text-alfawad-primary">Cleaner</span> Space?
+              Ready for a <br className="hidden md:block" /> <span className="text-alfawad-primary">Cleaner</span> Space?
             </h2>
             <p className="text-white/60 text-xl font-medium max-w-2xl mx-auto mb-16">
               Book your free inspection visit today and experience the professional difference of Lamiya Al Kahleej Company.

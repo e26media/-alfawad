@@ -91,26 +91,32 @@ const AlfawadFooter = () => {
         <div className="lg:w-[45%] bg-alfawad-primary text-white pt-16 pb-12 px-6 lg:px-20 relative">
           <div className="flex flex-col md:flex-row justify-between gap-12 lg:gap-20">
 
-            {/* Contact Us */}
-            <div className="flex-1">
-              <h4 className="text-[22px] font-black uppercase tracking-tighter mb-10 border-b border-white/20 pb-4 inline-block">Contact Us</h4>
-              <div className="flex flex-col gap-8">
-                <div className="flex items-start gap-4">
-                  <div className="mt-1"><span className="p-1 border border-white/40 rounded-sm">&bull;</span></div>
-                  <p className="text-[15px] font-bold leading-relaxed">
-                    P.O Box: 10778 / Postal Code <br />
-                    31951 - Jubail, <br />
-                    Makka Street Jubail
-                  </p>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-8 h-8 flex items-center justify-center border border-white/40 rounded-sm">
-                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M20 22.621l-3.521-6.759c-.645.277-1.111.917-1.882.252l-2.83-2.428c-.782-.671-.131-1.113.253-1.883l-6.759-3.522c-.383.771-1.045 1.258-1.815.597l-2.831-2.429c-.771-.661-.253-1.314.131-2.085l3.52-6.759c.771-.383 1.341-.273 2.012.302l2.831 2.429c.671.575.253 1.242-.131 2.013l6.759 3.521c.383-.771 1.045-1.242 1.815-.567l2.83 2.429c.771.661.254 1.314-.13 2.085z" /></svg>
-                  </div>
-                  <span className="text-[16px] font-black tracking-tight"> +966 XXXXXXXX</span>
-                </div>
-              </div>
+        {/* Contact Us */}
+        <div className="flex-1 lg:pl-10">
+          <h4 className="text-[20px] sm:text-[22px] font-black uppercase tracking-tighter mb-8 sm:mb-10 border-b border-white/20 pb-4 inline-block">Contact Us</h4>
+          <div className="flex flex-col gap-6 sm:gap-8">
+            <div className="flex items-start gap-4">
+              <div className="mt-1"><span className="p-1 border border-white/40 rounded-sm">&bull;</span></div>
+              <p className="text-[14px] sm:text-[15px] font-bold leading-relaxed">
+                P.O Box: 10778 / Postal Code <br />
+                31951 - Jubail, <br />
+                Makka Street Jubail
+              </p>
             </div>
+            <div className="flex items-center gap-4">
+              <div className="w-8 h-8 flex items-center justify-center border border-white/40 rounded-sm">
+                <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M20 22.621l-3.521-6.759c-.645.277-1.111.917-1.882.252l-2.83-2.428c-.782-.671-.131-1.113.253-1.883l-6.759-3.522c-.383.771-1.045 1.258-1.815.597l-2.831-2.429c-.771-.661-.253-1.314.131-2.085l3.52-6.759c.771-.383 1.341-.273 2.012.302l2.831 2.429c.671.575.253 1.242-.131 2.013l6.759 3.521c.383-.771 1.045-1.242 1.815-.567l2.83 2.429c.771.661.254 1.314-.13 2.085z" /></svg>
+              </div>
+              <span className="text-[15px] sm:text-[16px] font-black tracking-tight"> +966 50 100 7079</span>
+            </div>
+            <div className="flex items-center gap-4">
+              <div className="w-8 h-8 flex items-center justify-center border border-white/40 rounded-sm">
+                <span className="text-sm">✉️</span>
+              </div>
+              <span className="text-[14px] sm:text-[16px] font-black tracking-tighter lowercase"> info@lamiyaalkahleej.com</span>
+            </div>
+          </div>
+        </div>
 
             {/* Our Services */}
             <div className="flex-1 lg:pl-10">

@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "@/components/ScrollToTop";
 import TopBarToggle from "@/components/TopBarToggle";
 import Navbar from "@/components/Navbar";
@@ -32,14 +32,15 @@ const App = () => (
         <Navbar />
         <main>
           <Routes>
-            <Route index element={<Index />} />
+            <Route path="/" element={<Navigate to="/industrial" replace />} />
+            <Route path="/cleaning" element={<Index />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/services/:slug" element={<ServiceDetail />} />
             <Route path="/clients" element={<Clients />} />
             <Route path="/booking" element={<Booking />} />
             <Route path="/contact" element={<Contact />} />
-            
+
             {/* Package specific routes if needed, otherwise ServiceDetail handles them */}
             <Route path="/full-home-sanitization-package" element={<ServiceDetail />} />
             <Route path="/individual-room-sanitization-packages" element={<ServiceDetail />} />
