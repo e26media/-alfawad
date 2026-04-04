@@ -63,7 +63,7 @@ const Index = () => {
         >
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
         </div>
-        <div className="container mx-auto px-4 pt-32 md:pt-48 pb-32 relative z-10">
+        <div className="container mx-auto px-4 pt-32 md:pt-48 pb-[13rem] relative z-10">
           <div className="max-w-4xl">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -108,6 +108,7 @@ const Index = () => {
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.5 + i * 0.1 }}
+                  className="pt-12"
                 >
                   <Link to={service.path} className="flex flex-col items-center group min-w-[100px]">
                     <div className="w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/10 flex items-center justify-center group-hover:bg-alfawad-primary group-hover:border-alfawad-primary transition-all duration-500 mb-3 group-hover:-translate-y-2 group-hover:shadow-[0_15px_30px_rgba(182,138,65,0.4)]">
