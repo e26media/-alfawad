@@ -46,7 +46,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-24">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-24 items-start">
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
-            <img src={logoWhite} alt="Lamiya Al Khaleej Logo" className="h-24 mb-10 transform grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105" />
+            <img src={logoWhite} alt="Lamiya Al Khaleej Logo" className="h-24 mb-10 transform " />
             <p className="text-[14px] leading-[28px] opacity-40 font-medium max-w-md uppercase tracking-[0.05em]">
               With over 15 years experience, Lamiya Al Kahleej Company offers premier commercial and residential cleaning, AC, and pest control services across the Kingdom of Saudi Arabia.
             </p>

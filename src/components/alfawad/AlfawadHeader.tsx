@@ -50,7 +50,7 @@ const AlfawadHeader = () => {
   }, [location]);
 
   return (
-    <header className="fixed top-10 sm:top-12 left-0 right-0 z-50 transition-all duration-500 font-muli">
+    <header className="fixed top-10 sm:top-12 left-0 right-0 z-50 transition-all duration-500 font-muli bg-white">
       <div 
         className={`w-full transition-all duration-500 border-b border-alfawad-primary/10 ${
           scrolled 
@@ -115,8 +115,22 @@ const AlfawadHeader = () => {
             ))}
           </nav>
 
-          {/* Action Button Section */}
-      
+          {/* Action Button Section with Mobile Toggle */}
+          <div className="flex items-center gap-3">
+             <Link
+               to="/industrial/enquiry"
+               className="hidden md:flex bg-black text-white hover:bg-alfawad-primary items-center justify-center px-10 py-3 h-[48px] rounded-xl text-[12px] font-bold uppercase tracking-[0.2em] transition-all transform hover:-translate-y-1 shadow-xl hover:shadow-primary/30"
+             >
+               Enquiry
+             </Link>
+
+             <button
+               onClick={() => setMobileOpen(!mobileOpen)}
+               className="lg:hidden p-2.5 rounded-xl bg-gray-50 hover:bg-black hover:text-white transition-all border border-gray-100"
+             >
+               {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+             </button>
+          </div>
         </div>
       </div>
 
