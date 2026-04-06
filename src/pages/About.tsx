@@ -14,7 +14,7 @@ const About = () => (
     
     {/* Page Header */}
     <section className="relative py-24 md:py-48 bg-black overflow-hidden group">
-      <div className="absolute inset-0 bg-alfawad-primary/10 opacity-30 blur-[120px] rounded-full -translate-x-1/2 -translate-y-1/2 scale-150 transition-transform duration-[10000ms] group-hover:scale-100" />
+      <div className="absolute inset-0 bg-alfawad-primary/10 opacity-30 blur-[120px] rounded-full -translate-x-1/2 -translate-y-1/2 scale-150 transition-transform duration-10000 group-hover:scale-100" />
       <div className="container mx-auto px-4 relative z-10 text-center">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
           <span className="text-alfawad-primary font-black text-[12px] uppercase tracking-[0.6em] mb-8 block drop-shadow-lg">Industry Leaders Since 15+ Years</span>

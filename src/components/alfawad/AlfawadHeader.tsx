@@ -116,22 +116,7 @@ const AlfawadHeader = () => {
           </nav>
 
           {/* Action Button Section */}
-          <div className="flex items-center gap-3">
-            <Link
-              to="/industrial/enquiry"
-              className="hidden md:flex bg-black text-white hover:bg-alfawad-primary items-center justify-center px-8 xl:px-10 py-3 h-[48px] rounded-xl text-[11px] xl:text-[12px] font-bold uppercase tracking-[0.2em] transition-all transform hover:-translate-y-1 shadow-xl hover:shadow-alfawad-primary/30 group"
-            >
-              Request Quote
-            </Link>
-
-            {/* Mobile Toggle */}
-            <button 
-              onClick={() => setMobileOpen(!mobileOpen)}
-              className="lg:hidden p-2.5 text-black hover:text-white hover:bg-black transition-all rounded-xl border border-gray-200 shadow-sm"
-            >
-              {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-            </button>
-          </div>
+      
         </div>
       </div>
 

@@ -12,7 +12,7 @@ const Footer = () => {
     <footer className="bg-black text-white font-muli overflow-hidden border-t-[20px] border-black">
       {/* Need Help Bar */}
       <div className="bg-alfawad-primary py-12 md:py-24 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white opacity-5 rounded-full -mr-[250px] -mt-[250px] transition-transform duration-[5000ms] hover:scale-150" />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white opacity-5 rounded-full -mr-[250px] -mt-[250px] transition-transform duration-5000 hover:scale-150" />
         <div className="container mx-auto px-4 grid md:grid-cols-3 gap-16 items-center">
           <div className="relative z-10 text-center md:text-left">
             <h4 className="font-black text-black text-[12px] uppercase tracking-[0.6em] mb-4">Urgent Need?</h4>
@@ -147,7 +147,7 @@ const Footer = () => {
           <p className="text-[10px] font-black uppercase tracking-[0.6em] text-gray-700">
             © {new Date().getFullYear()} Lamiya Al Khaleej. All Rights Reserved.
           </p>
-          <div className="flex items-center gap-6">
+          {/* <div className="flex items-center gap-6">
             <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-gray-700">
               <ShieldCheck className="w-4 h-4 text-alfawad-primary" />
               ISO 9001 Certified
@@ -156,7 +156,7 @@ const Footer = () => {
               <Heart className="w-4 h-4 text-alfawad-primary" />
               Hygiene Expert
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

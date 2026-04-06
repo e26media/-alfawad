@@ -58,7 +58,7 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative min-h-[600px] md:min-h-[85vh] flex items-center overflow-hidden mt-5">
         <div
-          className="absolute inset-0 bg-cover bg-center transition-transform duration-[10000ms] hover:scale-110"
+          className="absolute inset-0 bg-cover bg-center transition-transform duration-10000 hover:scale-110"
           style={{ backgroundImage: `url(${heroBg})` }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
@@ -330,7 +330,7 @@ const Index = () => {
       </section>
 
       {/* Coverage Section */}
-      <section className="py-24 bg-[#f8f9fa] relative overflow-hidden">
+      {/* <section className="py-24 bg-[#f8f9fa] relative overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
           <div className="flex flex-col items-center text-center mb-16">
             <span className="text-alfawad-primary font-black text-[12px] uppercase tracking-[0.5em] mb-4">Widespread Presence</span>
@@ -351,7 +351,7 @@ const Index = () => {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Testimonials */}
       <section className="py-24 md:py-32 bg-white">

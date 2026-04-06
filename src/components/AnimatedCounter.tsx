@@ -4,7 +4,7 @@ import { useInView } from "framer-motion";
 interface Props {
   end: number;
   suffix?: string;
-  label: string;
+  label?: string;
   duration?: number;
 }
 
@@ -30,11 +30,11 @@ const AnimatedCounter = ({ end, suffix = "", label, duration = 2 }: Props) => {
   }, [inView, end, duration]);
 
   return (
-    <div ref={ref} className="text-center">
-      <div className="text-4xl md:text-5xl font-heading font-bold text-primary-foreground">
+    <div ref={ref}>
+      <span className={label ? "text-4xl md:text-5xl font-heading font-bold text-primary-foreground block" : ""}>
         {count}{suffix}
-      </div>
-      <div className="text-sm text-primary-foreground/70 mt-1">{label}</div>
+      </span>
+      {label && <div className="text-sm text-primary-foreground/70 mt-1">{label}</div>}
     </div>
   );
 };

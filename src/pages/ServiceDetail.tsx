@@ -38,7 +38,7 @@ const ServiceDetail = () => {
       {/* Hero Section */}
       <section className="relative min-h-[500px] md:min-h-[600px] flex items-center overflow-hidden">
         <div
-          className="absolute inset-0 bg-cover bg-center transition-all duration-[10000ms] hover:scale-110"
+          className="absolute inset-0 bg-cover bg-center transition-all duration-10000 hover:scale-110"
           style={{ backgroundImage: `url(${service.image})` }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent" />

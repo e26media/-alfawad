@@ -121,6 +121,10 @@ export default {
         'alfawad': '20px 20px 0px 0px #B68A41',
         'alfawad-md': '30px 30px 0px 0px #B68A41',
       },
+      transitionDuration: {
+        '5000': '5000ms',
+        '10000': '10000ms',
+      },
     },
   },
   plugins: [tailwindAnimate],
