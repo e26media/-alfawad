@@ -19,7 +19,7 @@ export default function TopBarToggle() {
         <Link
           to="/industrial"
           className={`relative z-10 flex-1 flex items-center justify-center text-center text-[10px] sm:text-[11px] font-black uppercase tracking-widest transition-colors duration-300 ${
-            isEngineering ? "text-black" : "text-gray-400 hover:text-gray-200"
+            isEngineering ? "text-white" : "text-gray-400 hover:text-gray-200"
           }`}
         >
           Engineering
@@ -27,7 +27,7 @@ export default function TopBarToggle() {
         <Link
           to="/cleaning"
           className={`relative z-10 flex-1 flex items-center justify-center text-center text-[10px] sm:text-[11px] font-black uppercase tracking-widest transition-colors duration-300 ${
-            !isEngineering ? "text-black" : "text-gray-400 hover:text-gray-200"
+            !isEngineering ? "text-white" : "text-gray-400 hover:text-gray-200"
           }`}
         >
           Cleaning
