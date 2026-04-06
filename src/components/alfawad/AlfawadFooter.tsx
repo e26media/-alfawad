@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowUp } from "lucide-react";
+import { ArrowUp, Phone, Mail, MapPin, ChevronRight, Award, ShieldCheck, Globe, Clock } from "lucide-react";
 
 const VENDOR_DATA = [
   { name: "Saudi Aramco", code: "4913", src: "https://alfawad.com/images/client-logo/saudi-aramco.jpg" },
@@ -9,7 +9,7 @@ const VENDOR_DATA = [
   { name: "SAIPEM", code: "162782", src: "https://alfawad.com/images/client-logo/Saipem.jpg" },
   { name: "Petrofac", code: "3520", src: "https://alfawad.com/images/client-logo/petrofac.jpg" },
   { name: "Royal Commission", code: "3603866", src: "https://alfawad.com/images/client-logo/Royal-commission.jpg" },
-  { name: "SGC", code: "100", src: "https://alfawad.com/images/client-logo/hyundai.jpg" }, // Placeholder for SGC if not available
+  { name: "SGC", code: "100", src: "https://alfawad.com/images/client-logo/hyundai.jpg" },
 ];
 
 const AlfawadFooter = () => {
@@ -18,134 +18,193 @@ const AlfawadFooter = () => {
   };
 
   return (
-    <div className="relative font-muli bg-white overflow-hidden">
-      {/* Floating Buttons */}
-      <div className="fixed bottom-6 right-6 z-[60] flex flex-col gap-3">
-        <a
-          href="https://wa.me/966501007079"
+    <footer className="relative font-muli overflow-hidden border-t border-gray-100">
+      {/* Floating Actions */}
+      <div className="fixed bottom-8 right-8 z-[70] flex flex-col gap-4">
+        <motion.a
+          whileHover={{ scale: 1.1, rotate: 5 }}
+          whileTap={{ scale: 0.9 }}
+          href="https://wa.me/966 XXXXXXXX"
           target="_blank"
           rel="noreferrer"
-          className="w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-transform cursor-pointer"
+          className="w-16 h-16 bg-[#25D366] text-white rounded-2xl flex items-center justify-center shadow-[0_20px_50px_rgba(37,211,102,0.3)] transition-all cursor-pointer group"
         >
-          <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" /></svg>
-        </a>
-        <button
+          <svg className="w-9 h-9" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" /></svg>
+        </motion.a>
+        <motion.button
+          whileHover={{ scale: 1.1, y: -5 }}
+          whileTap={{ scale: 0.9 }}
           onClick={scrollToTop}
-          className="w-14 h-14 bg-alfawad-primary text-white rounded-full flex flex-col items-center justify-center shadow-xl hover:scale-110 transition-transform active:translate-y-1"
+          className="w-16 h-16 bg-black text-white rounded-2xl flex flex-col items-center justify-center shadow-[0_20px_50px_rgba(0,0,0,0.3)] transition-all group"
         >
-          <span className="text-[12px] font-black uppercase leading-none">up</span>
-          <ArrowUp className="w-4 h-4 mt-1" />
-        </button>
+          <span className="text-[10px] font-black uppercase tracking-widest leading-none mb-1">Top</span>
+          <ArrowUp className="w-5 h-5 group-hover:-translate-y-1 transition-transform" />
+        </motion.button>
       </div>
 
-      <div className="flex flex-col lg:flex-row w-full min-h-[450px]">
-
-        {/* Left Side: White Background */}
-        <div className="lg:w-[55%] bg-[#f8f9fa] pt-16 pb-12 px-6 lg:pl-20 lg:pr-10">
-          {/* Top Brand & Certs Row */}
-          <div className="flex flex-col md:flex-row items-center justify-between gap-10 mb-16">
-            <Link to="/alfawad" className="block max-w-[220px]">
-              <img
-                src="/lamiya-logo.png"
-                alt="Lamiya Al Khaleej"
-                className="w-full h-auto object-contain max-h-24"
-              />
-            </Link>
-
-            {/* Certification Slider */}
-            <div className="w-full max-w-[300px] overflow-hidden relative group">
-              <motion.div
-                drag="x"
-                dragConstraints={{ left: -100, right: 0 }}
-                className="flex items-center gap-6 cursor-grab active:cursor-grabbing"
-              >
-                <img src="https://alfawad.com/images/q.png" alt="Cert 1" className="h-14 w-auto object-contain shrink-0" />
-                <img src="https://alfawad.com/images/w.png" alt="Cert 2" className="h-14 w-auto object-contain shrink-0" />
-                <img src="https://alfawad.com/images/e.png" alt="Cert 3" className="h-14 w-auto object-contain shrink-0" />
-                <img src="https://alfawad.com/images/q.png" alt="Cert 4" className="h-14 w-auto object-contain shrink-0" />
-                <img src="https://alfawad.com/images/w.png" alt="Cert 5" className="h-14 w-auto object-contain shrink-0" />
-              </motion.div>
-              {/* Visual indicator for drag */}
-              <div className="absolute right-0 top-1/2 -translate-y-1/2 w-8 h-full bg-gradient-to-l from-[#f8f9fa] to-transparent pointer-events-none" />
-            </div>
-          </div>
-
-          {/* Vendors Grid */}
-          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
-            {VENDOR_DATA.map((vendor, i) => (
-              <div key={i} className="flex flex-col items-center group">
-                <div className="bg-white p-3 aspect-square flex items-center justify-center mb-3 shadow-sm border border-gray-100 group-hover:shadow-md transition-all">
-                  <img src={vendor.src} alt={vendor.name} className="max-w-full max-h-full object-contain" />
+      <div className="flex flex-col lg:flex-row min-h-[600px] bg-white">
+        
+        {/* Left Side: Brand Experience */}
+        <div className="lg:w-[60%] pt-20 pb-16 px-6 sm:px-12 lg:pl-24 lg:pr-16 relative bg-white border-b lg:border-b-0 lg:border-r border-gray-100">
+          <div className="flex flex-col h-full">
+            {/* Top Row: Identity & Trust */}
+            <div className="flex flex-col md:flex-row items-center justify-between gap-12 mb-20">
+              <Link to="/industrial" className="block w-full max-w-[280px]">
+                <img
+                  src="/lamiya-logo.png"
+                  alt="Lamiya Al Khaleej"
+                  className="w-full h-auto object-contain"
+                />
+              </Link>
+              
+              <div className="flex items-center gap-6 p-6 bg-gray-50 rounded-3xl border border-gray-100 shadow-sm transition-all hover:shadow-md">
+                <div className="flex -space-x-3">
+                  {[1, 2, 3].map((i) => (
+                    <div key={i} className="w-12 h-12 rounded-2xl bg-white border-2 border-white shadow-sm flex items-center justify-center p-2 overflow-hidden ring-4 ring-gray-50">
+                      <img 
+                        src={`https://alfawad.com/images/${i === 1 ? 'q' : i === 2 ? 'w' : 'e'}.png`} 
+                        alt="ISO" 
+                        className="w-full h-full object-contain" 
+                      />
+                    </div>
+                  ))}
                 </div>
-                <div className="flex flex-col items-center text-[11px] font-bold text-center">
-                  <span className="text-gray-500 uppercase tracking-tighter">Vendor</span>
-                  <span className="text-gray-500 uppercase tracking-tighter">Code</span>
-                  <span className="text-black font-black text-[13px] mt-1">{vendor.code}</span>
+                <div className="h-10 w-[1px] bg-gray-200" />
+                <div className="flex flex-col">
+                  <span className="text-[10px] font-black text-black uppercase tracking-[0.2em] leading-none mb-1 text-center md:text-left">ISO Certified</span>
+                  <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest text-center md:text-left leading-none">Global Standards</span>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Right Side: Gold/Red Background */}
-        <div className="lg:w-[45%] bg-alfawad-primary text-white pt-16 pb-12 px-6 lg:px-20 relative">
-          <div className="flex flex-col md:flex-row justify-between gap-12 lg:gap-20">
-
-        {/* Contact Us */}
-        <div className="flex-1 lg:pl-10">
-          <h4 className="text-[20px] sm:text-[22px] font-black uppercase tracking-tighter mb-8 sm:mb-10 border-b border-white/20 pb-4 inline-block">Contact Us</h4>
-          <div className="flex flex-col gap-6 sm:gap-8">
-            <div className="flex items-start gap-4">
-              <div className="mt-1"><span className="p-1 border border-white/40 rounded-sm">&bull;</span></div>
-              <p className="text-[14px] sm:text-[15px] font-bold leading-relaxed">
-                P.O Box: 10778 / Postal Code <br />
-                31951 - Jubail, <br />
-                Makka Street Jubail
-              </p>
             </div>
-            <div className="flex items-center gap-4">
-              <div className="w-8 h-8 flex items-center justify-center border border-white/40 rounded-sm">
-                <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M20 22.621l-3.521-6.759c-.645.277-1.111.917-1.882.252l-2.83-2.428c-.782-.671-.131-1.113.253-1.883l-6.759-3.522c-.383.771-1.045 1.258-1.815.597l-2.831-2.429c-.771-.661-.253-1.314.131-2.085l3.52-6.759c.771-.383 1.341-.273 2.012.302l2.831 2.429c.671.575.253 1.242-.131 2.013l6.759 3.521c.383-.771 1.045-1.242 1.815-.567l2.83 2.429c.771.661.254 1.314-.13 2.085z" /></svg>
+
+            {/* Middle Row: Official Vendor Status */}
+            <div className="flex-1">
+              <div className="flex items-center gap-4 mb-12">
+                <h3 className="text-[12px] font-black uppercase tracking-[0.4em] text-black">Registered Industrial Vendor</h3>
+                <div className="h-[2px] flex-1 bg-gray-50" />
               </div>
-              <span className="text-[15px] sm:text-[16px] font-black tracking-tight"> +966 50 100 7079</span>
-            </div>
-            <div className="flex items-center gap-4">
-              <div className="w-8 h-8 flex items-center justify-center border border-white/40 rounded-sm">
-                <span className="text-sm">✉️</span>
-              </div>
-              <span className="text-[14px] sm:text-[16px] font-black tracking-tighter lowercase"> info@lamiyaalkahleej.com</span>
-            </div>
-          </div>
-        </div>
-
-            {/* Our Services */}
-            <div className="flex-1 lg:pl-10">
-              <h4 className="text-[22px] font-black uppercase tracking-tighter mb-10 border-b border-white/20 pb-4 inline-block">Our Services</h4>
-              <ul className="flex flex-col gap-6">
-                {["Technical Manpower Service", "Heavy Equipment Service", "Project Support Services", "Project Management Service", "Material Service"].map((service, i) => (
-                  <li key={i}>
-                    <Link to="#" className="text-[15px] font-bold hover:translate-x-2 transition-transform inline-block opacity-90 hover:opacity-100">
-                      {service}
-                    </Link>
-                  </li>
+              
+              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6">
+                {VENDOR_DATA.map((vendor, i) => (
+                  <motion.div 
+                    key={i}
+                    whileHover={{ scale: 1.05 }}
+                    className="flex flex-col items-center group cursor-pointer"
+                  >
+                    <div className="w-full aspect-square bg-[#fcfcfc] border border-gray-100 rounded-3xl p-4 flex items-center justify-center mb-4 transition-all group-hover:border-alfawad-primary/20 group-hover:shadow-2xl group-hover:bg-white overflow-hidden">
+                      <img 
+                        src={vendor.src} 
+                        alt={vendor.name} 
+                        className="max-w-full max-h-full object-contain grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 scale-90 group-hover:scale-100" 
+                      />
+                    </div>
+                    <div className="flex flex-col items-center text-center">
+                      <span className="text-[8px] font-black text-gray-300 uppercase tracking-widest group-hover:text-alfawad-primary transition-colors leading-none mb-1">Code</span>
+                      <span className="text-[14px] font-black text-black tracking-tighter">{vendor.code}</span>
+                    </div>
+                  </motion.div>
                 ))}
-              </ul>
+              </div>
+            </div>
+
+            {/* Bottom Row Area (Optional spacing) */}
+            <div className="mt-20 flex flex-col sm:flex-row items-center gap-10">
+               <div className="flex items-center gap-4">
+                  <ShieldCheck className="w-8 h-8 text-alfawad-primary" />
+                  <div className="flex flex-col">
+                    <span className="text-[10px] font-black uppercase tracking-widest text-black mb-1 leading-none">Secure Business</span>
+                    <span className="text-[9px] font-bold uppercase tracking-widest text-gray-400 leading-none">Safe Operations</span>
+                  </div>
+               </div>
+               <div className="flex items-center gap-4">
+                  <Globe className="w-8 h-8 text-alfawad-primary" />
+                  <div className="flex flex-col">
+                    <span className="text-[10px] font-black uppercase tracking-widest text-black mb-1 leading-none">Local Presence</span>
+                    <span className="text-[9px] font-bold uppercase tracking-widest text-gray-400 leading-none">Kingdom Wide</span>
+                  </div>
+               </div>
+               <div className="flex items-center gap-4">
+                  <Award className="w-8 h-8 text-alfawad-primary" />
+                  <div className="flex flex-col">
+                    <span className="text-[10px] font-black uppercase tracking-widest text-black mb-1 leading-none">Award Winning</span>
+                    <span className="text-[9px] font-bold uppercase tracking-widest text-gray-400 leading-none">Excellence Hub</span>
+                  </div>
+               </div>
             </div>
           </div>
+        </div>
 
-          {/* Bottom Bar */}
-          <div className="mt-24 pt-8 border-t border-white/10 flex flex-col items-center gap-4 text-center">
-            <p className="text-[13px] font-bold opacity-80 uppercase tracking-widest">
-              &copy;Copyright 2026 <span className="font-black italic">Lamiya Al Khaleej</span> All Rights Reserved
-            </p>
+        {/* Right Side: Contact Hub */}
+        <div className="lg:w-[40%] bg-black text-white relative pt-20 pb-16 px-6 sm:px-12 lg:px-20 overflow-hidden">
+          {/* Decorative Pattern & Gradients */}
+          <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
+            <div className="absolute -top-20 -right-20 w-80 h-80 bg-alfawad-primary rounded-full blur-[100px]" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full border-[100px] border-white/5 rounded-full" />
+          </div>
+
+          <div className="relative z-10 h-full flex flex-col">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-1 gap-16">
+              
+              {/* Specialized Solutions */}
+        
+
+              {/* Contact Data */}
+              <div>
+                <h4 className="text-[24px] font-black uppercase tracking-tighter mb-12 italic border-l-8 border-white pl-6">
+                  Corporate <span className="text-alfawad-primary">Hub</span>
+                </h4>
+                <div className="space-y-10">
+                  <div className="group flex items-start gap-6">
+                    <div className="w-14 h-14 rounded-3xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-alfawad-primary group-hover:text-black transition-all">
+                      <MapPin className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <span className="text-[10px] font-black uppercase tracking-[0.4em] text-alfawad-primary leading-none block mb-2">Location</span>
+                      <p className="text-[14px] font-bold uppercase tracking-widest leading-relaxed text-white/50">
+                        Makka Street Jubail,<br />
+                        31951 - Jubail, KSA
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="group flex items-start gap-6">
+                    <div className="w-14 h-14 rounded-3xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-alfawad-primary group-hover:text-black transition-all">
+                      <Phone className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <span className="text-[10px] font-black uppercase tracking-[0.4em] text-alfawad-primary leading-none block mb-2">Direct Line</span>
+                      <a href="tel:+966501007079" className="text-[22px] font-black uppercase tracking-tighter text-white hover:text-alfawad-primary transition-colors">+966 XXXXXXXX</a>
+                    </div>
+                  </div>
+
+                  <div className="group flex items-start gap-6">
+                    <div className="w-14 h-14 rounded-3xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-alfawad-primary group-hover:text-black transition-all">
+                      <Mail className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <span className="text-[10px] font-black uppercase tracking-[0.4em] text-alfawad-primary leading-none block mb-2">Connect</span>
+                      <a href="mailto:info@lamiyaalkahleej.com" className="text-[14px] font-black uppercase tracking-widest text-white/50 hover:text-white transition-colors border-b border-white/10">info@lamiyaalkahleej.com</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Terminal Info */}
+            <div className="mt-auto pt-24">
+               <div className="flex flex-col sm:flex-row justify-between items-center gap-8 border-t border-white/5 pt-12">
+                  
+                  <p className="text-[9px] font-black uppercase tracking-[0.5em] text-white/20">
+                    &copy; {new Date().getFullYear()} Lamiya Al Khaleej. All Rights Reserved.
+                  </p>
+                 
+               </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 
 export default AlfawadFooter;
-
-
-

@@ -171,7 +171,7 @@ export default function AlfawadHome() {
                 </div>
               </div>
 
-              <Link to="/introduction" className="flex items-center gap-4 mt-2 md:mt-4 group w-max mx-auto lg:mx-0">
+              <Link to="/industrial/introduction" className="flex items-center gap-4 mt-2 md:mt-4 group w-max mx-auto lg:mx-0">
                 <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border-2 border-alfawad-primary flex items-center justify-center transition-all group-hover:bg-alfawad-primary">
                   <div className="w-2 h-2 rounded-full bg-alfawad-primary group-hover:bg-white transition-all"></div>
                 </div>
@@ -255,7 +255,7 @@ export default function AlfawadHome() {
                   <p className="text-gray-500 text-sm md:text-base font-medium leading-relaxed mb-6 md:mb-8">
                     {service.desc}
                   </p>
-                  <Link to={`/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`} className="mt-auto flex items-center gap-2 text-black font-black uppercase text-[12px] md:text-[14px] tracking-widest group-hover:gap-4 transition-all">
+                  <Link to={`/industrial/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`} className="mt-auto flex items-center gap-2 text-black font-black uppercase text-[12px] md:text-[14px] tracking-widest group-hover:gap-4 transition-all">
                     Read More <ChevronRight className="w-5 h-5 text-alfawad-primary" />
                   </Link>
                 </div>
@@ -277,7 +277,7 @@ export default function AlfawadHome() {
               <p className="text-white/90 text-[16px] md:text-[18px] leading-relaxed font-bold mb-8 md:mb-10">
                 Our Project Management team supports you in the execution of your projects from the initial request to the design and delivery...
               </p>
-              <Link to="/services/project-support" className="bg-white text-alfawad-primary px-6 md:px-8 py-3 md:py-4 font-black uppercase tracking-widest text-xs md:text-sm hover:bg-black hover:text-white transition-all transform hover:-translate-y-1 inline-block">
+              <Link to="/industrial/contact" className="bg-white text-alfawad-primary px-6 md:px-8 py-3 md:py-4 font-black uppercase tracking-widest text-xs md:text-sm hover:bg-black hover:text-white transition-all transform hover:-translate-y-1 inline-block">
                 Know More
               </Link>
             </div>
@@ -293,7 +293,7 @@ export default function AlfawadHome() {
                   </li>
                 ))}
               </ul>
-              <Link to="/services/project-management" className="bg-white text-alfawad-primary px-6 md:px-8 py-3 md:py-4 font-black uppercase tracking-widest text-xs md:text-sm hover:bg-black hover:text-white transition-all transform hover:-translate-y-1 inline-block">
+              <Link to="/industrial/services/project-management" className="bg-white text-alfawad-primary px-6 md:px-8 py-3 md:py-4 font-black uppercase tracking-widest text-xs md:text-sm hover:bg-black hover:text-white transition-all transform hover:-translate-y-1 inline-block">
                 Know More
               </Link>
             </div>

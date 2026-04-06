@@ -50,7 +50,7 @@ const AlfawadHeader = () => {
   }, [location]);
 
   return (
-    <header className="fixed top-10 sm:top-12 left-0 right-0 z-50 transition-all duration-500 font-muli bg-white">
+    <header className="fixed top-10 sm:top-12 left-0 right-0 z-50 transition-all duration-500 font-muli">
       <div 
         className={`w-full transition-all duration-500 border-b border-alfawad-primary/10 ${
           scrolled 
@@ -115,22 +115,27 @@ const AlfawadHeader = () => {
             ))}
           </nav>
 
-          {/* Action Button Section with Mobile Toggle */}
-          <div className="flex items-center gap-3">
-             <Link
-               to="/industrial/enquiry"
-               className="hidden md:flex bg-black text-white hover:bg-alfawad-primary items-center justify-center px-10 py-3 h-[48px] rounded-xl text-[12px] font-bold uppercase tracking-[0.2em] transition-all transform hover:-translate-y-1 shadow-xl hover:shadow-primary/30"
-             >
-               Enquiry
-             </Link>
-
-             <button
-               onClick={() => setMobileOpen(!mobileOpen)}
-               className="lg:hidden p-2.5 rounded-xl bg-gray-50 hover:bg-black hover:text-white transition-all border border-gray-100"
-             >
-               {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-             </button>
-          </div>
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="lg:hidden w-10 h-10 sm:w-12 sm:h-12 bg-black text-white rounded-xl flex items-center justify-center transition-all active:scale-95 z-50 overflow-hidden"
+            aria-label="Toggle mobile menu"
+          >
+            <div className="relative w-6 h-6">
+               <motion.div
+                  animate={{ rotate: mobileOpen ? 45 : 0, y: mobileOpen ? 0 : -6 }}
+                  className="absolute top-1/2 left-0 w-6 h-0.5 bg-white origin-center"
+               />
+               <motion.div
+                  animate={{ opacity: mobileOpen ? 0 : 1 }}
+                  className="absolute top-1/2 left-0 w-6 h-0.5 bg-white -translate-y-1/2"
+               />
+               <motion.div
+                  animate={{ rotate: mobileOpen ? -45 : 0, y: mobileOpen ? 0 : 6 }}
+                  className="absolute top-1/2 left-0 w-6 h-0.5 bg-white origin-center"
+               />
+            </div>
+          </button>
         </div>
       </div>
 
