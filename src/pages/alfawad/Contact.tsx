@@ -36,9 +36,7 @@ const Contact = () => {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 uppercase tracking-widest mb-2">Head Office</h3>
                   <p className="text-gray-600 leading-relaxed font-medium">
-                    P.O Box: 10778 / Postal Code 31951<br />
-                    Makka Street, Jubail,<br />
-                    Kingdom of Saudi Arabia
+                   Al Khobar, KSA
                   </p>
                 </div>
               </div>
@@ -50,7 +48,10 @@ const Contact = () => {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 uppercase tracking-widest mb-2">Phones</h3>
                   <p className="text-gray-600 leading-relaxed font-medium">
-                    +966 XXXXXXXX
+                    +051 030 4627 
+                  </p>
+                  <p className="text-gray-600 leading-relaxed font-medium">
+                    +058 376 9845  
                   </p>
                 </div>
               </div>
@@ -62,8 +63,7 @@ const Contact = () => {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 uppercase tracking-widest mb-2">Emails</h3>
                   <p className="text-gray-600 leading-relaxed font-medium">
-                    info@lamiyaalkhaleej.com
-                  </p>
+                   lamiyaalkhaleej@gmail.com                  </p>
                 </div>
               </div>
 

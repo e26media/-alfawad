@@ -16,6 +16,7 @@ import MaterialService from "./alfawad/MaterialService";
 
 import Contact from "./alfawad/Contact";
 import { Brochure, ClientsGallery, Career, Enquiry } from "./alfawad/UtilityPages";
+import NewsDetail from "./alfawad/NewsDetail";
 
 const Alfawad = () => {
   return (
@@ -44,6 +45,7 @@ const Alfawad = () => {
         <Route path="/clients" element={<ClientsGallery />} />
         <Route path="/career" element={<Career />} />
         <Route path="/enquiry" element={<Enquiry />} />
+        <Route path="/news/:id" element={<NewsDetail />} />
         
         {/* Catch-all */}
         <Route path="*" element={<AlfawadHome />} />

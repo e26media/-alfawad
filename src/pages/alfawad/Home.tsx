@@ -8,44 +8,44 @@ export default function AlfawadHome() {
 
   const HERO_SLIDES = [
     {
-      image: "https://alfawad.com/images/slider/1.jpg",
+      image: "/images/industrial/hero-1.png",
       heading: "UNRESERVED",
       subheading: "INTEGRITY",
       accent: "RED",
       description: "SUPERIOR CUSTOMER SERVICE <br /> A PASSION FOR QUALITY"
     },
     {
-      image: "https://alfawad.com/images/slider/2.jpg",
+      image: "/images/industrial/hero-2.png",
       heading: "Where Passion",
       subheading: "meets Productivity",
       accent: "BLACK",
     },
     {
-      image: "https://alfawad.com/images/slider/3.jpg",
+      image: "/images/industrial/hero-3.png",
       heading: "Always dedicated",
       subheading: "& devoted",
       accent: "BLACK",
     },
     {
-      image: "https://alfawad.com/images/slider/4.jpg",
+      image: "/images/industrial/hero-4.png",
       heading: "Safety is our",
       subheading: "NO.1 Priority",
       accent: "BLACK",
     },
     {
-      image: "https://alfawad.com/images/slider/5.jpg",
+      image: "/images/industrial/hero-5.png",
       heading: "Everything needed",
       subheading: "to Build",
       accent: "BLACK",
     },
     {
-      image: "https://alfawad.com/images/slider/6.jpg",
+      image: "/images/industrial/hero-6.png",
       heading: "We're here",
       subheading: "for you Forever",
       accent: "BLACK",
     },
     {
-      image: "https://alfawad.com/images/slider/7.jpg",
+      image: "/images/industrial/hero-7.png",
       heading: "Guarantee",
       subheading: "Best Quality",
       accent: "BLACK",
@@ -164,7 +164,7 @@ export default function AlfawadHome() {
 
               <div className="flex items-center justify-center lg:justify-start gap-4 sm:gap-6 mt-4 md:mt-6 border-b border-gray-200 pb-8 md:pb-10 w-full max-w-md mx-auto lg:mx-0">
                 <div className="flex flex-col sm:flex-row gap-4 items-center">
-                  <img src="https://alfawad.com/images/font.jpg" alt="Signature" className="h-8 md:h-12 object-contain" />
+                  <img src="/images/industrial/hero-7.png" alt="Signature" className="h-8 md:h-12 object-contain opacity-0" />
                   <div className="text-alfawad-primary font-black text-[12px] md:text-[15px] uppercase tracking-widest leading-none text-center sm:text-left">
                     Chairman / Managing Director
                   </div>
@@ -183,7 +183,7 @@ export default function AlfawadHome() {
             <div className="lg:w-[45%] w-full flex items-center justify-center mt-8 lg:mt-0">
               <div className="w-full max-w-[550px] aspect-[4/5] relative overflow-hidden shadow-2xl rounded-2xl">
                 <img
-                  src="https://alfawad.com/images/3.jpg"
+                  src="/images/industrial/engineer-portrait.png"
                   alt="Engineer Portrait"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
                 />
@@ -197,7 +197,7 @@ export default function AlfawadHome() {
       <section className="relative w-full h-[400px] sm:h-[450px] md:h-[550px] overflow-hidden flex items-center">
         <div className="absolute inset-0 bg-alfawad-primary/80 z-10" />
         <img
-          src="https://alfawad.com/images/1.jpg"
+          src="/images/industrial/hero-1.png"
           alt="Vision 2030 Background"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -229,17 +229,17 @@ export default function AlfawadHome() {
             {[
               {
                 title: "Technical Manpower",
-                image: "https://alfawad.com/images/services/1.jpg",
+                image: "/images/industrial/service-manpower.png",
                 desc: "We provide highly skilled and technical manpower solutions for all engineering needs."
               },
               {
                 title: "Heavy Equipment",
-                image: "https://alfawad.com/images/services/2.jpg",
+                image: "/images/industrial/service-equipment.png",
                 desc: "Providing reliable and modern heavy equipment for construction and industrial projects."
               },
               {
                 title: "Material Service",
-                image: "https://alfawad.com/images/services/3.jpg",
+                image: "/images/industrial/service-material.png",
                 desc: "Supplying high-quality construction materials to ensure structural integrity."
               },
             ].map((service, i) => (
@@ -305,7 +305,7 @@ export default function AlfawadHome() {
       {/* Unreserved Integrity Video/Banner Section */}
       <section className="relative w-full h-[400px] md:h-[550px] overflow-hidden flex items-center justify-center text-center px-4">
         <img
-          src="https://alfawad.com/images/bg.jpg"
+          src="/images/industrial/wide-bg.png"
           alt="Industrial Background"
           className="absolute inset-0 w-full h-full object-cover scale-110"
         />
@@ -397,16 +397,26 @@ export default function AlfawadHome() {
             {[...Array(2)].map((_, outerIndex) => (
               <div key={outerIndex} className="flex shrink-0 gap-12 md:gap-20 items-center">
                 {[
-                  { name: "Saudi Aramco", logo: "https://alfawad.com/images/client-logo/saudi-aramco.jpg" },
-                  { name: "SABIC", logo: "https://alfawad.com/images/client-logo/SABIC.jpg" },
-                  { name: "Hyundai", logo: "https://alfawad.com/images/client-logo/hyundai.jpg" },
-                  { name: "Nesma Trading", logo: "https://alfawad.com/images/client-logo/nesma-trading.jpg" },
-                  { name: "Petro Rabigh", logo: "https://alfawad.com/images/client-logo/petro-rabigh.jpg" },
-                  { name: "Alfanar", logo: "https://alfawad.com/images/client-logo/alfanar.jpg" },
-                  { name: "Saudi Electricity", logo: "https://alfawad.com/images/client-logo/Saudi-electricity.jpg" },
-                  { name: "CTCI", logo: "https://alfawad.com/images/client-logo/CTCI.jpg" },
-                  { name: "Daelim", logo: "https://alfawad.com/images/client-logo/daelim.jpg" },
-                  { name: "Olayan", logo: "https://alfawad.com/images/client-logo/olayan.jpg" },
+                 { name: "Alfanar", logo: "https://alfawad.com/images/client-logo/alfanar.jpg" },
+    { name: "CTCI", logo: "https://alfawad.com/images/client-logo/CTCI.jpg" },
+    { name: "Daeha", logo: "https://alfawad.com/images/client-logo/daeha.jpg" },
+    { name: "Daelim", logo: "https://alfawad.com/images/client-logo/daelim.jpg" },
+    { name: "Daewoo", logo: "https://alfawad.com/images/client-logo/daewoo.jpg" },
+    { name: "GS E&C", logo: "https://alfawad.com/images/client-logo/gs-E&C.jpg" },
+    { name: "Hyundai", logo: "https://alfawad.com/images/client-logo/hyundai.jpg" },
+    { name: "Meedco", logo: "https://alfawad.com/images/client-logo/meedco.jpg" },
+    { name: "Nesma Trading", logo: "https://alfawad.com/images/client-logo/nesma-trading.jpg" },
+    { name: "Olayan", logo: "https://alfawad.com/images/client-logo/olayan.jpg" },
+    { name: "Petro Rabigh", logo: "https://alfawad.com/images/client-logo/petro-rabigh.jpg" },
+    { name: "Power China", logo: "https://alfawad.com/images/client-logo/power%20china.jpg" },
+    { name: "SABIC", logo: "https://alfawad.com/images/client-logo/SABIC.jpg" },
+    { name: "Saudi Aramco", logo: "https://alfawad.com/images/client-logo/saudi-aramco.jpg" },
+    { name: "Saudi Electricity", logo: "https://alfawad.com/images/client-logo/Saudi-electricity.jpg" },
+    { name: "Sepco", logo: "https://alfawad.com/images/client-logo/sepco.jpg" },
+    { name: "Sungchang", logo: "https://alfawad.com/images/client-logo/sungchang.jpg" },
+    { name: "TCC-1", logo: "https://alfawad.com/images/client-logo/TCC-1.jpg" },
+    { name: "Akon", logo: "https://alfawad.com/images/client-logo/akon.jpg" },
+    { name: "Hadeed", logo: "https://alfawad.com/images/client-logo/hadeed.jpg" },
                 ].map((client, i) => (
                   <div key={i} className="w-32 md:w-48 h-20 md:h-28 flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
                     <img src={client.logo} alt={client.name} className="max-w-full max-h-full object-contain filter drop-shadow-sm group-hover:drop-shadow-md" />

@@ -7,7 +7,7 @@ export const Brochure = () => (
     <section className="relative w-full h-[450px] md:h-[550px] overflow-hidden flex items-center">
       <div className="absolute inset-0 bg-alfawad-primary/75 z-10" />
       <img 
-        src="https://alfawad.com/images/1.jpg" 
+        src="/images/industrial/hero-1.png" 
         alt="Brochure Background" 
         className="absolute inset-0 w-full h-full object-cover"
       />
@@ -78,7 +78,7 @@ export const ClientsGallery = () => {
       <section className="relative w-full h-[450px] md:h-[550px] overflow-hidden flex items-center">
         <div className="absolute inset-0 bg-alfawad-primary/75 z-10" />
         <img 
-          src="https://alfawad.com/images/1.jpg" 
+          src="/images/industrial/hero-1.png" 
           alt="Clients Background" 
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -139,7 +139,7 @@ export const Enquiry = () => (
     <section className="relative w-full h-[450px] md:h-[550px] overflow-hidden flex items-center">
       <div className="absolute inset-0 bg-alfawad-primary/75 z-10" />
       <img 
-        src="https://alfawad.com/images/1.jpg" 
+        src="/images/industrial/hero-1.png" 
         alt="Enquiry Background" 
         className="absolute inset-0 w-full h-full object-cover"
       />
@@ -210,7 +210,7 @@ export const Career = () => (
     <section className="relative w-full h-[450px] md:h-[550px] overflow-hidden flex items-center">
       <div className="absolute inset-0 bg-alfawad-primary/75 z-10" />
       <img 
-        src="https://alfawad.com/images/1.jpg" 
+        src="/images/industrial/hero-1.png" 
         alt="Career Background" 
         className="absolute inset-0 w-full h-full object-cover"
       />

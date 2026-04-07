@@ -1,9 +1,10 @@
+import laklogo from "@/assets/laklogo.png";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const mainlogo = "/lamiya-logo.png";
+const mainlogo = laklogo;
 
 const navLinks = [
   { label: "Home", path: "/industrial" },

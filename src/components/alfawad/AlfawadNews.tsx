@@ -1,27 +1,6 @@
 import React from 'react';
-
-const newsItems = [
-  {
-    image: "/news_metallurgy_report.png",
-    title: "Metallurgy 2020: Successful report",
-    link: "#"
-  },
-  {
-    image: "/news_warehouse_innovation.png",
-    title: "Best innovations in metallurgy today",
-    link: "#"
-  },
-  {
-    image: "/news_industrial_crane.png",
-    title: "Commissioning delayed for the 2021.",
-    link: "#"
-  },
-  {
-    image: "/news_storage_racks.png",
-    title: "The relevant role in Europe’s history",
-    link: "#"
-  }
-];
+import { Link } from 'react-router-dom';
+import { newsItems } from '../../data/newsData';
 
 export const AlfawadNews = () => {
   return (
@@ -65,7 +44,11 @@ export const AlfawadNews = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {newsItems.map((item, index) => (
-            <div key={index} className="bg-white flex flex-col group cursor-pointer transition-all duration-500 hover:shadow-2xl">
+            <Link 
+              key={index} 
+              to={`/industrial/news/${item.id}`}
+              className="bg-white flex flex-col group cursor-pointer transition-all duration-500 hover:shadow-2xl"
+            >
               <div className="aspect-[16/11] overflow-hidden">
                 <img 
                   src={item.image} 
@@ -83,7 +66,7 @@ export const AlfawadNews = () => {
                   </span>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

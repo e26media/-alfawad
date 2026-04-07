@@ -1,8 +1,9 @@
+import laklogo from "@/assets/laklogo.png";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Calendar, ChevronDown } from "lucide-react";
-const logo = "/lamiya-logo.png";
+const logo = laklogo;
 
 const navLinks = [
   { label: "Home", path: "/cleaning" },

@@ -10,7 +10,7 @@ const TechnicalManpower = () => {
       <section className="relative w-full h-[450px] md:h-[550px] overflow-hidden flex items-center">
         <div className="absolute inset-0 bg-[#b68a41]/75 z-10" />
         <img 
-          src="https://alfawad.com/images/1.jpg" 
+          src="/images/industrial/hero-1.png" 
           alt="Technical Manpower Background" 
           className="absolute inset-0 w-full h-full object-cover"
         />

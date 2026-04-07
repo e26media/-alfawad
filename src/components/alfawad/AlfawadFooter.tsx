@@ -1,3 +1,4 @@
+import laklogo from "@/assets/laklogo.png";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowUp, Phone, Mail, MapPin, ChevronRight, Award, ShieldCheck, Globe, Clock } from "lucide-react";
@@ -51,18 +52,18 @@ const AlfawadFooter = () => {
             <div className="flex flex-col md:flex-row items-center justify-between gap-12 mb-20">
               <Link to="/industrial" className="block w-full max-w-[280px]">
                 <img
-                  src="/lamiya-logo.png"
+                  src={laklogo}
                   alt="Lamiya Al Khaleej"
                   className="w-full h-auto object-contain"
                 />
               </Link>
               
-              <div className="flex items-center gap-6 p-6 bg-gray-50 rounded-3xl border border-gray-100 shadow-sm transition-all hover:shadow-md">
+              {/* <div className="flex items-center gap-6 p-6 bg-gray-50 rounded-3xl border border-gray-100 shadow-sm transition-all hover:shadow-md">
                 <div className="flex -space-x-3">
                   {[1, 2, 3].map((i) => (
                     <div key={i} className="w-12 h-12 rounded-2xl bg-white border-2 border-white shadow-sm flex items-center justify-center p-2 overflow-hidden ring-4 ring-gray-50">
                       <img 
-                        src={`https://alfawad.com/images/${i === 1 ? 'q' : i === 2 ? 'w' : 'e'}.png`} 
+                        src="/images/industrial/hero-7.png" 
                         alt="ISO" 
                         className="w-full h-full object-contain" 
                       />
@@ -74,7 +75,7 @@ const AlfawadFooter = () => {
                   <span className="text-[10px] font-black text-black uppercase tracking-[0.2em] leading-none mb-1 text-center md:text-left">ISO Certified</span>
                   <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest text-center md:text-left leading-none">Global Standards</span>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Middle Row: Official Vendor Status */}
@@ -161,8 +162,7 @@ const AlfawadFooter = () => {
                     <div>
                       <span className="text-[10px] font-black uppercase tracking-[0.4em] text-alfawad-primary leading-none block mb-2">Location</span>
                       <p className="text-[14px] font-bold uppercase tracking-widest leading-relaxed text-white/50">
-                        Makka Street Jubail,<br />
-                        31951 - Jubail, KSA
+                        Al Khobar, KSA
                       </p>
                     </div>
                   </div>
@@ -173,7 +173,8 @@ const AlfawadFooter = () => {
                     </div>
                     <div>
                       <span className="text-[10px] font-black uppercase tracking-[0.4em] text-alfawad-primary leading-none block mb-2">Direct Line</span>
-                      <a href="tel:+966501007079" className="text-[22px] font-black uppercase tracking-tighter text-white hover:text-alfawad-primary transition-colors">+966 XXXXXXXX</a>
+                      <a href="tel:+0510304627" className="text-[22px] font-black uppercase tracking-tighter text-white hover:text-alfawad-primary transition-colors">+051 030 4627</a><br/>
+                      <a href="tel:+0583769845 " className="text-[22px] font-black uppercase tracking-tighter text-white hover:text-alfawad-primary transition-colors">+058 376 9845</a>
                     </div>
                   </div>
 
@@ -183,7 +184,7 @@ const AlfawadFooter = () => {
                     </div>
                     <div>
                       <span className="text-[10px] font-black uppercase tracking-[0.4em] text-alfawad-primary leading-none block mb-2">Connect</span>
-                      <a href="mailto:info@lamiyaalkahleej.com" className="text-[14px] font-black uppercase tracking-widest text-white/50 hover:text-white transition-colors border-b border-white/10">info@lamiyaalkahleej.com</a>
+                      <a href="mailto:lamiyaalkhaleej@gmail.com" className="text-[14px] font-black uppercase tracking-widest text-white/50 hover:text-white transition-colors border-b border-white/10">lamiyaalkhaleej@gmail.com</a>
                     </div>
                   </div>
                 </div>

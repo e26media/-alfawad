@@ -1,6 +1,7 @@
+import laklogo from "@/assets/laklogo.png";
 import { Link, useLocation } from "react-router-dom";
 import { Phone, Mail, MapPin, Facebook, Linkedin, Twitter, Smartphone, Send, Globe, ArrowRight, ShieldCheck, Heart } from "lucide-react";
-const logoWhite = "/lamiya-logo.png";
+const logoWhite = laklogo;
 
 const Footer = () => {
   const location = useLocation();
