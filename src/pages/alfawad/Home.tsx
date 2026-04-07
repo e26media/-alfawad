@@ -89,7 +89,7 @@ export default function AlfawadHome() {
                 className={`transition-all duration-700 transform ${index === currentSlide ? "translate-y-0 opacity-100 block" : "translate-y-4 opacity-0 hidden"}`}
               >
                 <h1 className="text-[28px] sm:text-[45px] md:text-[75px] font-black text-black leading-tight sm:leading-[1.0] uppercase tracking-tighter mb-4">
-                  Lamiya Al Kahleej <br />
+                  Lamiya Al&nbsp;Khaleej <br />
                   <span className="text-alfawad-primary">General Contracting</span>
                 </h1>
                 <p className="text-[14px] sm:text-[18px] md:text-[24px] font-extrabold text-gray-800 mt-1 md:mt-2 tracking-wide uppercase leading-tight max-w-[280px] sm:max-w-none">
@@ -104,12 +104,12 @@ export default function AlfawadHome() {
               </div>
             ))}
 
-            <div className="mt-8 sm:mt-12 md:mt-[80px] flex flex-col border-l-4 border-alfawad-primary pl-4 md:pl-6">
+            {/* <div className="mt-8 sm:mt-12 md:mt-[80px] flex flex-col border-l-4 border-alfawad-primary pl-4 md:pl-6">
               <span className="text-[12px] md:text-[20px] font-bold text-gray-900 mb-1 leading-tight">مؤسسة لمياء الخليج للمقاولات العامة</span>
               <span className="text-[17px] md:text-[38px] font-black uppercase text-gray-900 leading-none tracking-tighter">
-                Lamiya Al Kahleej Gen. Cont.
+                Lamiya Al Khaleej Gen. Cont.
               </span>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -149,7 +149,7 @@ export default function AlfawadHome() {
                 <div className="flex flex-col justify-center pt-1 md:pt-2 text-center lg:text-left mx-auto lg:mx-0">
                   <span className="text-[9px] sm:text-[12px] font-black text-gray-500 tracking-[0.3em] uppercase mb-1">GENERAL CONTRACTING</span>
                   <h2 className="text-[20px] sm:text-[28px] md:text-[34px] font-black text-black leading-[1.1] uppercase tracking-tighter">
-                    Lamiya Al Kahleej <br className="hidden sm:block" /> General Contracting
+                    Lamiya Al Khaleej <br className="hidden sm:block" /> General Contracting
                   </h2>
                 </div>
               </div>
@@ -159,14 +159,14 @@ export default function AlfawadHome() {
               </h3>
 
               <p className="text-[#666666] leading-relaxed sm:leading-[32px] text-[15px] md:text-[18px] font-medium text-center lg:text-left">
-                Lamiya Al Kahleej General Contracting is a leading Saudi-based contracting and industrial support services provider delivering reliable manpower, equipment rental, construction support, material supply, and project management services across the Kingdom of Saudi Arabia.
+                Lamiya Al Khaleej General Contracting is a leading Saudi-based contracting and industrial support services provider delivering reliable manpower, equipment rental, construction support, material supply, and project management services across the Kingdom of Saudi Arabia.
               </p>
 
               <div className="flex items-center justify-center lg:justify-start gap-4 sm:gap-6 mt-4 md:mt-6 border-b border-gray-200 pb-8 md:pb-10 w-full max-w-md mx-auto lg:mx-0">
                 <div className="flex flex-col sm:flex-row gap-4 items-center">
                   <img src="/images/industrial/hero-7.png" alt="Signature" className="h-8 md:h-12 object-contain opacity-0" />
                   <div className="text-alfawad-primary font-black text-[12px] md:text-[15px] uppercase tracking-widest leading-none text-center sm:text-left">
-                    Chairman / Managing Director
+                    Mohammed Nouman Hussain
                   </div>
                 </div>
               </div>
@@ -183,7 +183,7 @@ export default function AlfawadHome() {
             <div className="lg:w-[45%] w-full flex items-center justify-center mt-8 lg:mt-0">
               <div className="w-full max-w-[550px] aspect-[4/5] relative overflow-hidden shadow-2xl rounded-2xl">
                 <img
-                  src="/images/industrial/engineer-portrait.png"
+                  src="/images/industrial/industry.avif"
                   alt="Engineer Portrait"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
                 />
@@ -397,26 +397,26 @@ export default function AlfawadHome() {
             {[...Array(2)].map((_, outerIndex) => (
               <div key={outerIndex} className="flex shrink-0 gap-12 md:gap-20 items-center">
                 {[
-                 { name: "Alfanar", logo: "https://alfawad.com/images/client-logo/alfanar.jpg" },
-    { name: "CTCI", logo: "https://alfawad.com/images/client-logo/CTCI.jpg" },
-    { name: "Daeha", logo: "https://alfawad.com/images/client-logo/daeha.jpg" },
-    { name: "Daelim", logo: "https://alfawad.com/images/client-logo/daelim.jpg" },
-    { name: "Daewoo", logo: "https://alfawad.com/images/client-logo/daewoo.jpg" },
-    { name: "GS E&C", logo: "https://alfawad.com/images/client-logo/gs-E&C.jpg" },
-    { name: "Hyundai", logo: "https://alfawad.com/images/client-logo/hyundai.jpg" },
-    { name: "Meedco", logo: "https://alfawad.com/images/client-logo/meedco.jpg" },
-    { name: "Nesma Trading", logo: "https://alfawad.com/images/client-logo/nesma-trading.jpg" },
-    { name: "Olayan", logo: "https://alfawad.com/images/client-logo/olayan.jpg" },
-    { name: "Petro Rabigh", logo: "https://alfawad.com/images/client-logo/petro-rabigh.jpg" },
-    { name: "Power China", logo: "https://alfawad.com/images/client-logo/power%20china.jpg" },
-    { name: "SABIC", logo: "https://alfawad.com/images/client-logo/SABIC.jpg" },
-    { name: "Saudi Aramco", logo: "https://alfawad.com/images/client-logo/saudi-aramco.jpg" },
-    { name: "Saudi Electricity", logo: "https://alfawad.com/images/client-logo/Saudi-electricity.jpg" },
-    { name: "Sepco", logo: "https://alfawad.com/images/client-logo/sepco.jpg" },
-    { name: "Sungchang", logo: "https://alfawad.com/images/client-logo/sungchang.jpg" },
-    { name: "TCC-1", logo: "https://alfawad.com/images/client-logo/TCC-1.jpg" },
-    { name: "Akon", logo: "https://alfawad.com/images/client-logo/akon.jpg" },
-    { name: "Hadeed", logo: "https://alfawad.com/images/client-logo/hadeed.jpg" },
+                  { name: "Alfanar", logo: "https://alfawad.com/images/client-logo/alfanar.jpg" },
+                  { name: "CTCI", logo: "https://alfawad.com/images/client-logo/CTCI.jpg" },
+                  { name: "Daeha", logo: "https://alfawad.com/images/client-logo/daeha.jpg" },
+                  { name: "Daelim", logo: "https://alfawad.com/images/client-logo/daelim.jpg" },
+                  { name: "Daewoo", logo: "https://alfawad.com/images/client-logo/daewoo.jpg" },
+                  { name: "GS E&C", logo: "https://alfawad.com/images/client-logo/gs-E&C.jpg" },
+                  { name: "Hyundai", logo: "https://alfawad.com/images/client-logo/hyundai.jpg" },
+                  { name: "Meedco", logo: "https://alfawad.com/images/client-logo/meedco.jpg" },
+                  { name: "Nesma Trading", logo: "https://alfawad.com/images/client-logo/nesma-trading.jpg" },
+                  { name: "Olayan", logo: "https://alfawad.com/images/client-logo/olayan.jpg" },
+                  { name: "Petro Rabigh", logo: "https://alfawad.com/images/client-logo/petro-rabigh.jpg" },
+                  { name: "Power China", logo: "https://alfawad.com/images/client-logo/power%20china.jpg" },
+                  { name: "SABIC", logo: "https://alfawad.com/images/client-logo/SABIC.jpg" },
+                  { name: "Saudi Aramco", logo: "https://alfawad.com/images/client-logo/saudi-aramco.jpg" },
+                  { name: "Saudi Electricity", logo: "https://alfawad.com/images/client-logo/Saudi-electricity.jpg" },
+                  { name: "Sepco", logo: "https://alfawad.com/images/client-logo/sepco.jpg" },
+                  { name: "Sungchang", logo: "https://alfawad.com/images/client-logo/sungchang.jpg" },
+                  { name: "TCC-1", logo: "https://alfawad.com/images/client-logo/TCC-1.jpg" },
+                  { name: "Akon", logo: "https://alfawad.com/images/client-logo/akon.jpg" },
+                  { name: "Hadeed", logo: "https://alfawad.com/images/client-logo/hadeed.jpg" },
                 ].map((client, i) => (
                   <div key={i} className="w-32 md:w-48 h-20 md:h-28 flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
                     <img src={client.logo} alt={client.name} className="max-w-full max-h-full object-contain filter drop-shadow-sm group-hover:drop-shadow-md" />

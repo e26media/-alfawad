@@ -131,7 +131,7 @@ const Contact = () => {
               {/* Google Maps Embed Placeholder via iframe */}
               <div className="w-full h-[400px] rounded-lg overflow-hidden border-4 border-white shadow-xl bg-gray-200">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113429.62319047971!2d49.56942475459341!3d26.985652592750346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e35a12d1b84920b%3A0xe9f359c388efdcd7!2sJubail%20Saudi%20Arabia!5e0!3m2!1sen!2sae!4v1709400000000!5m2!1sen!2sae"
+                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3554.6438915540575!2d49.65473757544289!3d27.009812476589353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDAwJzM1LjMiTiA0OcKwMzknMjYuMyJF!5e0!3m2!1sen!2sin!4v1775571269405!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

@@ -21,8 +21,8 @@ export default function TopBarToggle() {
 
         <div
           className={`absolute h-[calc(100%-8px)] w-[calc(50%-4px)] rounded shadow-sm transition-all duration-300 ease-out ${isEngineering
-              ? "left-1 bg-alfawad-primary shadow-alfawad-primary/30"
-              : "left-[calc(50%+3px)] bg-alfawad-primary shadow-alfawad-primary/30"
+            ? "left-1 bg-alfawad-primary shadow-alfawad-primary/30"
+            : "left-[calc(50%+3px)] bg-alfawad-primary shadow-alfawad-primary/30"
             }`}
         />
 
@@ -38,7 +38,7 @@ export default function TopBarToggle() {
           className={`relative z-10 flex-1 flex items-center justify-center text-center text-[10px] sm:text-[11px] font-black uppercase tracking-widest transition-colors duration-300 ${!isEngineering ? "text-white" : "text-gray-400 hover:text-gray-200"
             }`}
         >
-          Cleaning
+          Cleaning Services
         </Link>
       </div>
     </div>
