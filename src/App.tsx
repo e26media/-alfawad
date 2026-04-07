@@ -70,8 +70,8 @@ const App = () => (
           </Routes>
         </main>
         <Footer />
-        <WhatsAppButton />
-        <ContactButton />
+        {/* <WhatsAppButton /> */}
+        {/* <ContactButton /> */}
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
