@@ -20,11 +20,13 @@ const Footer = () => {
             <p className="text-black font-black text-3xl md:text-5xl uppercase tracking-tighter leading-none italic">Need Help <br className="hidden md:block" /> Now?</p>
           </div>
           <div className="text-center relative z-10 transform -rotate-2">
-            <a href="tel:+966501007079" className="bg-black text-white px-10 py-6 font-black text-2xl md:text-4xl hover:bg-white hover:text-black transition-all tracking-tighter uppercase inline-block shadow-2xl">
-            +966 XXXXXXXX
+            <a href="tel:+966507077611" className="bg-black text-white px-10 py-6 font-black text-2xl md:text-4xl hover:bg-white hover:text-black transition-all tracking-tighter uppercase inline-block shadow-2xl">
+              +966 50 707 7611
             </a>
-            <div className="mt-6 flex flex-col items-center">
-              <a href="mailto:info@lamiyaalkhaleej.com" className="text-black/80 text-xs font-black uppercase tracking-[0.3em] hover:text-white transition-colors border-b-2 border-black/10 hover:border-white">info@lamiyaalkhaleej.com</a>
+            <div className="mt-6 flex flex-col items-center gap-2">
+              <a href="mailto:info@lamiyaalkhaleej.com" className="text-black/80 text-[10px] font-black uppercase tracking-[0.2em] hover:text-white transition-colors">info@lamiyaalkhaleej.com</a>
+              <a href="mailto:ashrafalbadan@lamiyaalkhaleej.com" className="text-black/80 text-[10px] font-black uppercase tracking-[0.2em] hover:text-white transition-colors">ashrafalbadan@lamiyaalkhaleej.com</a>
+              <a href="mailto:ahamedsuhail@lamiyaalkhaleej.com" className="text-black/80 text-[10px] font-black uppercase tracking-[0.2em] hover:text-white transition-colors">ahamedsuhail@lamiyaalkhaleej.com</a>
             </div>
           </div>
           <div className="flex flex-col items-center md:items-end relative z-10">
@@ -47,9 +49,9 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-24">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-24 items-start">
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
-            <img src={logoWhite} alt="Lamiya Al Khaleej Logo" className="h-24 mb-10 transform " />
+            <img src={logoWhite} alt="LAMIYA AL KHALEEJ AL ITTEHAD Logo" className="h-24 mb-10 transform " />
             <p className="text-[14px] leading-[28px] opacity-40 font-medium max-w-md uppercase tracking-[0.05em]">
-              With over 15 years experience, Lamiya Al Kahleej Company offers premier commercial and residential cleaning, AC, and pest control services across the Kingdom of Saudi Arabia.
+              With over 15 years experience,Lamiya Al Khaleej Al Ittehad  Company offers premier commercial and residential cleaning, AC, and pest control services across the Kingdom of Saudi Arabia.
             </p>
             <div className="flex gap-4 mt-12">
               <a href="#" className="w-12 h-12 rounded-none border border-white/10 flex items-center justify-center hover:bg-alfawad-primary hover:border-alfawad-primary hover:text-black transition-all">
@@ -113,27 +115,38 @@ const Footer = () => {
                 <div className="w-12 h-12 bg-white/5 flex items-center justify-center flex-shrink-0 group-hover:bg-alfawad-primary group-hover:text-black transition-all">
                   <Phone className="w-5 h-5" />
                 </div>
-                <div className="flex flex-col">
-                  <span className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-600 mb-2">Direct Line</span>
-                  <a href="tel:+966501007079" className="text-[20px] font-black hover:text-alfawad-primary transition-colors tracking-tighter uppercase">+966 XXXXXXXX</a>
+                <div className="flex flex-col gap-6">
+                  <span className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-600">Direct Lines</span>
+                  
+                  <div className="flex flex-col gap-5">
+                    <div className="flex flex-col">
+                      <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">Ashraf Al badan</span>
+                      <a href="tel:+966507077611" className="text-[12px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors">+966 50 707 7611</a>
+                    </div>
+
+                    <div className="flex flex-col">
+                      <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">Ahamed suhail</span>
+                      <div className="flex flex-col gap-1">
+                        <a href="tel:+966510304627" className="text-[12px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors">+966 51 030 4627</a>
+                        <a href="tel:+966566567518" className="text-[12px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors">+966 56 656 7518</a>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col">
+                      <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">Safwan</span>
+                      <a href="tel:+966583769845" className="text-[12px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors">+966 58 376 9845</a>
+                    </div>
+                  </div>
                 </div>
               </li>
-              <li className="flex flex-col lg:flex-row items-center lg:items-start gap-6 group">
-                <div className="w-12 h-12 bg-white/5 flex items-center justify-center flex-shrink-0 group-hover:bg-alfawad-primary group-hover:text-black transition-all">
-                  <Globe className="w-5 h-5" />
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-600 mb-2">Coverage</span>
-                  <span className="text-[14px] font-black opacity-40 leading-relaxed uppercase tracking-widest italic group-hover:opacity-100 transition-opacity">Kingdom of Saudi Arabia</span>
-                </div>
-              </li>
+             
               <li className="flex flex-col lg:flex-row items-center lg:items-start gap-6 group">
                 <div className="w-12 h-12 bg-white/5 flex items-center justify-center flex-shrink-0 group-hover:bg-alfawad-primary group-hover:text-black transition-all">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div className="flex flex-col">
                   <span className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-600 mb-2">Office Location</span>
-                  <span className="text-[11px] font-bold opacity-30 leading-loose uppercase tracking-[0.1em] group-hover:opacity-100 transition-opacity">8562 Al Tasni, An Nahdah District, <br /> Jeddah 23523, KSA</span>
+                  <span className="text-[11px] font-bold opacity-30 leading-loose uppercase tracking-[0.1em] group-hover:opacity-100 transition-opacity">Al Jubail, KSA </span>
                 </div>
               </li>
             </ul>
@@ -146,7 +159,7 @@ const Footer = () => {
         <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-alfawad-primary/50 to-transparent" />
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
           <p className="text-[10px] font-black uppercase tracking-[0.6em] text-gray-700">
-            © {new Date().getFullYear()} Lamiya Al Khaleej. All Rights Reserved.
+            © {new Date().getFullYear()} LAMIYA AL KHALEEJ AL ITTEHAD. All Rights Reserved.
           </p>
           {/* <div className="flex items-center gap-6">
             <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-gray-700">

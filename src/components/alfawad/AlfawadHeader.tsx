@@ -12,6 +12,7 @@ const navLinks = [
     label: "Overview", children: [
       { label: "Introduction", path: "/industrial/introduction" },
       { label: "Chairman Message", path: "/industrial/chairman-message" },
+      { label: "CEO Message", path: "/industrial/ceo-message" },
       { label: "Vision & Mission", path: "/industrial/vision-mission" },
       { label: "Quality Policy", path: "/industrial/quality-policy" },
       { label: "Environment & Safety Policy", path: "/industrial/environment-safety" },
@@ -19,11 +20,12 @@ const navLinks = [
   },
   {
     label: "Our Services", children: [
+         { label: "Material Service", path: "/industrial/services/material-service" },
       { label: "Technical Manpower Service", path: "/industrial/services/technical-manpower" },
       { label: "Heavy Equipment Service", path: "/industrial/services/heavy-equipment" },
       { label: "Project Support Service", path: "/industrial/services/project-support" },
       { label: "Project Management Service", path: "/industrial/services/project-management" },
-      { label: "Material Service", path: "/industrial/services/material-service" },
+   
     ]
   },
   { label: "Our Brochure", path: "/industrial/brochure" },
@@ -51,7 +53,7 @@ const AlfawadHeader = () => {
   }, [location]);
 
   return (
-    <header className="fixed top-10 sm:top-12 left-0 right-0 z-50 transition-all duration-500 font-muli">
+    <header className="fixed  left-0 right-0 z-50 transition-all duration-500 font-muli">
       <div 
         className={`w-full transition-all duration-500 border-b border-alfawad-primary/10 ${
           scrolled 
@@ -65,7 +67,7 @@ const AlfawadHeader = () => {
             <Link to="/industrial" className="flex items-center transition-transform duration-500 hover:scale-105">
               <img 
                 src={mainlogo} 
-                alt="Lamiya Al Khaleej" 
+                alt="LAMIYA AL KHALEEJ AL ITTEHAD" 
                 className={`transition-all duration-500 ${scrolled ? "h-9 md:h-11" : "h-11 md:h-13"} w-auto object-contain`}
               />
             </Link>
@@ -209,12 +211,29 @@ const AlfawadHeader = () => {
                     Request A Quote
                   </Link>
                   
-                  <div className="flex flex-col gap-6">
-                    <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest text-center">Get in Touch</p>
-                    <div className="flex gap-4 items-center justify-center">
-                      <a href="tel:+966500000000" className="w-12 h-12 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center text-gray-900 shadow-sm active:bg-black active:text-white transition-all">📞</a>
-                      <a href="mailto:info@lamiya.com" className="w-12 h-12 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center text-gray-900 shadow-sm active:bg-black active:text-white transition-all">✉️</a>
-                      <a href="#" className="w-12 h-12 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center text-gray-900 shadow-sm active:bg-black active:text-white transition-all">📍</a>
+                  <div className="flex flex-col gap-8">
+                    <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest text-center">Direct Support</p>
+                    <div className="flex flex-col gap-6">
+                      <div className="flex flex-col items-center text-center">
+                        <span className="text-[14px] font-black uppercase tracking-tighter text-black leading-tight">Ashraf Al badan</span>
+                        <a href="tel:+966507077611" className="text-[11px] font-bold text-alfawad-primary uppercase tracking-widest">+966 50 707 7611</a>
+                      </div>
+                      <div className="flex flex-col items-center text-center">
+                        <span className="text-[14px] font-black uppercase tracking-tighter text-black leading-tight">Ahamed suhail</span>
+                        <div className="flex flex-col gap-1 items-center">
+                          <a href="tel:+966510304627" className="text-[11px] font-bold text-alfawad-primary uppercase tracking-widest">+966 51 030 4627</a>
+                          <a href="tel:+966566567518" className="text-[11px] font-bold text-alfawad-primary uppercase tracking-widest">+966 56 656 7518</a>
+                        </div>
+                      </div>
+                      <div className="flex flex-col items-center text-center">
+                        <span className="text-[14px] font-black uppercase tracking-tighter text-black leading-tight">Safwan</span>
+                        <a href="tel:+966583769845" className="text-[11px] font-bold text-alfawad-primary uppercase tracking-widest">+966 58 376 9845</a>
+                      </div>
+                    </div>
+                    <div className="flex flex-col gap-3 items-center justify-center mt-6 pt-6 border-t border-gray-100 w-full">
+                      <a href="mailto:info@lamiyaalkhaleej.com" className="text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-alfawad-primary transition-colors">info@lamiyaalkhaleej.com</a>
+                      <a href="mailto:ashrafalbadan@lamiyaalkhaleej.com" className="text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-alfawad-primary transition-colors">ashrafalbadan@lamiyaalkhaleej.com</a>
+                      <a href="mailto:ahamedsuhail@lamiyaalkhaleej.com" className="text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-alfawad-primary transition-colors">ahamedsuhail@lamiyaalkhaleej.com</a>
                     </div>
                   </div>
                 </div>

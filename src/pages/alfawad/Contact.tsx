@@ -20,7 +20,7 @@ const Contact = () => {
             <h2 className="text-4xl font-black text-gray-900 mt-2 uppercase">We're Here To Help</h2>
             <div className="w-24 h-1 bg-alfawad-primary mx-auto mt-6" />
             <p className="text-gray-600 mt-6 text-lg">
-              Whether you need strategic project management, emergency project support, or specialized technical manpower. Reach out to Lamiya Al Kahleej General Contracting today.
+              Whether you need strategic project management, emergency project support, or specialized technical manpower. Reach out toLamiya Al Khaleej Al Ittehad  General Contracting today.
             </p>
           </div>
 
@@ -36,7 +36,7 @@ const Contact = () => {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 uppercase tracking-widest mb-2">Head Office</h3>
                   <p className="text-gray-600 leading-relaxed font-medium">
-                   Al Khobar, KSA
+                   Al Jubail, KSA
                   </p>
                 </div>
               </div>
@@ -47,12 +47,23 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 uppercase tracking-widest mb-2">Phones</h3>
-                  <p className="text-gray-600 leading-relaxed font-medium">
-                    +051 030 4627 
-                  </p>
-                  <p className="text-gray-600 leading-relaxed font-medium">
-                    +058 376 9845  
-                  </p>
+                  <div className="flex flex-col gap-6">
+                    <div className="flex flex-col">
+                      <span className="text-[18px] font-black uppercase tracking-tighter text-gray-900 leading-tight">Ashraf Al badan</span>
+                      <a href="tel:+966507077611" className="text-[12px] font-black uppercase tracking-widest text-alfawad-primary hover:text-black transition-colors">+966 50 707 7611</a>
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-[18px] font-black uppercase tracking-tighter text-gray-900 leading-tight">Ahamed suhail</span>
+                      <div className="flex flex-col gap-1">
+                        <a href="tel:+966510304627" className="text-[12px] font-black uppercase tracking-widest text-alfawad-primary hover:text-black transition-colors">+966 51 030 4627</a>
+                        <a href="tel:+966566567518" className="text-[12px] font-black uppercase tracking-widest text-alfawad-primary hover:text-black transition-colors">+966 56 656 7518</a>
+                      </div>
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-[18px] font-black uppercase tracking-tighter text-gray-900 leading-tight">Safwan</span>
+                      <a href="tel:+966583769845" className="text-[12px] font-black uppercase tracking-widest text-alfawad-primary hover:text-black transition-colors">+966 58 376 9845</a>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -61,9 +72,18 @@ const Contact = () => {
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 uppercase tracking-widest mb-2">Emails</h3>
-                  <p className="text-gray-600 leading-relaxed font-medium">
-                   lamiyaalkhaleej@gmail.com                  </p>
+                  <h3 className="text-xl font-bold text-gray-900 uppercase tracking-widest mb-4">Emails</h3>
+                  <div className="flex flex-col gap-6">
+                    <div className="flex flex-col">
+                      {/* <span className="text-[16px] font-black uppercase tracking-tighter text-gray-900 leading-tight">General Support</span> */}
+                      <a href="mailto:info@lamiyaalkhaleej.com" className="text-[11px] font-black uppercase tracking-widest text-alfawad-primary hover:text-black transition-colors">info@lamiyaalkhaleej.com</a>
+                                         <a href="mailto:ashrafalbadan@lamiyaalkhaleej.com" className="text-[11px] font-black uppercase tracking-widest text-alfawad-primary hover:text-black transition-colors">ashrafalbadan@lamiyaalkhaleej.com</a>
+                      <a href="mailto:ahamedsuhail@lamiyaalkhaleej.com" className="text-[11px] font-black uppercase tracking-widest text-alfawad-primary hover:text-black transition-colors">ahamedsuhail@lamiyaalkhaleej.com</a>
+
+                    </div>
+                   
+                  
+                  </div>
                 </div>
               </div>
 
@@ -138,7 +158,7 @@ const Contact = () => {
                   allowFullScreen={false}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Lamiya Al Kahleej General Contracting Headquarters Jubail"
+                  title="Lamiya alkhaleej alittihad establishment for general contractingHeadquarters Jubail"
                 ></iframe>
               </div>
 

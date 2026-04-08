@@ -53,7 +53,7 @@ const AlfawadFooter = () => {
               <Link to="/industrial" className="block w-full max-w-[280px]">
                 <img
                   src={laklogo}
-                  alt="Lamiya Al Khaleej"
+                  alt="LAMIYA AL KHALEEJ AL ITTEHAD"
                   className="w-full h-auto object-contain"
                 />
               </Link>
@@ -171,10 +171,28 @@ const AlfawadFooter = () => {
                     <div className="w-14 h-14 rounded-3xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-alfawad-primary group-hover:text-black transition-all">
                       <Phone className="w-6 h-6" />
                     </div>
-                    <div>
-                      <span className="text-[10px] font-black uppercase tracking-[0.4em] text-alfawad-primary leading-none block mb-2">Direct Line</span>
-                      <a href="tel:+0510304627" className="text-[22px] font-black uppercase tracking-tighter text-white hover:text-alfawad-primary transition-colors">+051 030 4627</a><br/>
-                      <a href="tel:+0583769845 " className="text-[22px] font-black uppercase tracking-tighter text-white hover:text-alfawad-primary transition-colors">+058 376 9845</a>
+                    <div className="space-y-6">
+                      <span className="text-[10px] font-black uppercase tracking-[0.4em] text-alfawad-primary leading-none block">Direct Lines</span>
+                      
+                      <div className="grid gap-8">
+                        <div className="flex flex-col">
+                          <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">Ashraf Al badan</span>
+                          <a href="tel:+966507077611" className="text-[13px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors">+966 50 707 7611</a>
+                        </div>
+
+                        <div className="flex flex-col">
+                          <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">Ahamed suhail</span>
+                          <div className="flex flex-col gap-1">
+                            <a href="tel:+966510304627" className="text-[13px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors">+966 51 030 4627</a>
+                            <a href="tel:+966566567518" className="text-[13px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors">+966 56 656 7518</a>
+                          </div>
+                        </div>
+
+                        <div className="flex flex-col">
+                          <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">Safwan</span>
+                          <a href="tel:+966583769845" className="text-[13px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors">+966 58 376 9845</a>
+                        </div>
+                      </div>
                     </div>
                   </div>
 
@@ -182,9 +200,13 @@ const AlfawadFooter = () => {
                     <div className="w-14 h-14 rounded-3xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-alfawad-primary group-hover:text-black transition-all">
                       <Mail className="w-6 h-6" />
                     </div>
-                    <div>
-                      <span className="text-[10px] font-black uppercase tracking-[0.4em] text-alfawad-primary leading-none block mb-2">Connect</span>
-                      <a href="mailto:lamiyaalkhaleej@gmail.com" className="text-[14px] font-black uppercase tracking-widest text-white/50 hover:text-white transition-colors border-b border-white/10">lamiyaalkhaleej@gmail.com</a>
+                    <div className="flex flex-col gap-4">
+                      <span className="text-[10px] font-black uppercase tracking-[0.4em] text-alfawad-primary leading-none block">Corporate Emails</span>
+                      <div className="flex flex-col gap-3">
+                        <a href="mailto:ashrafalbadan@lamiyaalkhaleej.com" className="text-[12px] font-bold uppercase tracking-widest text-white/50 hover:text-alfawad-primary transition-colors block">ashrafalbadan@lamiyaalkhaleej.com</a>
+                        <a href="mailto:ahamedsuhail@lamiyaalkhaleej.com" className="text-[12px] font-bold uppercase tracking-widest text-white/50 hover:text-alfawad-primary transition-colors block">ahamedsuhail@lamiyaalkhaleej.com</a>
+                        <a href="mailto:info@lamiyaalkhaleej.com" className="text-[12px] font-bold uppercase tracking-widest text-white/50 hover:text-alfawad-primary transition-colors block">info@lamiyaalkhaleej.com</a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -196,7 +218,7 @@ const AlfawadFooter = () => {
                <div className="flex flex-col sm:flex-row justify-between items-center gap-8 border-t border-white/5 pt-12">
                   
                   <p className="text-[9px] font-black uppercase tracking-[0.5em] text-white/20">
-                    &copy; {new Date().getFullYear()} Lamiya Al Khaleej. All Rights Reserved.
+                    &copy; {new Date().getFullYear()} LAMIYA AL KHALEEJ AL ITTEHAD. All Rights Reserved.
                   </p>
                  
                </div>

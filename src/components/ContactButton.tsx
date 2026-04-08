@@ -8,7 +8,7 @@ const ContactButton = () => {
 
   return (
     <motion.a
-      href="tel: +966 XXXXXXXX"
+      href="tel:+966507077611"
       className="fixed bottom-6 left-6 z-50 flex items-center gap-2 px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-shadow bg-primary text-primary-foreground text-sm font-medium"
       initial={{ x: -100, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}

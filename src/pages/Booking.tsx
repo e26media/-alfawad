@@ -52,7 +52,7 @@ const Booking = () => {
               <span className="text-alfawad-primary font-black text-[12px] uppercase tracking-[0.4em] mb-6 block">Why Book Today?</span>
               <h2 className="text-[36px] md:text-[50px] font-black text-black leading-tight uppercase tracking-tighter mb-8">Professional <br /> <span className="text-alfawad-primary">Inspection</span> Program</h2>
               <p className="text-gray-500 font-medium text-lg leading-relaxed mb-12">
-                At Lamiya Al Kahleej Company, we understand that every property is different. That is why we offer a Free Visit & Inspection Service for customers who want accurate pricing and customized service plans.
+                AtLamiya Al Khaleej Al Ittehad  Company, we understand that every property is different. That is why we offer a Free Visit & Inspection Service for customers who want accurate pricing and customized service plans.
               </p>
               <div className="space-y-6">
                 {[
@@ -101,16 +101,35 @@ const Booking = () => {
                   </div>
                   <h3 className="text-3xl font-black uppercase tracking-tighter mb-8 italic">Let Our Professionals Handle It</h3>
                   <p className="text-white/60 font-medium leading-relaxed mb-12">
-                    "Book your free visit today and experience the professional difference of Lamiya Al Kahleej Company facility solutions."
+                    "Book your free visit today and experience the professional difference ofLamiya Al Khaleej Al Ittehad  Company facility solutions."
                   </p>
                   <div className="space-y-6">
                     <div className="flex flex-col">
                       <span className="text-[10px] font-black uppercase tracking-[0.4em] text-alfawad-primary mb-2">Service Hours</span>
                       <span className="text-sm font-black uppercase tracking-widest leading-relaxed">Sat - Thu: 08:00 AM - 10:00 PM <br /> Fri: Based on Appointment</span>
                     </div>
-                    <div className="flex flex-col">
-                      <span className="text-[10px] font-black uppercase tracking-[0.4em] text-alfawad-primary mb-2">Hotline Support</span>
-                      <span className="text-2xl font-black uppercase tracking-tighter">+966 XXXXXXXX</span>
+                    <div className="flex flex-col gap-8">
+                      <span className="text-[10px] font-black uppercase tracking-[0.4em] text-alfawad-primary leading-none">Support Lines</span>
+                      
+                      <div className="flex flex-col gap-6">
+                        <div className="flex flex-col">
+                          <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">Ashraf Al badan</span>
+                          <a href="tel:+966507077611" className="text-[12px] font-bold uppercase tracking-widest text-alfawad-primary/60 hover:text-alfawad-primary transition-colors">+966 50 707 7611</a>
+                        </div>
+
+                        <div className="flex flex-col">
+                          <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">Ahamed suhail</span>
+                          <div className="flex flex-col gap-1">
+                            <a href="tel:+966510304627" className="text-[12px] font-bold uppercase tracking-widest text-alfawad-primary/60 hover:text-alfawad-primary transition-colors">+966 51 030 4627</a>
+                            <a href="tel:+966566567518" className="text-[12px] font-bold uppercase tracking-widest text-alfawad-primary/60 hover:text-alfawad-primary transition-colors">+966 56 656 7518</a>
+                          </div>
+                        </div>
+
+                        <div className="flex flex-col">
+                          <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">Safwan</span>
+                          <a href="tel:+966583769845" className="text-[12px] font-bold uppercase tracking-widest text-alfawad-primary/60 hover:text-alfawad-primary transition-colors">+966 58 376 9845</a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

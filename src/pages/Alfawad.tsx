@@ -4,6 +4,7 @@ import AlfawadHome from "./alfawad/Home";
 import Overview from "./alfawad/Overview";
 import Introduction from "./alfawad/Introduction";
 import ChairmanMessage from "./alfawad/ChairmanMessage";
+import CEOMessage from "./alfawad/CEOMessage";
 import VisionMission from "./alfawad/VisionMission";
 import QualityPolicy from "./alfawad/QualityPolicy";
 import EnvironmentSafety from "./alfawad/EnvironmentSafety";
@@ -28,6 +29,7 @@ const Alfawad = () => {
         <Route path="/overview" element={<Overview />} />
         <Route path="/introduction" element={<Introduction />} />
         <Route path="/chairman-message" element={<ChairmanMessage />} />
+        <Route path="/ceo-message" element={<CEOMessage />} />
         <Route path="/vision-mission" element={<VisionMission />} />
         <Route path="/quality-policy" element={<QualityPolicy />} />
         <Route path="/environment-safety" element={<EnvironmentSafety />} />

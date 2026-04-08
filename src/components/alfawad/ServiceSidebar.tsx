@@ -2,11 +2,12 @@ import { Link, useLocation } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 
 const SERVICE_LINKS = [
+   { label: "MATERIAL SERVICE", path: "/industrial/services/material-service" },
   { label: "TECHNICAL MANPOWER", path: "/industrial/services/technical-manpower" },
   { label: "HEAVY EQUIPMENT", path: "/industrial/services/heavy-equipment" },
   { label: "PROJECT SUPPORT", path: "/industrial/services/project-support" },
   { label: "PROJECT MANAGEMENT", path: "/industrial/services/project-management" },
-  { label: "MATERIAL SERVICE", path: "/industrial/services/material-service" },
+ 
 ];
 
 const ServiceSidebar = () => {

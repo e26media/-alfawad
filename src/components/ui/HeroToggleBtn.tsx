@@ -2,16 +2,16 @@ import { Link, useLocation } from "react-router-dom";
 import { HardHat, Droplets, Sparkles } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-export default function TopBarToggle() {
+export default function HeroToggleBtn() {
   const location = useLocation();
   const isEngineering = location.pathname.startsWith('/industrial');
 
   return (
     <motion.div 
-      initial={{ y: 100, x: "-50%", opacity: 0 }}
-      animate={{ y: 0, x: "-50%", opacity: 1 }}
+      initial={{ y: 20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
       transition={{ type: "spring", damping: 20, stiffness: 100 }}
-      className="fixed bottom-6 sm:bottom-10 left-1/2 z-[100] px-4 w-full max-w-fit"
+      className="z-40 px-4 w-full max-w-fit"
     >
       <div className="flex items-center backdrop-blur-2xl bg-black/50 p-1.5 rounded-full border border-white/10 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.8)] relative min-w-[280px] sm:min-w-[420px] h-14 sm:h-16 group">
         

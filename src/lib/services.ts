@@ -144,7 +144,7 @@ export const serviceDetails: ServiceDetail[] = [
   {
     title: "Deep Cleaning",
     slug: "deep-cleaning-service",
-    metaTitle: "Deep Cleaning Services in Saudi Arabia | Lamiya Al Kahleej",
+    metaTitle: "Deep Cleaning Services in Saudi Arabia |Lamiya Al Khaleej Al Ittehad ",
     metaDescription: "Professional deep cleaning services for homes, villas, apartments, and offices in Riyadh, Jeddah, Dammam, and across KSA.",
     description: "Intensive scrubbing, sanitizing, and detail oriented work.",
     icon: Sparkles,
@@ -243,7 +243,7 @@ export const serviceDetails: ServiceDetail[] = [
   {
     title: "AC Cleaning",
     slug: "ac-cleaning",
-    metaTitle: "AC Cleaning Services in KSA | Lamiya Al Kahleej Company",
+    metaTitle: "AC Cleaning Services in KSA |Lamiya Al Khaleej Al Ittehad  Company",
     metaDescription: "Expert AC cleaning, coil cleaning, duct cleaning, and maintenance services in Saudi Arabia. Improve air quality and reduce electricity bills.",
     description: "Professional AC cleaning for all types of units.",
     icon: Fan,
@@ -405,7 +405,7 @@ export const serviceDetails: ServiceDetail[] = [
   {
     title: "Annual Pest Control Contract",
     slug: "annual-pest-control-contract",
-    metaTitle: "Annual Pest Control Contract in KSA | Lamiya Al Kahleej",
+    metaTitle: "Annual Pest Control Contract in KSA |Lamiya Al Khaleej Al Ittehad ",
     metaDescription: "Protect your home and business with annual pest control contracts. Safe treatment for cockroaches, ants, termites, rodents, and mosquitoes.",
     description: "Year-round protection against common pests.",
     icon: Bug,

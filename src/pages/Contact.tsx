@@ -7,9 +7,27 @@ import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
 
 const contactInfo = [
-  { icon: Smartphone, label: "Direct Phone", value: "+966 XXXXXXXX", href: "tel:+966501007079" },
-  { icon: Mail, label: "Email Address", value: "info@lamiyaalkhaleej.com", href: "mailto:info@lamiyaalkhaleej.com" },
-  { icon: Globe, label: "Service Areas", value: "Riyadh, Jeddah, Dammam, Khobar, Mecca, Medina, and all KSA" },
+  { 
+    icon: Smartphone, 
+    label: "Direct Lines", 
+    isMulti: true,
+    contacts: [
+      { name: "Ashraf Al badan", numbers: ["+966 50 707 7611"] },
+      { name: "Ahamed suhail", numbers: ["+966 51 030 4627", "+966 56 656 7518"] },
+      { name: "Safwan", numbers: ["+966 58 376 9845"] }
+    ]
+  },
+  { 
+    icon: Mail, 
+    label: "Email Addresses", 
+    isMulti: true,
+    contacts: [
+      {  numbers: ["info@lamiyaalkhaleej.com"] },
+      {numbers: ["ashrafalbadan@lamiyaalkhaleej.com"] },
+      {  numbers: ["ahamedsuhail@lamiyaalkhaleej.com"] }
+    ]
+  },
+  { icon: Globe, label: "Head Office", value: "   Al Jubail, KSA" },
   { icon: Clock, label: "Business Hours", value: "Sat–Thu: 8:00 AM – 10:00 PM, Fri: Appointment Based" },
 ];
 
@@ -19,8 +37,8 @@ const Contact = () => {
   return (
     <div className="pt-32 md:pt-40 font-muli bg-white overflow-x-hidden">
       <SEO
-        title="Contact Us | Lamiya Al Kahleej Company - Professional Support in KSA"
-        description="Get in touch with Lamiya Al Kahleej Company for fast booking and professional support for cleaning, AC, and pest control services across Saudi Arabia."
+        title="Contact Us | Lamiya Al Khaleej Al Ittehad Company - Professional Support in KSA"
+        description="Get in touch with Lamiya Al Khaleej Al Ittehad Company for fast booking and professional support for cleaning, AC, and pest control services across Saudi Arabia."
       />
 
       {/* Header */}
@@ -52,19 +70,34 @@ const Contact = () => {
                     <div className="w-14 h-14 bg-black text-white flex items-center justify-center flex-shrink-0 group-hover:bg-alfawad-primary transition-colors">
                       <info.icon className="w-6 h-6" />
                     </div>
-                    <div>
+                    <div className="flex-1">
                       <div className="text-[11px] font-black text-gray-400 uppercase tracking-[0.4em] mb-3">{info.label}</div>
-                      {info.href ? (
-                        <a href={info.href} className="text-lg font-black text-black uppercase tracking-tighter hover:text-alfawad-primary transition-colors">{info.value}</a>
+                      {info.isMulti ? (
+                        <div className="flex flex-col gap-6 mt-4">
+                          {info.contacts?.map((c, idx) => (
+                            <div key={idx} className="flex flex-col">
+                                <span className="text-[16px] font-black uppercase tracking-tighter text-black leading-tight">{c.name}</span>
+                                <div className="flex flex-col gap-0.5">
+                                  {c.numbers.map(n => (
+                                    <a key={n} href={n.includes('@') ? `mailto:${n}` : `tel:${n.replace(/\s/g, '')}`} className="text-[11px] font-black uppercase tracking-widest text-alfawad-primary hover:text-black transition-colors">{n}</a>
+                                  ))}
+                                </div>
+                            </div>
+                          ))}
+                        </div>
                       ) : (
-                        <div className="text-lg font-black text-black uppercase tracking-tighter leading-tight">{info.value}</div>
+                         (info as any).href ? (
+                          <a href={(info as any).href} className="text-lg font-black text-black uppercase tracking-tighter hover:text-alfawad-primary transition-colors">{(info as any).value}</a>
+                        ) : (
+                          <div className="text-lg font-black text-black uppercase tracking-tighter leading-tight">{(info as any).value}</div>
+                        )
                       )}
                     </div>
                   </div>
                 </AnimatedSection>
               ))}
 
-              <AnimatedSection delay={0.4}>
+              {/* <AnimatedSection delay={0.4}>
                 <div className="bg-black text-white p-10 mt-12 relative overflow-hidden group">
                   <div className="absolute top-0 right-0 p-10 opacity-10 group-hover:scale-150 transition-all duration-700">
                     <MapPin className="w-20 h-20 text-alfawad-primary" />
@@ -77,7 +110,7 @@ const Contact = () => {
                     Get Directions <ArrowRight className="w-4 h-4 translate-x-0 group-hover/link:translate-x-2 transition-transform" />
                   </a>
                 </div>
-              </AnimatedSection>
+              </AnimatedSection> */}
             </div>
 
             <div className="lg:col-span-3">

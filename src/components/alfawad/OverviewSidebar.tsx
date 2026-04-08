@@ -4,6 +4,7 @@ import { ChevronRight } from "lucide-react";
 const OVERVIEW_LINKS = [
   { label: "INTRODUCTION", path: "/industrial/introduction" },
   { label: "CHAIRMAN MESSAGE", path: "/industrial/chairman-message" },
+  { label: "CEO MESSAGE", path: "/industrial/ceo-message" },
   { label: "VISION & MISSION", path: "/industrial/vision-mission" },
   { label: "QUALITY POLICY", path: "/industrial/quality-policy" },
   { label: "ENVIRONMENT & SAFETY POLICY", path: "/industrial/environment-safety" },

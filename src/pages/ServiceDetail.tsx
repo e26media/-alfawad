@@ -7,19 +7,19 @@ import { serviceDetails } from "@/lib/services";
 
 const ServiceDetail = () => {
   const { slug } = useParams();
-  
+
   // If no slug, check current pathname for direct matches (e.g. /ac-cleaning)
   const currentPath = window.location.pathname.replace(/^\//, '');
   const finalSlug = slug || currentPath;
-  
+
   const service = serviceDetails.find((s) => s.slug === finalSlug);
 
   if (!service) {
     return (
       <div className="pt-40 pb-20 font-muli text-center container mx-auto px-4 min-h-screen">
         <h1 className="text-3xl font-black text-black mb-8 uppercase tracking-tighter">Service not found</h1>
-        <Link 
-          to="/services" 
+        <Link
+          to="/services"
           className="bg-black text-white px-10 py-4 font-black uppercase tracking-widest text-sm hover:bg-alfawad-primary transition-all inline-block"
         >
           Back to Services
@@ -30,11 +30,11 @@ const ServiceDetail = () => {
 
   return (
     <div className="pt-32 md:pt-40 font-muli bg-white overflow-x-hidden">
-      <SEO 
-        title={service.metaTitle || `${service.title} | Lamiya Al Kahleej Company`} 
+      <SEO
+        title={service.metaTitle || `${service.title} |Lamiya Al Khaleej Al Ittehad  Company`}
         description={service.metaDescription || service.longDescription}
       />
-      
+
       {/* Hero Section */}
       <section className="relative min-h-[500px] md:min-h-[600px] flex items-center overflow-hidden">
         <div
@@ -45,20 +45,20 @@ const ServiceDetail = () => {
         </div>
         <div className="container mx-auto px-4 relative z-10 py-20">
           <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} className="max-w-3xl">
-             <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-alfawad-primary flex items-center justify-center">
-                   <service.icon className="w-6 h-6 text-black" />
-                </div>
-                <span className="text-alfawad-primary font-black text-[12px] md:text-[14px] uppercase tracking-[0.5em] block leading-tight">Professional Solution</span>
-             </div>
-             <h1 className="text-[40px] md:text-[80px] font-black text-white mb-8 uppercase tracking-tighter leading-[0.95] italic">{service.title}</h1>
-             <p className="text-white/80 text-xl font-medium leading-relaxed mb-12 max-w-xl border-l-4 border-alfawad-primary pl-8">{service.description}</p>
-             <Link
-               to="/booking"
-               className="bg-alfawad-primary text-white hover:bg-white hover:text-black px-12 py-5 font-black uppercase tracking-widest text-sm transition-all shadow-[0_20px_50px_rgba(182,138,65,0.3)] inline-block group"
-             >
-               Book Free Inspection <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform inline-block ml-2" />
-             </Link>
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 bg-alfawad-primary flex items-center justify-center">
+                <service.icon className="w-6 h-6 text-black" />
+              </div>
+              <span className="text-alfawad-primary font-black text-[12px] md:text-[14px] uppercase tracking-[0.5em] block leading-tight">Professional Solution</span>
+            </div>
+            <h1 className="text-[40px] md:text-[80px] font-black text-white mb-8 uppercase tracking-tighter leading-[0.95] italic">{service.title}</h1>
+            <p className="text-white/80 text-xl font-medium leading-relaxed mb-12 max-w-xl border-l-4 border-alfawad-primary pl-8">{service.description}</p>
+            <Link
+              to="/booking"
+              className="bg-alfawad-primary text-white hover:bg-white hover:text-black px-12 py-5 font-black uppercase tracking-widest text-sm transition-all shadow-[0_20px_50px_rgba(182,138,65,0.3)] inline-block group"
+            >
+              Book Free Inspection <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform inline-block ml-2" />
+            </Link>
           </motion.div>
         </div>
       </section>
@@ -68,129 +68,129 @@ const ServiceDetail = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-12 gap-16 xl:gap-24">
             <div className="lg:col-span-8 space-y-24">
-               {/* Description */}
-               <AnimatedSection>
-                  <h2 className="text-[32px] md:text-[45px] font-black text-black uppercase tracking-tighter mb-10 leading-none">Service Overview</h2>
-                  <p className="text-gray-500 text-xl font-medium leading-loose mb-12">{service.longDescription}</p>
-                  
-                  {service.pests && (
-                     <div className="bg-[#f8f9fa] p-10 mt-12 border-l-8 border-alfawad-primary">
-                        <h3 className="text-xl font-black uppercase tracking-tighter mb-8 italic">Pests We Control</h3>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                           {service.pests.map((pest, i) => (
-                              <div key={i} className="flex items-center gap-2">
-                                 <Bug className="w-4 h-4 text-alfawad-primary" />
-                                 <span className="text-[10px] font-black uppercase tracking-widest text-black">{pest}</span>
-                              </div>
-                           ))}
+              {/* Description */}
+              <AnimatedSection>
+                <h2 className="text-[32px] md:text-[45px] font-black text-black uppercase tracking-tighter mb-10 leading-none">Service Overview</h2>
+                <p className="text-gray-500 text-xl font-medium leading-loose mb-12">{service.longDescription}</p>
+
+                {service.pests && (
+                  <div className="bg-[#f8f9fa] p-10 mt-12 border-l-8 border-alfawad-primary">
+                    <h3 className="text-xl font-black uppercase tracking-tighter mb-8 italic">Pests We Control</h3>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                      {service.pests.map((pest, i) => (
+                        <div key={i} className="flex items-center gap-2">
+                          <Bug className="w-4 h-4 text-alfawad-primary" />
+                          <span className="text-[10px] font-black uppercase tracking-widest text-black">{pest}</span>
                         </div>
-                     </div>
-                  )}
-               </AnimatedSection>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </AnimatedSection>
 
-               {/* Benefits */}
-               <div>
-                 <AnimatedSection>
-                   <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
-                      <h2 className="text-[32px] md:text-[45px] font-black text-black uppercase tracking-tighter leading-none italic">
-                         Key <span className="text-alfawad-primary">Benefits</span>
-                      </h2>
-                      <div className="w-32 h-1 bg-alfawad-primary" />
-                   </div>
-                 </AnimatedSection>
-                 <div className="grid sm:grid-cols-2 gap-8">
-                   {service.benefits.map((b, i) => (
-                     <AnimatedSection key={i} delay={i * 0.05}>
-                       <div className="group flex flex-col p-8 bg-[#fcfcfc] border border-gray-100 hover:border-alfawad-primary transition-all duration-500 hover:shadow-2xl h-full">
-                         <div className="w-12 h-12 bg-black text-white flex items-center justify-center mb-6 group-hover:bg-alfawad-primary transition-colors">
-                           <BadgeCheck className="w-6 h-6" />
-                         </div>
-                         <span className="font-black text-black uppercase text-xs tracking-widest leading-relaxed">{b}</span>
-                       </div>
-                     </AnimatedSection>
-                   ))}
-                 </div>
-               </div>
+              {/* Benefits */}
+              <div>
+                <AnimatedSection>
+                  <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
+                    <h2 className="text-[32px] md:text-[45px] font-black text-black uppercase tracking-tighter leading-none italic">
+                      Key <span className="text-alfawad-primary">Benefits</span>
+                    </h2>
+                    <div className="w-32 h-1 bg-alfawad-primary" />
+                  </div>
+                </AnimatedSection>
+                <div className="grid sm:grid-cols-2 gap-8">
+                  {service.benefits.map((b, i) => (
+                    <AnimatedSection key={i} delay={i * 0.05}>
+                      <div className="group flex flex-col p-8 bg-[#fcfcfc] border border-gray-100 hover:border-alfawad-primary transition-all duration-500 hover:shadow-2xl h-full">
+                        <div className="w-12 h-12 bg-black text-white flex items-center justify-center mb-6 group-hover:bg-alfawad-primary transition-colors">
+                          <BadgeCheck className="w-6 h-6" />
+                        </div>
+                        <span className="font-black text-black uppercase text-xs tracking-widest leading-relaxed">{b}</span>
+                      </div>
+                    </AnimatedSection>
+                  ))}
+                </div>
+              </div>
 
-               {/* Methodology/Process */}
-               <div className="bg-black text-white p-12 md:p-24 relative overflow-hidden group">
-                 <div className="absolute top-0 right-0 p-12 opacity-5 -mr-10 -mt-10 group-hover:scale-150 transition-all duration-700">
-                    <Sparkles className="w-40 h-40 text-alfawad-primary" />
-                 </div>
-                 <AnimatedSection>
-                   <h2 className="text-[32px] md:text-[45px] font-black uppercase tracking-tighter mb-16 text-center italic">Service <span className="text-alfawad-primary">Methodology</span></h2>
-                 </AnimatedSection>
-                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10 text-center">
-                   {service.process.map((step, i) => (
-                     <AnimatedSection key={i} delay={i * 0.1}>
-                       <div className="group">
-                         <div className="w-20 h-20 bg-white/10 backdrop-blur-md flex items-center justify-center text-alfawad-primary font-black text-2xl mx-auto mb-8 transition-all group-hover:bg-alfawad-primary group-hover:text-black group-hover:scale-110">
-                           {i + 1}
-                         </div>
-                         <p className="font-black text-white uppercase text-[10px] tracking-[0.2em] leading-loose">{step}</p>
-                       </div>
-                     </AnimatedSection>
-                   ))}
-                 </div>
-               </div>
+              {/* Methodology/Process */}
+              <div className="bg-black text-white p-12 md:p-24 relative overflow-hidden group">
+                <div className="absolute top-0 right-0 p-12 opacity-5 -mr-10 -mt-10 group-hover:scale-150 transition-all duration-700">
+                  <Sparkles className="w-40 h-40 text-alfawad-primary" />
+                </div>
+                <AnimatedSection>
+                  <h2 className="text-[32px] md:text-[45px] font-black uppercase tracking-tighter mb-16 text-center italic">Service <span className="text-alfawad-primary">Methodology</span></h2>
+                </AnimatedSection>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10 text-center">
+                  {service.process.map((step, i) => (
+                    <AnimatedSection key={i} delay={i * 0.1}>
+                      <div className="group">
+                        <div className="w-20 h-20 bg-white/10 backdrop-blur-md flex items-center justify-center text-alfawad-primary font-black text-2xl mx-auto mb-8 transition-all group-hover:bg-alfawad-primary group-hover:text-black group-hover:scale-110">
+                          {i + 1}
+                        </div>
+                        <p className="font-black text-white uppercase text-[10px] tracking-[0.2em] leading-loose">{step}</p>
+                      </div>
+                    </AnimatedSection>
+                  ))}
+                </div>
+              </div>
             </div>
 
             {/* Sidebar */}
             <div className="lg:col-span-4 space-y-12">
-               <AnimatedSection>
-                 <div className="bg-[#fcfcfc] border-t-8 border-black p-10 md:p-12 shadow-2xl sticky top-32">
-                   <h3 className="text-2xl font-black uppercase tracking-tighter mb-10 italic">Service Packages</h3>
-                   <div className="space-y-12">
-                     {service.packages.map((pkg, i) => (
-                       <div key={i} className="relative pl-10 border-l border-gray-100 group">
-                         <div className="absolute top-0 left-0 -ml-[1px] w-[2px] h-0 bg-alfawad-primary group-hover:h-full transition-all duration-700" />
-                         <span className="text-[10px] font-black uppercase tracking-[0.4em] text-alfawad-primary mb-2 block">{pkg.name}</span>
-                         <div className="text-3xl font-black mb-6 uppercase tracking-tighter text-black italic">{pkg.price}</div>
-                         <ul className="space-y-4 mb-10">
-                           {pkg.features.map((f, j) => (
-                             <li key={j} className="flex items-start gap-3 text-[10px] font-bold uppercase tracking-widest text-gray-500 group-hover:text-black transition-colors">
-                                <div className="w-1.5 h-1.5 bg-alfawad-primary mt-1 flex-shrink-0" /> {f}
-                             </li>
-                           ))}
-                         </ul>
-                       </div>
-                     ))}
-                   </div>
-                   <Link
-                     to="/booking"
-                     className="bg-black hover:bg-alfawad-primary text-white px-8 py-5 font-black uppercase tracking-widest text-xs transition-all text-center block mt-12 shadow-xl"
-                   >
-                     Book This Service
-                   </Link>
-                 </div>
-               </AnimatedSection>
-
-               <AnimatedSection delay={0.2}>
-                 <div className="bg-[#f8f9fa] p-12 border-l-8 border-alfawad-primary group">
-                   <div className="flex gap-1 mb-8">
-                      {[1, 2, 3, 4, 5].map(i => <Star key={i} className="w-4 h-4 text-alfawad-primary fill-alfawad-primary" />)}
-                   </div>
-                   <p className="text-black font-black uppercase text-xs tracking-widest leading-loose mb-10 italic">
-                     "Lamiya Al Kahleej Company delivered exceptional quality. Their attention to detail in {service.title} was remarkable. Highly recommended."
-                   </p>
-                   <div className="flex items-center gap-4">
-                      <div className="w-10 h-1 bg-black group-hover:w-16 transition-all" />
-                      <span className="text-[10px] font-black uppercase tracking-widest text-gray-400">Trusted Client</span>
-                   </div>
-                 </div>
-               </AnimatedSection>
-               
-               <AnimatedSection delay={0.3}>
-                  <div className="bg-black text-white p-12 relative overflow-hidden group">
-                     <div className="absolute inset-0 bg-alfawad-primary opacity-0 group-hover:opacity-10 transition-opacity" />
-                     <Smartphone className="w-10 h-10 text-alfawad-primary mb-8" />
-                     <h4 className="text-xl font-black uppercase tracking-tighter mb-4 italic">Instant Quote?</h4>
-                     <p className="text-white/60 text-xs font-bold uppercase tracking-widest mb-10">WhatsApp us now for a quick response and expert advice.</p>
-                     <a href="https://wa.me/966501007079" className="text-alfawad-primary font-black uppercase tracking-widest text-xs flex items-center gap-3 hover:text-white transition-colors">
-                        SAY HELLO ON WHATSAPP <ArrowRight className="w-4 h-4" />
-                     </a>
+              <AnimatedSection>
+                <div className="bg-[#fcfcfc] border-t-8 border-black p-10 md:p-12 shadow-2xl sticky top-32">
+                  <h3 className="text-2xl font-black uppercase tracking-tighter mb-10 italic">Service Packages</h3>
+                  <div className="space-y-12">
+                    {service.packages.map((pkg, i) => (
+                      <div key={i} className="relative pl-10 border-l border-gray-100 group">
+                        <div className="absolute top-0 left-0 -ml-[1px] w-[2px] h-0 bg-alfawad-primary group-hover:h-full transition-all duration-700" />
+                        <span className="text-[10px] font-black uppercase tracking-[0.4em] text-alfawad-primary mb-2 block">{pkg.name}</span>
+                        <div className="text-3xl font-black mb-6 uppercase tracking-tighter text-black italic">{pkg.price}</div>
+                        <ul className="space-y-4 mb-10">
+                          {pkg.features.map((f, j) => (
+                            <li key={j} className="flex items-start gap-3 text-[10px] font-bold uppercase tracking-widest text-gray-500 group-hover:text-black transition-colors">
+                              <div className="w-1.5 h-1.5 bg-alfawad-primary mt-1 flex-shrink-0" /> {f}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
                   </div>
-               </AnimatedSection>
+                  <Link
+                    to="/booking"
+                    className="bg-black hover:bg-alfawad-primary text-white px-8 py-5 font-black uppercase tracking-widest text-xs transition-all text-center block mt-12 shadow-xl"
+                  >
+                    Book This Service
+                  </Link>
+                </div>
+              </AnimatedSection>
+
+              <AnimatedSection delay={0.2}>
+                <div className="bg-[#f8f9fa] p-12 border-l-8 border-alfawad-primary group">
+                  <div className="flex gap-1 mb-8">
+                    {[1, 2, 3, 4, 5].map(i => <Star key={i} className="w-4 h-4 text-alfawad-primary fill-alfawad-primary" />)}
+                  </div>
+                  <p className="text-black font-black uppercase text-xs tracking-widest leading-loose mb-10 italic">
+                    "Lamiya Al Kahleej Company delivered exceptional quality. Their attention to detail in {service.title} was remarkable. Highly recommended."
+                  </p>
+                  <div className="flex items-center gap-4">
+                    <div className="w-10 h-1 bg-black group-hover:w-16 transition-all" />
+                    <span className="text-[10px] font-black uppercase tracking-widest text-gray-400">Trusted Client</span>
+                  </div>
+                </div>
+              </AnimatedSection>
+
+              <AnimatedSection delay={0.3}>
+                <div className="bg-black text-white p-12 relative overflow-hidden group">
+                  <div className="absolute inset-0 bg-alfawad-primary opacity-0 group-hover:opacity-10 transition-opacity" />
+                  <Smartphone className="w-10 h-10 text-alfawad-primary mb-8" />
+                  <h4 className="text-xl font-black uppercase tracking-tighter mb-4 italic">Instant Quote?</h4>
+                  <p className="text-white/60 text-xs font-bold uppercase tracking-widest mb-10">WhatsApp us now for a quick response and expert advice.</p>
+                  <a href="https://wa.me/966501007079" className="text-alfawad-primary font-black uppercase tracking-widest text-xs flex items-center gap-3 hover:text-white transition-colors">
+                    SAY HELLO ON WHATSAPP <ArrowRight className="w-4 h-4" />
+                  </a>
+                </div>
+              </AnimatedSection>
             </div>
           </div>
         </div>
@@ -198,20 +198,20 @@ const ServiceDetail = () => {
 
       {/* Related Services */}
       <section className="py-24 bg-[#f8f9fa] border-t border-gray-100">
-         <div className="container mx-auto px-4">
-            <h2 className="text-2xl font-black text-black uppercase tracking-tighter mb-16 italic">Related Solutions</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-               {serviceDetails.slice(0, 4).map((s, i) => (
-                  <Link key={i} to={`/services/${s.slug}`} className="bg-white p-8 border border-gray-100 flex flex-col justify-between hover:border-alfawad-primary transition-all group">
-                     <h4 className="text-sm font-black uppercase tracking-widest text-black mb-10 group-hover:text-alfawad-primary transition-colors">{s.title}</h4>
-                     <div className="flex items-center justify-between text-[10px] font-black uppercase tracking-widest opacity-40 group-hover:opacity-100">
-                        <span>Details</span>
-                        <ArrowRight className="w-4 h-4" />
-                     </div>
-                  </Link>
-               ))}
-            </div>
-         </div>
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl font-black text-black uppercase tracking-tighter mb-16 italic">Related Solutions</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {serviceDetails.slice(0, 4).map((s, i) => (
+              <Link key={i} to={`/services/${s.slug}`} className="bg-white p-8 border border-gray-100 flex flex-col justify-between hover:border-alfawad-primary transition-all group">
+                <h4 className="text-sm font-black uppercase tracking-widest text-black mb-10 group-hover:text-alfawad-primary transition-colors">{s.title}</h4>
+                <div className="flex items-center justify-between text-[10px] font-black uppercase tracking-widest opacity-40 group-hover:opacity-100">
+                  <span>Details</span>
+                  <ArrowRight className="w-4 h-4" />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
       </section>
     </div>
   );

@@ -18,43 +18,43 @@ const NewsDetail = () => {
 
   return (
     <div className="flex flex-col min-h-screen bg-white font-muli">
-      
+
       {/* Premium Header Banner Section */}
       <section className="relative w-full h-[350px] md:h-[450px] overflow-hidden flex items-center">
         <div className="absolute inset-0 bg-[#b68a41]/85 z-10" />
-        <img 
-          src="/images/industrial/hero-1.png" 
-          alt="News Details Background" 
+        <img
+          src="/images/industrial/hero-1.png"
+          alt="News Details Background"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] relative z-20 flex flex-col items-center justify-center text-center pt-20">
-           <div className="w-full text-white">
-              <h1 className="text-[32px] md:text-[55px] font-black leading-tight mb-6 uppercase tracking-tighter text-white drop-shadow-2xl max-w-4xl mx-auto">
-                {news.title}
-              </h1>
-              <div className="w-24 h-2 bg-white mb-8 mx-auto" />
-              <div className="flex items-center justify-center gap-3 text-[12px] md:text-[14px] font-black text-white/95 uppercase tracking-[0.2em]">
-                <Link to="/" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
-                <ChevronRight className="w-4 h-4 text-white/50" />
-                <span className="text-white/70">News</span>
-                <ChevronRight className="w-4 h-4 text-white/50" />
-                <span className="text-white truncate max-w-[150px] sm:max-w-none">{news.title}</span>
-              </div>
-           </div>
+          <div className="w-full text-white">
+            <h1 className="text-[32px] md:text-[55px] font-black leading-tight mb-6 uppercase tracking-tighter text-white drop-shadow-2xl max-w-4xl mx-auto">
+              {news.title}
+            </h1>
+            <div className="w-24 h-2 bg-white mb-8 mx-auto" />
+            <div className="flex items-center justify-center gap-3 text-[12px] md:text-[14px] font-black text-white/95 uppercase tracking-[0.2em]">
+              <Link to="/" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
+              <ChevronRight className="w-4 h-4 text-white/50" />
+              <span className="text-white/70">News</span>
+              <ChevronRight className="w-4 h-4 text-white/50" />
+              <span className="text-white truncate max-w-[150px] sm:max-w-none">{news.title}</span>
+            </div>
+          </div>
         </div>
       </section>
 
       <section className="py-16 md:py-24 bg-[#f4f5f6]">
         <div className="container mx-auto px-4 lg:px-12 max-w-[1400px]">
           <div className="flex flex-col lg:flex-row gap-12">
-            
+
             {/* <div className="hidden lg:block w-1/4">
                <ServiceSidebar />
             </div> */}
 
             <div className="w-full lg:w-full">
               <div className="bg-white p-6 md:p-16 shadow-xl border border-gray-100 relative overflow-hidden group">
-                
+
                 {/* News Metadata */}
                 {/* <div className="flex flex-wrap items-center gap-6 mb-10 pb-8 border-b border-gray-100">
                   <div className="flex items-center gap-2">
@@ -74,10 +74,10 @@ const NewsDetail = () => {
                 <div className="flex flex-col gap-10">
                   {/* Related Image */}
                   <div className="w-full aspect-video overflow-hidden rounded-sm shadow-lg mb-4">
-                    <img 
-                      src={news.image} 
-                      alt={news.title} 
-                      className="w-full h-full object-cover  transition-all duration-700" 
+                    <img
+                      src={news.image}
+                      alt={news.title}
+                      className="w-full h-full object-cover  transition-all duration-700"
                     />
                   </div>
 
@@ -92,13 +92,13 @@ const NewsDetail = () => {
                     <p className="text-[22px] font-bold text-gray-900 leading-relaxed italic">
                       {news.description}
                     </p>
-                    
+
                     <p>
                       {news.fullContent}
                     </p>
 
                     <p>
-                      As part of our commitment to transparency and excellence, we share these updates to keep our clients and partners informed about the strategic progress we are making in the industrial sector. Our dedicated teams work tirelessly to ensure that every project phase aligns with the high standards expected from Lamiya Al Kahleej General Contracting.
+                      As part of our commitment to transparency and excellence, we share these updates to keep our clients and partners informed about the strategic progress we are making in the industrial sector. Our dedicated teams work tirelessly to ensure that every project phase aligns with the high standards expected fromLamiya Al Khaleej Al Ittehad  General Contracting.
                     </p>
                   </div>
 

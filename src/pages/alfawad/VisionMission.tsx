@@ -46,7 +46,7 @@ const VisionMission = () => {
                     <Target className="w-16 h-16 text-alfawad-primary mb-8" />
                     <h2 className="text-3xl font-black text-black uppercase tracking-tighter mb-6">Our Vision</h2>
                     <p className="text-[#666666] leading-relaxed text-lg font-medium italic">
-                      "To become one of the most respected and reliable contracting and industrial service providers in Saudi Arabia, recognized for excellence in manpower services, equipment solutions, and project support with strong safety and quality performance."
+                      "To become one of the most respected and reliable contracting and industrial service providers in Saudi Arabia, recognized for excellence in material providing services, manpower services, equipment solutions  and project support with strong safety and quality performance."
                     </p>
                  </div>
 

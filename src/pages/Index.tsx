@@ -36,13 +36,13 @@ const clientLogos = [
 
 const testimonials = [
   {
-    name: "Mohammed Sabra", text: "I used Lamiya Al Kahleej for the first time and I would used their service again. The team was quick in responding, punctual and professional. The quality of work they did was super and they made sure the place was super clean when they finished the job.",
+    name: "Mohammed Sabra", text: "I usedLamiya Al Khaleej Al Ittehad  for the first time and I would used their service again. The team was quick in responding, punctual and professional. The quality of work they did was super and they made sure the place was super clean when they finished the job.",
   },
   {
-    name: "Hoda Zah", text: "I will definitely be requesting my annual ac duct cleaning from Lamiya Al Kahleej! They explained each step, showed before and after pictures and left the place spotless. I highly recommend this service especially for new homes!",
+    name: "Hoda Zah", text: "I will definitely be requesting my annual ac duct cleaning fromLamiya Al Khaleej Al Ittehad ! They explained each step, showed before and after pictures and left the place spotless. I highly recommend this service especially for new homes!",
   },
   {
-    name: "Muhammad Faisal Hussain", text: "Had my sofa and curtains deep cleaned and disinfected from Lamiya Al Kahleej. Professional staff and the service was top quality. Will definitely recommend others to take their services.",
+    name: "Muhammad Faisal Hussain", text: "Had my sofa and curtains deep cleaned and disinfected fromLamiya Al Khaleej Al Ittehad . Professional staff and the service was top quality. Will definitely recommend others to take their services.",
   },
 ];
 
@@ -74,7 +74,7 @@ const Index = () => {
                 Trusted Excellence Across KSA
               </span>
               <h1 className="text-4xl md:text-6xl lg:text-8xl font-black leading-[0.95] mb-8 text-white uppercase tracking-tighter drop-shadow-2xl">
-                Lamiya Al Kahleej <br />
+                Lamiya Al Khaleej Al Ittehad  <br />
                 <span className="text-alfawad-primary opacity-90">Professional Care.</span>
               </h1>
               <p className="text-lg md:text-xl text-white/80 mb-12 max-w-2xl font-medium leading-relaxed">
@@ -165,7 +165,7 @@ const Index = () => {
             </AnimatedSection>
 
             <AnimatedSection delay={0.2}>
-              <span className="text-alfawad-primary font-black text-[12px] uppercase tracking-[0.4em] mb-6 block">Welcome to Lamiya Al Kahleej</span>
+              <span className="text-alfawad-primary font-black text-[12px] uppercase tracking-[0.4em] mb-6 block">Welcome toLamiya Al Khaleej Al Ittehad </span>
               <h2 className="text-[36px] md:text-[55px] font-black text-black leading-[1.1] uppercase tracking-tighter mb-8">
                 Your Trusted Partner for <span className="text-alfawad-primary">Total Hygiene</span> Solutions
               </h2>
@@ -173,7 +173,7 @@ const Index = () => {
                 "We believe that a clean environment is not only about appearance but also about health, safety, comfort, and productivity."
               </p>
               <div className="space-y-6 text-gray-500 font-medium leading-relaxed mb-12">
-                <p>Welcome to Lamiya Al Kahleej Company, your trusted partner for complete cleaning, sanitization, AC services, pest control, and facility maintenance solutions across the Kingdom of Saudi Arabia. We specialize in delivering high-quality hygiene and maintenance services for homes, villas, apartments, offices, shops, restaurants, warehouses, hospitals, and commercial buildings.</p>
+                <p>Welcome toLamiya Al Khaleej Al Ittehad  Company, your trusted partner for complete cleaning, sanitization, AC services, pest control, and facility maintenance solutions across the Kingdom of Saudi Arabia. We specialize in delivering high-quality hygiene and maintenance services for homes, villas, apartments, offices, shops, restaurants, warehouses, hospitals, and commercial buildings.</p>
                 <p>Our company is built on a strong reputation for professionalism, reliability, and premium customer support. We use advanced cleaning methods, professional-grade equipment, eco-friendly chemicals, and trained technicians to deliver exceptional results every time.</p>
               </div>
               <Link to="/about" className="group flex items-center gap-6">
@@ -402,7 +402,7 @@ const Index = () => {
               Ready for a <br className="hidden md:block" /> <span className="text-alfawad-primary">Cleaner</span> Space?
             </h2>
             <p className="text-white/60 text-xl font-medium max-w-2xl mx-auto mb-16">
-              Book your free inspection visit today and experience the professional difference of Lamiya Al Kahleej Company.
+              Book your free inspection visit today and experience the professional difference ofLamiya Al Khaleej Al Ittehad  Company.
             </p>
             <Link
               to="/booking"

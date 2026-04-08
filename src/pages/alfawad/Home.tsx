@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ChevronRight, Settings, Users, Truck, Wrench, Shield, CheckCircle } from "lucide-react";
 import { useEffect, useState } from "react";
 import { AlfawadNews } from "../../components/alfawad/AlfawadNews";
+import HeroToggleBtn from "@/components/ui/HeroToggleBtn";
 
 export default function AlfawadHome() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -88,10 +89,12 @@ export default function AlfawadHome() {
                 key={index}
                 className={`transition-all duration-700 transform ${index === currentSlide ? "translate-y-0 opacity-100 block" : "translate-y-4 opacity-0 hidden"}`}
               >
+                
                 <h1 className="text-[28px] sm:text-[45px] md:text-[75px] font-black text-black leading-tight sm:leading-[1.0] uppercase tracking-tighter mb-4">
-                  Lamiya Al&nbsp;Khaleej <br />
+                  Lamiya Al &nbsp;Khaleej  <br /> Al Ittehad <br />
                   <span className="text-alfawad-primary">General Contracting</span>
                 </h1>
+                
                 <p className="text-[14px] sm:text-[18px] md:text-[24px] font-extrabold text-gray-800 mt-1 md:mt-2 tracking-wide uppercase leading-tight max-w-[280px] sm:max-w-none">
                   Trusted Contracting & Industrial Service Provider in Saudi Arabia
                 </p>
@@ -137,6 +140,11 @@ export default function AlfawadHome() {
         >
           <span className="text-lg md:text-2xl font-bold">&rarr;</span>
         </button>
+
+        {/* Hero Toggle Button */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
+          <HeroToggleBtn />
+        </div>
       </section>
 
       {/* Intro Section */}
@@ -147,9 +155,9 @@ export default function AlfawadHome() {
             <div className="lg:w-[55%] flex flex-col gap-6 justify-center">
               <div className="flex items-start gap-3 sm:gap-6 border-b border-gray-300 pb-6 md:pb-10 mb-2 md:mb-6">
                 <div className="flex flex-col justify-center pt-1 md:pt-2 text-center lg:text-left mx-auto lg:mx-0">
-                  <span className="text-[9px] sm:text-[12px] font-black text-gray-500 tracking-[0.3em] uppercase mb-1">GENERAL CONTRACTING</span>
-                  <h2 className="text-[20px] sm:text-[28px] md:text-[34px] font-black text-black leading-[1.1] uppercase tracking-tighter">
-                    Lamiya Al Khaleej <br className="hidden sm:block" /> General Contracting
+                  {/* <span className="text-[9px] sm:text-[12px] font-black text-gray-500 tracking-[0.3em] uppercase mb-1">GENERAL CONTRACTING</span> */}
+                  <h2 className="text-[20px] sm:text-[28px] md:text-[34px] font-black text-black leading-[1.1]  tracking-wide  ">
+                  Lamiya alkhaleej alittihad <br className="hidden sm:block" />Establishment For General Contracting
                   </h2>
                 </div>
               </div>
@@ -159,7 +167,7 @@ export default function AlfawadHome() {
               </h3>
 
               <p className="text-[#666666] leading-relaxed sm:leading-[32px] text-[15px] md:text-[18px] font-medium text-center lg:text-left">
-                Lamiya Al Khaleej General Contracting is a leading Saudi-based contracting and industrial support services provider delivering reliable manpower, equipment rental, construction support, material supply, and project management services across the Kingdom of Saudi Arabia.
+                LAMIYA AL KHALEEJ AL ITTEHAD General Contracting is a leading Saudi-based contracting and industrial support services provider delivering reliable manpower, equipment rental, construction support, material supply, and project management services across the Kingdom of Saudi Arabia.
               </p>
 
               <div className="flex items-center justify-center lg:justify-start gap-4 sm:gap-6 mt-4 md:mt-6 border-b border-gray-200 pb-8 md:pb-10 w-full max-w-md mx-auto lg:mx-0">
@@ -228,20 +236,21 @@ export default function AlfawadHome() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-10">
             {[
               {
-                title: "Technical Manpower",
-                image: "/images/industrial/service-manpower.png",
-                desc: "We provide highly skilled and technical manpower solutions for all engineering needs."
-              },
-              {
-                title: "Heavy Equipment",
-                image: "/images/industrial/service-equipment.png",
-                desc: "Providing reliable and modern heavy equipment for construction and industrial projects."
-              },
-              {
                 title: "Material Service",
                 image: "/images/industrial/service-material.png",
                 desc: "Supplying high-quality construction materials to ensure structural integrity."
               },
+              {
+                title: "Technical Manpower Service",
+                image: "/images/industrial/service-manpower.png",
+                desc: "We provide highly skilled and technical manpower solutions for all engineering needs."
+              },
+              {
+                title: "Heavy Equipment Service",
+                image: "/images/industrial/service-equipment.png",
+                desc: "Providing reliable and modern heavy equipment for construction and industrial projects."
+              },
+            
             ].map((service, i) => (
               <div key={i} className="group flex flex-col bg-[#f8f9fa] overflow-hidden hover:shadow-2xl transition-all duration-500 border border-transparent hover:border-gray-100">
                 <div className="aspect-[16/10] overflow-hidden relative">
@@ -250,7 +259,7 @@ export default function AlfawadHome() {
                 </div>
                 <div className="p-8 md:p-10 flex flex-col flex-grow">
                   <h3 className="text-[20px] md:text-[24px] font-black text-black mb-3 md:mb-4 uppercase tracking-tighter group-hover:text-alfawad-primary transition-colors">
-                    {service.title} <br /> Service
+                    {service.title} <br /> 
                   </h3>
                   <p className="text-gray-500 text-sm md:text-base font-medium leading-relaxed mb-6 md:mb-8">
                     {service.desc}
@@ -302,26 +311,56 @@ export default function AlfawadHome() {
         </div>
       </section>
 
-      {/* Unreserved Integrity Video/Banner Section */}
-      <section className="relative w-full h-[400px] md:h-[550px] overflow-hidden flex items-center justify-center text-center px-4">
-        <img
-          src="/images/industrial/wide-bg.png"
-          alt="Industrial Background"
-          className="absolute inset-0 w-full h-full object-cover scale-110"
-        />
-        <div className="absolute inset-0 bg-alfawad-primary/40 z-10" />
+      {/* Saudi Vision 2030 Banner - Redesigned for Premium UI */}
+      <section className="relative w-full h-[550px] md:h-[750px] overflow-hidden flex items-center justify-center text-center">
+        {/* Cinematic Background with Parallax effect */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://soulofsaudi.com/wp-content/uploads/2025/02/The-Official-Vision-2030-Logo-Set-Against-the-Riyadh-Night-View-Credits-American-Telephysicians.png"
+            alt="Saudi Vision 2030 Background"
+            className="w-full h-full object-cover scale-110"
+          />
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-[1px]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/80" />
+        </div>
 
-        <div className="relative z-20 flex flex-col items-center">
-          <button className="w-16 h-16 md:w-24 md:h-24 rounded-full bg-alfawad-primary flex items-center justify-center mb-6 md:mb-10 shadow-[0_0_50px_rgba(182,138,65,0.6)] hover:scale-110 transition-transform group">
-            <div className="w-0 h-0 border-t-[8px] md:border-t-[12px] border-t-transparent border-l-[14px] md:border-l-[20px] border-l-white border-b-[8px] md:border-b-[12px] border-b-transparent ml-1.5 md:ml-2 group-hover:scale-110 transition-all"></div>
-          </button>
-          <h2 className="text-[32px] md:text-[70px] font-black text-white uppercase tracking-tighter leading-tight mb-4">
-            Unreserved Integrity
-          </h2>
-          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-white/80 font-black tracking-[0.1em] md:tracking-[0.2em] text-[11px] sm:text-sm md:text-lg uppercase">
-            <span>Superior Customer Service</span>
-            <div className="hidden sm:block w-2 h-2 rounded-full bg-alfawad-primary"></div>
-            <span>A Passion for Quality</span>
+        <div className="relative z-20 max-w-6xl mx-auto px-4 flex flex-col items-center">
+          {/* Animated Vision Logo */}
+          <div className="mb-10 md:mb-14 relative group animate-float">
+            <div className="absolute inset-0 bg-alfawad-primary/30 blur-[60px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+            {/* <img 
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFgLwsazZyeaX5q8Xuf8IHjI_JSGG-cEDQTQ&s" 
+              alt="Vision 2030" 
+              className="w-48 md:w-80 h-auto relative drop-shadow-[0_0_35px_rgba(182,138,65,0.7)] brightness-110"
+            /> */}
+          </div>
+
+          <div className="flex flex-col items-center">
+            <span className="text-alfawad-primary font-black text-[12px] md:text-[15px] uppercase tracking-[0.6em] mb-4 md:mb-6 animate-pulse">
+              Commitment to Excellence
+            </span>
+            
+            <h2 className="text-[42px] md:text-[100px] font-black text-white uppercase tracking-tighter leading-[0.85] mb-8 drop-shadow-2xl">
+              Saudi Vision <br />
+              <span className="text-alfawad-primary">2030</span>
+            </h2>
+
+            <div className="w-24 md:w-40 h-1.5 bg-white mb-10 md:mb-12 shadow-[0_0_20px_rgba(255,255,255,0.5)]" />
+
+            <h3 className="text-white text-[20px] md:text-[38px] font-black uppercase tracking-tighter leading-tight mb-8 drop-shadow-lg">
+              UNRESERVED INTEGRITY
+            </h3>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-14 text-white/70 font-black tracking-[0.2em] md:tracking-[0.3em] text-[10px] md:text-sm uppercase">
+              <div className="flex items-center gap-3 group">
+                <div className="w-2.5 h-2.5 rounded-full bg-alfawad-primary group-hover:scale-150 transition-transform shadow-[0_0_10px_rgba(182,138,65,0.8)]" />
+                <span>Superior Customer Service</span>
+              </div>
+              <div className="flex items-center gap-3 group">
+                <div className="w-2.5 h-2.5 rounded-full bg-alfawad-primary group-hover:scale-150 transition-transform shadow-[0_0_10px_rgba(182,138,65,0.8)]" />
+                <span>A Passion for Quality</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>

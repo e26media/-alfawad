@@ -50,7 +50,7 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-10 sm:top-12 left-0 right-0 z-50 transition-all duration-500 font-muli bg-[#fff]"
+      className="fixed  left-0 right-0 z-50 transition-all duration-500 font-muli bg-[#fff]"
     >
       <div 
         className={`w-full transition-all duration-500 border-b border-gray-100/50 ${
@@ -62,7 +62,7 @@ const Navbar = () => {
         <div className="container mx-auto px-4 lg:px-8 flex items-center justify-between">
           <div className="flex items-center">
             <Link to="/cleaning" className="flex-shrink-0 transition-transform hover:scale-105">
-              <img src={logo} alt="Lamiya Al Khaleej" className={`transition-all duration-500 ${scrolled ? "h-9 sm:h-11" : "h-11 sm:h-13"} w-auto object-contain px-2`} />
+              <img src={logo} alt="LAMIYA AL KHALEEJ AL ITTEHAD" className={`transition-all duration-500 ${scrolled ? "h-9 sm:h-11" : "h-11 sm:h-13"} w-auto object-contain px-2`} />
             </Link>
           </div>
 
@@ -197,12 +197,29 @@ const Navbar = () => {
                     Book Free Visit
                   </Link>
 
-                  <div className="flex flex-col gap-6">
-                    <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest text-center">Get in Touch</p>
-                    <div className="flex gap-4 items-center justify-center">
-                      <a href="tel:+966500000000" className="w-12 h-12 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center text-gray-900 shadow-sm active:bg-black active:text-white transition-all">📞</a>
-                      <a href="mailto:info@lamiya.com" className="w-12 h-12 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center text-gray-900 shadow-sm active:bg-black active:text-white transition-all">✉️</a>
-                      <a href="#" className="w-12 h-12 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center text-gray-900 shadow-sm active:bg-black active:text-white transition-all">📍</a>
+                  <div className="flex flex-col gap-8">
+                    <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest text-center">Direct Support</p>
+                    <div className="flex flex-col gap-6">
+                      <div className="flex flex-col items-center text-center">
+                        <span className="text-[14px] font-black uppercase tracking-tighter text-black leading-tight">Ashraf Al badan</span>
+                        <a href="tel:+966507077611" className="text-[11px] font-bold text-alfawad-primary uppercase tracking-widest">+966 50 707 7611</a>
+                      </div>
+                      <div className="flex flex-col items-center text-center">
+                        <span className="text-[14px] font-black uppercase tracking-tighter text-black leading-tight">Ahamed suhail</span>
+                        <div className="flex flex-col gap-1 items-center">
+                          <a href="tel:+966510304627" className="text-[11px] font-bold text-alfawad-primary uppercase tracking-widest">+966 51 030 4627</a>
+                          <a href="tel:+966566567518" className="text-[11px] font-bold text-alfawad-primary uppercase tracking-widest">+966 56 656 7518</a>
+                        </div>
+                      </div>
+                      <div className="flex flex-col items-center text-center">
+                        <span className="text-[14px] font-black uppercase tracking-tighter text-black leading-tight">Safwan</span>
+                        <a href="tel:+966583769845" className="text-[11px] font-bold text-alfawad-primary uppercase tracking-widest">+966 58 376 9845</a>
+                      </div>
+                    </div>
+                    <div className="flex flex-col gap-3 items-center justify-center mt-6 pt-6 border-t border-gray-100 w-full">
+                      <a href="mailto:info@lamiyaalkhaleej.com" className="text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-alfawad-primary transition-colors">info@lamiyaalkhaleej.com</a>
+                      <a href="mailto:ashrafalbadan@lamiyaalkhaleej.com" className="text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-alfawad-primary transition-colors">ashrafalbadan@lamiyaalkhaleej.com</a>
+                      <a href="mailto:ahamedsuhail@lamiyaalkhaleej.com" className="text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-alfawad-primary transition-colors">ahamedsuhail@lamiyaalkhaleej.com</a>
                     </div>
                   </div>
                 </div>
