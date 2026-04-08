@@ -84,6 +84,7 @@ export default function AlfawadHome() {
 
         <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] relative z-10 flex h-full items-center">
           <div className="flex flex-col gap-2 max-w-2xl mt-12 sm:mt-10 md:mt-20">
+            
             {HERO_SLIDES.map((slide, index) => (
               <div
                 key={index}
@@ -142,7 +143,7 @@ export default function AlfawadHome() {
         </button>
 
         {/* Hero Toggle Button */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
           <HeroToggleBtn />
         </div>
       </section>

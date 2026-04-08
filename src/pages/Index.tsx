@@ -7,6 +7,7 @@ import AnimatedCounter from "@/components/AnimatedCounter";
 import { heroServices, popularServices } from "@/lib/services";
 import heroBg from "@/assets/hero-bg.jpg";
 import SEO from "@/components/SEO";
+import HeroToggleBtn from "@/components/ui/HeroToggleBtn";
 
 const clientLogos = [
   "https://cleanproksa.com/wp-content/uploads/2025/02/Image-1.png",
@@ -95,6 +96,9 @@ const Index = () => {
                 </Link>
               </div>
             </motion.div>
+             <div className="absolute top-20 sm:top-24  left-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
+          <HeroToggleBtn />
+        </div>
           </div>
         </div>
 
