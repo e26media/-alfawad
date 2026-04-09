@@ -52,7 +52,7 @@ const Booking = () => {
               <span className="text-alfawad-primary font-black text-[12px] uppercase tracking-[0.4em] mb-6 block">Why Book Today?</span>
               <h2 className="text-[36px] md:text-[50px] font-black text-black leading-tight uppercase tracking-tighter mb-8">Professional <br /> <span className="text-alfawad-primary">Inspection</span> Program</h2>
               <p className="text-gray-500 font-medium text-lg leading-relaxed mb-12">
-                AtLamiya Al Khaleej Al Ittehad  Company, we understand that every property is different. That is why we offer a Free Visit & Inspection Service for customers who want accurate pricing and customized service plans.
+                At Lamiya Al Khaleej Al Ittehad  Company, we understand that every property is different. That is why we offer a Free Visit & Inspection Service for customers who want accurate pricing and customized service plans.
               </p>
               <div className="space-y-6">
                 {[
@@ -101,7 +101,7 @@ const Booking = () => {
                   </div>
                   <h3 className="text-3xl font-black uppercase tracking-tighter mb-8 italic">Let Our Professionals Handle It</h3>
                   <p className="text-white/60 font-medium leading-relaxed mb-12">
-                    "Book your free visit today and experience the professional difference ofLamiya Al Khaleej Al Ittehad  Company facility solutions."
+                    "Book your free visit today and experience the professional difference of Lamiya Al Khaleej Al Ittehad  Company facility solutions."
                   </p>
                   <div className="space-y-6">
                     <div className="flex flex-col">

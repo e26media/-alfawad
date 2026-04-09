@@ -29,7 +29,7 @@ const navLinks = [
     ]
   },
   { label: "Our Brochure", path: "/industrial/brochure" },
-  { label: "Clients", path: "/industrial/clients" },
+  // { label: "Clients", path: "/industrial/clients" },
   { label: "Career", path: "/industrial/career" },
   { label: "Enquiry", path: "/industrial/enquiry" },
   { label: "Contact Us", path: "/industrial/contact" },

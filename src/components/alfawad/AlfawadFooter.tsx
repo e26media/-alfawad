@@ -162,7 +162,7 @@ const AlfawadFooter = () => {
                     <div>
                       <span className="text-[10px] font-black uppercase tracking-[0.4em] text-alfawad-primary leading-none block mb-2">Location</span>
                       <p className="text-[14px] font-bold uppercase tracking-widest leading-relaxed text-white/50">
-                        Al Khobar, KSA
+                        Al Jubail, KSA
                       </p>
                     </div>
                   </div>

@@ -8,6 +8,7 @@ import { heroServices, popularServices } from "@/lib/services";
 import heroBg from "@/assets/hero-bg.jpg";
 import SEO from "@/components/SEO";
 import HeroToggleBtn from "@/components/ui/HeroToggleBtn";
+import laklogo from "@/assets/laklogo.png";
 
 const clientLogos = [
   "https://cleanproksa.com/wp-content/uploads/2025/02/Image-1.png",
@@ -53,53 +54,71 @@ const Index = () => {
   return (
     <div className="flex flex-col min-h-screen font-muli bg-white overflow-x-hidden">
       <SEO
-        title="Lamiya Al Kahleej Company | Cleaning, AC & Pest Control Services in KSA"
-        description="Lamiya Al Kahleej Company provides deep cleaning, sanitization, AC cleaning, duct cleaning, pest control, and water tank disinfection services across Saudi Arabia."
+        title="Lamiya Al Khaleej Company | Cleaning, AC & Pest Control Services in KSA"
+        description="Lamiya Al Khaleej Company provides deep cleaning, sanitization, AC cleaning, duct cleaning, pest control, and water tank disinfection services across Saudi Arabia."
       />
       {/* Hero Section */}
       <section className="relative min-h-[600px] md:min-h-[85vh] flex items-center overflow-hidden mt-5">
-        <div
-          className="absolute inset-0 bg-cover bg-center transition-transform duration-10000 hover:scale-110"
-          style={{ backgroundImage: `url(${heroBg})` }}
-        >
+        <div className="absolute inset-0 overflow-hidden">
+          <img
+            src={heroBg}
+            alt="Hero Background"
+            className="w-full h-full object-cover scale-105 animate-slow-zoom"
+            style={{ animationDuration: "20s" }}
+          />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
         </div>
         <div className="container mx-auto px-4 pt-32 md:pt-48 pb-[13rem] relative z-10">
-          <div className="max-w-4xl">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <span className="inline-block px-4 py-1 bg-alfawad-primary/20 text-alfawad-primary text-[10px] font-black uppercase tracking-[0.4em] mb-6 border-l-4 border-alfawad-primary">
-                Trusted Excellence Across KSA
-              </span>
-              <h1 className="text-4xl md:text-6xl lg:text-8xl font-black leading-[0.95] mb-8 text-white uppercase tracking-tighter drop-shadow-2xl">
-                Lamiya Al Khaleej Al Ittehad  <br />
-                <span className="text-alfawad-primary opacity-90">Professional Care.</span>
-              </h1>
-              <p className="text-lg md:text-xl text-white/80 mb-12 max-w-2xl font-medium leading-relaxed">
-                Your trusted partner for complete cleaning, sanitization, AC services, pest control, and facility maintenance solutions across the Kingdom of Saudi Arabia.
-              </p>
-              <div className="flex flex-wrap gap-6">
-                <Link
-                  to="/booking"
-                  className="bg-alfawad-primary hover:bg-white text-white hover:text-black px-12 py-5 font-black uppercase tracking-widest inline-flex items-center justify-center gap-3 transition-all text-sm shadow-[0_20px_50px_rgba(182,138,65,0.3)] hover:-translate-y-1"
-                >
-                  Book Free Visit <ArrowRight className="w-5 h-5" />
-                </Link>
-                <Link
-                  to="/services"
-                  className="bg-white/10 backdrop-blur-md hover:bg-white text-white hover:text-black border border-white/20 px-12 py-5 font-black uppercase tracking-widest inline-flex items-center justify-center transition-all text-sm hover:-translate-y-1"
-                >
-                  Explore Services
-                </Link>
-              </div>
-            </motion.div>
-        {/* Top Hero Toggle - Commented out */}
-        {/* <div className="absolute top-20 sm:top-24  left-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
-          <HeroToggleBtn />
-        </div> */}
+          <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+            <div className="max-w-4xl">
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <span className="inline-block px-4 py-1 bg-alfawad-primary/20 text-alfawad-primary text-[10px] font-black uppercase tracking-[0.4em] mb-6 border-l-4 border-alfawad-primary">
+                  Trusted Excellence Across KSA
+                </span>
+                <h1 className="text-4xl md:text-6xl lg:text-8xl font-black leading-[0.95] mb-8 text-white uppercase tracking-tighter drop-shadow-2xl">
+                  Lamiya Al Khaleej Al Ittehad  <br />
+                  <span className="text-alfawad-primary opacity-90">Professional residential care.</span>
+                </h1>
+                <p className="text-lg md:text-xl text-white/80 mb-12 max-w-2xl font-medium leading-relaxed">
+                  Your trusted partner for complete cleaning, sanitization, AC services, pest control, and facility maintenance solutions across the Kingdom of Saudi Arabia.
+                </p>
+                <div className="flex flex-wrap gap-6">
+                  <Link
+                    to="/booking"
+                    className="bg-alfawad-primary hover:bg-white text-white hover:text-black px-12 py-5 font-black uppercase tracking-widest inline-flex items-center justify-center gap-3 transition-all text-sm shadow-[0_20px_50px_rgba(182,138,65,0.3)] hover:-translate-y-1"
+                  >
+                    Book Free Visit <ArrowRight className="w-5 h-5" />
+                  </Link>
+                  <Link
+                    to="/services"
+                    className="bg-white/10 backdrop-blur-md hover:bg-white text-white hover:text-black border border-white/20 px-12 py-5 font-black uppercase tracking-widest inline-flex items-center justify-center transition-all text-sm hover:-translate-y-1"
+                  >
+                    Explore Services
+                  </Link>
+                </div>
+              </motion.div>
+          {/* Top Hero Toggle - Commented out */}
+          {/* <div className="absolute top-20 sm:top-24  left-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
+            <HeroToggleBtn />
+          </div> */}
+            </div>
+
+            {/* Premium Logo on Right Side - Responsive View */}
+            <div className="flex items-center justify-center p-6 md:p-12 bg-white/10 backdrop-blur-xl border border-white/20 rounded-[2.5rem] md:rounded-[4rem] shadow-[0_30px_100px_rgba(0,0,0,0.2)] hover:scale-105 transition-all duration-700 group relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-tr from-alfawad-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              <motion.img 
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 1, delay: 0.5 }}
+                src={laklogo} 
+                alt="Lamiya Logo" 
+                className="w-32 sm:w-48 md:w-80 h-auto object-contain drop-shadow-[0_0_30px_rgba(255,255,255,0.4)] relative z-10" 
+              />
+            </div>
           </div>
         </div>
 
@@ -160,7 +179,7 @@ const Index = () => {
             <AnimatedSection>
               <div className="relative">
                 <div className="aspect-[4/5] bg-gray-200 overflow-hidden shadow-[30px_30px_0px_0px_#b68a41]">
-                  <img src={heroBg} alt="Lamiya Al Kahleej Service" className="w-full h-full object-cover" />
+                  <img src={heroBg} alt="Lamiya Al Khaleej Service" className="w-full h-full object-cover" />
                 </div>
                 <div className="absolute -bottom-10 -right-10 bg-black text-white p-10 hidden md:block">
                   <div className="text-5xl font-black text-alfawad-primary mb-2">5+</div>
@@ -170,7 +189,7 @@ const Index = () => {
             </AnimatedSection>
 
             <AnimatedSection delay={0.2}>
-              <span className="text-alfawad-primary font-black text-[12px] uppercase tracking-[0.4em] mb-6 block">Welcome toLamiya Al Khaleej Al Ittehad </span>
+              <span className="text-alfawad-primary font-black text-[12px] uppercase tracking-[0.4em] mb-6 block">Welcome to Lamiya Al Khaleej Al Ittehad </span>
               <h2 className="text-[36px] md:text-[55px] font-black text-black leading-[1.1] uppercase tracking-tighter mb-8">
                 Your Trusted Partner for <span className="text-alfawad-primary">Total Hygiene</span> Solutions
               </h2>
@@ -178,7 +197,7 @@ const Index = () => {
                 "We believe that a clean environment is not only about appearance but also about health, safety, comfort, and productivity."
               </p>
               <div className="space-y-6 text-gray-500 font-medium leading-relaxed mb-12">
-                <p>Welcome toLamiya Al Khaleej Al Ittehad  Company, your trusted partner for complete cleaning, sanitization, AC services, pest control, and facility maintenance solutions across the Kingdom of Saudi Arabia. We specialize in delivering high-quality hygiene and maintenance services for homes, villas, apartments, offices, shops, restaurants, warehouses, hospitals, and commercial buildings.</p>
+                <p>Welcome to Lamiya Al Khaleej Al Ittehad  Company, your trusted partner for complete cleaning, sanitization, AC services, pest control, and facility maintenance solutions across the Kingdom of Saudi Arabia. We specialize in delivering high-quality hygiene and maintenance services for homes, villas, apartments, offices, shops, restaurants, warehouses, hospitals, and commercial buildings.</p>
                 <p>Our company is built on a strong reputation for professionalism, reliability, and premium customer support. We use advanced cleaning methods, professional-grade equipment, eco-friendly chemicals, and trained technicians to deliver exceptional results every time.</p>
               </div>
               <Link to="/about" className="group flex items-center gap-6">
@@ -311,7 +330,7 @@ const Index = () => {
       </section>
 
       {/* Client Logos Marquee */}
-      <section className="py-24 bg-white border-y border-gray-100 overflow-hidden">
+      {/* <section className="py-24 bg-white border-y border-gray-100 overflow-hidden">
         <div className="container mx-auto px-4 mb-16 text-center">
           <span className="text-alfawad-primary font-black text-[12px] uppercase tracking-[0.5em] mb-4 block">Official Partners</span>
           <h2 className="text-3xl font-black text-black uppercase tracking-tighter">Trusted By Industry Leaders</h2>
@@ -332,8 +351,8 @@ const Index = () => {
             ))}
           </motion.div>
         </div>
-      </section>
-
+      </section> */}
+<br/>
       {/* Coverage Section */}
       {/* <section className="py-24 bg-[#f8f9fa] relative overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
@@ -409,7 +428,7 @@ const Index = () => {
               Ready for a <br className="hidden md:block" /> <span className="text-alfawad-primary">Cleaner</span> Space?
             </h2>
             <p className="text-white/60 text-xl font-medium max-w-2xl mx-auto mb-16">
-              Book your free inspection visit today and experience the professional difference ofLamiya Al Khaleej Al Ittehad  Company.
+              Book your free inspection visit today and experience the professional difference of Lamiya Al Khaleej Al Ittehad  Company.
             </p>
             <Link
               to="/booking"

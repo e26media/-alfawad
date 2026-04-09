@@ -3,72 +3,52 @@ import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
 import { serviceDetails } from "@/lib/services";
-import { ArrowRight, Sparkles, Building2, Fan, Sofa, Bug, Droplets, Paintbrush } from "lucide-react";
-
+import { ArrowRight, Home, Wrench, Droplets, Bug } from "lucide-react";
 const serviceCategories = [
   {
-    title: "Residential Cleaning & Sanitization",
-    icon: Sparkles,
-    description: "Our residential services are designed to ensure your home stays fresh, safe, and healthy. We cover all property types including villas, apartments, flats, and compounds.",
-    services: [
-      "residential-cleaning",
-      "full-home-sanitization-package",
-      "individual-room-sanitization-packages",
-      "deep-cleaning-service"
-    ]
-  },
-  {
-    title: "Commercial & Corporate Cleaning",
-    icon: Building2,
-    description: "Businesses require a clean environment for employees and customers. We provide specialized cleaning solutions for offices and commercial properties.",
-    services: [
-      "commercial-cleaning",
-      "post-construction-cleaning",
-      "window-cleaning",
-      "floor-care"
-    ]
-  },
-  {
-    title: "AC Cleaning & Maintenance",
-    icon: Fan,
-    description: "Saudi Arabia’s climate makes AC systems extremely important. Our AC services ensure better cooling, improved air quality, and reduced electricity bills.",
+    title: "Residential Services",
+    id: "residential",
+    icon: Home,
+    description: "Our residential services ensure your home stays fresh and healthy. We cover villas, apartments, and residential buildings.",
     services: [
       "ac-cleaning",
-      "ac-duct-cleaning",
-      "ac-maintenance-and-repair",
-      "ac-coil-cleaning-services",
-      "ac-installation-and-replacement-services",
-      "annual-ac-maintenance-contracts"
-    ]
-  },
-  {
-    title: "Furniture & Upholstery Cleaning",
-    icon: Sofa,
-    description: "Furniture absorbs dust, stains, sweat, and allergens over time. Our upholstery cleaning service restores your furniture’s freshness.",
-    services: [
+      "deep-cleaning-service",
       "sofa-cleaning-services",
-      "mattress-cleaning",
       "carpet-cleaning-sanitation",
-      "curtain-cleaning-sanitation",
-      "furniture-cleaning-services"
+      "mattress-cleaning",
+      "furniture-cleaning-services",
+      "building-cleaning",
+      "container-cleaning"
     ]
   },
   {
-    title: "Pest Control Services",
+    title: "Maintenance Services",
+    id: "maintenance",
+    icon: Wrench,
+    description: "Expert maintenance solutions including electrical, plumbing, and carpentry for your property.",
+    services: [
+      "electrical-services",
+      "plumbing-services",
+      "carpenter-services",
+      "ac-installation-maintenance"
+    ]
+  },
+  {
+    title: "Water Tank Services",
+    id: "water-tank",
+    icon: Droplets,
+    description: "Professional water tank cleaning and disinfection to ensure safe water supply for your family.",
+    services: [
+      "water-tank-cleaning-disinfection"
+    ]
+  },
+  {
+    title: "Professional Pest Control & Pesticide Treatments",
+    id: "pesticide",
     icon: Bug,
-    description: "Pests can damage property and create serious health issues. We provide advanced pest control services with safe chemical solutions.",
+    description: "Advanced pesticide and pest control services with safe and effective treatments for a pest-free environment.",
     services: [
       "annual-pest-control-contract"
-    ]
-  },
-  {
-    title: "Water Tank & Painting",
-    icon: Droplets,
-    description: "Water tanks require regular cleaning to prevent contamination. We also provide professional painting services to enhance your property.",
-    services: [
-      "water-tank-cleaning-disinfection",
-      "painting-service",
-      "mold-cleaning"
     ]
   }
 ];
@@ -77,7 +57,7 @@ const Services = () => (
   <div className="pt-32 md:pt-40 font-muli bg-white overflow-x-hidden">
     <SEO
       title="Our Services |Lamiya Al Khaleej Al Ittehad  Company - Cleaning & Maintenance in KSA"
-      description="AtLamiya Al Khaleej Al Ittehad  Company, we offer a wide range of professional services designed for both residential and commercial customers. Complete cleaning & maintenance solutions in KSA."
+      description="At Lamiya Al Khaleej Al Ittehad  Company, we offer a wide range of professional services designed for both residential and commercial customers. Complete cleaning & maintenance solutions in KSA."
     />
 
     {/* Hero Section */}
@@ -100,7 +80,7 @@ const Services = () => (
       <div className="container mx-auto px-4">
         <div className="space-y-32">
           {serviceCategories.map((cat, idx) => (
-            <div key={idx} className="relative">
+        <div key={idx} className="relative" id={cat.id}>
               <AnimatedSection>
                 <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-16 gap-8">
                   <div className="max-w-2xl">

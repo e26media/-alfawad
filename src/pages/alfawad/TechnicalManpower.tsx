@@ -74,14 +74,14 @@ const TechnicalManpower = () => {
                       { title: "Operators", desc: "Heavy equipment and crane operators with valid licenses." },
                       { title: "Skilled & General Labor", desc: "Support staff for various site activities." },
                     ].map((item, i) => (
-                      <div key={i} className="flex flex-col gap-2 md:gap-3 bg-gray-50/50 p-6 md:p-8 border-l-4 border-alfawad-primary hover:bg-black group transition-all duration-500 h-full">
-                        <h3 className="text-lg md:text-xl font-black text-black group-hover:text-alfawad-primary uppercase transition-colors">{item.title}</h3>
-                        <p className="text-gray-500 group-hover:text-white/70 text-[13px] md:text-sm leading-relaxed transition-colors">{item.desc}</p>
+                      <div key={i} className="flex flex-col gap-2 md:gap-3 bg-gray-50/50 p-6 md:p-8 border-l-4 border-alfawad-primary transition-all duration-500 h-full">
+                        <h3 className="text-lg md:text-xl font-black text-black uppercase transition-colors">{item.title}</h3>
+                        <p className="text-gray-500  text-[13px] md:text-sm leading-relaxed transition-colors">{item.desc}</p>
                       </div>
                     ))}
                   </div>
 
-                  <div className="mt-8 md:mt-12 bg-[#1c1c1c] p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 md:gap-10 rounded-sm">
+                  {/* <div className="mt-8 md:mt-12 bg-[#1c1c1c] p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 md:gap-10 rounded-sm">
                     <div className="w-16 h-16 md:w-24 md:h-24 bg-alfawad-primary flex items-center justify-center rotate-45 group hover:rotate-90 transition-transform duration-500">
                       <ShieldCheck className="w-8 h-8 md:w-12 md:h-12 text-white -rotate-45 group-hover:-rotate-90 transition-transform duration-500" />
                     </div>
@@ -91,7 +91,7 @@ const TechnicalManpower = () => {
                         We ensure that our manpower solutions are cost-effective, reliable, and perfectly matched to your project’s technical requirements.
                       </p>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

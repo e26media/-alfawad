@@ -53,7 +53,7 @@ const ProjectManagement = () => {
                   </div>
 
                   <p className="text-[20px] md:text-[22px] font-bold text-black leading-relaxed italic border-b border-gray-100 pb-8">
-                    AtLamiya Al Khaleej Al Ittehad  General Contracting, we offer professional project management and site supervision services to ensure that every project is completed with efficiency, safety, and quality.
+                    At Lamiya Al Khaleej Al Ittehad  General Contracting, we offer professional project management and site supervision services to ensure that every project is completed with efficiency, safety, and quality.
                   </p>
 
                   <div className="text-[#666666] leading-[36px] text-[18px] font-medium flex flex-col gap-6">

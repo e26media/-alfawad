@@ -171,7 +171,7 @@ const ServiceDetail = () => {
                     {[1, 2, 3, 4, 5].map(i => <Star key={i} className="w-4 h-4 text-alfawad-primary fill-alfawad-primary" />)}
                   </div>
                   <p className="text-black font-black uppercase text-xs tracking-widest leading-loose mb-10 italic">
-                    "Lamiya Al Kahleej Company delivered exceptional quality. Their attention to detail in {service.title} was remarkable. Highly recommended."
+                    "Lamiya Al Khaleej Company delivered exceptional quality. Their attention to detail in {service.title} was remarkable. Highly recommended."
                   </p>
                   <div className="flex items-center gap-4">
                     <div className="w-10 h-1 bg-black group-hover:w-16 transition-all" />

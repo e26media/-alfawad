@@ -69,14 +69,14 @@ const Introduction = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
                     <div className="bg-gray-50 p-10 border-t-4 border-alfawad-primary flex flex-col gap-4 group hover:bg-alfawad-primary transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 h-full">
-                       <h3 className="text-2xl font-black text-black group-hover:text-white uppercase transition-colors">Skilled Workforce</h3>
-                       <p className="text-gray-600 group-hover:text-white/90 leading-relaxed transition-colors">
+                       <h3 className="text-2xl font-black text-black  uppercase transition-colors">Skilled Workforce</h3>
+                       <p className="text-gray-600  leading-relaxed transition-colors">
                          We provide a large pool of qualified manpower including engineers, supervisors, technicians, operators, and labor categories to meet project-specific requirements.
                        </p>
                     </div>
-                    <div className="bg-gray-50 p-10 border-t-4 border-black flex flex-col gap-4 group hover:bg-black transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 h-full">
-                       <h3 className="text-2xl font-black text-black group-hover:text-white uppercase transition-colors">Safety Commitment</h3>
-                       <p className="text-gray-600 group-hover:text-white/90 leading-relaxed transition-colors">
+<div className="bg-gray-50 p-10 border-t-4 border-alfawad-primary flex flex-col gap-4 group hover:bg-alfawad-primary transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 h-full">
+                       <h3 className="text-2xl font-black text-black  uppercase transition-colors">Safety Commitment</h3>
+                                    <p className="text-gray-600  leading-relaxed transition-colors">
                          Safety is a core value. We follow strict HSE guidelines to ensure accident-free and compliant work environments.
                        </p>
                     </div>

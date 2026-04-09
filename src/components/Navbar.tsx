@@ -9,14 +9,10 @@ const navLinks = [
   { label: "Home", path: "/cleaning" },
   {
     label: "Services", path: "/services", children: [
-      { label: "AC Cleaning", path: "/ac-cleaning" },
-      { label: "Deep Cleaning", path: "/deep-cleaning-service" },
-      { label: "Sofa Cleaning", path: "/sofa-cleaning-services" },
-      { label: "Carpet Cleaning", path: "/carpet-cleaning-sanitation" },
-      { label: "Mattress Cleaning", path: "/mattress-cleaning" },
-      { label: "Water Tank Cleaning", path: "/water-tank-cleaning-disinfection" },
-      { label: "Furniture Cleaning", path: "/furniture-cleaning-services" },
-      { label: "Pest Control", path: "/annual-pest-control-contract" },
+      { label: "Residential Services", path: "/services#residential" },
+      { label: "Maintenance Services", path: "/services#maintenance" },
+      { label: "Water Tank Services", path: "/water-tank-cleaning-disinfection" },
+      { label: "Pesticide Services", path: "/annual-pest-control-contract" },
     ]
   },
   { label: "About Us", path: "/about" },

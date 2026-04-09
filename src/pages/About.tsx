@@ -1,3 +1,4 @@
+import laklogo from "@/assets/laklogo.png";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -38,7 +39,7 @@ const About = () => (
               <div className="absolute -inset-4 bg-alfawad-primary/10 border border-alfawad-primary/20 -rotate-3 transition-transform group-hover:rotate-0 duration-700" />
               <div className="relative bg-white p-6 border-2 border-black shadow-[40px_40px_0px_0px_#b68a41]">
                 <div className="aspect-[4/5] bg-[#0a0a0a] overflow-hidden relative">
-                  <img src="/lamiya-logo.png" alt="Lamiya Al Khaleej Identity" className="w-full h-full object-contain p-24 opacity-30 grayscale brightness-200" />
+                  {/* <img src={laklogo} alt="Lamiya Al Khaleej Identity" className="w-full h-full object-contain p-24 opacity-30 grayscale brightness-200" /> */}
                   <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-12">
                     <ShieldCheck className="w-20 h-20 text-alfawad-primary mb-8 animate-pulse" />
                     <h3 className="text-4xl font-black text-white uppercase tracking-tighter mb-4 italic">100% QUALITY</h3>

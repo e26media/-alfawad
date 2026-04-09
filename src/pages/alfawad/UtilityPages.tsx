@@ -182,10 +182,11 @@ export const Enquiry = () => (
             <div className="flex flex-col gap-3">
               <label className="text-[12px] font-black text-gray-500 uppercase tracking-widest">Service Interested</label>
               <select className="bg-gray-50 border-b-2 border-gray-200 p-4 focus:border-alfawad-primary focus:outline-none font-bold transition-all appearance-none">
+                <option>Material Sourcing</option>
                 <option>Technical Manpower</option>
                 <option>Heavy Equipment</option>
                 <option>Project Support</option>
-                <option>Material Sourcing</option>
+               
               </select>
             </div>
             <div className="flex flex-col gap-3 md:col-span-2">

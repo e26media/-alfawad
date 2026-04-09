@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { ChevronRight, Settings, Users, Truck, Wrench, Shield, CheckCircle } from "lucide-react";
 import { useEffect, useState } from "react";
 import { AlfawadNews } from "../../components/alfawad/AlfawadNews";
+import laklogo from "@/assets/laklogo.png";
 // import HeroToggleBtn from "@/components/ui/HeroToggleBtn";
 
 export default function AlfawadHome() {
@@ -82,8 +84,8 @@ export default function AlfawadHome() {
           </div>
         ))}
 
-        <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] relative z-10 flex h-full items-center">
-          <div className="flex flex-col gap-2 max-w-2xl mt-12 sm:mt-10 md:mt-20">
+        <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] relative z-10 flex flex-col md:flex-row h-full items-center justify-between py-12 md:py-0">
+          <div className="flex flex-col gap-2 max-w-2xl mt-8 sm:mt-10 md:mt-20">
             
             {HERO_SLIDES.map((slide, index) => (
               <div
@@ -114,6 +116,19 @@ export default function AlfawadHome() {
                 Lamiya Al Khaleej Gen. Cont.
               </span>
             </div> */}
+          </div>
+
+          {/* Premium Logo on Right Side - Responsive View */}
+          <div className="flex items-center justify-center p-6 md:p-12 bg-white/10 backdrop-blur-xl border border-white/20 rounded-[2.5rem] md:rounded-[4rem] shadow-[0_30px_100px_rgba(0,0,0,0.2)] hover:scale-105 transition-all duration-700 group relative overflow-hidden mt-10 md:mt-0">
+            <div className="absolute inset-0 bg-gradient-to-tr from-alfawad-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+            <motion.img 
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 1, delay: 0.5 }}
+              src={laklogo} 
+              alt="Lamiya Logo" 
+              className="w-32 sm:w-48 md:w-80 h-auto object-contain drop-shadow-[0_0_30px_rgba(255,255,255,0.4)] relative z-10" 
+            />
           </div>
         </div>
 
@@ -171,14 +186,14 @@ export default function AlfawadHome() {
                 LAMIYA AL KHALEEJ AL ITTEHAD General Contracting is a leading Saudi-based contracting and industrial support services provider delivering reliable manpower, equipment rental, construction support, material supply, and project management services across the Kingdom of Saudi Arabia.
               </p>
 
-              <div className="flex items-center justify-center lg:justify-start gap-4 sm:gap-6 mt-4 md:mt-6 border-b border-gray-200 pb-8 md:pb-10 w-full max-w-md mx-auto lg:mx-0">
+              {/* <div className="flex items-center justify-center lg:justify-start gap-4 sm:gap-6 mt-4 md:mt-6 border-b border-gray-200 pb-8 md:pb-10 w-full max-w-md mx-auto lg:mx-0">
                 <div className="flex flex-col sm:flex-row gap-4 items-center">
                   <img src="/images/industrial/hero-7.png" alt="Signature" className="h-8 md:h-12 object-contain opacity-0" />
                   <div className="text-alfawad-primary font-black text-[12px] md:text-[15px] uppercase tracking-widest leading-none text-center sm:text-left">
                     Mohammed Nouman Hussain
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               <Link to="/industrial/introduction" className="flex items-center gap-4 mt-2 md:mt-4 group w-max mx-auto lg:mx-0">
                 <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border-2 border-alfawad-primary flex items-center justify-center transition-all group-hover:bg-alfawad-primary">
@@ -416,7 +431,7 @@ export default function AlfawadHome() {
       </section>
 
       {/* Our Clients Section */}
-      <section className="py-20 bg-white overflow-hidden">
+      {/* <section className="py-20 bg-white overflow-hidden">
         <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] mb-12">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div className="flex flex-col">
@@ -431,7 +446,6 @@ export default function AlfawadHome() {
           </div>
         </div>
 
-        {/* Scrolling Logo Marquee */}
         <div className="relative flex overflow-x-hidden group bg-gray-50 py-12 border-y border-gray-100">
           <div className="animate-marquee flex whitespace-nowrap gap-12 md:gap-20 items-center">
             {[...Array(2)].map((_, outerIndex) => (
@@ -466,7 +480,7 @@ export default function AlfawadHome() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* News & Updates Section */}
       <AlfawadNews />

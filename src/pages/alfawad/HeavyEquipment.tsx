@@ -96,10 +96,10 @@ const HeavyEquipment = () => {
                       { title: "On-Site Support", icon: <Zap className="w-8 h-8" />, desc: "Fast mobilization and technical support to ensure zero downtime." },
                       { title: "Safety Compliant", icon: <ShieldCheck className="w-8 h-8" />, desc: "All machines carry necessary inspection and valid third-party certificates." }
                     ].map((item, i) => (
-                      <div key={i} className="bg-gray-50 p-8 border-b-4 border-alfawad-primary flex flex-col gap-4 text-center items-center group hover:bg-black transition-all duration-500 h-full">
+                      <div key={i} className="bg-gray-50 p-8 border-b-4 border-alfawad-primary flex flex-col gap-4 text-center items-center transition-all duration-500 h-full">
                         <div className="text-alfawad-primary group-hover:scale-110 transition-transform">{item.icon}</div>
-                        <h3 className="text-xl font-black text-black group-hover:text-white uppercase transition-colors tracking-tighter">{item.title}</h3>
-                        <p className="text-gray-500 group-hover:text-white/80 text-sm leading-relaxed transition-colors">{item.desc}</p>
+                        <h3 className="text-xl font-black text-black  uppercase transition-colors tracking-tighter">{item.title}</h3>
+                        <p className="text-gray-500  text-sm leading-relaxed transition-colors">{item.desc}</p>
                       </div>
                     ))}
                   </div>

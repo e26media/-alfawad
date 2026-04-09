@@ -20,7 +20,7 @@ const Contact = () => {
             <h2 className="text-4xl font-black text-gray-900 mt-2 uppercase">We're Here To Help</h2>
             <div className="w-24 h-1 bg-alfawad-primary mx-auto mt-6" />
             <p className="text-gray-600 mt-6 text-lg">
-              Whether you need strategic project management, emergency project support, or specialized technical manpower. Reach out toLamiya Al Khaleej Al Ittehad  General Contracting today.
+              Whether you need strategic project management, emergency project support, or specialized technical manpower. Reach out to Lamiya Al Khaleej Al Ittehad  General Contracting today.
             </p>
           </div>
 

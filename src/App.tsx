@@ -60,6 +60,12 @@ const App = () => (
             <Route path="/annual-pest-control-contract" element={<ServiceDetail />} />
             <Route path="/mold-cleaning" element={<ServiceDetail />} />
             <Route path="/painting-service" element={<ServiceDetail />} />
+            <Route path="/building-cleaning" element={<ServiceDetail />} />
+            <Route path="/container-cleaning" element={<ServiceDetail />} />
+            <Route path="/electrical-services" element={<ServiceDetail />} />
+            <Route path="/plumbing-services" element={<ServiceDetail />} />
+            <Route path="/carpenter-services" element={<ServiceDetail />} />
+            <Route path="/ac-installation-maintenance" element={<ServiceDetail />} />
             <Route path="/about-us" element={<About />} />
             <Route path="/our-clients" element={<Clients />} />
             <Route path="/contact-us" element={<Contact />} />

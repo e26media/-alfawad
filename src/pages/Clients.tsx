@@ -45,7 +45,7 @@ const Clients = () => (
   <div className="pt-32 md:pt-40 font-muli bg-white overflow-x-hidden">
     <SEO
       title="Our Clients | Trusted by Homes & Businesses Across Saudi Arabia"
-      description="Lamiya Al Kahleej Company proudly serves residential and commercial clients across Riyadh, Jeddah, Dammam, and all of KSA."
+      description="Lamiya Al Khaleej Company proudly serves residential and commercial clients across Riyadh, Jeddah, Dammam, and all of KSA."
     />
 
     <section className="relative py-24 md:py-40 bg-black overflow-hidden text-center">
@@ -70,7 +70,7 @@ const Clients = () => (
               Clients <span className="text-alfawad-primary">We Serve</span>
             </h2>
             <p className="text-gray-500 text-lg font-medium leading-relaxed max-w-3xl">
-              AtLamiya Al Khaleej Al Ittehad  Company, our success is measured by customer satisfaction. We proudly serve a wide range of clients, including residential customers and leading commercial businesses across the Kingdom.
+              At Lamiya Al Khaleej Al Ittehad  Company, our success is measured by customer satisfaction. We proudly serve a wide range of clients, including residential customers and leading commercial businesses across the Kingdom.
             </p>
           </div>
         </AnimatedSection>
@@ -93,7 +93,7 @@ const Clients = () => (
     </section>
 
     {/* Client Logos Gallery */}
-    <section className="py-24 md:py-32 bg-white">
+    {/* <section className="py-24 md:py-32 bg-white">
       <div className="container mx-auto px-4 max-w-7xl">
         <AnimatedSection>
           <div className="text-center mb-24">
@@ -117,7 +117,7 @@ const Clients = () => (
           ))}
         </div>
       </div>
-    </section>
+    </section> */}
 
     <section className="py-24 md:py-32 bg-[#f8f9fa] relative overflow-hidden">
       <div className="container mx-auto px-4 max-w-6xl text-center">

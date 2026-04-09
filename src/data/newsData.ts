@@ -13,7 +13,7 @@ export const newsItems = [
     title: "Best innovations in metallurgy today",
     date: "November 05, 2023",
     description: "Exploring the latest technological advancements in the metallurgy industry and how they are being implemented in our current projects.",
-    fullContent: "The field of metallurgy is evolving rapidly with new automation and material science breakthroughs. AtLamiya Al Khaleej Al Ittehad , we stay at the forefront by adopting state-of-the-art smelting and alloy treatment processes. This article explores how computer-aided manufacturing (CAM) and real-time monitoring systems are reducing material waste and increasing structural integrity. We discuss our recent investment in laser-guided welding equipment and how it has improved our production efficiency by 25%. Staying ahead of innovation means providing our clients with the most durable and cost-effective industrial solutions."
+    fullContent: "The field of metallurgy is evolving rapidly with new automation and material science breakthroughs. At Lamiya Al Khaleej Al Ittehad , we stay at the forefront by adopting state-of-the-art smelting and alloy treatment processes. This article explores how computer-aided manufacturing (CAM) and real-time monitoring systems are reducing material waste and increasing structural integrity. We discuss our recent investment in laser-guided welding equipment and how it has improved our production efficiency by 25%. Staying ahead of innovation means providing our clients with the most durable and cost-effective industrial solutions."
   },
   {
     id: "commissioning-delayed-2021",
