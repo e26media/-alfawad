@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { ChevronRight, Settings, Users, Truck, Wrench, Shield, CheckCircle } from "lucide-react";
 import { useEffect, useState } from "react";
 import { AlfawadNews } from "../../components/alfawad/AlfawadNews";
-import HeroToggleBtn from "@/components/ui/HeroToggleBtn";
+// import HeroToggleBtn from "@/components/ui/HeroToggleBtn";
 
 export default function AlfawadHome() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -142,10 +142,10 @@ export default function AlfawadHome() {
           <span className="text-lg md:text-2xl font-bold">&rarr;</span>
         </button>
 
-        {/* Hero Toggle Button */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
+        {/* Hero Toggle Button - commented out */}
+        {/* <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
           <HeroToggleBtn />
-        </div>
+        </div> */}
       </section>
 
       {/* Intro Section */}
@@ -158,7 +158,7 @@ export default function AlfawadHome() {
                 <div className="flex flex-col justify-center pt-1 md:pt-2 text-center lg:text-left mx-auto lg:mx-0">
                   {/* <span className="text-[9px] sm:text-[12px] font-black text-gray-500 tracking-[0.3em] uppercase mb-1">GENERAL CONTRACTING</span> */}
                   <h2 className="text-[20px] sm:text-[28px] md:text-[34px] font-black text-black leading-[1.1]  tracking-wide  ">
-                  Lamiya alkhaleej alittihad <br className="hidden sm:block" />Establishment For General Contracting
+                  Lamiya Al Khaleej Al Ittihad <br className="hidden sm:block" />Establishment For General Contracting
                   </h2>
                 </div>
               </div>

@@ -8,8 +8,8 @@ import { CheckCircle2, Target, Eye, Heart, ShieldCheck, UserCheck, Zap, Sparkles
 const About = () => (
   <div className="pt-32 md:pt-40 font-muli bg-white overflow-x-hidden">
     <SEO
-      title="About Us |Lamiya Al Khaleej Al Ittehad  Company - Over 23 Years of Excellence"
-      description="Learn aboutLamiya Al Khaleej Al Ittehad  Company, a leading professional cleaning and sanitization provider in KSA with 23+ years of experience and international standards."
+      title="About Us | Lamiya Al Khaleej Al Ittehad  Company - 5+ Years of Excellence"
+      description="Learn about Lamiya Al Khaleej Al Ittehad  Company, a leading professional cleaning and sanitization provider in KSA with 5+ years of experience and international standards."
     />
 
     {/* Page Header */}
@@ -17,7 +17,7 @@ const About = () => (
       <div className="absolute inset-0 bg-alfawad-primary/10 opacity-30 blur-[120px] rounded-full -translate-x-1/2 -translate-y-1/2 scale-150 transition-transform duration-10000 group-hover:scale-100" />
       <div className="container mx-auto px-4 relative z-10 text-center">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-          <span className="text-alfawad-primary font-black text-[12px] uppercase tracking-[0.6em] mb-8 block drop-shadow-lg">Industry Leaders Since 15+ Years</span>
+          <span className="text-alfawad-primary font-black text-[12px] uppercase tracking-[0.6em] mb-8 block drop-shadow-lg">Industry Leaders Since 5+ Years</span>
           <h1 className="text-[50px] md:text-[100px] font-black text-white leading-none uppercase tracking-tighter mb-10 italic drop-shadow-2xl">
             Our <span className="text-alfawad-primary">Journey</span>
           </h1>
@@ -38,7 +38,7 @@ const About = () => (
               <div className="absolute -inset-4 bg-alfawad-primary/10 border border-alfawad-primary/20 -rotate-3 transition-transform group-hover:rotate-0 duration-700" />
               <div className="relative bg-white p-6 border-2 border-black shadow-[40px_40px_0px_0px_#b68a41]">
                 <div className="aspect-[4/5] bg-[#0a0a0a] overflow-hidden relative">
-                  <img src="/lamiya-logo.png" alt="Lamiya Al Kahleej Identity" className="w-full h-full object-contain p-24 opacity-30 grayscale brightness-200" />
+                  <img src="/lamiya-logo.png" alt="Lamiya Al Khaleej Identity" className="w-full h-full object-contain p-24 opacity-30 grayscale brightness-200" />
                   <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-12">
                     <ShieldCheck className="w-20 h-20 text-alfawad-primary mb-8 animate-pulse" />
                     <h3 className="text-4xl font-black text-white uppercase tracking-tighter mb-4 italic">100% QUALITY</h3>
@@ -54,15 +54,15 @@ const About = () => (
               <div className="w-12 h-[2px] bg-alfawad-primary" />
               <span className="text-alfawad-primary font-black text-[12px] uppercase tracking-[0.5em]">Who We Are</span>
             </div>
-            <h2 className="text-[40px] md:text-[65px] font-black text-black leading-[0.95] uppercase tracking-tighter mb-10">Lamiya Al Kahleej <br /> <span className="text-alfawad-primary">A Legacy of Trust</span></h2>
+            <h2 className="text-[40px] md:text-[65px] font-black text-black leading-[0.95] uppercase tracking-tighter mb-10">Lamiya Al Khaleej <br /> <span className="text-alfawad-primary">A Legacy of Trust</span></h2>
             <div className="space-y-8 text-gray-500 text-lg leading-relaxed font-black uppercase tracking-tight mb-12">
-              <p>Lamiya Al Kahleej Company brings over 23 years of specialized experience in the cleaning and sanitization industry. We serve both residential (B2C) and corporate (B2B) clients across Saudi Arabia with a single-minded focus: Excellence.</p>
+              <p>Lamiya Al Khaleej Company brings 5+ years of specialized experience in the cleaning and sanitization industry. We serve both residential (B2C) and corporate (B2B) clients across Saudi Arabia with a single-minded focus: Excellence.</p>
               <p className="text-black bg-[#f8f9fa] p-8 border-l-8 border-alfawad-primary italic">"Our core belief is simple: Cleanliness is the key to life. We don't just clean; we restore health and safety to your environment."</p>
               <p>Our technical personnel are hand-picked, highly qualified, and professionally trained to handle the most demanding cleaning challenges using latest European and American technology.</p>
             </div>
             <div className="grid grid-cols-2 gap-1 md:gap-4">
               <div className="p-8 bg-black text-white border-b-8 border-alfawad-primary">
-                <div className="text-4xl font-black text-alfawad-primary mb-2 tracking-tighter uppercase"><AnimatedCounter end={23} suffix="+" duration={3} /></div>
+                <div className="text-4xl font-black text-alfawad-primary mb-2 tracking-tighter uppercase"><AnimatedCounter end={5} suffix="+" duration={3} /></div>
                 <div className="text-[10px] font-black uppercase tracking-widest text-white/40">Years Experience</div>
               </div>
               <div className="p-8 bg-[#f8f9fa] border-b-8 border-black">

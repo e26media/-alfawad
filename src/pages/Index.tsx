@@ -96,9 +96,10 @@ const Index = () => {
                 </Link>
               </div>
             </motion.div>
-             <div className="absolute top-20 sm:top-24  left-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
+        {/* Top Hero Toggle - Commented out */}
+        {/* <div className="absolute top-20 sm:top-24  left-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
           <HeroToggleBtn />
-        </div>
+        </div> */}
           </div>
         </div>
 
@@ -162,7 +163,7 @@ const Index = () => {
                   <img src={heroBg} alt="Lamiya Al Kahleej Service" className="w-full h-full object-cover" />
                 </div>
                 <div className="absolute -bottom-10 -right-10 bg-black text-white p-10 hidden md:block">
-                  <div className="text-5xl font-black text-alfawad-primary mb-2">15+</div>
+                  <div className="text-5xl font-black text-alfawad-primary mb-2">5+</div>
                   <div className="text-xs font-black uppercase tracking-[0.2em] leading-relaxed">Years of Industry <br /> Excellence in KSA</div>
                 </div>
               </div>
@@ -358,6 +359,7 @@ const Index = () => {
       </section> */}
 
       {/* Testimonials */}
+      {/* Testimonials - Commented out
       <section className="py-24 md:py-32 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-3 gap-20 items-center">
@@ -392,6 +394,7 @@ const Index = () => {
           </div>
         </div>
       </section>
+      */}
 
       {/* CTA Final */}
       <section className="py-24 md:py-40 bg-black text-white relative overflow-hidden">

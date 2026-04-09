@@ -65,8 +65,8 @@ export default function HeroToggleBtn() {
              </motion.div>
             )}
           </div>
-          <span className={!isEngineering ? "inline" : "hidden sm:inline"}>Cleaning Services</span>
-          {isEngineering && <span className="sm:hidden">Cleaning Services</span>}
+          <span className={!isEngineering ? "inline" : "hidden sm:inline"}>Cleaning & Maintenance Services</span>
+          {isEngineering && <span className="sm:hidden">Cleaning & Maintenance Services</span>}
         </Link>
       </div>
     </motion.div>

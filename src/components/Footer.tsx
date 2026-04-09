@@ -51,7 +51,7 @@ const Footer = () => {
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
             <img src={logoWhite} alt="LAMIYA AL KHALEEJ AL ITTEHAD Logo" className="h-24 mb-10 transform " />
             <p className="text-[14px] leading-[28px] opacity-40 font-medium max-w-md uppercase tracking-[0.05em]">
-              With over 15 years experience,Lamiya Al Khaleej Al Ittehad  Company offers premier commercial and residential cleaning, AC, and pest control services across the Kingdom of Saudi Arabia.
+              With 5+ years experience, Lamiya Al Khaleej Al Ittehad  Company offers premier commercial and residential cleaning, AC, and pest control services across the Kingdom of Saudi Arabia.
             </p>
             <div className="flex gap-4 mt-12">
               <a href="#" className="w-12 h-12 rounded-none border border-white/10 flex items-center justify-center hover:bg-alfawad-primary hover:border-alfawad-primary hover:text-black transition-all">
