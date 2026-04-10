@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 import { ChevronRight, Users, HardHat, CheckCircle, Award, ShieldCheck } from "lucide-react";
 import ServiceSidebar from "../../components/alfawad/ServiceSidebar";
+import { useTranslation } from "react-i18next";
 
 const TechnicalManpower = () => {
+  const { i18n } = useTranslation();
+  const isAr = i18n.language === 'ar';
+
   return (
     <div className="flex flex-col min-h-screen bg-white font-muli">
 
@@ -17,15 +21,15 @@ const TechnicalManpower = () => {
         <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] relative z-20 flex flex-col items-center justify-center text-center pt-20">
           <div className="w-full text-white">
             <h1 className="text-[45px] md:text-[75px] font-black leading-[0.9] mb-6 uppercase tracking-tighter text-white drop-shadow-2xl">
-              TECHNICAL <br /> MANPOWER
+              {isAr ? "القوى العاملة" : "TECHNICAL"} <br /> {isAr ? "الفنية" : "MANPOWER"}
             </h1>
             <div className="w-24 h-2 bg-white mb-8 mx-auto" />
             <div className="flex items-center justify-center gap-3 text-[14px] md:text-[16px] font-black text-white/95 uppercase tracking-[0.2em]">
-              <Link to="/" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
+              <Link to="/" className="hover:text-alfawad-accent transition-all duration-300">{isAr ? "الرئيسية" : "Home"}</Link>
               <ChevronRight className="w-4 h-4 text-white/50" />
-              <span className="text-white/70">Services</span>
+              <span className="text-white/70">{isAr ? "الخدمات" : "Services"}</span>
               <ChevronRight className="w-4 h-4 text-white/50" />
-              <span className="text-white">Technical Manpower</span>
+              <span className="text-white">{isAr ? "القوى العاملة الفنية" : "Technical Manpower"}</span>
             </div>
           </div>
         </div>
@@ -43,36 +47,36 @@ const TechnicalManpower = () => {
 
                 <div className="flex flex-col gap-6 md:gap-8">
                   <div className="flex flex-col border-l-4 md:border-l-8 border-alfawad-primary pl-4 md:pl-8">
-                    <span className="text-alfawad-primary font-black text-[12px] md:text-[14px] uppercase tracking-[0.4em] mb-1 md:mb-2 text-wrap">Quality Workforce</span>
+                    <span className="text-alfawad-primary font-black text-[12px] md:text-[14px] uppercase tracking-[0.4em] mb-1 md:mb-2 text-wrap">{isAr ? "قوى عاملة ذات كفاءة" : "Quality Workforce"}</span>
                     <h2 className="text-[26px] sm:text-[32px] md:text-[45px] font-black text-black leading-tight uppercase tracking-tighter">
-                      Manpower Services
+                      {isAr ? "خدمات القوى العاملة" : "Manpower Services"}
                     </h2>
                   </div>
 
                   <p className="text-[17px] md:text-[22px] font-bold text-black leading-relaxed italic border-b border-gray-100 pb-6 md:pb-8">
-                    Providing qualified and reliable manpower solutions for industrial, construction, and engineering projects across Saudi Arabia.
+                    {isAr ? "توفير حلول قوى عاملة مؤهلة وموثوقة." : "Providing qualified and reliable manpower solutions for industrial, construction, and engineering projects across Saudi Arabia."}
                   </p>
 
                   <div className="text-[#666666] leading-[28px] md:leading-[36px] text-[16px] md:text-[18px] font-medium flex flex-col gap-4 md:gap-6">
                     <p>
-                      Lamiya Al Khaleej Al Ittehad  General Contracting is a trusted partner for manpower outsourcing. we provide a wide range of technical and non-technical workforce categories to support large-scale industrial projects, shutdowns, maintenance work, and construction activities.
+                      {isAr ? "نحن في لمياء الخليج شريك موثوق للاستعانة بمصادر خارجية للقوى العاملة." : "Lamiya Al Khaleej Al Ittehad  General Contracting is a trusted partner for manpower outsourcing. we provide a wide range of technical and non-technical workforce categories to support large-scale industrial projects, shutdowns, maintenance work, and construction activities."}
                     </p>
                     <p>
-                      We understand that the success of any project depends on the quality of its people. That's why we ensure all our personnel are properly vetted, trained, and compliant with site safety requirements. Our flexible mobilization strategy allows us to provide manpower for both short-term and long-term needs.
+                      {isAr ? "ندرك أن نجاح أي مشروع يعتمد على جودة العاملين فيه." : "We understand that the success of any project depends on the quality of its people. That's why we ensure all our personnel are properly vetted, trained, and compliant with site safety requirements. Our flexible mobilization strategy allows us to provide manpower for both short-term and long-term needs."}
                     </p>
                   </div>
 
-                  <h3 className="text-2xl font-black text-black uppercase tracking-tighter mt-4">Our Skilled Workforce Categories</h3>
+                  <h3 className="text-2xl font-black text-black uppercase tracking-tighter mt-4">{isAr ? "فئات القوى العاملة الماهرة" : "Our Skilled Workforce Categories"}</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 mt-4">
                     {[
-                      { title: "Engineers & Supervisors", desc: "Civil, Mechanical, Electrical, and Instrumentation categories." },
-                      { title: "HSE Officers / Safety Officers", desc: "Qualified safety professionals for site compliance." },
-                      { title: "Technicians", desc: "Mechanical, Electrical, HVAC, and Instrument technicians." },
-                      { title: "Welders & Fabricators", desc: "Multiple certified categories for industrial piping and structural work." },
-                      { title: "Pipe Fitters & Millwrights", desc: "Highly skilled fitters for industrial plant mechanical works." },
-                      { title: "Electricians & Plumbers", desc: "Qualified professionals for industrial and commercial projects." },
-                      { title: "Operators", desc: "Heavy equipment and crane operators with valid licenses." },
-                      { title: "Skilled & General Labor", desc: "Support staff for various site activities." },
+                      { title: isAr ? "المهندسون والمشرفون" : "Engineers & Supervisors", desc: isAr ? "يغطي جميع الأقسام الهندسية." : "Civil, Mechanical, Electrical, and Instrumentation categories." },
+                      { title: isAr ? "مسؤولو السلامة والصحة" : "HSE Officers / Safety Officers", desc: isAr ? "محترفون لضمان الامتثال في الموقع." : "Qualified safety professionals for site compliance." },
+                      { title: isAr ? "فنيون" : "Technicians", desc: isAr ? "فنيو الأعمال الميكانيكية والكهربائية." : "Mechanical, Electrical, HVAC, and Instrument technicians." },
+                      { title: isAr ? "اللحامين وعمال التشكيل" : "Welders & Fabricators", desc: isAr ? "فئات معتمدة متعددة." : "Multiple certified categories for industrial piping and structural work." },
+                      { title: isAr ? "مركبو الأنابيب" : "Pipe Fitters & Millwrights", desc: isAr ? "عاملون مهرة للأعمال الخاصة بالمصانع." : "Highly skilled fitters for industrial plant mechanical works." },
+                      { title: isAr ? "كهربائيون وسباكون" : "Electricians & Plumbers", desc: isAr ? "محترفون مؤهلون وتغطية شاملة." : "Qualified professionals for industrial and commercial projects." },
+                      { title: isAr ? "المشغلين" : "Operators", desc: isAr ? "مشغلو المعدات الثقيلة والرافعات." : "Heavy equipment and crane operators with valid licenses." },
+                      { title: isAr ? "العمالة الماهرة والمقاولات" : "Skilled & General Labor", desc: isAr ? "موظفو دعم مختلفين." : "Support staff for various site activities." },
                     ].map((item, i) => (
                       <div key={i} className="flex flex-col gap-2 md:gap-3 bg-gray-50/50 p-6 md:p-8 border-l-4 border-alfawad-primary transition-all duration-500 h-full">
                         <h3 className="text-lg md:text-xl font-black text-black uppercase transition-colors">{item.title}</h3>

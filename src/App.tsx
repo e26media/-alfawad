@@ -9,6 +9,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ContactButton from "@/components/ContactButton";
+import LanguageToggle from "@/components/LanguageToggle";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Services from "./pages/Services";
@@ -27,6 +28,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <LanguageToggle />
         <ScrollToTop />
         <TopBarToggle />
         <Navbar />

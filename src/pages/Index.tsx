@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, Star, ChevronLeft, ChevronRight, CheckCircle2, ShieldCheck, Clock, BadgeCheck, MapPin } from "lucide-react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import AnimatedSection from "@/components/AnimatedSection";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import { heroServices, popularServices } from "@/lib/services";
@@ -49,6 +50,7 @@ const testimonials = [
 ];
 
 const Index = () => {
+  const { t } = useTranslation();
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
   return (
@@ -77,27 +79,27 @@ const Index = () => {
                 transition={{ duration: 0.8 }}
               >
                 <span className="inline-block px-4 py-1 bg-alfawad-primary/20 text-alfawad-primary text-[10px] font-black uppercase tracking-[0.4em] mb-6 border-l-4 border-alfawad-primary">
-                  Trusted Excellence Across KSA
+                  {t('hero.badge')}
                 </span>
                 <h1 className="text-4xl md:text-6xl lg:text-8xl font-black leading-[0.95] mb-8 text-white uppercase tracking-tighter drop-shadow-2xl">
-                  Lamiya Al Khaleej Al Ittehad  <br />
-                  <span className="text-alfawad-primary opacity-90">Professional residential care.</span>
+                  {t('hero.title')}  <br />
+                  <span className="text-alfawad-primary opacity-90">{t('hero.subtitle')}</span>
                 </h1>
                 <p className="text-lg md:text-xl text-white/80 mb-12 max-w-2xl font-medium leading-relaxed">
-                  Your trusted partner for complete cleaning, sanitization, AC services, pest control, and facility maintenance solutions across the Kingdom of Saudi Arabia.
+                  {t('hero.description')}
                 </p>
                 <div className="flex flex-wrap gap-6">
                   <Link
                     to="/booking"
                     className="bg-alfawad-primary hover:bg-white text-white hover:text-black px-12 py-5 font-black uppercase tracking-widest inline-flex items-center justify-center gap-3 transition-all text-sm shadow-[0_20px_50px_rgba(182,138,65,0.3)] hover:-translate-y-1"
                   >
-                    Book Free Visit <ArrowRight className="w-5 h-5" />
+                    {t('hero.book_btn')} <ArrowRight className="w-5 h-5" />
                   </Link>
                   <Link
                     to="/services"
                     className="bg-white/10 backdrop-blur-md hover:bg-white text-white hover:text-black border border-white/20 px-12 py-5 font-black uppercase tracking-widest inline-flex items-center justify-center transition-all text-sm hover:-translate-y-1"
                   >
-                    Explore Services
+                    {t('hero.explore_btn')}
                   </Link>
                 </div>
               </motion.div>
@@ -154,19 +156,19 @@ const Index = () => {
         <div className="container mx-auto px-4 flex flex-wrap justify-center md:justify-between items-center gap-8 opacity-50 grayscale hover:grayscale-0 transition-all">
           <div className="flex items-center gap-3 text-white">
             <ShieldCheck className="w-6 h-6 text-alfawad-primary" />
-            <span className="text-[12px] font-black uppercase tracking-widest">Certified Technicians</span>
+            <span className="text-[12px] font-black uppercase tracking-widest">{t('cleaning.badges.technicians')}</span>
           </div>
           <div className="flex items-center gap-3 text-white">
             <Clock className="w-6 h-6 text-alfawad-primary" />
-            <span className="text-[12px] font-black uppercase tracking-widest">On-Time Service</span>
+            <span className="text-[12px] font-black uppercase tracking-widest">{t('cleaning.badges.on_time')}</span>
           </div>
           <div className="flex items-center gap-3 text-white">
             <BadgeCheck className="w-6 h-6 text-alfawad-primary" />
-            <span className="text-[12px] font-black uppercase tracking-widest">Guaranteed Quality</span>
+            <span className="text-[12px] font-black uppercase tracking-widest">{t('cleaning.badges.quality')}</span>
           </div>
           <div className="flex items-center gap-3 text-white">
             <MapPin className="w-6 h-6 text-alfawad-primary" />
-            <span className="text-[12px] font-black uppercase tracking-widest">Coverage Across KSA</span>
+            <span className="text-[12px] font-black uppercase tracking-widest">{t('cleaning.badges.coverage')}</span>
           </div>
         </div>
       </section>
@@ -189,22 +191,23 @@ const Index = () => {
             </AnimatedSection>
 
             <AnimatedSection delay={0.2}>
-              <span className="text-alfawad-primary font-black text-[12px] uppercase tracking-[0.4em] mb-6 block">Welcome to Lamiya Al Khaleej Al Ittehad </span>
-              <h2 className="text-[36px] md:text-[55px] font-black text-black leading-[1.1] uppercase tracking-tighter mb-8">
-                Your Trusted Partner for <span className="text-alfawad-primary">Total Hygiene</span> Solutions
-              </h2>
+              <span className="text-alfawad-primary font-black text-[12px] uppercase tracking-[0.4em] mb-6 block">{t('cleaning.welcome.title_small')}</span>
+              <h2 
+                className="text-[36px] md:text-[55px] font-black text-black leading-[1.1] uppercase tracking-tighter mb-8"
+                dangerouslySetInnerHTML={{__html: t('cleaning.welcome.title_main')}} 
+              />
               <p className="text-gray-600 text-lg leading-relaxed mb-10 font-medium italic border-l-4 border-gray-100 pl-8">
-                "We believe that a clean environment is not only about appearance but also about health, safety, comfort, and productivity."
+                {t('cleaning.welcome.quote')}
               </p>
               <div className="space-y-6 text-gray-500 font-medium leading-relaxed mb-12">
-                <p>Welcome to Lamiya Al Khaleej Al Ittehad  Company, your trusted partner for complete cleaning, sanitization, AC services, pest control, and facility maintenance solutions across the Kingdom of Saudi Arabia. We specialize in delivering high-quality hygiene and maintenance services for homes, villas, apartments, offices, shops, restaurants, warehouses, hospitals, and commercial buildings.</p>
-                <p>Our company is built on a strong reputation for professionalism, reliability, and premium customer support. We use advanced cleaning methods, professional-grade equipment, eco-friendly chemicals, and trained technicians to deliver exceptional results every time.</p>
+                <p>{t('cleaning.welcome.p1')}</p>
+                <p>{t('cleaning.welcome.p2')}</p>
               </div>
               <Link to="/about" className="group flex items-center gap-6">
                 <div className="w-16 h-16 rounded-full border-2 border-black flex items-center justify-center transition-all group-hover:bg-black group-hover:scale-110">
                   <ArrowRight className="w-6 h-6 group-hover:text-white transition-colors" />
                 </div>
-                <span className="text-lg font-black uppercase tracking-tighter text-black">Read Our Full Story</span>
+                <span className="text-lg font-black uppercase tracking-tighter text-black">{t('cleaning.welcome.read_story')}</span>
               </Link>
             </AnimatedSection>
           </div>
@@ -216,12 +219,12 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
             <AnimatedSection>
-              <span className="text-alfawad-primary font-black text-[12px] uppercase tracking-[0.5em] mb-4 block">Our Expertise</span>
-              <h2 className="text-[40px] md:text-[60px] font-black uppercase tracking-tighter leading-none">Core Services</h2>
+              <span className="text-alfawad-primary font-black text-[12px] uppercase tracking-[0.5em] mb-4 block">{t('cleaning.services.subtitle')}</span>
+              <h2 className="text-[40px] md:text-[60px] font-black uppercase tracking-tighter leading-none">{t('cleaning.services.title')}</h2>
             </AnimatedSection>
             <AnimatedSection delay={0.2}>
               <Link to="/services" className="text-alfawad-primary font-black uppercase tracking-widest text-sm flex items-center gap-3 hover:text-white transition-colors group">
-                Browse All Services <div className="w-12 h-[2px] bg-alfawad-primary group-hover:w-16 group-hover:bg-white transition-all" />
+                {t('cleaning.services.browse')} <div className="w-12 h-[2px] bg-alfawad-primary group-hover:w-16 group-hover:bg-white transition-all" />
               </Link>
             </AnimatedSection>
           </div>
@@ -239,10 +242,10 @@ const Index = () => {
                   className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-10 flex flex-col justify-end">
-                  <span className="text-alfawad-primary text-[10px] font-black uppercase tracking-[0.3em] mb-2 opacity-0 group-hover:opacity-100 transition-opacity translate-y-4 group-hover:translate-y-0 duration-500">Expert Service</span>
+                  <span className="text-alfawad-primary text-[10px] font-black uppercase tracking-[0.3em] mb-2 opacity-0 group-hover:opacity-100 transition-opacity translate-y-4 group-hover:translate-y-0 duration-500">{t('cleaning.services.expert')}</span>
                   <h3 className="text-2xl font-black uppercase tracking-tighter mb-4 translate-y-8 group-hover:translate-y-0 transition-transform duration-500">{service.title}</h3>
                   <div className="w-10 h-1 bg-alfawad-primary mb-6 transition-all group-hover:w-full" />
-                  <span className="text-xs font-black uppercase tracking-widest opacity-0 group-hover:opacity-60 transition-opacity">Learn More &rarr;</span>
+                  <span className="text-xs font-black uppercase tracking-widest opacity-0 group-hover:opacity-60 transition-opacity">{t('cleaning.services.learn_more')}</span>
                 </div>
               </Link>
             ))}
@@ -255,22 +258,15 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <AnimatedSection>
-              <h2 className="text-[40px] md:text-[60px] font-black text-black leading-[1] uppercase tracking-tighter mb-10">
-                Not Just a <br /> Cleaning <br /> <span className="text-alfawad-primary">Company.</span>
-              </h2>
+              <h2 
+                className="text-[40px] md:text-[60px] font-black text-black leading-[1] uppercase tracking-tighter mb-10"
+                dangerouslySetInnerHTML={{__html: t('cleaning.why_us.title')}} 
+              />
               <p className="text-gray-500 text-lg mb-12 font-medium max-w-lg">
-                We are a complete hygiene and maintenance solution provider that understands Saudi living standards and customer expectations.
+                {t('cleaning.why_us.desc')}
               </p>
               <div className="space-y-6">
-                {[
-                  "Certified cleaning & AC technicians",
-                  "Safe and eco-friendly products",
-                  "Professional machines and tools",
-                  "Transparent pricing with no hidden charges",
-                  "Quick booking and on-time service",
-                  "Affordable annual maintenance packages",
-                  "Customer satisfaction guaranteed",
-                ].map((item, i) => (
+                {(t('cleaning.why_us.reasons', { returnObjects: true }) as string[]).map((item, i) => (
                   <motion.div
                     key={i}
                     initial={{ opacity: 0, x: -20 }}
@@ -293,11 +289,11 @@ const Index = () => {
                   <div className="absolute inset-0 bg-alfawad-primary opacity-0 group-hover:opacity-10 transition-opacity" />
                   <div className="relative z-20 h-full flex flex-col justify-center">
                     <Star className="w-16 h-16 text-alfawad-primary mb-10 fill-alfawad-primary" />
-                    <h3 className="text-4xl font-black text-black uppercase tracking-tighter mb-10 leading-tight">Professional Standards in Every Step</h3>
-                    <p className="text-gray-600 font-bold leading-relaxed mb-10">We focus on professional-grade equipment, eco-friendly chemicals, and highly trained technicians to deliver exceptional results every time across the Kingdom.</p>
+                    <h3 className="text-4xl font-black text-black uppercase tracking-tighter mb-10 leading-tight">{t('cleaning.why_us.standards_title')}</h3>
+                    <p className="text-gray-600 font-bold leading-relaxed mb-10">{t('cleaning.why_us.standards_desc')}</p>
                     <div className="flex gap-4">
-                      <div className="px-6 py-3 bg-black text-white text-[10px] font-black uppercase tracking-widest">ISO Certified</div>
-                      <div className="px-6 py-3 bg-white text-black border border-black/10 text-[10px] font-black uppercase tracking-widest">Premium Quality</div>
+                      <div className="px-6 py-3 bg-black text-white text-[10px] font-black uppercase tracking-widest">{t('cleaning.why_us.iso')}</div>
+                      <div className="px-6 py-3 bg-white text-black border border-black/10 text-[10px] font-black uppercase tracking-widest">{t('cleaning.why_us.premium')}</div>
                     </div>
                   </div>
                 </div>
@@ -315,15 +311,15 @@ const Index = () => {
           <div className="grid grid-cols-3 w-full gap-4 md:gap-20">
             <div className="flex flex-col items-center">
               <div className="text-3xl md:text-7xl font-black text-alfawad-primary tracking-tighter"><AnimatedCounter end={1200} suffix="+" duration={2} /></div>
-              <div className="text-[10px] md:text-sm font-black text-white/50 uppercase tracking-[0.3em] mt-4">Happy Clients</div>
+              <div className="text-[10px] md:text-sm font-black text-white/50 uppercase tracking-[0.3em] mt-4">{t('cleaning.stats.clients')}</div>
             </div>
             <div className="flex flex-col items-center">
               <div className="text-3xl md:text-7xl font-black text-white tracking-tighter"><AnimatedCounter end={100} suffix="%" duration={2} /></div>
-              <div className="text-[10px] md:text-sm font-black text-alfawad-primary uppercase tracking-[0.3em] mt-4 leading-tight text-center">Clean <br className="md:hidden" /> Guarantee</div>
+              <div className="text-[10px] md:text-sm font-black text-alfawad-primary uppercase tracking-[0.3em] mt-4 leading-tight text-center" dangerouslySetInnerHTML={{__html: t('cleaning.stats.clean')}} />
             </div>
             <div className="flex flex-col items-center">
               <div className="text-3xl md:text-7xl font-black text-alfawad-primary tracking-tighter"><AnimatedCounter end={48} suffix="/7" duration={2} /></div>
-              <div className="text-[10px] md:text-sm font-black text-white/50 uppercase tracking-[0.3em] mt-4 leading-tight text-center">Fast <br className="md:hidden" /> Response</div>
+              <div className="text-[10px] md:text-sm font-black text-white/50 uppercase tracking-[0.3em] mt-4 leading-tight text-center" dangerouslySetInnerHTML={{__html: t('cleaning.stats.fast')}} />
             </div>
           </div>
         </div>
@@ -424,17 +420,15 @@ const Index = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-[45px] md:text-[80px] font-black uppercase tracking-tighter leading-none mb-10">
-              Ready for a <br className="hidden md:block" /> <span className="text-alfawad-primary">Cleaner</span> Space?
-            </h2>
+            <h2 className="text-[45px] md:text-[80px] font-black uppercase tracking-tighter leading-none mb-10" dangerouslySetInnerHTML={{__html: t('cleaning.cta.title')}} />
             <p className="text-white/60 text-xl font-medium max-w-2xl mx-auto mb-16">
-              Book your free inspection visit today and experience the professional difference of Lamiya Al Khaleej Al Ittehad  Company.
+              {t('cleaning.cta.desc')}
             </p>
             <Link
               to="/booking"
               className="bg-alfawad-primary hover:bg-white text-white hover:text-black px-16 py-6 font-black uppercase tracking-widest text-sm shadow-2xl transition-all hover:scale-105"
             >
-              Book Your Free Visit Now
+              {t('cleaning.cta.btn')}
             </Link>
           </motion.div>
         </div>

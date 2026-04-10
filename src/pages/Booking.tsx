@@ -9,24 +9,28 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
-
-const inspectionPoints = [
-  { icon: Search, label: "Property evaluation", desc: "Size and condition assessment for accurate planning." },
-  { icon: Fan, label: "AC System Inspection", desc: "Performance check for all heating and cooling units." },
-  { icon: Bug, label: "Pest Activity Check", desc: "Detective work on existing pest problems." },
-  { icon: Sofa, label: "Furniture Condition", desc: "Fabric and leather analysis for cleaning suitability." },
-  { icon: Droplets, label: "Water Tank Status", desc: "Hygiene check for sediments and algae." },
-  { icon: Sparkles, icon_comp: <BadgeCheck className="w-6 h-6" />, label: "Mold & Moisture", desc: "Detection of health hazards and wall damage zones." }
-];
+import { useTranslation } from "react-i18next";
 
 const Booking = () => {
+  const { i18n } = useTranslation();
+  const isAr = i18n.language === 'ar';
+
+  const inspectionPoints = [
+    { icon: Search, label: isAr ? "تقييم الممتلكات" : "Property evaluation", desc: isAr ? "تقييم الحجم والحالة للتخطيط الدقيق." : "Size and condition assessment for accurate planning." },
+    { icon: Fan, label: isAr ? "فحص نظام التكييف" : "AC System Inspection", desc: isAr ? "فحص أداء جميع وحدات التدفئة والتبريد." : "Performance check for all heating and cooling units." },
+    { icon: Bug, label: isAr ? "التحقق من نشاط الآفات" : "Pest Activity Check", desc: isAr ? "عمل استقصائي حول مشاكل الآفات الحالية." : "Detective work on existing pest problems." },
+    { icon: Sofa, label: isAr ? "حالة الأثاث" : "Furniture Condition", desc: isAr ? "تحليل النسيج والجلود لملاءمة التنظيف." : "Fabric and leather analysis for cleaning suitability." },
+    { icon: Droplets, label: isAr ? "حالة خزان المياه" : "Water Tank Status", desc: isAr ? "فحص النظافة للرواسب والطحالب." : "Hygiene check for sediments and algae." },
+    { icon: Sparkles, icon_comp: <BadgeCheck className="w-6 h-6" />, label: isAr ? "العفن والرطوبة" : "Mold & Moisture", desc: isAr ? "الكشف عن المخاطر الصحية ومناطق تلف الجدران." : "Detection of health hazards and wall damage zones." }
+  ];
+
   const [submitted, setSubmitted] = useState(false);
 
   return (
     <div className="pt-32 md:pt-40 font-muli bg-white overflow-x-hidden">
       <SEO
-        title="Book a Free Visit | Free Inspection & Quote in Saudi Arabia"
-        description="Schedule your free property inspection and get an accurate, customized quote for cleaning, AC, and pest control services across KSA."
+        title={isAr ? "احجز زيارة مجانية | الفحص في السعودية" : "Book a Free Visit | Free Inspection & Quote in Saudi Arabia"}
+        description={isAr ? "حدد موعدًا للفحص المجاني لممتلكاتك" : "Schedule your free property inspection and get an accurate, customized quote for cleaning, AC, and pest control services across KSA."}
       />
 
       {/* Header */}
@@ -34,11 +38,11 @@ const Booking = () => {
         <div className="absolute inset-0 bg-alfawad-primary/5 opacity-30" />
         <div className="container mx-auto px-4 relative z-10 text-center">
           <motion.div initial={{ opacity: 0, y: -30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <span className="text-alfawad-primary font-black text-[12px] uppercase tracking-[0.5em] mb-6 block">Free Inspection & Quote</span>
-            <h1 className="text-[40px] md:text-[80px] font-black text-white leading-tight uppercase tracking-tighter mb-8 italic">Book a Free Visit</h1>
+            <span className="text-alfawad-primary font-black text-[12px] uppercase tracking-[0.5em] mb-6 block">{isAr ? "فحص مجاني وعرض أسعار" : "Free Inspection & Quote"}</span>
+            <h1 className="text-[40px] md:text-[80px] font-black text-white leading-tight uppercase tracking-tighter mb-8 italic">{isAr ? "احجز زيارة مجانية" : "Book a Free Visit"}</h1>
             <div className="w-24 h-2 bg-alfawad-primary mx-auto mb-10" />
             <p className="text-white/60 text-xl font-medium max-w-2xl mx-auto uppercase tracking-widest leading-relaxed">
-              Expert solutions for your property - no hidden costs, accurate pricing.
+              {isAr ? "حلول متخصصة لممتلكاتك - بدون تكاليف خفية، وتسعير دقيق." : "Expert solutions for your property - no hidden costs, accurate pricing."}
             </p>
           </motion.div>
         </div>
@@ -49,18 +53,18 @@ const Booking = () => {
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <AnimatedSection>
-              <span className="text-alfawad-primary font-black text-[12px] uppercase tracking-[0.4em] mb-6 block">Why Book Today?</span>
-              <h2 className="text-[36px] md:text-[50px] font-black text-black leading-tight uppercase tracking-tighter mb-8">Professional <br /> <span className="text-alfawad-primary">Inspection</span> Program</h2>
+              <span className="text-alfawad-primary font-black text-[12px] uppercase tracking-[0.4em] mb-6 block">{isAr ? "لماذا تحجز اليوم؟" : "Why Book Today?"}</span>
+              <h2 className="text-[36px] md:text-[50px] font-black text-black leading-tight uppercase tracking-tighter mb-8">{isAr ? "برنامج الفحص" : "Professional"} <br /> <span className="text-alfawad-primary">{isAr ? "الاحترافي" : "Inspection"}</span> {isAr ? "" : "Program"}</h2>
               <p className="text-gray-500 font-medium text-lg leading-relaxed mb-12">
-                At Lamiya Al Khaleej Al Ittehad  Company, we understand that every property is different. That is why we offer a Free Visit & Inspection Service for customers who want accurate pricing and customized service plans.
+                {isAr ? "نحن ندرك أن كل عقار يختلف عن الآخر. لذلك نقدم خدمة زيارة وفحص مجانية للعملاء الذين يرغبون في تسعير دقيق وخطط مخصصة." : "At Lamiya Al Khaleej Al Ittehad  Company, we understand that every property is different. That is why we offer a Free Visit & Inspection Service for customers who want accurate pricing and customized service plans."}
               </p>
               <div className="space-y-6">
                 {[
-                  "No hidden costs - what we quote is what you pay.",
-                  "Accurate pricing based on actual property size.",
-                  "Expert suggestions from certified technicians.",
-                  "Custom packages tailored to your specific needs.",
-                  "Helps you choose the most effective service type."
+                  isAr ? "بدون تكاليف خفية - ما نقتبسه هو ما تدفعه." : "No hidden costs - what we quote is what you pay.",
+                  isAr ? "تسعير دقيق بناءً على حجم العقار الفعلي." : "Accurate pricing based on actual property size.",
+                  isAr ? "اقتراحات خبراء من الفنيين المعتمدين." : "Expert suggestions from certified technicians.",
+                  isAr ? "حزم مخصصة مصممة خصيصًا لاحتياجاتك." : "Custom packages tailored to your specific needs.",
+                  isAr ? "يساعدك على اختيار نوع الخدمة الأكثر فعالية." : "Helps you choose the most effective service type."
                 ].map((benefit, i) => (
                   <div key={i} className="flex items-center gap-4 group">
                     <div className="w-8 h-8 rounded-full bg-white shadow-xl flex items-center justify-center flex-shrink-0 group-hover:bg-alfawad-primary transition-all">
@@ -99,14 +103,14 @@ const Booking = () => {
                   <div className="absolute top-0 right-0 p-12 opacity-5 -mr-10 -mt-10 group-hover:scale-150 transition-all duration-700">
                     <Calendar className="w-40 h-40 text-alfawad-primary" />
                   </div>
-                  <h3 className="text-3xl font-black uppercase tracking-tighter mb-8 italic">Let Our Professionals Handle It</h3>
+                  <h3 className="text-3xl font-black uppercase tracking-tighter mb-8 italic">{isAr ? "دع محترفينا يتعاملون مع الأمر" : "Let Our Professionals Handle It"}</h3>
                   <p className="text-white/60 font-medium leading-relaxed mb-12">
-                    "Book your free visit today and experience the professional difference of Lamiya Al Khaleej Al Ittehad  Company facility solutions."
+                    {isAr ? "\"احجز زيارتك المجانية اليوم واختبر الفرق المهني لشركة لمياء الخليج.\"" : "\"Book your free visit today and experience the professional difference of Lamiya Al Khaleej Al Ittehad  Company facility solutions.\""}
                   </p>
                   <div className="space-y-6">
                     <div className="flex flex-col">
-                      <span className="text-[10px] font-black uppercase tracking-[0.4em] text-alfawad-primary mb-2">Service Hours</span>
-                      <span className="text-sm font-black uppercase tracking-widest leading-relaxed">Sat - Thu: 08:00 AM - 10:00 PM <br /> Fri: Based on Appointment</span>
+                      <span className="text-[10px] font-black uppercase tracking-[0.4em] text-alfawad-primary mb-2">{isAr ? "ساعات الخدمة" : "Service Hours"}</span>
+                      <span className="text-sm font-black uppercase tracking-widest leading-relaxed">{isAr ? "السبت - الخميس: 08:00 ص - 10:00 م" : "Sat - Thu: 08:00 AM - 10:00 PM"} <br /> {isAr ? "الجمعة: بناءً على الموعد" : "Fri: Based on Appointment"}</span>
                     </div>
                     <div className="flex flex-col gap-8">
                       <span className="text-[10px] font-black uppercase tracking-[0.4em] text-alfawad-primary leading-none">Support Lines</span>
@@ -143,30 +147,30 @@ const Booking = () => {
                     <div className="w-24 h-24 bg-alfawad-primary text-black flex items-center justify-center rounded-none mx-auto mb-10 transform scale-110 shadow-2xl">
                       <ShieldCheck className="w-12 h-12" />
                     </div>
-                    <h3 className="text-4xl font-black text-black mb-6 uppercase tracking-tighter italic">Booking Successful!</h3>
-                    <p className="text-gray-500 text-lg font-bold uppercase tracking-[0.2em] mb-12">Our coordinator will contact you shortly to confirm the inspection visit.</p>
-                    <button onClick={() => setSubmitted(false)} className="bg-black text-white px-12 py-5 font-black uppercase tracking-widest text-sm hover:bg-alfawad-primary transition-all">Make Another Booking</button>
+                    <h3 className="text-4xl font-black text-black mb-6 uppercase tracking-tighter italic">{isAr ? "تم الحجز بنجاح!" : "Booking Successful!"}</h3>
+                    <p className="text-gray-500 text-lg font-bold uppercase tracking-[0.2em] mb-12">{isAr ? "سيتصل بك المنسق قريباً لتأكيد زيارة الفحص." : "Our coordinator will contact you shortly to confirm the inspection visit."}</p>
+                    <button onClick={() => setSubmitted(false)} className="bg-black text-white px-12 py-5 font-black uppercase tracking-widest text-sm hover:bg-alfawad-primary transition-all">{isAr ? "قم بحجز آخر" : "Make Another Booking"}</button>
                   </div>
                 ) : (
                   <form onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }} className="bg-[#fcfcfc] p-10 md:p-16 space-y-10 shadow-2xl border-t-8 border-black">
-                    <h3 className="text-3xl font-black text-black mb-8 uppercase tracking-tighter">Schedule Your Free Visit</h3>
+                    <h3 className="text-3xl font-black text-black mb-8 uppercase tracking-tighter">{isAr ? "حدد موعد زيارتك المجانية" : "Schedule Your Free Visit"}</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                       <div className="space-y-2">
-                        <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">Full Name *</label>
-                        <Input placeholder="YOUR NAME" required className="bg-white rounded-none border-gray-200 focus:border-alfawad-primary h-14 font-black text-xs placeholder:text-gray-300" />
+                        <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">{isAr ? "الاسم الكامل *" : "Full Name *"}</label>
+                        <Input placeholder={isAr ? "اسمك" : "YOUR NAME"} required className="bg-white rounded-none border-gray-200 focus:border-alfawad-primary h-14 font-black text-xs placeholder:text-gray-300" />
                       </div>
                       <div className="space-y-2">
-                        <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">Phone Number *</label>
-                        <Input placeholder=" +966 XXXXXXXX" type="tel" required className="bg-white rounded-none border-gray-200 focus:border-alfawad-primary h-14 font-black text-xs placeholder:text-gray-300" />
+                        <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">{isAr ? "رقم الهاتف *" : "Phone Number *"}</label>
+                        <Input placeholder=" +966 XXXXXXXX" dir="ltr" type="tel" required className="bg-white rounded-none border-gray-200 focus:border-alfawad-primary h-14 font-black text-xs placeholder:text-gray-300" />
                       </div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                       <div className="space-y-2">
-                        <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">City *</label>
+                        <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">{isAr ? "المدينة *" : "City *"}</label>
                         <Select required>
                           <SelectTrigger className="bg-white rounded-none border-gray-200 focus:border-alfawad-primary h-14 font-black text-xs">
-                            <SelectValue placeholder="SELECT CITY" />
+                            <SelectValue placeholder={isAr ? "اختر المدينة" : "SELECT CITY"} />
                           </SelectTrigger>
                           <SelectContent>
                             {["Riyadh", "Jeddah", "Dammam", "Al Khobar", "Dhahran", "Jubail", "Taif", "Mecca", "Medina"].map(city => (
@@ -176,10 +180,10 @@ const Booking = () => {
                         </Select>
                       </div>
                       <div className="space-y-2">
-                        <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">Service Category *</label>
+                        <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">{isAr ? "فئة الخدمة *" : "Service Category *"}</label>
                         <Select required>
                           <SelectTrigger className="bg-white rounded-none border-gray-200 focus:border-alfawad-primary h-14 font-black text-xs">
-                            <SelectValue placeholder="SELECT SERVICE" />
+                            <SelectValue placeholder={isAr ? "اختر الخدمة" : "SELECT SERVICE"} />
                           </SelectTrigger>
                           <SelectContent>
                             {["Deep Cleaning", "AC Cleaning", "Pest Control", "Upholstery Cleaning", "Sanitization", "Full Package"].map(service => (
@@ -191,12 +195,12 @@ const Booking = () => {
                     </div>
 
                     <div className="space-y-2">
-                      <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">Property Details / Message</label>
-                      <Textarea placeholder="PLEASE DESCRIBE YOUR PROPERTY OR SPECIFIC NEEDS..." rows={5} className="bg-white rounded-none border-gray-200 focus:border-alfawad-primary font-black text-xs py-4 placeholder:text-gray-300" />
+                      <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">{isAr ? "تفاصيل العقار / رسالة" : "Property Details / Message"}</label>
+                      <Textarea placeholder={isAr ? "يرجى وصف الممتلكات الخاصة بك أو الاحتياجات المحددة..." : "PLEASE DESCRIBE YOUR PROPERTY OR SPECIFIC NEEDS..."} rows={5} className="bg-white rounded-none border-gray-200 focus:border-alfawad-primary font-black text-xs py-4 placeholder:text-gray-300" />
                     </div>
 
                     <button type="submit" className="bg-black text-white px-10 py-6 text-sm font-black uppercase tracking-widest w-full hover:bg-alfawad-primary transition-all flex items-center justify-center gap-3 shadow-2xl group">
-                      Request Inspection Visit <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                      {isAr ? "طلب زيارة فحص" : "Request Inspection Visit"} <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
                     </button>
                   </form>
                 )}

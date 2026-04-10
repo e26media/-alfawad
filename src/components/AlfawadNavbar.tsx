@@ -1,40 +1,42 @@
 import { Link, useLocation } from "react-router-dom";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 
 const ALFAWAD_LINKS = [
-  { name: "Home", path: "/alfawad" },
+  { nameKey: "industrial.nav.home", path: "/alfawad" },
   {
-    name: "About Us",
+    nameKey: "industrial.nav.about",
     dropdown: [
-      { name: "Overview", path: "/alfawad/overview" },
-      { name: "Introduction", path: "/alfawad/introduction" },
-      { name: "Chairman Message", path: "/alfawad/chairman-message" },
-      { name: "Vision & Mission", path: "/alfawad/vision-mission" },
-      { name: "Quality Policy", path: "/alfawad/quality-policy" },
-      { name: "Environment & Safety Policy", path: "/alfawad/environment-safety" },
+      { nameKey: "industrial.nav.overview", path: "/alfawad/overview" },
+      { nameKey: "industrial.nav.introduction", path: "/alfawad/introduction" },
+      { nameKey: "industrial.nav.chairman", path: "/alfawad/chairman-message" },
+      { nameKey: "industrial.nav.vision", path: "/alfawad/vision-mission" },
+      { nameKey: "industrial.nav.quality", path: "/alfawad/quality-policy" },
+      { nameKey: "industrial.nav.env_safety", path: "/alfawad/environment-safety" },
     ],
   },
   {
-    name: "Our Services",
+    nameKey: "industrial.nav.services",
     path: "/alfawad/services",
     dropdown: [
-      { name: "Technical Manpower Service", path: "/alfawad/services/technical-manpower" },
-      { name: "Heavy Equipment Service", path: "/alfawad/services/heavy-equipment" },
-      { name: "Project Support Service", path: "/alfawad/services/project-support" },
-      { name: "Project Management Service", path: "/alfawad/services/project-management" },
-      { name: "Material Service", path: "/alfawad/services/material-service" },
+      { nameKey: "industrial.nav.manpower", path: "/alfawad/services/technical-manpower" },
+      { nameKey: "industrial.nav.equipment", path: "/alfawad/services/heavy-equipment" },
+      { nameKey: "industrial.nav.support", path: "/alfawad/services/project-support" },
+      { nameKey: "industrial.nav.management", path: "/alfawad/services/project-management" },
+      { nameKey: "industrial.nav.material", path: "/alfawad/services/material-service" },
     ],
   },
-  { name: "Our Brochure", path: "/alfawad/brochure" },
-  { name: "Clients", path: "/alfawad/clients" },
-  { name: "Career", path: "/alfawad/career" },
-  { name: "Enquiry", path: "/alfawad/enquiry" },
-  { name: "Contact Us", path: "/alfawad/contact" },
+  { nameKey: "industrial.nav.brochure", path: "/alfawad/brochure" },
+  { nameKey: "industrial.nav.clients", path: "/alfawad/clients" },
+  { nameKey: "industrial.nav.career", path: "/alfawad/career" },
+  { nameKey: "industrial.nav.enquiry", path: "/alfawad/enquiry" },
+  { nameKey: "industrial.nav.contact", path: "/alfawad/contact" },
 ];
 
 const AlfawadNavbar = () => {
+  const { t } = useTranslation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
@@ -61,10 +63,10 @@ const AlfawadNavbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-2">
             {ALFAWAD_LINKS.map((link) => (
-              <div key={link.name} className="relative group">
+              <div key={link.nameKey} className="relative group">
                 {link.dropdown ? (
                   <button className="flex items-center gap-1 px-3 py-2 text-[13px] font-black uppercase tracking-tighter hover:text-alfawad-primary transition-colors">
-                    {link.name} <ChevronDown className="w-3 h-3 opacity-50" />
+                    {t(link.nameKey)} <ChevronDown className="w-3 h-3 opacity-50" />
                   </button>
                 ) : (
                   <Link
@@ -73,7 +75,7 @@ const AlfawadNavbar = () => {
                       location.pathname === link.path ? "text-alfawad-primary" : ""
                     }`}
                   >
-                    {link.name}
+                    {t(link.nameKey)}
                   </Link>
                 )}
 
@@ -86,7 +88,7 @@ const AlfawadNavbar = () => {
                         to={sublink.path}
                         className="block px-6 py-3 text-[12px] font-bold uppercase tracking-wider hover:bg-gray-50 hover:text-alfawad-primary transition-colors border-b border-gray-50 last:border-0"
                       >
-                        {sublink.name}
+                        {t(sublink.nameKey)}
                       </Link>
                     ))}
                   </div>
@@ -105,7 +107,7 @@ const AlfawadNavbar = () => {
 
           <div className="hidden lg:flex items-center ml-4">
              <Link to="/" className="text-[10px] font-bold bg-gray-100 text-gray-500 px-3 py-1.5 rounded-full hover:bg-alfawad-primary hover:text-white transition-all uppercase">
-               Exit Alfawad
+               {t('industrial.nav.exit')}
              </Link>
           </div>
 
@@ -134,14 +136,14 @@ const AlfawadNavbar = () => {
                   {link.dropdown ? (
                     <div>
                       <button
-                        onClick={() => toggleDropdown(link.name)}
+                        onClick={() => toggleDropdown(link.nameKey)}
                         className="flex items-center justify-between w-full px-4 py-3 text-sm font-medium hover:bg-[#a31b17] rounded-lg transition-colors border-b border-alfawad-primary/50"
                       >
-                        {link.name}
-                        <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.name ? "rotate-180" : ""}`} />
+                        {t(link.nameKey)}
+                        <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.nameKey ? "rotate-180" : ""}`} />
                       </button>
                       <AnimatePresence>
-                        {activeDropdown === link.name && (
+                        {activeDropdown === link.nameKey && (
                           <motion.div
                             initial={{ height: 0 }}
                             animate={{ height: "auto" }}
@@ -155,7 +157,7 @@ const AlfawadNavbar = () => {
                                 onClick={() => setMobileMenuOpen(false)}
                                 className="block px-8 py-3 text-sm text-red-100 hover:text-white hover:bg-alfawad-primary/50"
                               >
-                                {sublink.name}
+                                {t(sublink.nameKey)}
                               </Link>
                             ))}
                           </motion.div>
@@ -168,7 +170,7 @@ const AlfawadNavbar = () => {
                       onClick={() => setMobileMenuOpen(false)}
                       className="block px-4 py-3 text-sm font-medium hover:bg-[#a31b17] rounded-lg transition-colors border-b border-alfawad-primary/50"
                     >
-                      {link.name}
+                      {t(link.nameKey)}
                     </Link>
                   )}
                 </div>

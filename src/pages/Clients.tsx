@@ -3,60 +3,65 @@ import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
 import { Users, Building, Home, Utensils, HeartPulse, GraduationCap, Hotel, ShoppingBag, Factory, ShieldCheck, Star } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
-const clientTypes = [
-  { icon: Home, label: "Villas & Apartments", desc: "Premium cleaning and sanitization for residential properties across KSA." },
-  { icon: Building, label: "Corporate Offices", desc: "Professional maintenance for high-traffic business environments." },
-  { icon: Utensils, label: "Restaurants & Cafes", desc: "Deep kitchen degreasing and hygiene compliance services." },
-  { icon: HeartPulse, label: "Hospitals & Clinics", desc: "Specialized medical-grade sanitization and disinfection." },
-  { icon: GraduationCap, label: "Schools & Universities", desc: "Creating safe and clean learning environments for students." },
-  { icon: Hotel, label: "Hotels & Resorts", desc: "Upholstery cleaning and facility maintenance for hospitality." },
-  { icon: ShoppingBag, label: "Retail & Showrooms", desc: "Maintaining spotless fronts and interiors for retail success." },
-  { icon: Factory, label: "Industrial & Warehouses", desc: "Specialized cleaning for large-scale storage and production units." },
-];
+const Clients = () => {
+  const { i18n } = useTranslation();
+  const isAr = i18n.language === 'ar';
 
-const clientLogos = [
-  "https://cleanproksa.com/wp-content/uploads/2025/02/Image-1.png",
-  "https://cleanproksa.com/wp-content/uploads/2025/02/10-01-1-1.png",
-  "https://cleanproksa.com/wp-content/uploads/2025/02/19-01-1-1.png",
-  "https://cleanproksa.com/wp-content/uploads/2025/02/8-01-1-2.png",
-  "https://cleanproksa.com/wp-content/uploads/2025/02/1-01-1-1.png",
-  "https://cleanproksa.com/wp-content/uploads/2025/02/3-01-1-1.png",
-  "https://cleanproksa.com/wp-content/uploads/2025/02/2-01-1-1.png",
-  "https://cleanproksa.com/wp-content/uploads/2025/01/16-01-150x150-1.jpg",
-  "https://cleanproksa.com/wp-content/uploads/2025/01/4-01-150x150-1.jpg",
-  "https://cleanproksa.com/wp-content/uploads/2025/01/5-01-150x150-1.jpg",
-  "https://cleanproksa.com/wp-content/uploads/2025/01/6-01-150x150-1.jpg",
-  "https://cleanproksa.com/wp-content/uploads/2025/01/7-01-150x150-1.jpg",
-  "https://cleanproksa.com/wp-content/uploads/2025/01/9-01-150x150-1.jpg",
-  "https://cleanproksa.com/wp-content/uploads/2025/01/11-01-150x150-1.jpg",
-  "https://cleanproksa.com/wp-content/uploads/2025/01/12-01-150x150-1.jpg",
-  "https://cleanproksa.com/wp-content/uploads/2025/01/13-01-150x150-1.jpg",
-  "https://cleanproksa.com/wp-content/uploads/2025/01/14-01-150x150-1.jpg",
-  "https://cleanproksa.com/wp-content/uploads/2025/01/18-01-150x150-1.jpg",
-  "https://cleanproksa.com/wp-content/uploads/2025/01/20-01-150x150-1.jpg",
-  "https://cleanproksa.com/wp-content/uploads/2025/01/21-01-150x150-1.jpg",
-  "https://cleanproksa.com/wp-content/uploads/2025/01/22-01-150x150-1.jpg",
-  "https://cleanproksa.com/wp-content/uploads/2025/01/23-01-150x150-1.jpg",
-  "https://cleanproksa.com/wp-content/uploads/2025/01/24-01-150x150-1.jpg",
-];
+  const clientTypes = [
+    { icon: Home, label: isAr ? "الفلل والشقق" : "Villas & Apartments", desc: isAr ? "تنظيف وتعقيم ممتاز للعقارات السكنية في جميع أنحاء المملكة." : "Premium cleaning and sanitization for residential properties across KSA." },
+    { icon: Building, label: isAr ? "مكاتب الشركات" : "Corporate Offices", desc: isAr ? "صيانة احترافية لبيئات الأعمال ذات الازدحام الشديد." : "Professional maintenance for high-traffic business environments." },
+    { icon: Utensils, label: isAr ? "المطاعم والمقاهي" : "Restaurants & Cafes", desc: isAr ? "خدمات إزالة الشحوم من المطابخ والامتثال لمتطلبات النظافة." : "Deep kitchen degreasing and hygiene compliance services." },
+    { icon: HeartPulse, label: isAr ? "المستشفيات والعيادات" : "Hospitals & Clinics", desc: isAr ? "تعقيم وتطهير متخصص من الدرجة الطبية." : "Specialized medical-grade sanitization and disinfection." },
+    { icon: GraduationCap, label: isAr ? "المدارس والجامعات" : "Schools & Universities", desc: isAr ? "خلق بيئات تعليمية آمنة ونظيفة للطلاب." : "Creating safe and clean learning environments for students." },
+    { icon: Hotel, label: isAr ? "الفنادق والمنتجعات" : "Hotels & Resorts", desc: isAr ? "تنظيف المفروشات وصيانة المرافق الخاصة بالضيافة." : "Upholstery cleaning and facility maintenance for hospitality." },
+    { icon: ShoppingBag, label: isAr ? "التجزئة والمعارض" : "Retail & Showrooms", desc: isAr ? "الحفاظ على واجهات وديكورات داخلية خالية من العيوب." : "Maintaining spotless fronts and interiors for retail success." },
+    { icon: Factory, label: isAr ? "الصناعية والمستودعات" : "Industrial & Warehouses", desc: isAr ? "تنظيف متخصص لوحدات التخزين والإنتاج واسعة النطاق." : "Specialized cleaning for large-scale storage and production units." },
+  ];
 
-const Clients = () => (
-  <div className="pt-32 md:pt-40 font-muli bg-white overflow-x-hidden">
-    <SEO
-      title="Our Clients | Trusted by Homes & Businesses Across Saudi Arabia"
-      description="Lamiya Al Khaleej Company proudly serves residential and commercial clients across Riyadh, Jeddah, Dammam, and all of KSA."
+  const clientLogos = [
+    "https://cleanproksa.com/wp-content/uploads/2025/02/Image-1.png",
+    "https://cleanproksa.com/wp-content/uploads/2025/02/10-01-1-1.png",
+    "https://cleanproksa.com/wp-content/uploads/2025/02/19-01-1-1.png",
+    "https://cleanproksa.com/wp-content/uploads/2025/02/8-01-1-2.png",
+    "https://cleanproksa.com/wp-content/uploads/2025/02/1-01-1-1.png",
+    "https://cleanproksa.com/wp-content/uploads/2025/02/3-01-1-1.png",
+    "https://cleanproksa.com/wp-content/uploads/2025/02/2-01-1-1.png",
+    "https://cleanproksa.com/wp-content/uploads/2025/01/16-01-150x150-1.jpg",
+    "https://cleanproksa.com/wp-content/uploads/2025/01/4-01-150x150-1.jpg",
+    "https://cleanproksa.com/wp-content/uploads/2025/01/5-01-150x150-1.jpg",
+    "https://cleanproksa.com/wp-content/uploads/2025/01/6-01-150x150-1.jpg",
+    "https://cleanproksa.com/wp-content/uploads/2025/01/7-01-150x150-1.jpg",
+    "https://cleanproksa.com/wp-content/uploads/2025/01/9-01-150x150-1.jpg",
+    "https://cleanproksa.com/wp-content/uploads/2025/01/11-01-150x150-1.jpg",
+    "https://cleanproksa.com/wp-content/uploads/2025/01/12-01-150x150-1.jpg",
+    "https://cleanproksa.com/wp-content/uploads/2025/01/13-01-150x150-1.jpg",
+    "https://cleanproksa.com/wp-content/uploads/2025/01/14-01-150x150-1.jpg",
+    "https://cleanproksa.com/wp-content/uploads/2025/01/18-01-150x150-1.jpg",
+    "https://cleanproksa.com/wp-content/uploads/2025/01/20-01-150x150-1.jpg",
+    "https://cleanproksa.com/wp-content/uploads/2025/01/21-01-150x150-1.jpg",
+    "https://cleanproksa.com/wp-content/uploads/2025/01/22-01-150x150-1.jpg",
+    "https://cleanproksa.com/wp-content/uploads/2025/01/23-01-150x150-1.jpg",
+    "https://cleanproksa.com/wp-content/uploads/2025/01/24-01-150x150-1.jpg",
+  ];
+
+  return (
+    <div className="pt-32 md:pt-40 font-muli bg-white overflow-x-hidden">
+      <SEO
+      title={isAr ? "عملائنا | شركة لمياء الخليج" : "Our Clients | Trusted by Homes & Businesses Across Saudi Arabia"}
+      description={isAr ? "تخدم شركة لمياء الخليج بكل فخر العملاء السكنيين والتجاريين." : "Lamiya Al Khaleej Company proudly serves residential and commercial clients across Riyadh, Jeddah, Dammam, and all of KSA."}
     />
 
     <section className="relative py-24 md:py-40 bg-black overflow-hidden text-center">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-alfawad-primary/5 blur-[100px] rounded-full" />
       <div className="container mx-auto px-4 relative z-10">
         <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8 }}>
-          <span className="text-alfawad-primary font-black text-[12px] uppercase tracking-[0.5em] mb-6 block">Trusted Partners</span>
-          <h1 className="text-[40px] md:text-[80px] font-black text-white leading-none uppercase tracking-tighter mb-8 italic">Our Clients</h1>
+          <span className="text-alfawad-primary font-black text-[12px] uppercase tracking-[0.5em] mb-6 block">{isAr ? "شركاء موثوقون" : "Trusted Partners"}</span>
+          <h1 className="text-[40px] md:text-[80px] font-black text-white leading-none uppercase tracking-tighter mb-8 italic">{isAr ? "عملائنا" : "Our Clients"}</h1>
           <div className="w-24 h-2 bg-alfawad-primary mx-auto mb-10" />
           <p className="text-white/60 text-xl font-medium max-w-2xl mx-auto uppercase tracking-widest leading-relaxed">
-            Trusted by Homes & Businesses Across Saudi Arabia.
+            {isAr ? "موثوق بها من قبل المنازل والشركات في جميع أنحاء المملكة." : "Trusted by Homes & Businesses Across Saudi Arabia."}
           </p>
         </motion.div>
       </div>
@@ -67,10 +72,10 @@ const Clients = () => (
         <AnimatedSection>
           <div className="flex flex-col items-center text-center mb-24">
             <h2 className="text-[36px] md:text-[55px] font-black text-black leading-tight uppercase tracking-tighter mb-8">
-              Clients <span className="text-alfawad-primary">We Serve</span>
+              {isAr ? "العملاء" : "Clients"} <span className="text-alfawad-primary">{isAr ? "الذين نخدمهم" : "We Serve"}</span>
             </h2>
             <p className="text-gray-500 text-lg font-medium leading-relaxed max-w-3xl">
-              At Lamiya Al Khaleej Al Ittehad  Company, our success is measured by customer satisfaction. We proudly serve a wide range of clients, including residential customers and leading commercial businesses across the Kingdom.
+              {isAr ? "في شركة لمياء الخليج الاتحاد، نقيس نجاحنا برضا العملاء. نحن نفخر بخدمة مجموعة واسعة من العملاء، بما في ذلك العملاء السكنيين والشركات التجارية الرائدة في جميع أنحاء المملكة." : "At Lamiya Al Khaleej Al Ittehad  Company, our success is measured by customer satisfaction. We proudly serve a wide range of clients, including residential customers and leading commercial businesses across the Kingdom."}
             </p>
           </div>
         </AnimatedSection>
@@ -127,22 +132,22 @@ const Clients = () => (
               <ShieldCheck className="w-40 h-40" />
             </div>
             <Users className="w-16 h-16 text-alfawad-primary mx-auto mb-10" />
-            <h3 className="text-3xl md:text-5xl font-black text-black uppercase tracking-tighter mb-10 leading-tight italic">Building Long-Term Trust</h3>
+            <h3 className="text-3xl md:text-5xl font-black text-black uppercase tracking-tighter mb-10 leading-tight italic">{isAr ? "بناء ثقة طويلة الأمد" : "Building Long-Term Trust"}</h3>
             <p className="text-gray-500 text-xl font-medium leading-loose max-w-4xl mx-auto mb-12">
-              Our long-term client relationships are built on trust, service quality, and on-time delivery. We believe in providing services that bring value, safety, and peace of mind to every property we maintain.
+              {isAr ? "تُبنى علاقاتنا طويلة الأمد مع العملاء على الثقة وجودة الخدمة والتسليم في الوقت المحدد." : "Our long-term client relationships are built on trust, service quality, and on-time delivery. We believe in providing services that bring value, safety, and peace of mind to every property we maintain."}
             </p>
             <div className="flex flex-wrap justify-center gap-6">
               <div className="flex items-center gap-2">
                 <Star className="w-5 h-5 text-alfawad-primary fill-alfawad-primary" />
-                <span className="text-[12px] font-black uppercase tracking-widest text-black">Reliability</span>
+                <span className="text-[12px] font-black uppercase tracking-widest text-black">{isAr ? "موثوقية" : "Reliability"}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Star className="w-5 h-5 text-alfawad-primary fill-alfawad-primary" />
-                <span className="text-[12px] font-black uppercase tracking-widest text-black">Service Quality</span>
+                <span className="text-[12px] font-black uppercase tracking-widest text-black">{isAr ? "جودة الخدمة" : "Service Quality"}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Star className="w-5 h-5 text-alfawad-primary fill-alfawad-primary" />
-                <span className="text-[12px] font-black uppercase tracking-widest text-black">On-Time Delivery</span>
+                <span className="text-[12px] font-black uppercase tracking-widest text-black">{isAr ? "التسليم في الوقت المحدد" : "On-Time Delivery"}</span>
               </div>
             </div>
           </div>
@@ -154,14 +159,15 @@ const Clients = () => (
     <section className="bg-alfawad-primary py-24 text-center">
       <div className="container mx-auto px-4">
         <AnimatedSection>
-          <h2 className="text-4xl font-black text-white uppercase tracking-tighter mb-10">Join Our Professional Client Network</h2>
+          <h2 className="text-4xl font-black text-white uppercase tracking-tighter mb-10">{isAr ? "انضم إلى شبكتنا المهنية" : "Join Our Professional Client Network"}</h2>
           <Link to="/booking" className="bg-black text-white px-12 py-5 font-black uppercase tracking-widest text-sm hover:bg-white hover:text-black transition-all inline-block shadow-2xl">
-            Get Your Customized Quote Today
+            {isAr ? "احصل على عرض أسعار مخصص" : "Get Your Customized Quote Today"}
           </Link>
         </AnimatedSection>
       </div>
     </section>
   </div>
-);
+  );
+};
 
 export default Clients;

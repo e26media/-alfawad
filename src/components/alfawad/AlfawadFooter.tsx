@@ -2,6 +2,7 @@ import laklogo from "@/assets/laklogo.png";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowUp, Phone, Mail, MapPin, ChevronRight, Award, ShieldCheck, Globe, Clock } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const VENDOR_DATA = [
   { name: "Saudi Aramco", code: "4913", src: "https://alfawad.com/images/client-logo/saudi-aramco.jpg" },
@@ -14,6 +15,9 @@ const VENDOR_DATA = [
 ];
 
 const AlfawadFooter = () => {
+  const { i18n } = useTranslation();
+  const isAr = i18n.language === 'ar';
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -38,7 +42,7 @@ const AlfawadFooter = () => {
           onClick={scrollToTop}
           className="w-16 h-16 bg-black text-white rounded-2xl flex flex-col items-center justify-center shadow-[0_20px_50px_rgba(0,0,0,0.3)] transition-all group"
         >
-          <span className="text-[10px] font-black uppercase tracking-widest leading-none mb-1">Top</span>
+          <span className="text-[10px] font-black uppercase tracking-widest leading-none mb-1">{isAr ? "الأعلى" : "Top"}</span>
           <ArrowUp className="w-5 h-5 group-hover:-translate-y-1 transition-transform" />
         </motion.button>
       </div>
@@ -81,7 +85,7 @@ const AlfawadFooter = () => {
             {/* Middle Row: Official Vendor Status */}
             <div className="flex-1">
               <div className="flex items-center gap-4 mb-12">
-                <h3 className="text-[12px] font-black uppercase tracking-[0.4em] text-black">Registered Industrial Vendor</h3>
+                <h3 className="text-[12px] font-black uppercase tracking-[0.4em] text-black">{isAr ? "بائع صناعي معتمد" : "Registered Industrial Vendor"}</h3>
                 <div className="h-[2px] flex-1 bg-gray-50" />
               </div>
               
@@ -100,7 +104,7 @@ const AlfawadFooter = () => {
                       />
                     </div>
                     <div className="flex flex-col items-center text-center">
-                      <span className="text-[8px] font-black text-gray-300 uppercase tracking-widest group-hover:text-alfawad-primary transition-colors leading-none mb-1">Code</span>
+                      <span className="text-[8px] font-black text-gray-300 uppercase tracking-widest group-hover:text-alfawad-primary transition-colors leading-none mb-1">{isAr ? "رمز" : "Code"}</span>
                       <span className="text-[14px] font-black text-black tracking-tighter">{vendor.code}</span>
                     </div>
                   </motion.div>
@@ -113,22 +117,22 @@ const AlfawadFooter = () => {
                <div className="flex items-center gap-4">
                   <ShieldCheck className="w-8 h-8 text-alfawad-primary" />
                   <div className="flex flex-col">
-                    <span className="text-[10px] font-black uppercase tracking-widest text-black mb-1 leading-none">Secure Business</span>
-                    <span className="text-[9px] font-bold uppercase tracking-widest text-gray-400 leading-none">Safe Operations</span>
+                    <span className="text-[10px] font-black uppercase tracking-widest text-black mb-1 leading-none">{isAr ? "أعمال آمنة" : "Secure Business"}</span>
+                    <span className="text-[9px] font-bold uppercase tracking-widest text-gray-400 leading-none">{isAr ? "عمليات آمنة" : "Safe Operations"}</span>
                   </div>
                </div>
                <div className="flex items-center gap-4">
                   <Globe className="w-8 h-8 text-alfawad-primary" />
                   <div className="flex flex-col">
-                    <span className="text-[10px] font-black uppercase tracking-widest text-black mb-1 leading-none">Local Presence</span>
-                    <span className="text-[9px] font-bold uppercase tracking-widest text-gray-400 leading-none">Kingdom Wide</span>
+                    <span className="text-[10px] font-black uppercase tracking-widest text-black mb-1 leading-none">{isAr ? "تواجد محلي" : "Local Presence"}</span>
+                    <span className="text-[9px] font-bold uppercase tracking-widest text-gray-400 leading-none">{isAr ? "في جميع أنحاء المملكة" : "Kingdom Wide"}</span>
                   </div>
                </div>
                <div className="flex items-center gap-4">
                   <Award className="w-8 h-8 text-alfawad-primary" />
                   <div className="flex flex-col">
-                    <span className="text-[10px] font-black uppercase tracking-widest text-black mb-1 leading-none">Award Winning</span>
-                    <span className="text-[9px] font-bold uppercase tracking-widest text-gray-400 leading-none">Excellence Hub</span>
+                    <span className="text-[10px] font-black uppercase tracking-widest text-black mb-1 leading-none">{isAr ? "حائز على جوائز" : "Award Winning"}</span>
+                    <span className="text-[9px] font-bold uppercase tracking-widest text-gray-400 leading-none">{isAr ? "مركز التميز" : "Excellence Hub"}</span>
                   </div>
                </div>
             </div>
@@ -152,7 +156,7 @@ const AlfawadFooter = () => {
               {/* Contact Data */}
               <div>
                 <h4 className="text-[24px] font-black uppercase tracking-tighter mb-12 italic border-l-8 border-white pl-6">
-                  Corporate <span className="text-alfawad-primary">Hub</span>
+                  {isAr ? "المركز" : "Corporate"} <span className="text-alfawad-primary">{isAr ? "المشترك" : "Hub"}</span>
                 </h4>
                 <div className="space-y-10">
                   <div className="group flex items-start gap-6">
@@ -160,9 +164,9 @@ const AlfawadFooter = () => {
                       <MapPin className="w-6 h-6" />
                     </div>
                     <div>
-                      <span className="text-[10px] font-black uppercase tracking-[0.4em] text-alfawad-primary leading-none block mb-2">Location</span>
+                      <span className="text-[10px] font-black uppercase tracking-[0.4em] text-alfawad-primary leading-none block mb-2">{isAr ? "الموقع" : "Location"}</span>
                       <p className="text-[14px] font-bold uppercase tracking-widest leading-relaxed text-white/50">
-                        Al Jubail, KSA
+                        {isAr ? "الجبيل، المملكة العربية السعودية" : "Al Jubail, KSA"}
                       </p>
                     </div>
                   </div>
@@ -172,25 +176,25 @@ const AlfawadFooter = () => {
                       <Phone className="w-6 h-6" />
                     </div>
                     <div className="space-y-6">
-                      <span className="text-[10px] font-black uppercase tracking-[0.4em] text-alfawad-primary leading-none block">Direct Lines</span>
+                      <span className="text-[10px] font-black uppercase tracking-[0.4em] text-alfawad-primary leading-none block">{isAr ? "خطوط مباشرة" : "Direct Lines"}</span>
                       
                       <div className="grid gap-8">
                         <div className="flex flex-col">
-                          <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">Ashraf Al badan</span>
-                          <a href="tel:+966507077611" className="text-[13px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors">+966 50 707 7611</a>
+                          <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">{isAr ? "أشرف البدن" : "Ashraf Al badan"}</span>
+                          <a href="tel:+966507077611" className="text-[13px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors" dir="ltr">+966 50 707 7611</a>
                         </div>
 
                         <div className="flex flex-col">
-                          <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">Ahamed suhail</span>
+                          <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">{isAr ? "أحمد سهيل" : "Ahamed suhail"}</span>
                           <div className="flex flex-col gap-1">
-                            <a href="tel:+966510304627" className="text-[13px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors">+966 51 030 4627</a>
-                            <a href="tel:+966566567518" className="text-[13px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors">+966 56 656 7518</a>
+                            <a href="tel:+966510304627" className="text-[13px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors" dir="ltr">+966 51 030 4627</a>
+                            <a href="tel:+966566567518" className="text-[13px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors" dir="ltr">+966 56 656 7518</a>
                           </div>
                         </div>
 
                         <div className="flex flex-col">
-                          <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">Safwan</span>
-                          <a href="tel:+966583769845" className="text-[13px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors">+966 58 376 9845</a>
+                          <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">{isAr ? "صفوان" : "Safwan"}</span>
+                          <a href="tel:+966583769845" className="text-[13px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors" dir="ltr">+966 58 376 9845</a>
                         </div>
                       </div>
                     </div>
@@ -201,7 +205,7 @@ const AlfawadFooter = () => {
                       <Mail className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-4">
-                      <span className="text-[10px] font-black uppercase tracking-[0.4em] text-alfawad-primary leading-none block">Corporate Emails</span>
+                      <span className="text-[10px] font-black uppercase tracking-[0.4em] text-alfawad-primary leading-none block">{isAr ? "رسائل البريد الإلكتروني" : "Corporate Emails"}</span>
                       <div className="flex flex-col gap-3">
                         <a href="mailto:ashrafalbadan@lamiyaalkhaleej.com" className="text-[12px] font-bold uppercase tracking-widest text-white/50 hover:text-alfawad-primary transition-colors block">ashrafalbadan@lamiyaalkhaleej.com</a>
                         <a href="mailto:ahamedsuhail@lamiyaalkhaleej.com" className="text-[12px] font-bold uppercase tracking-widest text-white/50 hover:text-alfawad-primary transition-colors block">ahamedsuhail@lamiyaalkhaleej.com</a>
@@ -218,7 +222,7 @@ const AlfawadFooter = () => {
                <div className="flex flex-col sm:flex-row justify-between items-center gap-8 border-t border-white/5 pt-12">
                   
                   <p className="text-[9px] font-black uppercase tracking-[0.5em] text-white/20">
-                    &copy; {new Date().getFullYear()} LAMIYA AL KHALEEJ AL ITTEHAD. All Rights Reserved.
+                    &copy; {new Date().getFullYear()} {isAr ? "لمياء الخليج الاتحاد. جميع الحقوق محفوظة." : "LAMIYA AL KHALEEJ AL ITTEHAD. All Rights Reserved."}
                   </p>
                  
                </div>

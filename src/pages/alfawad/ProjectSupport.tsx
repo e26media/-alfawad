@@ -2,8 +2,12 @@ import { Link } from "react-router-dom";
 import { ChevronRight, Wrench, CheckCircle, ShieldCheck, Zap, Settings } from "lucide-react";
 import ServiceSidebar from "../../components/alfawad/ServiceSidebar";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const ProjectSupport = () => {
+  const { i18n } = useTranslation();
+  const isAr = i18n.language === 'ar';
+
   const [activeTab, setActiveTab] = useState("Civil");
 
   return (
@@ -20,15 +24,15 @@ const ProjectSupport = () => {
         <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] relative z-20 flex flex-col items-center justify-center text-center pt-20">
           <div className="w-full text-white">
             <h1 className="text-[45px] md:text-[75px] font-black leading-[0.9] mb-6 uppercase tracking-tighter text-white drop-shadow-2xl">
-              PROJECT <br /> SUPPORT
+              {isAr ? "دعم" : "PROJECT"} <br /> {isAr ? "المشاريع" : "SUPPORT"}
             </h1>
             <div className="w-24 h-2 bg-white mb-8 mx-auto" />
             <div className="flex items-center justify-center gap-3 text-[14px] md:text-[16px] font-black text-white/95 uppercase tracking-[0.2em]">
-              <Link to="/" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
+              <Link to="/" className="hover:text-alfawad-accent transition-all duration-300">{isAr ? "الرئيسية" : "Home"}</Link>
               <ChevronRight className="w-4 h-4 text-white/50" />
-              <span className="text-white/70">Services</span>
+              <span className="text-white/70">{isAr ? "الخدمات" : "Services"}</span>
               <ChevronRight className="w-4 h-4 text-white/50" />
-              <span className="text-white">Project Support</span>
+              <span className="text-white">{isAr ? "دعم المشاريع" : "Project Support"}</span>
             </div>
           </div>
         </div>
@@ -46,19 +50,19 @@ const ProjectSupport = () => {
 
                 <div className="flex flex-col gap-8">
                   <div className="flex flex-col border-l-8 border-alfawad-primary pl-8">
-                    <span className="text-alfawad-primary font-black text-[14px] uppercase tracking-[0.4em] mb-2">Operational Backbone</span>
+                    <span className="text-alfawad-primary font-black text-[14px] uppercase tracking-[0.4em] mb-2">{isAr ? "العمود الفقري للعمليات" : "Operational Backbone"}</span>
                     <h2 className="text-[32px] md:text-[45px] font-black text-black leading-tight uppercase tracking-tighter">
-                      Construction Support Services
+                      {isAr ? "خدمات دعم البناء" : "Construction Support Services"}
                     </h2>
                   </div>
 
                   <p className="text-[20px] md:text-[22px] font-bold text-black leading-relaxed italic border-b border-gray-100 pb-8">
-                    We provide comprehensive support across civil, mechanical, and electrical engineering domains to keep your projects on track.
+                    {isAr ? "نقدم دعماً شاملاً عبر مجالات الهندسة المدنية والميكانيكية والكهربائية للحفاظ على مشاريعك في المسار الصحيح." : "We provide comprehensive support across civil, mechanical, and electrical engineering domains to keep your projects on track."}
                   </p>
 
                   <div className="text-[#666666] leading-[36px] text-[18px] font-medium flex flex-col gap-6">
                     <p>
-                      Lamiya Al Khaleej Al Ittehad  General Contracting offers multi-disciplinary construction support services. We assist primary contractors and industrial clients by executing specific project scopes with precision and reliability.
+                      {isAr ? "تقدم لمياء الخليج خدمات دعم بناء متعددة التخصصات. نحن نساعد المقاولين الأساسيين من خلال تنفيذ المشاريع بدقة." : "Lamiya Al Khaleej Al Ittehad  General Contracting offers multi-disciplinary construction support services. We assist primary contractors and industrial clients by executing specific project scopes with precision and reliability."}
                     </p>
                   </div>
 
@@ -150,9 +154,9 @@ const ProjectSupport = () => {
                   <div className="mt-8 bg-black p-12 flex flex-col md:flex-row items-center gap-10">
                     <ShieldCheck className="w-20 h-20 text-alfawad-primary" />
                     <div className="text-white flex-1">
-                      <h4 className="text-2xl font-black uppercase mb-4 tracking-tighter">Reliable Infrastructure Support</h4>
+                      <h4 className="text-2xl font-black uppercase mb-4 tracking-tighter">{isAr ? "دعم قوي للبنية التحتية" : "Reliable Infrastructure Support"}</h4>
                       <p className="text-white/60 leading-relaxed font-bold">
-                        Our team is dedicated to supporting your project vision with quality execution and professional site management.
+                        {isAr ? "فريقنا مكرس لدعم رؤية مشروعك بجودة تنفيذ وإدارة موقع احترافية." : "Our team is dedicated to supporting your project vision with quality execution and professional site management."}
                       </p>
                     </div>
                   </div>

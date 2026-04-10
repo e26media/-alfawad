@@ -4,13 +4,19 @@ import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
 import { serviceDetails } from "@/lib/services";
 import { ArrowRight, Home, Wrench, Droplets, Bug } from "lucide-react";
-const serviceCategories = [
-  {
-    title: "Residential Services",
-    id: "residential",
-    icon: Home,
-    description: "Our residential services ensure your home stays fresh and healthy. We cover villas, apartments, and residential buildings.",
-    services: [
+import { useTranslation } from "react-i18next";
+
+const Services = () => {
+  const { i18n } = useTranslation();
+  const isAr = i18n.language === 'ar';
+
+  const serviceCategories = [
+    {
+      title: isAr ? "الخدمات السكنية" : "Residential Services",
+      id: "residential",
+      icon: Home,
+      description: isAr ? "خدماتنا السكنية تضمن بقاء منزلك منتعشًا وصحيًا. نغطي الفلل والشقق والمباني السكنية." : "Our residential services ensure your home stays fresh and healthy. We cover villas, apartments, and residential buildings.",
+      services: [
       "ac-cleaning",
       "deep-cleaning-service",
       "sofa-cleaning-services",
@@ -51,13 +57,13 @@ const serviceCategories = [
       "annual-pest-control-contract"
     ]
   }
-];
+  ];
 
-const Services = () => (
+  return (
   <div className="pt-32 md:pt-40 font-muli bg-white overflow-x-hidden">
     <SEO
-      title="Our Services |Lamiya Al Khaleej Al Ittehad  Company - Cleaning & Maintenance in KSA"
-      description="At Lamiya Al Khaleej Al Ittehad  Company, we offer a wide range of professional services designed for both residential and commercial customers. Complete cleaning & maintenance solutions in KSA."
+      title={isAr ? "خدماتنا | شركة لمياء الخليج الاتحاد" : "Our Services |Lamiya Al Khaleej Al Ittehad  Company - Cleaning & Maintenance in KSA"}
+      description={isAr ? "نقدم مجموعة واسعة من الخدمات المهنية السكنية والتجارية في السعودية." : "At Lamiya Al Khaleej Al Ittehad  Company, we offer a wide range of professional services designed for both residential and commercial customers. Complete cleaning & maintenance solutions in KSA."}
     />
 
     {/* Hero Section */}
@@ -65,11 +71,11 @@ const Services = () => (
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-alfawad-primary opacity-10 rounded-full blur-[120px] -mr-[400px] -mt-[400px]" />
       <div className="container mx-auto px-4 relative z-10 text-center">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-          <span className="text-alfawad-primary font-black text-[12px] uppercase tracking-[0.5em] mb-6 block leading-tight">Complete Cleaning & Maintenance Solutions</span>
-          <h1 className="text-[40px] md:text-[80px] font-black text-white leading-none uppercase tracking-tighter mb-8 italic">Our Services</h1>
+          <span className="text-alfawad-primary font-black text-[12px] uppercase tracking-[0.5em] mb-6 block leading-tight">{isAr ? "حلول تنظيف وصيانة كاملة" : "Complete Cleaning & Maintenance Solutions"}</span>
+          <h1 className="text-[40px] md:text-[80px] font-black text-white leading-none uppercase tracking-tighter mb-8 italic">{isAr ? "خدماتنا" : "Our Services"}</h1>
           <div className="w-24 h-2 bg-alfawad-primary mx-auto mb-10" />
           <p className="text-white/60 text-xl font-medium max-w-2xl mx-auto uppercase tracking-widest leading-relaxed">
-            High-quality, safe, and affordable solutions improving the comfort and hygiene of your environment.
+            {isAr ? "حلول عالية الجودة وآمنة وبأسعار معقولة." : "High-quality, safe, and affordable solutions improving the comfort and hygiene of your environment."}
           </p>
         </motion.div>
       </div>
@@ -108,11 +114,11 @@ const Services = () => (
                             <div className="text-alfawad-primary mb-8 opacity-0 group-hover:opacity-100 transition-opacity">
                               <service.icon className="w-10 h-10" />
                             </div>
-                            <h3 className="text-xl font-black text-black uppercase tracking-tighter mb-4 leading-tight group-hover:text-alfawad-primary transition-colors">{service.title}</h3>
-                            <p className="text-gray-400 text-xs font-bold uppercase tracking-widest leading-relaxed mb-10">{service.description}</p>
+                            <h3 className="text-xl font-black text-black uppercase tracking-tighter mb-4 leading-tight group-hover:text-alfawad-primary transition-colors">{isAr ? service.targetAr : service.title}</h3>
+                            <p className="text-gray-400 text-xs font-bold uppercase tracking-widest leading-relaxed mb-10">{isAr ? service.descAr || service.description : service.description}</p>
                           </div>
                           <div className="flex items-center justify-between text-[10px] font-black uppercase tracking-[0.2em] text-black">
-                            <span>View Details</span>
+                            <span>{isAr ? "عرض التفاصيل" : "View Details"}</span>
                             <ArrowRight className="w-4 h-4 translate-x-0 group-hover:translate-x-2 transition-transform color-alfawad-primary" />
                           </div>
                         </div>
@@ -132,18 +138,19 @@ const Services = () => (
       <div className="container mx-auto px-4 relative z-10">
         <AnimatedSection>
           <h2 className="text-[32px] md:text-[60px] font-black text-white uppercase tracking-tighter leading-none mb-10">
-            Not Sure Which Service <br /> You Need?
+            {isAr ? "لست متأكداً أي خدمة" : "Not Sure Which Service"} <br /> {isAr ? "تحتاج؟" : "You Need?"}
           </h2>
           <p className="text-white/60 text-lg font-medium max-w-xl mx-auto mb-16 uppercase tracking-widest">
-            Book a free inspection visit and let our experts evaluate your property for accurate pricing and plans.
+            {isAr ? "احجز زيارة فحص مجانية ودع خبرائنا يقيمون ممتلكاتك." : "Book a free inspection visit and let our experts evaluate your property for accurate pricing and plans."}
           </p>
           <Link to="/booking" className="bg-alfawad-primary hover:bg-white text-white hover:text-black px-16 py-6 font-black uppercase tracking-widest text-sm transition-all inline-block shadow-2xl">
-            Book Free Inspection Today
+            {isAr ? "احجز فحص مجاني اليوم" : "Book Free Inspection Today"}
           </Link>
         </AnimatedSection>
       </div>
     </section>
   </div>
-);
+  );
+};
 
 export default Services;

@@ -4,8 +4,12 @@ import ServiceSidebar from "../../components/alfawad/ServiceSidebar";
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import { useCallback, useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 const MaterialService = () => {
+  const { i18n } = useTranslation();
+  const isAr = i18n.language === 'ar';
+
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" }, [Autoplay()]);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
@@ -62,15 +66,15 @@ const MaterialService = () => {
         <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] relative z-20 flex flex-col items-center justify-center text-center pt-20">
           <div className="w-full text-white">
             <h1 className="text-[45px] md:text-[75px] font-black leading-[0.9] mb-6 uppercase tracking-tighter text-white drop-shadow-2xl">
-              MATERIAL <br /> SERVICE
+              {isAr ? "خدمة" : "MATERIAL"} <br /> {isAr ? "المواد" : "SERVICE"}
             </h1>
             <div className="w-24 h-2 bg-white mb-8 mx-auto" />
             <div className="flex items-center justify-center gap-3 text-[14px] md:text-[16px] font-black text-white/95 uppercase tracking-[0.2em]">
-              <Link to="/" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
+              <Link to="/" className="hover:text-alfawad-accent transition-all duration-300">{isAr ? "الرئيسية" : "Home"}</Link>
               <ChevronRight className="w-4 h-4 text-white/50" />
-              <span className="text-white/70">Services</span>
+              <span className="text-white/70">{isAr ? "الخدمات" : "Services"}</span>
               <ChevronRight className="w-4 h-4 text-white/50" />
-              <span className="text-white">Material Service</span>
+              <span className="text-white">{isAr ? "خدمة المواد" : "Material Service"}</span>
             </div>
           </div>
         </div>
@@ -88,19 +92,19 @@ const MaterialService = () => {
 
                 <div className="flex flex-col gap-8">
                   <div className="flex flex-col border-l-8 border-alfawad-primary pl-8">
-                    <span className="text-alfawad-primary font-black text-[14px] uppercase tracking-[0.4em] mb-2">Supply Chain Partner</span>
+                    <span className="text-alfawad-primary font-black text-[14px] uppercase tracking-[0.4em] mb-2">{isAr ? "شريك سلسلة التوريد" : "Supply Chain Partner"}</span>
                     <h2 className="text-[32px] md:text-[45px] font-black text-black leading-tight uppercase tracking-tighter">
-                      Material Supply Services
+                      {isAr ? "خدمات توريد المواد" : "Material Supply Services"}
                     </h2>
                   </div>
 
                   <p className="text-[20px] md:text-[22px] font-bold text-black leading-relaxed italic border-b border-gray-100 pb-8">
-                    We specialize in sourcing and providing high-quality construction and industrial materials to support project developers and contractors across the Kingdom.
+                    {isAr ? "نحن متخصصون في توريد وتوفير مواد البناء والصناعية عالية الجودة." : "We specialize in sourcing and providing high-quality construction and industrial materials to support project developers and contractors across the Kingdom."}
                   </p>
 
                   <div className="text-[#666666] leading-[36px] text-[18px] font-medium flex flex-col gap-6">
                     <p>
-                      Lamiya Al Khaleej Al Ittehad General Contracting provides efficient material supply solutions. We understand that timely material delivery is critical for project success, which is why we maintain a reliable supplier network and logistics support.
+                      {isAr ? "توفر شركة لمياء الخليج حلول توريد المواد الفعالة." : "Lamiya Al Khaleej Al Ittehad General Contracting provides efficient material supply solutions. We understand that timely material delivery is critical for project success, which is why we maintain a reliable supplier network and logistics support."}
                     </p>
                   </div>
 
@@ -178,7 +182,7 @@ const MaterialService = () => {
                   <div className="mt-16 bg-[#f8f9fa] p-12 border border-gray-100 relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-64 h-64 bg-alfawad-primary/5 -mr-32 -mt-32 rounded-full" />
                     <h3 className="text-[28px] font-black text-black uppercase tracking-tighter mb-8 relative z-10 border-b-4 border-alfawad-primary inline-block">
-                      Key Product Ranges
+                      {isAr ? "نطاقات المنتجات الرئيسية" : "Key Product Ranges"}
                     </h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
                       {productRanges.map((item, i) => (

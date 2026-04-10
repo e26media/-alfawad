@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 interface AlfawadPageHeaderProps {
   title: string;
@@ -14,6 +15,9 @@ const AlfawadPageHeader = ({
   bgImage = "https://alfawad.com/images/1.jpg",
   subtitle
 }: AlfawadPageHeaderProps) => {
+  const { i18n } = useTranslation();
+  const isAr = i18n.language === 'ar';
+
   return (
     <section className="relative w-full h-[450px] md:h-[550px] overflow-hidden flex items-center">
       <div className="absolute inset-0 bg-alfawad-primary/75 z-10" />
@@ -29,7 +33,7 @@ const AlfawadPageHeader = ({
             </h1>
             <div className="w-24 h-2 bg-white mb-8 mx-auto" />
             <div className="flex items-center justify-center gap-3 text-[14px] md:text-[16px] font-black text-white/95 uppercase tracking-[0.2em]">
-              <Link to="/alfawad" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
+              <Link to="/alfawad" className="hover:text-alfawad-accent transition-all duration-300">{isAr ? "الرئيسية" : "Home"}</Link>
               {breadcrumbs.map((crumb, index) => (
                 <div key={index} className="flex items-center gap-3">
                   <ChevronRight className="w-4 h-4 text-white/50" />

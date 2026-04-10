@@ -2,11 +2,14 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ChevronRight, Settings, Users, Truck, Wrench, Shield, CheckCircle } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { AlfawadNews } from "../../components/alfawad/AlfawadNews";
 import laklogo from "@/assets/laklogo.png";
 // import HeroToggleBtn from "@/components/ui/HeroToggleBtn";
 
 export default function AlfawadHome() {
+  const { t, i18n } = useTranslation();
+  const isAr = i18n.language === 'ar';
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const HERO_SLIDES = [
@@ -94,17 +97,17 @@ export default function AlfawadHome() {
               >
                 
                 <h1 className="text-[28px] sm:text-[45px] md:text-[75px] font-black text-black leading-tight sm:leading-[1.0] uppercase tracking-tighter mb-4">
-                  Lamiya Al &nbsp;Khaleej  <br /> Al Ittehad <br />
-                  <span className="text-alfawad-primary">General Contracting</span>
+                  {t('industrial.hero.title')} <br />
+                  <span className="text-alfawad-primary">{t('industrial.hero.subtitle')}</span>
                 </h1>
                 
                 <p className="text-[14px] sm:text-[18px] md:text-[24px] font-extrabold text-gray-800 mt-1 md:mt-2 tracking-wide uppercase leading-tight max-w-[280px] sm:max-w-none">
-                  Trusted Contracting & Industrial Service Provider in Saudi Arabia
+                  {t('industrial.hero.description')}
                 </p>
 
                 <div className="mt-8 md:mt-12 flex items-center">
                   <Link to="/contact" className="bg-alfawad-primary hover:bg-black text-white px-8 sm:px-10 py-3 sm:py-4 font-black uppercase tracking-widest flex items-center justify-center gap-3 transition-all text-xs sm:text-base w-full sm:w-auto shadow-lg hover:-translate-y-1">
-                    GET IN TOUCH <span className="text-xl leading-none">&rarr;</span>
+                    {t('industrial.hero.cta')} <span className="text-xl leading-none">&rarr;</span>
                   </Link>
                 </div>
               </div>
@@ -172,18 +175,19 @@ export default function AlfawadHome() {
               <div className="flex items-start gap-3 sm:gap-6 border-b border-gray-300 pb-6 md:pb-10 mb-2 md:mb-6">
                 <div className="flex flex-col justify-center pt-1 md:pt-2 text-center lg:text-left mx-auto lg:mx-0">
                   {/* <span className="text-[9px] sm:text-[12px] font-black text-gray-500 tracking-[0.3em] uppercase mb-1">GENERAL CONTRACTING</span> */}
-                  <h2 className="text-[20px] sm:text-[28px] md:text-[34px] font-black text-black leading-[1.1]  tracking-wide  ">
-                  Lamiya Al Khaleej Al Ittihad <br className="hidden sm:block" />Establishment For General Contracting
-                  </h2>
+                  <h2 
+                    className="text-[20px] sm:text-[28px] md:text-[34px] font-black text-black leading-[1.1]  tracking-wide  "
+                    dangerouslySetInnerHTML={{__html: t('industrial.intro.title_main')}} 
+                  />
                 </div>
               </div>
 
               <h3 className="text-[16px] sm:text-[20px] md:text-[24px] font-black text-alfawad-primary mt-1 md:mt-4 uppercase tracking-tight text-center lg:text-left">
-                LEADING SAUDI-BASED CONTRACTING FIRM
+                {t('industrial.intro.title_sub')}
               </h3>
 
               <p className="text-[#666666] leading-relaxed sm:leading-[32px] text-[15px] md:text-[18px] font-medium text-center lg:text-left">
-                LAMIYA AL KHALEEJ AL ITTEHAD General Contracting is a leading Saudi-based contracting and industrial support services provider delivering reliable manpower, equipment rental, construction support, material supply, and project management services across the Kingdom of Saudi Arabia.
+                {t('industrial.intro.desc')}
               </p>
 
               {/* <div className="flex items-center justify-center lg:justify-start gap-4 sm:gap-6 mt-4 md:mt-6 border-b border-gray-200 pb-8 md:pb-10 w-full max-w-md mx-auto lg:mx-0">
@@ -199,7 +203,7 @@ export default function AlfawadHome() {
                 <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border-2 border-alfawad-primary flex items-center justify-center transition-all group-hover:bg-alfawad-primary">
                   <div className="w-2 h-2 rounded-full bg-alfawad-primary group-hover:bg-white transition-all"></div>
                 </div>
-                <span className="text-[15px] md:text-[18px] font-black text-black uppercase tracking-tighter group-hover:text-alfawad-primary transition-colors">Know Our Story</span>
+                <span className="text-[15px] md:text-[18px] font-black text-black uppercase tracking-tighter group-hover:text-alfawad-primary transition-colors">{t('industrial.intro.story')}</span>
               </Link>
             </div>
 
@@ -227,12 +231,10 @@ export default function AlfawadHome() {
         />
         <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] relative z-20 flex flex-col items-center justify-center text-center">
           <div className="w-full text-white px-2">
-            <h2 className="text-[26px] sm:text-[40px] md:text-[65px] font-black leading-tight sm:leading-[1.0] mb-4 md:mb-6 uppercase tracking-tighter text-white drop-shadow-2xl">
-              BUILDING THE <br className="hidden sm:block" /> FUTURE OF <br className="hidden sm:block" /> SAUDI ARABIA
-            </h2>
+            <h2 className="text-[26px] sm:text-[40px] md:text-[65px] font-black leading-tight sm:leading-[1.0] mb-4 md:mb-6 uppercase tracking-tighter text-white drop-shadow-2xl" dangerouslySetInnerHTML={{__html: t('industrial.leadership.title')}} />
             <div className="w-12 sm:w-20 md:w-24 h-1 md:h-2 bg-white mb-6 md:mb-8 mx-auto" />
             <p className="text-[13px] sm:text-[18px] md:text-[22px] font-bold text-white/95 max-w-2xl mx-auto leading-tight md:leading-relaxed uppercase tracking-tight">
-              Health And Safety Is Primarily Concern For Our People
+              {t('industrial.leadership.desc')}
             </p>
           </div>
         </div>
@@ -242,9 +244,9 @@ export default function AlfawadHome() {
       <section className="py-16 md:py-28 bg-white">
         <div className="container mx-auto px-4 lg:px-12 max-w-[1400px]">
           <div className="text-center mb-12 md:mb-20 flex flex-col items-center px-4">
-            <span className="text-alfawad-primary font-black text-[12px] md:text-[14px] uppercase tracking-[0.4em] mb-3 md:mb-4">Our Services</span>
+            <span className="text-alfawad-primary font-black text-[12px] md:text-[14px] uppercase tracking-[0.4em] mb-3 md:mb-4">{t('industrial.services.subtitle')}</span>
             <h2 className="text-[28px] sm:text-[36px] md:text-[55px] font-black text-black uppercase tracking-tighter leading-tight mb-4 md:mb-6">
-              Where Passion Meets Productivity
+              {t('industrial.services.title')}
             </h2>
             <div className="w-20 md:w-24 h-1 bg-gray-200" />
           </div>
@@ -252,19 +254,19 @@ export default function AlfawadHome() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-10">
             {[
               {
-                title: "Material Service",
+                title: isAr ? "خدمة المواد" : "Material Service",
                 image: "/images/industrial/service-material.png",
-                desc: "Supplying high-quality construction materials to ensure structural integrity."
+                desc: isAr ? "توفير مواد بناء عالية الجودة لضمان السلامة الهيكلية." : "Supplying high-quality construction materials to ensure structural integrity."
               },
               {
-                title: "Technical Manpower Service",
+                title: isAr ? "خدمة القوى العاملة الفنية" : "Technical Manpower Service",
                 image: "/images/industrial/service-manpower.png",
-                desc: "We provide highly skilled and technical manpower solutions for all engineering needs."
+                desc: isAr ? "نحن نقدم حلول قوى عاملة فنية وذات مهارات عالية لجميع الاحتياجات الهندسية." : "We provide highly skilled and technical manpower solutions for all engineering needs."
               },
               {
-                title: "Heavy Equipment Service",
+                title: isAr ? "خدمة المعدات الثقيلة" : "Heavy Equipment Service",
                 image: "/images/industrial/service-equipment.png",
-                desc: "Providing reliable and modern heavy equipment for construction and industrial projects."
+                desc: isAr ? "توفير معدات ثقيلة موثوقة وحديثة لمشاريع البناء والمشاريع الصناعية." : "Providing reliable and modern heavy equipment for construction and industrial projects."
               },
             
             ].map((service, i) => (
@@ -281,7 +283,7 @@ export default function AlfawadHome() {
                     {service.desc}
                   </p>
                   <Link to={`/industrial/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`} className="mt-auto flex items-center gap-2 text-black font-black uppercase text-[12px] md:text-[14px] tracking-widest group-hover:gap-4 transition-all">
-                    Read More <ChevronRight className="w-5 h-5 text-alfawad-primary" />
+                    {t('industrial.services.read_more')} <ChevronRight className="w-5 h-5 text-alfawad-primary" />
                   </Link>
                 </div>
               </div>
@@ -296,30 +298,32 @@ export default function AlfawadHome() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-stretch">
 
             <div className="text-white border-r-0 md:border-r md:border-white/20 pr-0 md:pr-12 md:pb-0 pb-12 border-b md:border-b-0 border-white/10">
-              <h3 className="text-[28px] md:text-[36px] font-black uppercase tracking-tighter mb-6 md:mb-8 leading-tight">
-                Project Support <br /> Service
-              </h3>
+              <h3 
+                className="text-[28px] md:text-[36px] font-black uppercase tracking-tighter mb-6 md:mb-8 leading-tight" 
+                dangerouslySetInnerHTML={{__html: t('industrial.project.support_title')}} 
+              />
               <p className="text-white/90 text-[16px] md:text-[18px] leading-relaxed font-bold mb-8 md:mb-10">
-                Our Project Management team supports you in the execution of your projects from the initial request to the design and delivery...
+                {t('industrial.project.support_desc')}
               </p>
               <Link to="/industrial/contact" className="bg-white text-alfawad-primary px-6 md:px-8 py-3 md:py-4 font-black uppercase tracking-widest text-xs md:text-sm hover:bg-black hover:text-white transition-all transform hover:-translate-y-1 inline-block">
-                Know More
+                {t('industrial.project.support_btn')}
               </Link>
             </div>
 
             <div className="text-white pl-0 md:pl-12">
-              <h3 className="text-[28px] md:text-[36px] font-black uppercase tracking-tighter mb-6 md:mb-8 leading-tight">
-                Project Management <br /> Service
-              </h3>
+              <h3 
+                className="text-[28px] md:text-[36px] font-black uppercase tracking-tighter mb-6 md:mb-8 leading-tight" 
+                dangerouslySetInnerHTML={{__html: t('industrial.project.mgmt_title')}} 
+              />
               <ul className="mb-8 md:mb-10 space-y-3 md:space-y-4">
-                {["Fire Protection Installation", "Hydroblasting", "Bolt Integrity Solutions"].map((item, i) => (
+                {(t('industrial.project.mgmt_items', { returnObjects: true }) as string[]).map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-[16px] md:text-[18px] font-bold">
                     <CheckCircle className="w-5 h-5 text-white/70" /> {item}
                   </li>
                 ))}
               </ul>
               <Link to="/industrial/services/project-management" className="bg-white text-alfawad-primary px-6 md:px-8 py-3 md:py-4 font-black uppercase tracking-widest text-xs md:text-sm hover:bg-black hover:text-white transition-all transform hover:-translate-y-1 inline-block">
-                Know More
+                {t('industrial.project.mgmt_btn')}
               </Link>
             </div>
 
@@ -353,28 +357,28 @@ export default function AlfawadHome() {
 
           <div className="flex flex-col items-center">
             <span className="text-alfawad-primary font-black text-[12px] md:text-[15px] uppercase tracking-[0.6em] mb-4 md:mb-6 animate-pulse">
-              Commitment to Excellence
+              {t('industrial.vision.subtitle')}
             </span>
             
-            <h2 className="text-[42px] md:text-[100px] font-black text-white uppercase tracking-tighter leading-[0.85] mb-8 drop-shadow-2xl">
-              Saudi Vision <br />
-              <span className="text-alfawad-primary">2030</span>
-            </h2>
+            <h2 
+              className="text-[42px] md:text-[100px] font-black text-white uppercase tracking-tighter leading-[0.85] mb-8 drop-shadow-2xl"
+              dangerouslySetInnerHTML={{__html: t('industrial.vision.title') + `<span class="text-alfawad-primary">${t('industrial.vision.title_span')}</span>`}}
+            />
 
             <div className="w-24 md:w-40 h-1.5 bg-white mb-10 md:mb-12 shadow-[0_0_20px_rgba(255,255,255,0.5)]" />
 
             <h3 className="text-white text-[20px] md:text-[38px] font-black uppercase tracking-tighter leading-tight mb-8 drop-shadow-lg">
-              UNRESERVED INTEGRITY
+              {t('industrial.vision.tagline')}
             </h3>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-14 text-white/70 font-black tracking-[0.2em] md:tracking-[0.3em] text-[10px] md:text-sm uppercase">
               <div className="flex items-center gap-3 group">
                 <div className="w-2.5 h-2.5 rounded-full bg-alfawad-primary group-hover:scale-150 transition-transform shadow-[0_0_10px_rgba(182,138,65,0.8)]" />
-                <span>Superior Customer Service</span>
+                <span>{t('industrial.vision.item1')}</span>
               </div>
               <div className="flex items-center gap-3 group">
                 <div className="w-2.5 h-2.5 rounded-full bg-alfawad-primary group-hover:scale-150 transition-transform shadow-[0_0_10px_rgba(182,138,65,0.8)]" />
-                <span>A Passion for Quality</span>
+                <span>{t('industrial.vision.item2')}</span>
               </div>
             </div>
           </div>
@@ -385,9 +389,9 @@ export default function AlfawadHome() {
       <section className="py-16 md:py-32 bg-[#f4f5f6]">
         <div className="container mx-auto px-4 lg:px-12 max-w-[1400px]">
           <div className="mb-12 md:mb-20">
-            <span className="text-alfawad-primary font-black text-[12px] md:text-[14px] uppercase tracking-[0.4em] mb-3 md:mb-4 block">Why Choose Us</span>
+            <span className="text-alfawad-primary font-black text-[12px] md:text-[14px] uppercase tracking-[0.4em] mb-3 md:mb-4 block">{t('industrial.why_us.subtitle')}</span>
             <h2 className="text-[26px] sm:text-[34px] md:text-[50px] font-black text-black leading-tight max-w-[600px] uppercase tracking-tighter">
-              We give utmost importance to Quality and guarantee is on us
+              {t('industrial.why_us.title')}
             </h2>
           </div>
 
@@ -395,24 +399,24 @@ export default function AlfawadHome() {
 
             {[
               {
-                title: "Fast Mobilization",
+                title: t('industrial.why_us.features.fast'),
                 icon: <Truck className="w-10 h-10 md:w-12 md:h-12" />,
-                desc: "Quick mobilization of manpower and equipment to site."
+                desc: t('industrial.why_us.features.fast_desc')
               },
               {
-                title: "Skilled Workforce",
+                title: t('industrial.why_us.features.skilled'),
                 icon: <Users className="w-10 h-10 md:w-12 md:h-12" />,
-                desc: "Qualified technical and non-technical workforce categories."
+                desc: t('industrial.why_us.features.skilled_desc')
               },
               {
-                title: "Modern Fleet",
+                title: t('industrial.why_us.features.modern'),
                 icon: <Settings className="w-10 h-10 md:w-12 md:h-12" />,
-                desc: "Up-to-date equipment fleet with regular maintenance."
+                desc: t('industrial.why_us.features.modern_desc')
               },
               {
-                title: "Safety First",
+                title: t('industrial.why_us.features.safety'),
                 icon: <Shield className="w-10 h-10 md:w-12 md:h-12" />,
-                desc: "Strict adherence to HSE and environmental regulations."
+                desc: t('industrial.why_us.features.safety_desc')
               },
             ].map((item, i) => (
               <div key={i} className="bg-white p-8 md:p-12 h-full flex flex-col shadow-sm group relative transition-all duration-500 transform hover:-translate-y-2 border-b-4 border-transparent hover:border-alfawad-primary">

@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 import { ChevronRight, CheckCircle, ShieldCheck, Award, Zap } from "lucide-react";
 import OverviewSidebar from "../../components/alfawad/OverviewSidebar";
+import { useTranslation } from "react-i18next";
 
 const QualityPolicy = () => {
+  const { i18n } = useTranslation();
+  const isAr = i18n.language === 'ar';
+
   return (
     <div className="flex flex-col min-h-screen bg-white font-muli">
 
@@ -17,15 +21,15 @@ const QualityPolicy = () => {
         <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] relative z-20 flex flex-col items-center justify-center text-center pt-32 md:pt-48">
           <div className="w-full text-white">
             <h1 className="text-[45px] md:text-[75px] font-black leading-[0.9] mb-6 uppercase tracking-tighter text-white drop-shadow-2xl">
-              QUALITY <br /> POLICY
+              {isAr ? "سياسة" : "QUALITY"} <br /> {isAr ? "الجودة" : "POLICY"}
             </h1>
             <div className="w-24 h-2 bg-white mb-8 mx-auto" />
             <div className="flex items-center justify-center gap-3 text-[14px] md:text-[16px] font-black text-white/95 uppercase tracking-[0.2em]">
-              <Link to="/" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
+              <Link to="/" className="hover:text-alfawad-accent transition-all duration-300">{isAr ? "الرئيسية" : "Home"}</Link>
               <ChevronRight className="w-4 h-4 text-white/50" />
-              <span className="text-white/70">Overview</span>
+              <span className="text-white/70">{isAr ? "نظرة عامة" : "Overview"}</span>
               <ChevronRight className="w-4 h-4 text-white/50" />
-              <span className="text-white">Quality Policy</span>
+              <span className="text-white">{isAr ? "سياسة الجودة" : "Quality Policy"}</span>
             </div>
           </div>
         </div>
@@ -43,34 +47,34 @@ const QualityPolicy = () => {
 
                 <div className="flex flex-col gap-8">
                   <div className="flex flex-col border-l-8 border-alfawad-primary pl-8">
-                    <span className="text-alfawad-primary font-black text-[14px] uppercase tracking-[0.4em] mb-2">Our Standard</span>
+                    <span className="text-alfawad-primary font-black text-[14px] uppercase tracking-[0.4em] mb-2">{isAr ? "معاييرنا" : "Our Standard"}</span>
                     <h2 className="text-[32px] md:text-[45px] font-black text-black leading-tight uppercase tracking-tighter">
-                      Quality Policy
+                      {isAr ? "سياسة الجودة" : "Quality Policy"}
                     </h2>
                   </div>
 
                   <p className="text-[20px] md:text-[22px] font-bold text-black leading-relaxed italic border-b border-gray-100 pb-8">
-                    At Lamiya Al Khaleej Al Ittehad  General Contracting, quality is not just a department—it is a culture.
+                    {isAr ? "في لمياء الخليج الاتحاد، الجودة ليست مجرد قسم، بل هي ثقافة." : "At Lamiya Al Khaleej Al Ittehad  General Contracting, quality is not just a department—it is a culture."}
                   </p>
 
                   <div className="text-[#666666] leading-[36px] text-[18px] font-medium flex flex-col gap-6">
                     <p>
-                      We are committed to providing high-quality contracting services that meet and exceed customer expectations. Our quality policy ensures that all our operations are carried out with efficiency, reliability, and compliance with industry standards.
+                      {isAr ? "نحن ملتزمون بتقديم خدمات استثنائية." : "We are committed to providing high-quality contracting services that meet and exceed customer expectations. Our quality policy ensures that all our operations are carried out with efficiency, reliability, and compliance with industry standards."}
                     </p>
                     <p>
-                      We maintain strict quality control measures throughout the project lifecycle, from mobilization to execution and final delivery. Our goal is to ensure that every client receives consistent and professional service.
+                      {isAr ? "نحن نحافظ على ضوابط جودة صارمة طوال دورة حياة المشروع. هدفنا هو ضمان تلقي كل عميل لخدمات احترافية متسقة." : "We maintain strict quality control measures throughout the project lifecycle, from mobilization to execution and final delivery. Our goal is to ensure that every client receives consistent and professional service."}
                     </p>
                   </div>
 
-                  <h3 className="text-2xl font-black text-black uppercase tracking-tighter mt-8">Our Quality Commitments</h3>
+                  <h3 className="text-2xl font-black text-black uppercase tracking-tighter mt-8">{isAr ? "التزامات الجودة لدينا" : "Our Quality Commitments"}</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {[
-                      "Meeting Customer Specifications",
-                      "Continuous Process Improvement",
-                      "Proper Site Supervision",
-                      "Skilled & Trained Manpower",
-                      "Regular Equipment Maintenance",
-                      "Compliance with Saudi Regulations"
+                      isAr ? "تلبية مواصفات العميل" : "Meeting Customer Specifications",
+                      isAr ? "التحسين المستمر للعمليات" : "Continuous Process Improvement",
+                      isAr ? "الإشراف المناسب على الموقع" : "Proper Site Supervision",
+                      isAr ? "عمالة ماهرة ومدربة" : "Skilled & Trained Manpower",
+                      isAr ? "صيانة دورية للمعدات" : "Regular Equipment Maintenance",
+                      isAr ? "الامتثال للأنظمة السعودية" : "Compliance with Saudi Regulations"
                     ].map((item, i) => (
                       <div key={i} className="flex items-center gap-4 bg-gray-50 p-6 border-l-4 border-alfawad-primary group hover:bg-alfawad-primary transition-all duration-500">
                         <CheckCircle className="w-6 h-6 text-alfawad-primary group-hover:text-white transition-colors" />
@@ -81,9 +85,9 @@ const QualityPolicy = () => {
 
                   <div className="mt-12 bg-black p-12 flex flex-col md:flex-row items-center gap-10">
                     <div className="text-white flex-1">
-                      <h4 className="text-2xl font-black uppercase mb-4 tracking-tighter text-alfawad-primary">Quality Guaranteed</h4>
+                      <h4 className="text-2xl font-black uppercase mb-4 tracking-tighter text-alfawad-primary">{isAr ? "جودة مضمونة" : "Quality Guaranteed"}</h4>
                       <p className="text-white/60 leading-relaxed font-bold">
-                        We believe quality improvement is a continuous journey. Our objective is to build long-term relationships by delivering superior performance and consistent service reliability.
+                        {isAr ? "نحن نؤمن بأن تحسين الجودة هو رحلة مستمرة. هدفنا بناء علاقات طويلة المدى." : "We believe quality improvement is a continuous journey. Our objective is to build long-term relationships by delivering superior performance and consistent service reliability."}
                       </p>
                     </div>
                   </div>

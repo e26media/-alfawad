@@ -1,13 +1,17 @@
 import AlfawadPageHeader from "../../components/alfawad/AlfawadPageHeader";
 import { Mail, MapPin, Phone, Clock } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const { i18n } = useTranslation();
+  const isAr = i18n.language === 'ar';
+
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       <AlfawadPageHeader
-        title="Contact Us"
+        title={isAr ? "اتصل بنا" : "Contact Us"}
         breadcrumbs={[
-          { label: "Contact Us" }
+          { label: isAr ? "اتصل بنا" : "Contact Us" }
         ]}
         bgImage="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2669&auto=format&fit=crop"
       />
@@ -16,11 +20,11 @@ const Contact = () => {
         <div className="container mx-auto px-4 max-w-7xl">
 
           <div className="text-center mb-16 max-w-2xl mx-auto">
-            <span className="text-alfawad-primary font-bold uppercase tracking-widest text-sm">Get In Touch</span>
-            <h2 className="text-4xl font-black text-gray-900 mt-2 uppercase">We're Here To Help</h2>
+            <span className="text-alfawad-primary font-bold uppercase tracking-widest text-sm">{isAr ? "ابق على تواصل" : "Get In Touch"}</span>
+            <h2 className="text-4xl font-black text-gray-900 mt-2 uppercase">{isAr ? "نحن هنا للمساعدة" : "We're Here To Help"}</h2>
             <div className="w-24 h-1 bg-alfawad-primary mx-auto mt-6" />
             <p className="text-gray-600 mt-6 text-lg">
-              Whether you need strategic project management, emergency project support, or specialized technical manpower. Reach out to Lamiya Al Khaleej Al Ittehad  General Contracting today.
+              {isAr ? "سواء كنت بحاجة إلى إدارة المشاريع أو الدعم أو توفير العمالة الفنية. تواصل مع لمياء الخليج اليوم." : "Whether you need strategic project management, emergency project support, or specialized technical manpower. Reach out to Lamiya Al Khaleej Al Ittehad  General Contracting today."}
             </p>
           </div>
 
@@ -34,9 +38,9 @@ const Contact = () => {
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 uppercase tracking-widest mb-2">Head Office</h3>
+                  <h3 className="text-xl font-bold text-gray-900 uppercase tracking-widest mb-2">{isAr ? "المكتب الرئيسي" : "Head Office"}</h3>
                   <p className="text-gray-600 leading-relaxed font-medium">
-                   Al Jubail, KSA
+                   {isAr ? "الجبيل، المملكة العربية السعودية" : "Al Jubail, KSA"}
                   </p>
                 </div>
               </div>
@@ -46,21 +50,21 @@ const Contact = () => {
                   <Phone className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 uppercase tracking-widest mb-2">Phones</h3>
+                  <h3 className="text-xl font-bold text-gray-900 uppercase tracking-widest mb-2">{isAr ? "الهواتف" : "Phones"}</h3>
                   <div className="flex flex-col gap-6">
                     <div className="flex flex-col">
-                      <span className="text-[18px] font-black uppercase tracking-tighter text-gray-900 leading-tight">Ashraf Al badan</span>
+                      <span className="text-[18px] font-black uppercase tracking-tighter text-gray-900 leading-tight">{isAr ? "أشرف البدن" : "Ashraf Al badan"}</span>
                       <a href="tel:+966507077611" className="text-[12px] font-black uppercase tracking-widest text-alfawad-primary hover:text-black transition-colors">+966 50 707 7611</a>
                     </div>
                     <div className="flex flex-col">
-                      <span className="text-[18px] font-black uppercase tracking-tighter text-gray-900 leading-tight">Ahamed suhail</span>
+                      <span className="text-[18px] font-black uppercase tracking-tighter text-gray-900 leading-tight">{isAr ? "أحمد سهيل" : "Ahamed suhail"}</span>
                       <div className="flex flex-col gap-1">
                         <a href="tel:+966510304627" className="text-[12px] font-black uppercase tracking-widest text-alfawad-primary hover:text-black transition-colors">+966 51 030 4627</a>
                         <a href="tel:+966566567518" className="text-[12px] font-black uppercase tracking-widest text-alfawad-primary hover:text-black transition-colors">+966 56 656 7518</a>
                       </div>
                     </div>
                     <div className="flex flex-col">
-                      <span className="text-[18px] font-black uppercase tracking-tighter text-gray-900 leading-tight">Safwan</span>
+                      <span className="text-[18px] font-black uppercase tracking-tighter text-gray-900 leading-tight">{isAr ? "صفوان" : "Safwan"}</span>
                       <a href="tel:+966583769845" className="text-[12px] font-black uppercase tracking-widest text-alfawad-primary hover:text-black transition-colors">+966 58 376 9845</a>
                     </div>
                   </div>
@@ -72,7 +76,7 @@ const Contact = () => {
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 uppercase tracking-widest mb-4">Emails</h3>
+                  <h3 className="text-xl font-bold text-gray-900 uppercase tracking-widest mb-4">{isAr ? "رسائل البريد الإلكتروني" : "Emails"}</h3>
                   <div className="flex flex-col gap-6">
                     <div className="flex flex-col">
                       {/* <span className="text-[16px] font-black uppercase tracking-tighter text-gray-900 leading-tight">General Support</span> */}
@@ -92,11 +96,11 @@ const Contact = () => {
                   <Clock className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 uppercase tracking-widest mb-2">Working Hours</h3>
+                  <h3 className="text-xl font-bold text-gray-900 uppercase tracking-widest mb-2">{isAr ? "ساعات العمل" : "Working Hours"}</h3>
                   <p className="text-gray-600 leading-relaxed font-medium">
-                    Sunday - Thursday<br />
-                    08:00 AM - 05:00 PM<br />
-                    <span className="text-red-500">Friday & Saturday Closed</span>
+                    {isAr ? "الأحد - الخميس" : "Sunday - Thursday"}<br />
+                    {isAr ? "08:00 صباحاً - 05:00 مساءً" : "08:00 AM - 05:00 PM"}<br />
+                    <span className="text-red-500">{isAr ? "الجمعة والسبت مغلق" : "Friday & Saturday Closed"}</span>
                   </p>
                 </div>
               </div>
@@ -107,43 +111,43 @@ const Contact = () => {
             <div className="w-full lg:w-2/3 flex flex-col gap-8">
 
               <div className="bg-white p-8 md:p-12 rounded-lg shadow-xl shadow-gray-200/40 border border-gray-100 flex flex-col gap-6">
-                <h3 className="text-2xl font-black text-gray-900 uppercase tracking-widest border-l-4 border-alfawad-primary pl-4 mb-4">Send Us A Message</h3>
+                <h3 className="text-2xl font-black text-gray-900 uppercase tracking-widest border-l-4 border-alfawad-primary pl-4 mb-4">{isAr ? "أرسل لنا رسالة" : "Send Us A Message"}</h3>
 
                 <form className="flex flex-col gap-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="flex flex-col gap-2">
-                      <label className="text-xs font-bold text-gray-500 uppercase tracking-wide">Your Name <span className="text-alfawad-primary">*</span></label>
-                      <input type="text" placeholder="John Doe" className="w-full bg-gray-50 border border-gray-200 rounded px-4 py-3 focus:outline-none focus:border-alfawad-primary focus:ring-1 focus:ring-alfawad-primary transition-colors" />
+                      <label className="text-xs font-bold text-gray-500 uppercase tracking-wide">{isAr ? "اسمك" : "Your Name"} <span className="text-alfawad-primary">*</span></label>
+                      <input type="text" placeholder={isAr ? "الاسم" : "John Doe"} className="w-full bg-gray-50 border border-gray-200 rounded px-4 py-3 focus:outline-none focus:border-alfawad-primary focus:ring-1 focus:ring-alfawad-primary transition-colors" />
                     </div>
                     <div className="flex flex-col gap-2">
-                      <label className="text-xs font-bold text-gray-500 uppercase tracking-wide">Email Address <span className="text-alfawad-primary">*</span></label>
+                      <label className="text-xs font-bold text-gray-500 uppercase tracking-wide">{isAr ? "البريد الإلكتروني" : "Email Address"} <span className="text-alfawad-primary">*</span></label>
                       <input type="email" placeholder="john@company.com" className="w-full bg-gray-50 border border-gray-200 rounded px-4 py-3 focus:outline-none focus:border-alfawad-primary focus:ring-1 focus:ring-alfawad-primary transition-colors" />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="flex flex-col gap-2">
-                      <label className="text-xs font-bold text-gray-500 uppercase tracking-wide">Phone Number</label>
+                      <label className="text-xs font-bold text-gray-500 uppercase tracking-wide">{isAr ? "رقم الهاتف" : "Phone Number"}</label>
                       <input type="tel" placeholder=" +966 XXXXXXXX" className="w-full bg-gray-50 border border-gray-200 rounded px-4 py-3 focus:outline-none focus:border-alfawad-primary focus:ring-1 focus:ring-alfawad-primary transition-colors" />
                     </div>
                     <div className="flex flex-col gap-2">
-                      <label className="text-xs font-bold text-gray-500 uppercase tracking-wide">Inquiry Subject</label>
+                      <label className="text-xs font-bold text-gray-500 uppercase tracking-wide">{isAr ? "موضوع الاستفسار" : "Inquiry Subject"}</label>
                       <select className="w-full bg-gray-50 border border-gray-200 rounded px-4 py-3 focus:outline-none focus:border-alfawad-primary focus:ring-1 focus:ring-alfawad-primary transition-colors appearance-none">
-                        <option>General Information</option>
-                        <option>Request a Quote</option>
-                        <option>Job Application</option>
-                        <option>Partnership Inquiry</option>
+                        <option>{isAr ? "معلومات عامة" : "General Information"}</option>
+                        <option>{isAr ? "طلب تسعيرة" : "Request a Quote"}</option>
+                        <option>{isAr ? "طلب وظيفة" : "Job Application"}</option>
+                        <option>{isAr ? "استفسار شراكة" : "Partnership Inquiry"}</option>
                       </select>
                     </div>
                   </div>
 
                   <div className="flex flex-col gap-2">
-                    <label className="text-xs font-bold text-gray-500 uppercase tracking-wide">Your Message <span className="text-alfawad-primary">*</span></label>
-                    <textarea rows={6} placeholder="Write your project details or inquiry here..." className="w-full bg-gray-50 border border-gray-200 rounded px-4 py-3 focus:outline-none focus:border-alfawad-primary focus:ring-1 focus:ring-alfawad-primary transition-colors resize-none"></textarea>
+                    <label className="text-xs font-bold text-gray-500 uppercase tracking-wide">{isAr ? "رسالتك" : "Your Message"} <span className="text-alfawad-primary">*</span></label>
+                    <textarea rows={6} placeholder={isAr ? "اكتب تفاصيل مشروعك هنا..." : "Write your project details or inquiry here..."} className="w-full bg-gray-50 border border-gray-200 rounded px-4 py-3 focus:outline-none focus:border-alfawad-primary focus:ring-1 focus:ring-alfawad-primary transition-colors resize-none"></textarea>
                   </div>
 
                   <button type="button" className="bg-alfawad-primary hover:bg-gray-900 text-white font-bold uppercase tracking-widest py-4 px-8 rounded mt-4 transition-colors max-w-xs self-start shadow-lg hover:shadow-xl">
-                    Submit Message
+                    {isAr ? "إرسال الرسالة" : "Submit Message"}
                   </button>
                 </form>
               </div>

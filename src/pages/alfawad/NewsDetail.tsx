@@ -2,16 +2,19 @@ import { useParams, Link } from "react-router-dom";
 import { ChevronRight, Calendar, User, Tag, Share2 } from "lucide-react";
 import { newsItems } from "../../data/newsData";
 import ServiceSidebar from "../../components/alfawad/ServiceSidebar";
+import { useTranslation } from "react-i18next";
 
 const NewsDetail = () => {
+  const { i18n } = useTranslation();
+  const isAr = i18n.language === 'ar';
   const { id } = useParams();
   const news = newsItems.find((item) => item.id === id);
 
   if (!news) {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen">
-        <h1 className="text-4xl font-black">News Not Found</h1>
-        <Link to="/industrial" className="mt-4 text-alfawad-primary font-bold uppercase underline">Back to Home</Link>
+        <h1 className="text-4xl font-black">{isAr ? "لم يتم العثور على الأخبار" : "News Not Found"}</h1>
+        <Link to="/industrial" className="mt-4 text-alfawad-primary font-bold uppercase underline">{isAr ? "العودة للرئيسية" : "Back to Home"}</Link>
       </div>
     );
   }
@@ -34,9 +37,9 @@ const NewsDetail = () => {
             </h1>
             <div className="w-24 h-2 bg-white mb-8 mx-auto" />
             <div className="flex items-center justify-center gap-3 text-[12px] md:text-[14px] font-black text-white/95 uppercase tracking-[0.2em]">
-              <Link to="/" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
+              <Link to="/" className="hover:text-alfawad-accent transition-all duration-300">{isAr ? "الرئيسية" : "Home"}</Link>
               <ChevronRight className="w-4 h-4 text-white/50" />
-              <span className="text-white/70">News</span>
+              <span className="text-white/70">{isAr ? "أخبار" : "News"}</span>
               <ChevronRight className="w-4 h-4 text-white/50" />
               <span className="text-white truncate max-w-[150px] sm:max-w-none">{news.title}</span>
             </div>
@@ -84,7 +87,7 @@ const NewsDetail = () => {
                   {/* News Content */}
                   <div className="flex flex-col border-l-8 border-alfawad-primary pl-8 mb-6">
                     <h2 className="text-[28px] md:text-[40px] font-black text-black leading-tight uppercase tracking-tighter">
-                      Project Insights & Updates
+                      {isAr ? "رؤى وتحديثات المشروع" : "Project Insights & Updates"}
                     </h2>
                   </div>
 
@@ -98,7 +101,7 @@ const NewsDetail = () => {
                     </p>
 
                     <p>
-                      As part of our commitment to transparency and excellence, we share these updates to keep our clients and partners informed about the strategic progress we are making in the industrial sector. Our dedicated teams work tirelessly to ensure that every project phase aligns with the high standards expected fromLamiya Al Khaleej Al Ittehad  General Contracting.
+                      {isAr ? "كجزء من التزامنا بالشفافية والتميز، نشارك هذه التحديثات لإبقاء عملائنا وشركائنا على علم بالتقدم الذي نحرزه في القطاع الصناعي." : "As part of our commitment to transparency and excellence, we share these updates to keep our clients and partners informed about the strategic progress we are making in the industrial sector. Our dedicated teams work tirelessly to ensure that every project phase aligns with the high standards expected from Lamiya Al Khaleej Al Ittehad General Contracting."}
                     </p>
                   </div>
 
@@ -115,7 +118,7 @@ const NewsDetail = () => {
                        </div>
                     </div> */}
                     <Link to="/industrial" className="bg-black text-white px-8 py-4 font-black uppercase text-xs tracking-widest hover:bg-alfawad-primary transition-all shadow-lg hover:-translate-y-1">
-                      Back to News Updates
+                      {isAr ? "العودة إلى تحديثات الأخبار" : "Back to News Updates"}
                     </Link>
                   </div>
                 </div>

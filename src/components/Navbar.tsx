@@ -1,27 +1,29 @@
 import laklogo from "@/assets/navbarlogo.png";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Calendar, ChevronDown } from "lucide-react";
 const logo = laklogo;
 
 const navLinks = [
-  { label: "Home", path: "/cleaning" },
+  { labelKey: "nav.home", path: "/cleaning" },
   {
-    label: "Services", path: "/services", children: [
-      { label: "Residential Services", path: "/services#residential" },
-      { label: "Maintenance Services", path: "/services#maintenance" },
-      { label: "Water Tank Services", path: "/water-tank-cleaning-disinfection" },
-      { label: "Pesticide Services", path: "/annual-pest-control-contract" },
+    labelKey: "nav.services", path: "/services", children: [
+      { labelKey: "nav.residential", path: "/services#residential" },
+      { labelKey: "nav.maintenance", path: "/services#maintenance" },
+      { labelKey: "nav.water_tank", path: "/water-tank-cleaning-disinfection" },
+      { labelKey: "nav.pesticide", path: "/annual-pest-control-contract" },
     ]
   },
-  { label: "About Us", path: "/about" },
-  { label: "Our Clients", path: "/clients" },
-  { label: "Contact Us", path: "/contact" },
-  { label: "Book a Free Visit", path: "/booking" },
+  { labelKey: "nav.about", path: "/about" },
+  { labelKey: "nav.clients", path: "/clients" },
+  { labelKey: "nav.contact", path: "/contact" },
+  { labelKey: "nav.book", path: "/booking" },
 ];
 
 const Navbar = () => {
+  const { t } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -73,7 +75,7 @@ const Navbar = () => {
                         : "text-gray-800 hover:text-black hover:bg-gray-100/50"
                     }`}
                   >
-                    {link.label}
+                    {t(link.labelKey)}
                     <ChevronDown className="w-3.5 h-3.5 transition-transform group-hover:rotate-180" strokeWidth={2} />
                   </button>
                 ) : (
@@ -85,7 +87,7 @@ const Navbar = () => {
                         : "text-gray-800 hover:text-black hover:bg-gray-100/50"
                     }`}
                   >
-                    {link.label}
+                    {t(link.labelKey)}
                   </Link>
                 )}
                 {link.children && (
@@ -97,7 +99,7 @@ const Navbar = () => {
                           to={child.path}
                           className="block px-6 py-3.5 text-[11px] font-black uppercase tracking-widest text-black hover:text-alfawad-primary hover:bg-gray-50 transition-all border-b border-gray-50 last:border-0"
                         >
-                          {child.label}
+                          {t(child.labelKey)}
                         </Link>
                       ))}
                     </div>
@@ -112,7 +114,7 @@ const Navbar = () => {
               to="/booking"
               className="hidden md:flex bg-black text-white hover:bg-alfawad-primary items-center justify-center px-8 xl:px-10 py-3 h-[48px] rounded-xl text-[11px] xl:text-[12px] font-bold uppercase tracking-[0.2em] transition-all transform hover:-translate-y-1 shadow-xl hover:shadow-primary/30 group"
             >
-              Book Visit
+              {t('nav.book')}
             </Link>
 
             <button
@@ -151,7 +153,7 @@ const Navbar = () => {
                           onClick={() => setDropdownOpen(!dropdownOpen)}
                           className="w-full flex items-center justify-between py-5 text-[15px] font-black uppercase tracking-widest text-black border-b border-gray-50"
                         >
-                          {link.label}
+                          {t(link.labelKey)}
                           <ChevronDown className={`w-5 h-5 transition-transform ${dropdownOpen ? "rotate-180 text-alfawad-primary" : ""}`} />
                         </button>
                         <AnimatePresence>
@@ -168,7 +170,7 @@ const Navbar = () => {
                                   to={child.path}
                                   className="block px-8 py-4 text-[13px] font-bold uppercase tracking-widest text-gray-500 hover:text-alfawad-primary"
                                 >
-                                  {child.label}
+                                  {t(child.labelKey)}
                                 </Link>
                               ))}
                             </motion.div>
@@ -182,7 +184,7 @@ const Navbar = () => {
                           location.pathname === link.path ? "text-alfawad-primary" : "text-black hover:text-alfawad-primary"
                         }`}
                       >
-                        {link.label}
+                        {t(link.labelKey)}
                       </Link>
                     )}
                   </div>
@@ -190,7 +192,7 @@ const Navbar = () => {
                 
                 <div className="mt-12 flex flex-col gap-8 pb-10">
                   <Link to="/booking" className="bg-black text-white py-5 rounded-full text-[13px] font-black uppercase tracking-widest text-center shadow-xl active:scale-95 transition-all">
-                    Book Free Visit
+                    {t('nav.book')}
                   </Link>
 
                   <div className="flex flex-col gap-8">

@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 import { Download, ChevronRight, Users, Briefcase, Mail, Send, Award, FileText } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
-export const Brochure = () => (
+export const Brochure = () => {
+  const { i18n } = useTranslation();
+  const isAr = i18n.language === 'ar';
+  return (
   <div className="flex flex-col min-h-screen bg-white font-muli">
     {/* Premium Header Banner Section - Refined for Vision 2030 Design */}
     <section className="relative w-full h-[450px] md:h-[550px] overflow-hidden flex items-center">
@@ -14,13 +18,13 @@ export const Brochure = () => (
       <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] relative z-20 flex flex-col items-center justify-center text-center pt-32 md:pt-48">
         <div className="w-full text-white">
           <h1 className="text-[45px] md:text-[75px] font-black leading-[0.9] mb-6 uppercase tracking-tighter text-white drop-shadow-2xl">
-            COMPANY <br /> BROCHURE
+            {isAr ? "الكتيب" : "COMPANY"} <br /> {isAr ? "التعريفي" : "BROCHURE"}
           </h1>
           <div className="w-24 h-2 bg-white mb-8 mx-auto" />
           <div className="flex items-center justify-center gap-3 text-[14px] md:text-[16px] font-black text-white/95 uppercase tracking-[0.2em]">
-            <Link to="/" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
+            <Link to="/" className="hover:text-alfawad-accent transition-all duration-300">{isAr ? "الرئيسية" : "Home"}</Link>
             <ChevronRight className="w-4 h-4 text-white/50" />
-            <span className="text-white">Brochure</span>
+            <span className="text-white">{isAr ? "الكتيب" : "Brochure"}</span>
           </div>
         </div>
       </div>
@@ -34,19 +38,20 @@ export const Brochure = () => (
             <FileText className="w-10 h-10" />
           </div>
           <div className="flex flex-col gap-6">
-            <h2 className="text-[32px] md:text-[40px] font-black text-black uppercase tracking-tighter leading-none">Download Corporate Profile</h2>
+            <h2 className="text-[32px] md:text-[40px] font-black text-black uppercase tracking-tighter leading-none">{isAr ? "تحميل ملف الشركة" : "Download Corporate Profile"}</h2>
             <p className="text-[#666666] text-lg font-medium leading-relaxed max-w-2xl">
-              Get a comprehensive overview of our multi-disciplinary capabilities, modern fleet strength, and specialized project management philosophies in our official corporate brochure.
+              {isAr ? "احصل على نظرة شاملة على قدراتنا المتعددة وأسطولنا الحديث وفلسفات إدارة المشاريع." : "Get a comprehensive overview of our multi-disciplinary capabilities, modern fleet strength, and specialized project management philosophies in our official corporate brochure."}
             </p>
           </div>
           <button className="flex items-center gap-4 bg-black hover:bg-alfawad-primary text-white font-black uppercase tracking-widest py-6 px-12 rounded mt-4 transition-all shadow-2xl hover:-translate-y-1">
-            <Download className="w-6 h-6" />Lamiya Al Khaleej Al Ittehad  PROFILE 2026 (PDF)
+            <Download className="w-6 h-6" />{isAr ? "تحميل الكتيب" : "Lamiya Al Khaleej Al Ittehad  PROFILE 2026 (PDF)"}
           </button>
         </div>
       </div>
     </section>
   </div>
-);
+  );
+};
 
 export const ClientsGallery = () => {
   const clients = [
@@ -72,6 +77,9 @@ export const ClientsGallery = () => {
     { name: "Hadeed", logo: "https://alfawad.com/images/client-logo/hadeed.jpg" },
   ];
 
+  const { i18n } = useTranslation();
+  const isAr = i18n.language === 'ar';
+
   return (
     <div className="flex flex-col min-h-screen bg-white font-muli">
       {/* Premium Header Banner Section - Refined for Vision 2030 Design */}
@@ -85,13 +93,13 @@ export const ClientsGallery = () => {
         <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] relative z-20 flex flex-col items-center justify-center text-center pt-32 md:pt-48">
           <div className="w-full text-white">
             <h1 className="text-[45px] md:text-[75px] font-black leading-[0.9] mb-6 uppercase tracking-tighter text-white drop-shadow-2xl">
-              OUR <br /> CLIENTS
+              {isAr ? "عملاؤنا" : "OUR"} <br /> {isAr ? "" : "CLIENTS"}
             </h1>
             <div className="w-24 h-2 bg-white mb-8 mx-auto" />
             <div className="flex items-center justify-center gap-3 text-[14px] md:text-[16px] font-black text-white/95 uppercase tracking-[0.2em]">
-              <Link to="/" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
+              <Link to="/" className="hover:text-alfawad-accent transition-all duration-300">{isAr ? "الرئيسية" : "Home"}</Link>
               <ChevronRight className="w-4 h-4 text-white/50" />
-              <span className="text-white">Clients</span>
+              <span className="text-white">{isAr ? "العملاء" : "Clients"}</span>
             </div>
           </div>
         </div>
@@ -100,9 +108,9 @@ export const ClientsGallery = () => {
       <section className="py-24 bg-[#f4f5f6]">
         <div className="container mx-auto px-4 lg:px-12 max-w-[1400px]">
           <div className="text-center mb-20 flex flex-col items-center">
-            <span className="text-alfawad-primary font-black text-[14px] uppercase tracking-[0.4em] mb-4">Partnering with Leaders</span>
+            <span className="text-alfawad-primary font-black text-[14px] uppercase tracking-[0.4em] mb-4">{isAr ? "شراكة مع القادة" : "Partnering with Leaders"}</span>
             <h2 className="text-[36px] md:text-[55px] font-black text-black uppercase tracking-tighter leading-none mb-6">
-              Our Professional Clients
+              {isAr ? "عملائنا المحترفون" : "Our Professional Clients"}
             </h2>
             <div className="w-24 h-1 bg-gray-300" />
           </div>
@@ -133,7 +141,10 @@ export const ClientsGallery = () => {
   );
 };
 
-export const Enquiry = () => (
+export const Enquiry = () => {
+  const { i18n } = useTranslation();
+  const isAr = i18n.language === 'ar';
+  return (
   <div className="flex flex-col min-h-screen bg-white font-muli">
     {/* Premium Header Banner Section - Refined for Vision 2030 Design */}
     <section className="relative w-full h-[450px] md:h-[550px] overflow-hidden flex items-center">
@@ -146,13 +157,13 @@ export const Enquiry = () => (
       <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] relative z-20 flex flex-col items-center justify-center text-center pt-32 md:pt-48">
         <div className="w-full text-white">
           <h1 className="text-[45px] md:text-[75px] font-black leading-[0.9] mb-6 uppercase tracking-tighter text-white drop-shadow-2xl">
-            GET IN <br /> TOUCH
+            {isAr ? "تواصل" : "GET IN"} <br /> {isAr ? "معنا" : "TOUCH"}
           </h1>
           <div className="w-24 h-2 bg-white mb-8 mx-auto" />
           <div className="flex items-center justify-center gap-3 text-[14px] md:text-[16px] font-black text-white/95 uppercase tracking-[0.2em]">
-            <Link to="/" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
+            <Link to="/" className="hover:text-alfawad-accent transition-all duration-300">{isAr ? "الرئيسية" : "Home"}</Link>
             <ChevronRight className="w-4 h-4 text-white/50" />
-            <span className="text-white">Enquiry</span>
+            <span className="text-white">{isAr ? "استفسار" : "Enquiry"}</span>
           </div>
         </div>
       </div>
@@ -162,40 +173,40 @@ export const Enquiry = () => (
       <div className="container mx-auto px-4 lg:px-12 max-w-[1000px]">
         <div className="bg-white p-12 md:p-20 shadow-2xl border border-gray-100 relative">
           <div className="flex flex-col border-l-8 border-alfawad-primary pl-8 mb-12">
-            <span className="text-alfawad-primary font-black text-[14px] uppercase tracking-[0.4em] mb-2">Partner with us</span>
-            <h2 className="text-[32px] md:text-[45px] font-black text-black leading-tight uppercase tracking-tighter">Submit Enquiry</h2>
+            <span className="text-alfawad-primary font-black text-[14px] uppercase tracking-[0.4em] mb-2">{isAr ? "كن شريكنا" : "Partner with us"}</span>
+            <h2 className="text-[32px] md:text-[45px] font-black text-black leading-tight uppercase tracking-tighter">{isAr ? "إرسال استفسار" : "Submit Enquiry"}</h2>
           </div>
 
           <form className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="flex flex-col gap-3">
-              <label className="text-[12px] font-black text-gray-500 uppercase tracking-widest">Full Name</label>
-              <input type="text" className="bg-gray-50 border-b-2 border-gray-200 p-4 focus:border-alfawad-primary focus:outline-none font-bold transition-all" placeholder="Enter your name" />
+              <label className="text-[12px] font-black text-gray-500 uppercase tracking-widest">{isAr ? "الاسم الكامل" : "Full Name"}</label>
+              <input type="text" className="bg-gray-50 border-b-2 border-gray-200 p-4 focus:border-alfawad-primary focus:outline-none font-bold transition-all" placeholder={isAr ? "أدخل اسمك" : "Enter your name"} />
             </div>
             <div className="flex flex-col gap-3">
-              <label className="text-[12px] font-black text-gray-500 uppercase tracking-widest">Company Name</label>
-              <input type="text" className="bg-gray-50 border-b-2 border-gray-200 p-4 focus:border-alfawad-primary focus:outline-none font-bold transition-all" placeholder="Your organization" />
+              <label className="text-[12px] font-black text-gray-500 uppercase tracking-widest">{isAr ? "اسم الشركة" : "Company Name"}</label>
+              <input type="text" className="bg-gray-50 border-b-2 border-gray-200 p-4 focus:border-alfawad-primary focus:outline-none font-bold transition-all" placeholder={isAr ? "مؤسستك" : "Your organization"} />
             </div>
             <div className="flex flex-col gap-3">
-              <label className="text-[12px] font-black text-gray-500 uppercase tracking-widest">Email Address</label>
+              <label className="text-[12px] font-black text-gray-500 uppercase tracking-widest">{isAr ? "البريد الإلكتروني" : "Email Address"}</label>
               <input type="email" className="bg-gray-50 border-b-2 border-gray-200 p-4 focus:border-alfawad-primary focus:outline-none font-bold transition-all" placeholder="email@example.com" />
             </div>
             <div className="flex flex-col gap-3">
-              <label className="text-[12px] font-black text-gray-500 uppercase tracking-widest">Service Interested</label>
+              <label className="text-[12px] font-black text-gray-500 uppercase tracking-widest">{isAr ? "الخدمة المطلوبة" : "Service Interested"}</label>
               <select className="bg-gray-50 border-b-2 border-gray-200 p-4 focus:border-alfawad-primary focus:outline-none font-bold transition-all appearance-none">
-                <option>Material Sourcing</option>
-                <option>Technical Manpower</option>
-                <option>Heavy Equipment</option>
-                <option>Project Support</option>
+                <option>{isAr ? "مصادر المواد" : "Material Sourcing"}</option>
+                <option>{isAr ? "القوى العاملة الفنية" : "Technical Manpower"}</option>
+                <option>{isAr ? "المعدات الثقيلة" : "Heavy Equipment"}</option>
+                <option>{isAr ? "دعم المشروع" : "Project Support"}</option>
                
               </select>
             </div>
             <div className="flex flex-col gap-3 md:col-span-2">
-              <label className="text-[12px] font-black text-gray-500 uppercase tracking-widest">Project Requirements</label>
-              <textarea rows={5} className="bg-gray-50 border-b-2 border-gray-200 p-4 focus:border-alfawad-primary focus:outline-none font-bold transition-all resize-none" placeholder="Describe your project needs..." />
+              <label className="text-[12px] font-black text-gray-500 uppercase tracking-widest">{isAr ? "متطلبات المشروع" : "Project Requirements"}</label>
+              <textarea rows={5} className="bg-gray-50 border-b-2 border-gray-200 p-4 focus:border-alfawad-primary focus:outline-none font-bold transition-all resize-none" placeholder={isAr ? "صف احتياجات مشروعك..." : "Describe your project needs..."} />
             </div>
             <div className="md:col-span-2 pt-4">
               <button className="bg-black text-white px-12 py-5 font-black uppercase text-sm tracking-[0.2em] hover:bg-alfawad-primary transition-all shadow-xl flex items-center gap-4 group">
-                Send Enquiry <Send className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                {isAr ? "إرسال الاستفسار" : "Send Enquiry"} <Send className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
               </button>
             </div>
           </form>
@@ -203,9 +214,13 @@ export const Enquiry = () => (
       </div>
     </section>
   </div>
-);
+  );
+};
 
-export const Career = () => (
+export const Career = () => {
+  const { i18n } = useTranslation();
+  const isAr = i18n.language === 'ar';
+  return (
   <div className="flex flex-col min-h-screen bg-white font-muli">
     {/* Premium Header Banner Section - Refined for Vision 2030 Design */}
     <section className="relative w-full h-[450px] md:h-[550px] overflow-hidden flex items-center">
@@ -218,13 +233,13 @@ export const Career = () => (
       <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] relative z-20 flex flex-col items-center justify-center text-center pt-32 md:pt-48">
         <div className="w-full text-white">
           <h1 className="text-[45px] md:text-[75px] font-black leading-[0.9] mb-6 uppercase tracking-tighter text-white drop-shadow-2xl">
-            JOIN OUR <br /> TEAM
+            {isAr ? "انضم إلى" : "JOIN OUR"} <br /> {isAr ? "فريقنا" : "TEAM"}
           </h1>
           <div className="w-24 h-2 bg-white mb-8 mx-auto" />
           <div className="flex items-center justify-center gap-3 text-[14px] md:text-[16px] font-black text-white/95 uppercase tracking-[0.2em]">
-            <Link to="/" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
+            <Link to="/" className="hover:text-alfawad-accent transition-all duration-300">{isAr ? "الرئيسية" : "Home"}</Link>
             <ChevronRight className="w-4 h-4 text-white/50" />
-            <span className="text-white">Careers</span>
+            <span className="text-white">{isAr ? "الوظائف" : "Careers"}</span>
           </div>
         </div>
       </div>
@@ -234,46 +249,46 @@ export const Career = () => (
       <div className="container mx-auto px-4 lg:px-12 max-w-[1200px]">
         <div className="flex flex-col gap-16">
           <div className="text-center flex flex-col items-center">
-            <span className="text-alfawad-primary font-black text-[14px] uppercase tracking-[0.4em] mb-4">Building Futures</span>
-            <h2 className="text-[36px] md:text-[55px] font-black text-black uppercase tracking-tighter leading-none mb-6">Drive Your Career Forward</h2>
-            <p className="text-[#666666] text-xl font-medium max-w-3xl leading-relaxed">Lamiya alkhaleej alittihad establishment for general contracting is constantly looking for dedicated professionals who thrive on challenge and operational excellence.</p>
+            <span className="text-alfawad-primary font-black text-[14px] uppercase tracking-[0.4em] mb-4">{isAr ? "بناء المستقبل" : "Building Futures"}</span>
+            <h2 className="text-[36px] md:text-[55px] font-black text-black uppercase tracking-tighter leading-none mb-6">{isAr ? "تقدم في حياتك المهنية" : "Drive Your Career Forward"}</h2>
+            <p className="text-[#666666] text-xl font-medium max-w-3xl leading-relaxed">{isAr ? "تبحث مؤسسة لمياء الخليج دائمًا عن محترفين يسعون للتميز." : "Lamiya alkhaleej alittihad establishment for general contracting is constantly looking for dedicated professionals who thrive on challenge and operational excellence."}</p>
           </div>
 
           <div className="bg-black text-white p-12 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 border-l-[12px] border-alfawad-primary">
             <div className="flex flex-col gap-2">
-              <span className="text-alfawad-primary font-black uppercase tracking-[0.2em] text-sm">Now Hiring</span>
-              <h3 className="text-2xl font-black uppercase tracking-tighter">HSE Officers | QC Inspectors | Rigger Specialists</h3>
+              <span className="text-alfawad-primary font-black uppercase tracking-[0.2em] text-sm">{isAr ? "التوظيف الآن" : "Now Hiring"}</span>
+              <h3 className="text-2xl font-black uppercase tracking-tighter">{isAr ? "مسؤولو السلامة | مفتشو الجودة | أخصائي التجهيز" : "HSE Officers | QC Inspectors | Rigger Specialists"}</h3>
             </div>
-            <Link to="/alfawad/contact" className="bg-white text-black px-10 py-4 font-black uppercase text-xs tracking-widest hover:bg-alfawad-primary hover:text-white transition-all whitespace-nowrap">Apply Today</Link>
+            <Link to="/alfawad/contact" className="bg-white text-black px-10 py-4 font-black uppercase text-xs tracking-widest hover:bg-alfawad-primary hover:text-white transition-all whitespace-nowrap">{isAr ? "قدم اليوم" : "Apply Today"}</Link>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 bg-white p-12 md:p-20 shadow-xl border border-gray-100 relative overflow-hidden group">
             <div className="flex flex-col gap-8">
               <div className="flex flex-col border-l-8 border-alfawad-primary pl-8">
-                <h3 className="text-[28px] font-black text-black uppercase tracking-tighter">Submit Application</h3>
+                <h3 className="text-[28px] font-black text-black uppercase tracking-tighter">{isAr ? "إرسال الطلب" : "Submit Application"}</h3>
               </div>
 
               <div className="flex flex-col gap-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="flex flex-col gap-2">
-                    <label className="text-[11px] font-black text-gray-500 uppercase tracking-[0.2em]">Full Name</label>
+                    <label className="text-[11px] font-black text-gray-500 uppercase tracking-[0.2em]">{isAr ? "الاسم الكامل" : "Full Name"}</label>
                     <input type="text" className="bg-gray-50 border-b-2 border-gray-200 p-3 focus:border-alfawad-primary focus:outline-none font-bold" />
                   </div>
                   <div className="flex flex-col gap-2">
-                    <label className="text-[11px] font-black text-gray-500 uppercase tracking-[0.2em]">Contact No.</label>
+                    <label className="text-[11px] font-black text-gray-500 uppercase tracking-[0.2em]">{isAr ? "رقم الاتصال" : "Contact No."}</label>
                     <input type="text" className="bg-gray-50 border-b-2 border-gray-200 p-3 focus:border-alfawad-primary focus:outline-none font-bold" />
                   </div>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <label className="text-[11px] font-black text-gray-500 uppercase tracking-[0.2em]">Application For Position</label>
+                  <label className="text-[11px] font-black text-gray-500 uppercase tracking-[0.2em]">{isAr ? "طلب لوظيفة" : "Application For Position"}</label>
                   <input type="text" className="bg-gray-50 border-b-2 border-gray-200 p-3 focus:border-alfawad-primary focus:outline-none font-bold" />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <label className="text-[11px] font-black text-gray-500 uppercase tracking-[0.2em]">Attach CV (PDF Only)</label>
+                  <label className="text-[11px] font-black text-gray-500 uppercase tracking-[0.2em]">{isAr ? "إرفاق السيرة الذاتية" : "Attach CV (PDF Only)"}</label>
                   <input type="file" className="bg-gray-50 border-dashed border-2 border-gray-200 p-8 text-sm font-bold text-gray-400 text-center cursor-pointer hover:border-alfawad-primary transition-all" />
                 </div>
                 <button className="bg-black text-white px-12 py-5 font-black uppercase text-sm tracking-[0.2em] hover:bg-alfawad-primary transition-all shadow-xl">
-                  Submit Resume
+                  {isAr ? "إرسال" : "Submit Resume"}
                 </button>
               </div>
             </div>
@@ -282,9 +297,9 @@ export const Career = () => (
               <div className="w-20 h-20 bg-alfawad-primary rounded-full flex items-center justify-center mb-4">
                 <Mail className="w-8 h-8 text-black" />
               </div>
-              <h3 className="text-[26px] font-black uppercase tracking-tighter">Direct Submission</h3>
+              <h3 className="text-[26px] font-black uppercase tracking-tighter">{isAr ? "التقديم المباشر" : "Direct Submission"}</h3>
               <p className="text-white/60 font-bold leading-relaxed">
-                Avoid the wait. Forward your comprehensive CV packet directly to our strategic human resources mailbox.
+                {isAr ? "تجنب الانتظار. أرسل سيرتك الذاتية الشاملة مباشرة." : "Avoid the wait. Forward your comprehensive CV packet directly to our strategic human resources mailbox."}
               </p>
               <a href="mailto:info@lamiyaalkhaleej.com" className="text-alfawad-primary font-black text-[22px] tracking-tight hover:text-white transition-colors border-b-2 border-alfawad-primary pb-1">info@lamiyaalkhaleej.com</a>
             </div>
@@ -293,7 +308,8 @@ export const Career = () => (
       </div>
     </section>
   </div>
-);
+  );
+};
 
 
 

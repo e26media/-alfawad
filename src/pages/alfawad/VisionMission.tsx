@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 import { ChevronRight, Target, Shield, Users, Award, Zap, Heart } from "lucide-react";
 import OverviewSidebar from "../../components/alfawad/OverviewSidebar";
+import { useTranslation } from "react-i18next";
 
 const VisionMission = () => {
+  const { i18n } = useTranslation();
+  const isAr = i18n.language === 'ar';
+
   return (
     <div className="flex flex-col min-h-screen bg-white font-muli">
       
@@ -17,15 +21,15 @@ const VisionMission = () => {
         <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] relative z-20 flex flex-col items-center justify-center text-center pt-32 md:pt-48">
            <div className="w-full text-white">
               <h1 className="text-[45px] md:text-[75px] font-black leading-[0.9] mb-6 uppercase tracking-tighter text-white drop-shadow-2xl">
-                VISION <br /> & MISSION
+                {isAr ? "الرؤية" : "VISION"} <br /> {isAr ? "والرسالة" : "& MISSION"}
               </h1>
               <div className="w-24 h-2 bg-white mb-8 mx-auto" />
               <div className="flex items-center justify-center gap-3 text-[14px] md:text-[16px] font-black text-white/95 uppercase tracking-[0.2em]">
-                <Link to="/" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
+                <Link to="/" className="hover:text-alfawad-accent transition-all duration-300">{isAr ? "الرئيسية" : "Home"}</Link>
                 <ChevronRight className="w-4 h-4 text-white/50" />
-                <span className="text-white/70">Overview</span>
+                <span className="text-white/70">{isAr ? "نظرة عامة" : "Overview"}</span>
                 <ChevronRight className="w-4 h-4 text-white/50" />
-                <span className="text-white">Vision & Mission</span>
+                <span className="text-white">{isAr ? "الرؤية والرسالة" : "Vision & Mission"}</span>
               </div>
            </div>
         </div>
@@ -44,9 +48,9 @@ const VisionMission = () => {
                  <div className="bg-white p-12 shadow-xl border border-gray-100 relative overflow-hidden group hover:-translate-y-2 transition-all duration-500">
                     <div className="absolute top-0 right-0 w-24 h-24 bg-alfawad-primary/10 rounded-bl-full transition-transform group-hover:scale-150" />
                     <Target className="w-16 h-16 text-alfawad-primary mb-8" />
-                    <h2 className="text-3xl font-black text-black uppercase tracking-tighter mb-6">Our Vision</h2>
+                    <h2 className="text-3xl font-black text-black uppercase tracking-tighter mb-6">{isAr ? "رؤيتنا" : "Our Vision"}</h2>
                     <p className="text-[#666666] leading-relaxed text-lg font-medium italic">
-                      "To become one of the most respected and reliable contracting and industrial service providers in Saudi Arabia, recognized for excellence in material providing services, manpower services, equipment solutions  and project support with strong safety and quality performance."
+                      {isAr ? `"أن نصبح واحدًا من أهم وأوثق مقدمي خدمات المقاولات والدعم في المملكة العربية السعودية، والمعروفين بالتميز."` : `"To become one of the most respected and reliable contracting and industrial service providers in Saudi Arabia, recognized for excellence in material providing services, manpower services, equipment solutions  and project support with strong safety and quality performance."`}
                     </p>
                  </div>
 
@@ -54,9 +58,9 @@ const VisionMission = () => {
                  <div className="bg-black p-12 shadow-xl relative overflow-hidden group hover:-translate-y-2 transition-all duration-500">
                     <div className="absolute top-0 right-0 w-24 h-24 bg-white/5 rounded-bl-full transition-transform group-hover:scale-150" />
                     <Award className="w-16 h-16 text-alfawad-primary mb-8" />
-                    <h2 className="text-3xl font-black text-white uppercase tracking-tighter mb-6">Our Mission</h2>
+                    <h2 className="text-3xl font-black text-white uppercase tracking-tighter mb-6">{isAr ? "مهمتنا" : "Our Mission"}</h2>
                     <p className="text-white/70 leading-relaxed text-lg font-medium italic">
-                      "Our mission is to provide professional contracting support solutions by delivering qualified manpower, reliable equipment fleet, quality-based service execution, and safe operations."
+                      {isAr ? `"مهمتنا هي توفير حلول دعم مهنية من خلال القوى العاملة ومعداتنا والتنفيذ القائم على الجودة."` : `"Our mission is to provide professional contracting support solutions by delivering qualified manpower, reliable equipment fleet, quality-based service execution, and safe operations."`}
                     </p>
                  </div>
               </div>
@@ -64,25 +68,25 @@ const VisionMission = () => {
               {/* Core Principles */}
               <div className="bg-white p-8 md:p-16 shadow-xl border border-gray-100">
                  <div className="flex flex-col border-l-8 border-alfawad-primary pl-8 mb-12">
-                    <span className="text-alfawad-primary font-black text-[14px] uppercase tracking-[0.4em] mb-2">Our Driving Values</span>
+                    <span className="text-alfawad-primary font-black text-[14px] uppercase tracking-[0.4em] mb-2">{isAr ? "قيمنا الدافعة" : "Our Driving Values"}</span>
                     <h2 className="text-[32px] md:text-[45px] font-black text-black leading-tight uppercase tracking-tighter">
-                      Core Principles
+                      {isAr ? "المبادئ الأساسية" : "Core Principles"}
                     </h2>
                  </div>
 
                  <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                     {[
-                      { title: "Integrity", icon: <Shield className="w-8 h-8" />, desc: "We conduct business with honesty, transparency, and fairness." },
-                      { title: "Quality", icon: <Award className="w-8 h-8" />, desc: "We follow structured quality standards to ensure consistent service performance." },
-                      { title: "Safety", icon: <Shield className="w-8 h-8" />, desc: "We prioritize health and safety above everything." },
-                      { title: "Customer Commitment", icon: <Users className="w-8 h-8" />, desc: "We focus on meeting client expectations and ensuring smooth project execution." },
-                      { title: "Teamwork", icon: <Heart className="w-8 h-8" />, desc: "We build strong internal teams and collaborative client partnerships." },
+                      { title: isAr ? "النزاهة" : "Integrity", icon: <Shield className="w-8 h-8" />, desc: isAr ? "ندير أعمالنا بصدق وشفافية." : "We conduct business with honesty, transparency, and fairness." },
+                      { title: isAr ? "الجودة" : "Quality", icon: <Award className="w-8 h-8" />, desc: isAr ? "نتبع معايير جودة منظمة." : "We follow structured quality standards to ensure consistent service performance." },
+                      { title: isAr ? "السلامة" : "Safety", icon: <Shield className="w-8 h-8" />, desc: isAr ? "نولي الأولوية للصحة والسلامة." : "We prioritize health and safety above everything." },
+                      { title: isAr ? "الالتزام تجاه العملاء" : "Customer Commitment", icon: <Users className="w-8 h-8" />, desc: isAr ? "نركز على تلبية توقعات العملاء." : "We focus on meeting client expectations and ensuring smooth project execution." },
+                      { title: isAr ? "العمل الجماعي" : "Teamwork", icon: <Heart className="w-8 h-8" />, desc: isAr ? "نبني فرقًا داخلية قوية." : "We build strong internal teams and collaborative client partnerships." },
                     ].map((item, i) => (
-                      <div key={i} className="flex flex-col gap-4 border-b border-gray-100 pb-8 hover:border-alfawad-primary transition-colors cursor-default group">
-                         <div className="text-alfawad-primary group-hover:scale-110 transition-transform">{item.icon}</div>
-                         <h3 className="text-xl font-black text-black uppercase">{item.title}</h3>
-                         <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
-                      </div>
+                       <div key={i} className="flex flex-col gap-4 border-b border-gray-100 pb-8 hover:border-alfawad-primary transition-colors cursor-default group">
+                          <div className="text-alfawad-primary group-hover:scale-110 transition-transform">{item.icon}</div>
+                          <h3 className="text-xl font-black text-black uppercase">{item.title}</h3>
+                          <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+                       </div>
                     ))}
                  </div>
               </div>

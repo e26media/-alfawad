@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 import { ChevronRight, ShieldAlert, ShieldCheck, HardHat, TrendingDown, RefreshCcw, Leaf } from "lucide-react";
 import OverviewSidebar from "../../components/alfawad/OverviewSidebar";
+import { useTranslation } from "react-i18next";
 
 const EnvironmentSafety = () => {
+  const { i18n } = useTranslation();
+  const isAr = i18n.language === 'ar';
+
   return (
     <div className="flex flex-col min-h-screen bg-white font-muli">
       
@@ -17,15 +21,15 @@ const EnvironmentSafety = () => {
         <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] relative z-20 flex flex-col items-center justify-center text-center pt-32 md:pt-48">
            <div className="w-full text-white">
               <h1 className="text-[45px] md:text-[75px] font-black leading-[0.9] mb-6 uppercase tracking-tighter text-white drop-shadow-2xl">
-                ENVIRONMENT <br /> & SAFETY
+                {isAr ? "البيئة" : "ENVIRONMENT"} <br /> {isAr ? "والسلامة" : "& SAFETY"}
               </h1>
               <div className="w-24 h-2 bg-white mb-8 mx-auto" />
               <div className="flex items-center justify-center gap-3 text-[14px] md:text-[16px] font-black text-white/95 uppercase tracking-[0.2em]">
-                <Link to="/" className="hover:text-alfawad-accent transition-all duration-300">Home</Link>
+                <Link to="/" className="hover:text-alfawad-accent transition-all duration-300">{isAr ? "الرئيسية" : "Home"}</Link>
                 <ChevronRight className="w-4 h-4 text-white/50" />
-                <span className="text-white/70">Overview</span>
+                <span className="text-white/70">{isAr ? "نظرة عامة" : "Overview"}</span>
                 <ChevronRight className="w-4 h-4 text-white/50" />
-                <span className="text-white">Environment & Safety</span>
+                <span className="text-white">{isAr ? "البيئة والسلامة" : "Environment & Safety"}</span>
               </div>
            </div>
         </div>
@@ -43,9 +47,9 @@ const EnvironmentSafety = () => {
                  
                   <div className="flex flex-col gap-8">
                     <div className="flex flex-col border-l-8 border-alfawad-primary pl-8">
-                      <span className="text-alfawad-primary font-black text-[14px] uppercase tracking-[0.4em] mb-2">Our Commitment</span>
+                      <span className="text-alfawad-primary font-black text-[14px] uppercase tracking-[0.4em] mb-2">{isAr ? "التزامنا" : "Our Commitment"}</span>
                       <h2 className="text-[32px] md:text-[45px] font-black text-black leading-tight uppercase tracking-tighter">
-                        Health, Safety & Environment (HSE)
+                        {isAr ? "الصحة، السلامة والبيئة" : "Health, Safety & Environment (HSE)"}
                       </h2>
                     </div>
 
@@ -53,27 +57,27 @@ const EnvironmentSafety = () => {
                        <ShieldAlert className="w-20 h-20 text-alfawad-primary shrink-0" />
                        <div className="text-white flex-1">
                           <p className="text-[18px] md:text-[22px] font-bold leading-relaxed italic border-b border-white/10 pb-6 mb-6">
-                             "Lamiya alkhaleej alittihad establishment for general contracting  believes that safety is the foundation of success."
+                             {isAr ? `"تؤمن مؤسسة لمياء الخليج بأن السلامة هي أساس النجاح."` : `"Lamiya alkhaleej alittihad establishment for general contracting  believes that safety is the foundation of success."`}
                           </p>
-                          <p className="text-white/60 font-bold uppercase tracking-widest text-sm">Our Safety Commitment</p>
+                          <p className="text-white/60 font-bold uppercase tracking-widest text-sm">{isAr ? "التزامنا بالسلامة" : "Our Safety Commitment"}</p>
                        </div>
                     </div>
 
                     <div className="text-[#666666] leading-[36px] text-[18px] font-medium flex flex-col gap-6">
                       <p>
-                        We are committed to maintaining a safe workplace for our employees, clients, subcontractors, and all stakeholders. We strictly follow the safety guidelines and standards required by Saudi regulations and client HSE policies.
+                        {isAr ? "نحن ملتزمون بالحفاظ على مكان عمل آمن لموظفينا وعملائنا والمقاولين. حيث نتبع بدقة إرشادات ومعايير السلامة المطلوبة بموجب اللوائح السعودية." : "We are committed to maintaining a safe workplace for our employees, clients, subcontractors, and all stakeholders. We strictly follow the safety guidelines and standards required by Saudi regulations and client HSE policies."}
                       </p>
                       <p>
-                        We implement a proactive safety approach to reduce risks, prevent accidents, and ensure compliance at every project location. Our objective is to maintain a zero-accident work culture and ensure the environment is protected during all operations.
+                        {isAr ? "إننا نطبق نهجًا استباقيًا للسلامة لتقليل المخاطر ومنع الحوادث. هدفنا هو الحفاظ على ثقافة عمل خالية من الحوادث وضمان حماية البيئة." : "We implement a proactive safety approach to reduce risks, prevent accidents, and ensure compliance at every project location. Our objective is to maintain a zero-accident work culture and ensure the environment is protected during all operations."}
                       </p>
                     </div>
 
-                    <h3 className="text-2xl font-black text-black uppercase tracking-tighter mt-4">Our Safety Policy</h3>
+                    <h3 className="text-2xl font-black text-black uppercase tracking-tighter mt-4">{isAr ? "سياسة السلامة" : "Our Safety Policy"}</h3>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-4">
                       {[
-                        { title: "Safe Conditions", icon: <ShieldCheck className="w-8 h-8" />, desc: "Maintaining safe working conditions across all project sites." },
-                        { title: "Safety Training", icon: <HardHat className="w-8 h-8" />, desc: "Regular safety training and awareness programs including toolbox meetings." },
-                        { title: "PPE Compliance", icon: <ShieldCheck className="w-8 h-8" />, desc: "Strict use of certified Personal Protective Equipment (PPE)." }
+                        { title: isAr ? "ظروف آمنة" : "Safe Conditions", icon: <ShieldCheck className="w-8 h-8" />, desc: isAr ? "الحفاظ على ظروف عمل آمنة." : "Maintaining safe working conditions across all project sites." },
+                        { title: isAr ? "تدريب على السلامة" : "Safety Training", icon: <HardHat className="w-8 h-8" />, desc: isAr ? "برامج توعية وتدريب على السلامة." : "Regular safety training and awareness programs including toolbox meetings." },
+                        { title: isAr ? "الامتثال للمعدات الشخصية" : "PPE Compliance", icon: <ShieldCheck className="w-8 h-8" />, desc: isAr ? "استخدام صارم لمعدات الحماية الشخصية المعتمدة." : "Strict use of certified Personal Protective Equipment (PPE)." }
                       ].map((item, i) => (
                         <div key={i} className="bg-gray-50 p-8 border-b-4 border-alfawad-primary flex flex-col gap-4 text-center items-center group  transition-all duration-500 h-full">
                            <div className="text-alfawad-primary  transition-colors">{item.icon}</div>
@@ -84,13 +88,13 @@ const EnvironmentSafety = () => {
                     </div>
 
                     <div className="mt-8 border-t border-gray-100 pt-10">
-                       <h4 className="text-2xl font-black text-black uppercase tracking-tighter mb-8 text-alfawad-primary">Environmental Responsibility</h4>
+                       <h4 className="text-2xl font-black text-black uppercase tracking-tighter mb-8 text-alfawad-primary">{isAr ? "المسؤولية البيئية" : "Environmental Responsibility"}</h4>
                        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
                           {[
-                            "Reducing waste and promoting proper disposal methods",
-                            "Controlling pollution and preventing environmental damage",
-                            "Encouraging responsible use of resources",
-                            "Supporting sustainable work practices where applicable"
+                            isAr ? "تقليل النفايات وتعزيز طرق التخلص السليمة" : "Reducing waste and promoting proper disposal methods",
+                            isAr ? "السيطرة على التلوث وتقليل الأضرار البيئية" : "Controlling pollution and preventing environmental damage",
+                            isAr ? "تشجيع الاستخدام المسؤول للموارد" : "Encouraging responsible use of resources",
+                            isAr ? "دعم ممارسات العمل المستدامة" : "Supporting sustainable work practices where applicable"
                           ].map((item, i) => (
                             <div key={i} className="flex items-start gap-4">
                                <div className="w-6 h-6 rounded-full bg-alfawad-primary/10 flex items-center justify-center shrink-0 mt-1">

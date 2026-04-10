@@ -5,52 +5,55 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
-
-const contactInfo = [
-  { 
-    icon: Smartphone, 
-    label: "Direct Lines", 
-    isMulti: true,
-    contacts: [
-      { name: "Ashraf Al badan", numbers: ["+966 50 707 7611"] },
-      { name: "Ahamed suhail", numbers: ["+966 51 030 4627", "+966 56 656 7518"] },
-      { name: "Safwan", numbers: ["+966 58 376 9845"] }
-    ]
-  },
-  { 
-    icon: Mail, 
-    label: "Email Addresses", 
-    isMulti: true,
-    contacts: [
-      {  numbers: ["info@lamiyaalkhaleej.com"] },
-      {numbers: ["ashrafalbadan@lamiyaalkhaleej.com"] },
-      {  numbers: ["ahamedsuhail@lamiyaalkhaleej.com"] }
-    ]
-  },
-  { icon: Globe, label: "Head Office", value: "   Al Jubail, KSA" },
-  { icon: Clock, label: "Business Hours", value: "Sat–Thu: 8:00 AM – 10:00 PM, Fri: Appointment Based" },
-];
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
+  const { i18n } = useTranslation();
+  const isAr = i18n.language === 'ar';
+
+  const contactInfo = [
+    { 
+      icon: Smartphone, 
+      label: isAr ? "خطوط مباشرة" : "Direct Lines", 
+      isMulti: true,
+      contacts: [
+        { name: isAr ? "أشرف البدن" : "Ashraf Al badan", numbers: ["+966 50 707 7611"] },
+        { name: isAr ? "أحمد سهيل" : "Ahamed suhail", numbers: ["+966 51 030 4627", "+966 56 656 7518"] },
+        { name: isAr ? "صفوان" : "Safwan", numbers: ["+966 58 376 9845"] }
+      ]
+    },
+    { 
+      icon: Mail, 
+      label: isAr ? "عناوين البريد الإلكتروني" : "Email Addresses", 
+      isMulti: true,
+      contacts: [
+        { numbers: ["info@lamiyaalkhaleej.com"] },
+        { numbers: ["ashrafalbadan@lamiyaalkhaleej.com"] },
+        { numbers: ["ahamedsuhail@lamiyaalkhaleej.com"] }
+      ]
+    },
+    { icon: Globe, label: isAr ? "المكتب الرئيسي" : "Head Office", value: isAr ? "الجبيل، السعودية" : "Al Jubail, KSA" },
+    { icon: Clock, label: isAr ? "ساعات العمل" : "Business Hours", value: isAr ? "السبت-الخميس: 8:00 ص - 10:00 م، الجمعة: بموعد" : "Sat–Thu: 8:00 AM – 10:00 PM, Fri: Appointment Based" },
+  ];
 
   return (
     <div className="pt-32 md:pt-40 font-muli bg-white overflow-x-hidden">
-      <SEO
-        title="Contact Us | Lamiya Al Khaleej Al Ittehad Company - Professional Support in KSA"
-        description="Get in touch with Lamiya Al Khaleej Al Ittehad Company for fast booking and professional support for cleaning, AC, and pest control services across Saudi Arabia."
-      />
+      <SEO>
+        <title>{isAr ? "اتصل بنا | شركة لمياء الخليج" : "Contact Us | Lamiya Al Khaleej Al Ittehad Company - Professional Support in KSA"}</title>
+        <meta name="description" content={isAr ? "احجز خدمات تنظيف احترافية في السعودية" : "Get in touch with Lamiya Al Khaleej Al Ittehad Company for fast booking and professional support for cleaning, AC, and pest control services across Saudi Arabia."} />
+      </SEO>
 
       {/* Header */}
       <section className="relative py-24 md:py-40 bg-black overflow-hidden text-center">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-alfawad-primary opacity-10 rounded-full blur-[100px] -mr-[250px] -mt-[250px]" />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8 }}>
-            <span className="text-alfawad-primary font-black text-[12px] uppercase tracking-[0.4em] mb-6 block">Get In Touch</span>
-            <h1 className="text-[40px] md:text-[80px] font-black text-white leading-none uppercase tracking-tighter mb-8 italic">Contact Us</h1>
+            <span className="text-alfawad-primary font-black text-[12px] uppercase tracking-[0.4em] mb-6 block">{isAr ? "دعنا نتواصل" : "Get In Touch"}</span>
+            <h1 className="text-[40px] md:text-[80px] font-black text-white leading-none uppercase tracking-tighter mb-8 italic">{isAr ? "اتصل بنا" : "Contact Us"}</h1>
             <div className="w-24 h-2 bg-alfawad-primary mx-auto mb-10" />
             <p className="text-white/60 text-xl font-medium max-w-2xl mx-auto uppercase tracking-widest leading-relaxed">
-              Book professional services today and let our experts handle the rest.
+              {isAr ? "احجز خدمات احترافية اليوم ودع خبرائنا يعتنون بالباقي." : "Book professional services today and let our experts handle the rest."}
             </p>
           </motion.div>
         </div>
@@ -61,7 +64,7 @@ const Contact = () => {
           <div className="grid lg:grid-cols-5 gap-20">
             <div className="lg:col-span-2 space-y-8">
               <AnimatedSection>
-                <h3 className="text-3xl font-black text-black uppercase tracking-tighter mb-10 italic">Office Details</h3>
+                <h3 className="text-3xl font-black text-black uppercase tracking-tighter mb-10 italic">{isAr ? "تفاصيل المكتب" : "Office Details"}</h3>
               </AnimatedSection>
 
               {contactInfo.map((info, i) => (
@@ -121,39 +124,39 @@ const Contact = () => {
                       <CheckCircle className="w-40 h-40" />
                     </div>
                     <CheckCircle className="w-24 h-24 text-alfawad-primary mx-auto mb-10 scale-125" />
-                    <h3 className="text-4xl font-black text-black mb-6 uppercase tracking-tighter italic">Message Transmitted</h3>
-                    <p className="text-gray-500 text-lg font-bold uppercase tracking-[0.2em] max-w-sm mx-auto mb-12">Thank you! We will get back to you within 24 hours with a solution.</p>
-                    <button onClick={() => setSubmitted(false)} className="bg-black text-white px-12 py-5 font-black uppercase tracking-widest text-sm hover:shadow-2xl transition-all">Back to Contact Form</button>
+                    <h3 className="text-4xl font-black text-black mb-6 uppercase tracking-tighter italic">{isAr ? "تم الإرسال" : "Message Transmitted"}</h3>
+                    <p className="text-gray-500 text-lg font-bold uppercase tracking-[0.2em] max-w-sm mx-auto mb-12">{isAr ? "شكرًا لك! سنرد عليك خلال 24 ساعة." : "Thank you! We will get back to you within 24 hours with a solution."}</p>
+                    <button onClick={() => setSubmitted(false)} className="bg-black text-white px-12 py-5 font-black uppercase tracking-widest text-sm hover:shadow-2xl transition-all">{isAr ? "العودة للنموذج" : "Back to Contact Form"}</button>
                   </div>
                 ) : (
                   <form onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }} className="bg-[#fcfcfc] p-10 md:p-16 space-y-10 shadow-[40px_40px_0px_0px_#f8f9fa] border-t-8 border-black">
-                    <h3 className="text-3xl font-black text-black mb-4 uppercase tracking-tighter italic">Send Pro Inquiry</h3>
+                    <h3 className="text-3xl font-black text-black mb-4 uppercase tracking-tighter italic">{isAr ? "إرسال استفسار" : "Send Pro Inquiry"}</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                       <div className="space-y-3">
-                        <label className="text-[11px] font-black uppercase tracking-[0.4em] text-gray-400">Your Full Name *</label>
-                        <Input placeholder="E.G. ABDULLAH SAUD" required className="bg-white rounded-none border-gray-200 focus:border-alfawad-primary h-14 font-black text-xs uppercase" />
+                        <label className="text-[11px] font-black uppercase tracking-[0.4em] text-gray-400">{isAr ? "الاسم الكامل *" : "Your Full Name *"}</label>
+                        <Input placeholder={isAr ? "مثال: عبد الله سعود" : "E.G. ABDULLAH SAUD"} required className="bg-white rounded-none border-gray-200 focus:border-alfawad-primary h-14 font-black text-xs uppercase" />
                       </div>
                       <div className="space-y-3">
-                        <label className="text-[11px] font-black uppercase tracking-[0.4em] text-gray-400">Mobile Number *</label>
-                        <Input placeholder=" +966 XXXXXXXX" type="tel" required className="bg-white rounded-none border-gray-200 focus:border-alfawad-primary h-14 font-black text-xs" />
+                        <label className="text-[11px] font-black uppercase tracking-[0.4em] text-gray-400">{isAr ? "رقم الجوال *" : "Mobile Number *"}</label>
+                        <Input placeholder=" +966 XXXXXXXX" type="tel" dir="ltr" required className="bg-white rounded-none border-gray-200 focus:border-alfawad-primary h-14 font-black text-xs" />
                       </div>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                       <div className="space-y-3">
-                        <label className="text-[11px] font-black uppercase tracking-[0.4em] text-gray-400">Email Address</label>
-                        <Input placeholder="YOUR@EMAIL.COM" type="email" className="bg-white rounded-none border-gray-200 focus:border-alfawad-primary h-14 font-black text-xs" />
+                        <label className="text-[11px] font-black uppercase tracking-[0.4em] text-gray-400">{isAr ? "البريد الإلكتروني" : "Email Address"}</label>
+                        <Input placeholder={isAr ? "بريدك الإلكتروني" : "YOUR@EMAIL.COM"} type="email" className="bg-white rounded-none border-gray-200 focus:border-alfawad-primary h-14 font-black text-xs" />
                       </div>
                       <div className="space-y-3">
-                        <label className="text-[11px] font-black uppercase tracking-[0.4em] text-gray-400">Service Required</label>
-                        <Input placeholder="E.G. DEEP CLEANING" className="bg-white rounded-none border-gray-200 focus:border-alfawad-primary h-14 font-black text-xs uppercase" />
+                        <label className="text-[11px] font-black uppercase tracking-[0.4em] text-gray-400">{isAr ? "الخدمة المطلوبة" : "Service Required"}</label>
+                        <Input placeholder={isAr ? "مثال: تنظيف عميق" : "E.G. DEEP CLEANING"} className="bg-white rounded-none border-gray-200 focus:border-alfawad-primary h-14 font-black text-xs uppercase" />
                       </div>
                     </div>
                     <div className="space-y-3">
-                      <label className="text-[11px] font-black uppercase tracking-[0.4em] text-gray-400">Message / Requirements *</label>
-                      <Textarea placeholder="DESCRIBE YOUR REQUEST..." rows={6} required className="bg-white rounded-none border-gray-200 focus:border-alfawad-primary font-black text-xs py-4 uppercase" />
+                      <label className="text-[11px] font-black uppercase tracking-[0.4em] text-gray-400">{isAr ? "الرسالة / المتطلبات *" : "Message / Requirements *"}</label>
+                      <Textarea placeholder={isAr ? "صف طلبك هنا..." : "DESCRIBE YOUR REQUEST..."} rows={6} required className="bg-white rounded-none border-gray-200 focus:border-alfawad-primary font-black text-xs py-4 uppercase" />
                     </div>
                     <button type="submit" className="bg-black text-white px-10 py-6 text-sm font-black uppercase tracking-widest w-full hover:bg-alfawad-primary transition-all flex items-center justify-center gap-4 shadow-2xl group">
-                      Send Secure Message <Send className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                      {isAr ? "إرسال رسالة آمنة" : "Send Secure Message"} <Send className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                     </button>
                   </form>
                 )}

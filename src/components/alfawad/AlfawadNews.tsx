@@ -1,8 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { newsItems } from '../../data/newsData';
+import { useTranslation } from "react-i18next";
 
 export const AlfawadNews = () => {
+  const { i18n } = useTranslation();
+  const isAr = i18n.language === 'ar';
+
   return (
     <section className="relative py-24 px-4 sm:px-8 md:px-12 lg:px-20 overflow-hidden bg-[#ffea99]">
       {/* Background Pattern - Wavy fluid lines */}
@@ -39,7 +43,7 @@ export const AlfawadNews = () => {
 
       <div className="max-w-[1400px] mx-auto relative z-10">
         <h2 className="text-black text-[32px] sm:text-[45px] md:text-[55px] font-black mb-12 sm:mb-16 md:mb-20 uppercase tracking-tighter leading-tight font-muli">
-          News & Updates
+          {isAr ? "الأخبار والتحديثات" : "News & Updates"}
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
@@ -62,7 +66,7 @@ export const AlfawadNews = () => {
                 </h3>
                 <div className="mt-auto">
                   <span className="text-[12px] sm:text-[14px] font-black text-gray-800 uppercase tracking-widest border-b-2 border-transparent group-hover:border-black transition-all">
-                    Read More
+                    {isAr ? "اقرأ المزيد" : "Read More"}
                   </span>
                 </div>
               </div>
