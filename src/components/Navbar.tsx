@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Calendar, ChevronDown } from "lucide-react";
+import { LanguageToggleInline } from "./LanguageToggle";
 const logo = laklogo;
 
 const navLinks = [
@@ -48,7 +49,7 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed  left-0 right-0 z-50 transition-all duration-500 font-muli bg-[#fff]"
+      className="fixed top-9 left-0 right-0 z-50 transition-all duration-500 font-muli bg-[#fff]"
     >
       <div 
         className={`w-full transition-all duration-500 border-b border-gray-100/50 ${
@@ -145,6 +146,9 @@ const Navbar = () => {
               className="lg:hidden fixed right-0 top-0 bottom-0 w-[85%] max-w-[400px] bg-white z-40 shadow-[-10px_0_50px_rgba(0,0,0,0.1)] flex flex-col pt-[80px]"
             >
               <div className="flex flex-col h-full overflow-y-auto px-8 py-10 gap-1">
+                <div className="flex justify-end mb-4">
+                  <LanguageToggleInline />
+                </div>
                 {navLinks.map((link) => (
                   <div key={link.path} className="w-full">
                     {link.children ? (

@@ -1,39 +1,107 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Languages } from 'lucide-react';
 
-const LanguageToggle = () => {
+const LanguageTopBar = () => {
   const { i18n } = useTranslation();
-
-  const toggleLanguage = () => {
-    const newLang = i18n.language === 'en' ? 'ar' : 'en';
-    i18n.changeLanguage(newLang);
-  };
-
-  const currentLang = i18n.language === 'ar' ? 'En' : 'Ar';
+  const isAr = i18n.language === 'ar';
 
   return (
-    <div className="fixed top-24 right-4 z-[100] sm:top-28 sm:right-10">
+    <motion.div
+      initial={{ y: -40, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ type: 'spring', damping: 20, stiffness: 120, delay: 0.1 }}
+      className="fixed top-0 left-0 right-0 z-[200] h-9 flex items-center justify-center bg-[#0a0a0a] border-b border-white/10"
+    >
+      <div className="flex items-center gap-1 p-1 rounded-full bg-white/5 border border-white/10">
+
+        {/* EN Button */}
+        <motion.button
+          onClick={() => i18n.changeLanguage('en')}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ type: 'spring', damping: 15, stiffness: 300 }}
+          className="relative px-4 py-0.5 rounded-full text-[11px] font-black uppercase tracking-widest select-none transition-colors duration-200"
+          style={{ color: !isAr ? '#0a0a0a' : 'rgba(255,255,255,0.45)' }}
+        >
+          {/* Active background slide */}
+          {!isAr && (
+            <motion.span
+              layoutId="lang-pill"
+              className="absolute inset-0 rounded-full bg-alfawad-primary shadow-[0_0_12px_rgba(182,138,65,0.5)]"
+              transition={{ type: 'spring', damping: 22, stiffness: 300 }}
+            />
+          )}
+          <span className="relative z-10">EN</span>
+        </motion.button>
+
+        {/* AR Button */}
+        <motion.button
+          onClick={() => i18n.changeLanguage('ar')}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ type: 'spring', damping: 15, stiffness: 300 }}
+          className="relative px-4 py-0.5 rounded-full text-[11px] font-black uppercase tracking-widest select-none transition-colors duration-200"
+          style={{ color: isAr ? '#0a0a0a' : 'rgba(255,255,255,0.45)' }}
+        >
+          {isAr && (
+            <motion.span
+              layoutId="lang-pill"
+              className="absolute inset-0 rounded-full bg-alfawad-primary shadow-[0_0_12px_rgba(182,138,65,0.5)]"
+              transition={{ type: 'spring', damping: 22, stiffness: 300 }}
+            />
+          )}
+          <span className="relative z-10">AR</span>
+        </motion.button>
+
+      </div>
+    </motion.div>
+  );
+};
+
+// Inline variant for mobile menus
+export const LanguageToggleInline = ({ className = '' }: { className?: string }) => {
+  const { i18n } = useTranslation();
+  const isAr = i18n.language === 'ar';
+
+  return (
+    <div className={`flex items-center gap-1 p-1 rounded-full bg-black/5 border border-black/10 ${className}`}>
+
       <motion.button
-        whileHover={{ scale: 1.1, shadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" }}
-        whileTap={{ scale: 0.9 }}
-        onClick={toggleLanguage}
-        className="flex items-center gap-3 px-5 py-2.5 bg-black text-white border border-white/10 shadow-2xl rounded-full group transition-all"
+        onClick={() => i18n.changeLanguage('en')}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="relative px-3 py-0.5 rounded-full text-[11px] font-black uppercase tracking-widest select-none"
+        style={{ color: !isAr ? '#ffffff' : 'rgba(0,0,0,0.4)' }}
       >
-        <div className="w-7 h-7 rounded-full bg-alfawad-primary flex items-center justify-center group-hover:rotate-12 transition-transform">
-          <Languages className="w-4 h-4 text-white" />
-        </div>
-        <span className="text-[12px] font-black uppercase tracking-[0.2em]">
-          {i18n.language === 'en' ? 'Arabic' : 'English'}
-        </span>
-        <div className="flex items-center gap-1 ml-1 border-l border-white/20 pl-3">
-          <span className={`text-[10px] font-bold ${i18n.language === 'en' ? 'text-alfawad-primary' : 'text-white/40'}`}>EN</span>
-          <span className="text-[10px] text-white/20">/</span>
-          <span className={`text-[10px] font-bold ${i18n.language === 'ar' ? 'text-alfawad-primary' : 'text-white/40'}`}>AR</span>
-        </div>
+        {!isAr && (
+          <motion.span
+            layoutId="lang-pill-inline"
+            className="absolute inset-0 rounded-full bg-alfawad-primary"
+            transition={{ type: 'spring', damping: 22, stiffness: 300 }}
+          />
+        )}
+        <span className="relative z-10">EN</span>
       </motion.button>
+
+      <motion.button
+        onClick={() => i18n.changeLanguage('ar')}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="relative px-3 py-0.5 rounded-full text-[11px] font-black uppercase tracking-widest select-none"
+        style={{ color: isAr ? '#ffffff' : 'rgba(0,0,0,0.4)' }}
+      >
+        {isAr && (
+          <motion.span
+            layoutId="lang-pill-inline"
+            className="absolute inset-0 rounded-full bg-alfawad-primary"
+            transition={{ type: 'spring', damping: 22, stiffness: 300 }}
+          />
+        )}
+        <span className="relative z-10">AR</span>
+      </motion.button>
+
     </div>
   );
 };
 
-export default LanguageToggle;
+export default LanguageTopBar;

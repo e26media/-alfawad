@@ -27,9 +27,9 @@ const Footer = () => {
               +966 50 707 7611
             </a>
             <div className="mt-6 flex flex-col items-center gap-2">
-              <a href="mailto:info@lamiyaalkhaleej.com" className="text-black/80 text-[10px] font-black uppercase tracking-[0.2em] hover:text-white transition-colors">info@lamiyaalkhaleej.com</a>
-              <a href="mailto:ashrafalbadan@lamiyaalkhaleej.com" className="text-black/80 text-[10px] font-black uppercase tracking-[0.2em] hover:text-white transition-colors">ashrafalbadan@lamiyaalkhaleej.com</a>
-              <a href="mailto:ahamedsuhail@lamiyaalkhaleej.com" className="text-black/80 text-[10px] font-black uppercase tracking-[0.2em] hover:text-white transition-colors">ahamedsuhail@lamiyaalkhaleej.com</a>
+              <a href="mailto:info@lamiyaalkhaleej.com" className="text-black/80 text-[10px] font-black uppercase tracking-[0.2em] hover:text-white transition-colors break-all">info@lamiyaalkhaleej.com</a>
+              <a href="mailto:ashrafalbadan@lamiyaalkhaleej.com" className="text-black/80 text-[10px] font-black uppercase tracking-[0.2em] hover:text-white transition-colors break-all">ashrafalbadan@lamiyaalkhaleej.com</a>
+              <a href="mailto:ahamedsuhail@lamiyaalkhaleej.com" className="text-black/80 text-[10px] font-black uppercase tracking-[0.2em] hover:text-white transition-colors break-all">ahamedsuhail@lamiyaalkhaleej.com</a>
             </div>
           </div>
           <div className="flex flex-col items-center md:items-end relative z-10">
@@ -116,9 +116,9 @@ const Footer = () => {
           <div className="text-center lg:text-left">
             <h4 className="text-[12px] font-black uppercase tracking-[0.6em] text-alfawad-primary mb-12">{isAr ? "المقر الرئيسي" : "Headquarters"}</h4>
             <ul className="space-y-10">
-              <li className="flex flex-col lg:flex-row items-center lg:items-start gap-6 group">
+              <li className="flex flex-col sm:flex-row items-center sm:items-start gap-6 group">
                 <div className="w-12 h-12 bg-white/5 flex items-center justify-center flex-shrink-0 group-hover:bg-alfawad-primary group-hover:text-black transition-all">
-                  <Globe className="w-5 h-5" />
+                  <Globe className="w-5 h-5 group-hover:text-black transition-colors" />
                 </div>
                 <div className="flex flex-col gap-6">
                   <span className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-600">{isAr ? "خطوط مباشرة" : "Direct Lines"}</span>
@@ -126,26 +126,26 @@ const Footer = () => {
                   <div className="flex flex-col gap-5">
                     <div className="flex flex-col">
                       <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">{isAr ? "أشرف البدن" : "Ashraf Al badan"}</span>
-                      <a href="tel:+966507077611" className="text-[12px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors" dir="ltr">+966 50 707 7611</a>
+                      <a href="tel:+966507077611" className="text-[12px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors break-all" dir="ltr">+966 50 707 7611</a>
                     </div>
 
                     <div className="flex flex-col">
                       <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">{isAr ? "أحمد سهيل" : "Ahamed suhail"}</span>
                       <div className="flex flex-col gap-1">
-                        <a href="tel:+966510304627" className="text-[12px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors" dir="ltr">+966 51 030 4627</a>
-                        <a href="tel:+966566567518" className="text-[12px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors" dir="ltr">+966 56 656 7518</a>
+                        <a href="tel:+966510304627" className="text-[12px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors break-all" dir="ltr">+966 51 030 4627</a>
+                        <a href="tel:+966566567518" className="text-[12px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors break-all" dir="ltr">+966 56 656 7518</a>
                       </div>
                     </div>
 
                     <div className="flex flex-col">
                       <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">{isAr ? "صفوان" : "Safwan"}</span>
-                      <a href="tel:+966583769845" className="text-[12px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors" dir="ltr">+966 58 376 9845</a>
+                      <a href="tel:+966583769845" className="text-[12px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors break-all" dir="ltr">+966 58 376 9845</a>
                     </div>
                   </div>
                 </div>
               </li>
              
-              <li className="flex flex-col lg:flex-row items-center lg:items-start gap-6 group">
+              <li className="flex flex-col sm:flex-row items-center sm:items-start gap-6 group">
                 <div className="w-12 h-12 bg-white/5 flex items-center justify-center flex-shrink-0 group-hover:bg-alfawad-primary group-hover:text-black transition-all">
                   <MapPin className="w-5 h-5" />
                 </div>

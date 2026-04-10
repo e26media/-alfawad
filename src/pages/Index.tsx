@@ -136,13 +136,15 @@ const Index = () => {
                   transition={{ delay: 0.5 + i * 0.1 }}
                   className="pt-12"
                 >
-                  <Link to={service.path} className="flex flex-col items-center group min-w-[100px]">
-                    <div className="w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/10 flex items-center justify-center group-hover:bg-alfawad-primary group-hover:border-alfawad-primary transition-all duration-500 mb-3 group-hover:-translate-y-2 group-hover:shadow-[0_15px_30px_rgba(182,138,65,0.4)]">
+                  <Link to={service.path} className="flex flex-col items-center group w-[100px]">
+                    <div className="w-16 h-16 shrink-0 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/10 flex items-center justify-center group-hover:bg-alfawad-primary group-hover:border-alfawad-primary transition-all duration-500 mb-3 group-hover:-translate-y-2 group-hover:shadow-[0_15px_30px_rgba(182,138,65,0.4)]">
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
-                    <span className="text-[10px] font-black text-white/70 uppercase tracking-widest text-center leading-tight group-hover:text-alfawad-primary transition-colors whitespace-pre-line">
-                      {service.title}
-                    </span>
+                    <div className="h-10 flex items-start justify-center">
+                      <span className="text-[10px] font-black text-white/70 uppercase tracking-widest text-center leading-tight group-hover:text-alfawad-primary transition-colors whitespace-pre-line">
+                        {service.title}
+                      </span>
+                    </div>
                   </Link>
                 </motion.div>
               ))}

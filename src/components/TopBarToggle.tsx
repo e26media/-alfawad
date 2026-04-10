@@ -1,9 +1,10 @@
 import { Link, useLocation } from "react-router-dom";
-import { HardHat, Droplets, Sparkles } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 
 export default function TopBarToggle() {
   const location = useLocation();
+  const { t } = useTranslation();
   const isEngineering = location.pathname.startsWith('/industrial');
 
   return (
@@ -11,62 +12,38 @@ export default function TopBarToggle() {
       initial={{ y: 100, x: "-50%", opacity: 0 }}
       animate={{ y: 0, x: "-50%", opacity: 1 }}
       transition={{ type: "spring", damping: 20, stiffness: 100 }}
-      className="fixed bottom-6 sm:bottom-10 left-1/2 z-[100] px-4 w-full max-w-fit"
+      className="fixed bottom-4 sm:bottom-8 left-1/2 z-[100] px-3 w-full max-w-fit"
+      // Force LTR so RTL page direction never flips the slider
+      dir="ltr"
     >
-      <div className="flex items-center backdrop-blur-2xl bg-black/50 p-1.5 rounded-full border border-white/10 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.8)] relative min-w-[280px] sm:min-w-[420px] h-14 sm:h-16 group">
-        
-        {/* Animated Premium Slider Container */}
-        <div className="absolute inset-1.5 w-full h-[calc(100%-12px)] pointer-events-none">
-          <motion.div
-            layout
-            animate={{ x: isEngineering ? "0%" : "103%" }}
-            transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-            className="h-full w-[calc(50%-6px)] rounded-full bg-gradient-to-r from-alfawad-primary to-[#d4af37] shadow-[0_0_30px_rgba(182,138,65,0.4)]"
-          />
-        </div>
+      <div className="flex items-center backdrop-blur-2xl bg-black/80 p-1.5 rounded-full border border-white/20 shadow-[0_20px_40px_-5px_rgba(0,0,0,0.8)] relative min-w-[300px] sm:min-w-[420px] h-12 sm:h-16">
+
+        {/* Sliding background pill — uses left offset, immune to RTL */}
+        <motion.div
+          animate={{ left: isEngineering ? "6px" : "calc(50% + 3px)" }}
+          transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+          className="absolute top-1.5 bottom-1.5 w-[calc(50%-9px)] rounded-full bg-gradient-to-r from-alfawad-primary to-[#d4af37] shadow-[0_0_20px_rgba(182,138,65,0.4)] pointer-events-none"
+        />
 
         {/* Engineering Link */}
         <Link
           to="/industrial"
-          className={`relative z-10 flex-1 flex items-center justify-center gap-2 sm:gap-3 text-center text-[10px] sm:text-[13px] font-black uppercase tracking-[0.15em] transition-all duration-500 ${
+          className={`relative z-10 flex-1 flex items-center justify-center gap-2 sm:gap-3 text-center text-[10px] sm:text-[13px] font-black uppercase tracking-[0.1em] transition-all duration-500 px-2 ${
             isEngineering ? "text-white" : "text-white/40 hover:text-white/70"
           }`}
         >
-          <div className="relative">
-            {/* <HardHat className={`w-4 h-4 sm:w-5 sm:h-5 transition-all duration-500 ${isEngineering ? 'scale-110' : 'scale-90 opacity-50'}`} /> */}
-            {isEngineering && (
-              <motion.div 
-                layoutId="sparkle"
-                className="absolute -top-1.5 -right-1.5"
-              >
-                {/* <Sparkles className="w-3 h-3 text-yellow-200 animate-pulse" /> */}
-              </motion.div>
-            )}
-          </div>
-          <span className={isEngineering ? "inline" : "hidden sm:inline"}>Engineering</span>
-          {!isEngineering && <span className="sm:hidden">Engineering</span>}
+          <span className="block">{t('nav.engineering', 'Engineering')}</span>
         </Link>
 
         {/* Cleaning Link */}
         <Link
           to="/cleaning"
-          className={`relative z-10 flex-1 flex items-center justify-center gap-2 sm:gap-3 text-center text-[10px] sm:text-[13px] font-black uppercase tracking-[0.15em] transition-all duration-500 ${
+          className={`relative z-10 flex-1 flex items-center justify-center gap-2 sm:gap-3 text-center text-[10px] sm:text-[13px] font-black uppercase tracking-[0.1em] transition-all duration-500 px-2 ${
             !isEngineering ? "text-white" : "text-white/40 hover:text-white/70"
           }`}
         >
-          <div className="relative">
-            {/* <Droplets className={`w-4 h-4 sm:w-5 sm:h-5 transition-all duration-500 ${!isEngineering ? 'scale-110' : 'scale-90 opacity-50'}`} /> */}
-            {!isEngineering && (
-               <motion.div 
-               layoutId="sparkle"
-               className="absolute -top-1.5 -right-1.5"
-             >
-               {/* <Sparkles className="w-3 h-3 text-blue-200 animate-pulse" /> */}
-             </motion.div>
-            )}
-          </div>
-          <span className={!isEngineering ? "inline" : "hidden sm:inline"}>Cleaning & Maintenance Services</span>
-          {isEngineering && <span className="sm:hidden">Cleaning & Maintenance Services</span>}
+          <span className="hidden sm:block">{t('nav.cleaning_services', 'Cleaning & Maintenance')}</span>
+          <span className="block sm:hidden">{t('nav.cleaning', 'Cleaning')}</span>
         </Link>
       </div>
     </motion.div>

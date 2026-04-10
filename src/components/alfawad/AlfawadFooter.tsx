@@ -4,15 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowUp, Phone, Mail, MapPin, ChevronRight, Award, ShieldCheck, Globe, Clock } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
-const VENDOR_DATA = [
-  { name: "Saudi Aramco", code: "4913", src: "https://alfawad.com/images/client-logo/saudi-aramco.jpg" },
-  { name: "SABIC", code: "508551", src: "https://alfawad.com/images/client-logo/SABIC.jpg" },
-  { name: "Saudi Electricity Company", code: "5017989", src: "https://alfawad.com/images/client-logo/Saudi-electricity.jpg" },
-  { name: "SAIPEM", code: "162782", src: "https://alfawad.com/images/client-logo/Saipem.jpg" },
-  { name: "Petrofac", code: "3520", src: "https://alfawad.com/images/client-logo/petrofac.jpg" },
-  { name: "Royal Commission", code: "3603866", src: "https://alfawad.com/images/client-logo/Royal-commission.jpg" },
-  { name: "SGC", code: "100", src: "https://alfawad.com/images/client-logo/hyundai.jpg" },
-];
+
 
 const AlfawadFooter = () => {
   const { i18n } = useTranslation();
@@ -25,7 +17,7 @@ const AlfawadFooter = () => {
   return (
     <footer className="relative font-muli overflow-hidden border-t border-gray-100">
       {/* Floating Actions */}
-      <div className="fixed bottom-8 right-8 z-[70] flex flex-col gap-4">
+      <div className="fixed bottom-24 sm:bottom-8 end-4 sm:end-8 z-[70] flex flex-col gap-4">
         {/* <motion.a
           whileHover={{ scale: 1.1, rotate: 5 }}
           whileTap={{ scale: 0.9 }}
@@ -40,107 +32,115 @@ const AlfawadFooter = () => {
           whileHover={{ scale: 1.1, y: -5 }}
           whileTap={{ scale: 0.9 }}
           onClick={scrollToTop}
-          className="w-16 h-16 bg-black text-white rounded-2xl flex flex-col items-center justify-center shadow-[0_20px_50px_rgba(0,0,0,0.3)] transition-all group"
+          className="w-12 h-12 sm:w-16 sm:h-16 bg-black text-white rounded-2xl flex flex-col items-center justify-center shadow-[0_20px_50px_rgba(0,0,0,0.3)] transition-all group"
         >
-          <span className="text-[10px] font-black uppercase tracking-widest leading-none mb-1">{isAr ? "الأعلى" : "Top"}</span>
-          <ArrowUp className="w-5 h-5 group-hover:-translate-y-1 transition-transform" />
+          <span className="text-[8px] sm:text-[10px] font-black uppercase tracking-widest leading-none mb-1">{isAr ? "الأعلى" : "Top"}</span>
+          <ArrowUp className="w-4 h-4 sm:w-5 sm:h-5 group-hover:-translate-y-1 transition-transform" />
         </motion.button>
       </div>
 
       <div className="flex flex-col lg:flex-row min-h-[600px] bg-white">
         
-        {/* Left Side: Brand Experience */}
-        <div className="lg:w-[60%] pt-20 pb-16 px-6 sm:px-12 lg:pl-24 lg:pr-16 relative bg-white border-b lg:border-b-0 lg:border-r border-gray-100">
+        {/* Left Side: Professional Navigation & Identity */}
+        <div className="lg:w-[70%] pt-20 pb-16 px-6 sm:px-12 lg:pl-24 lg:pr-16 relative bg-white border-b lg:border-b-0 lg:border-r border-gray-100">
           <div className="flex flex-col h-full">
-            {/* Top Row: Identity & Trust */}
-            <div className="flex flex-col md:flex-row items-center justify-between gap-12 mb-20">
-              <Link to="/industrial" className="block w-full max-w-[280px]">
-                <img
-                  src={laklogo}
-                  alt="LAMIYA AL KHALEEJ AL ITTEHAD"
-                  className="w-full h-auto object-contain"
-                />
-              </Link>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mb-20">
               
-              {/* <div className="flex items-center gap-6 p-6 bg-gray-50 rounded-3xl border border-gray-100 shadow-sm transition-all hover:shadow-md">
-                <div className="flex -space-x-3">
-                  {[1, 2, 3].map((i) => (
-                    <div key={i} className="w-12 h-12 rounded-2xl bg-white border-2 border-white shadow-sm flex items-center justify-center p-2 overflow-hidden ring-4 ring-gray-50">
-                      <img 
-                        src="/images/industrial/hero-7.png" 
-                        alt="ISO" 
-                        className="w-full h-full object-contain" 
-                      />
+              {/* Column 1: Identity */}
+              <div className="flex flex-col gap-10">
+                <Link to="/industrial" className="block w-full max-w-[240px]">
+                  <img src={laklogo} alt="LAMIYA AL KHALEEJ AL ITTEHAD" className="w-full h-auto object-contain" />
+                </Link>
+                <p className="text-[14px] leading-relaxed text-gray-400 font-medium uppercase tracking-wider">
+                  {isAr 
+                    ? "الرائدة في تقديم خدمات الدعم الصناعي والإنشائي المتكاملة عبر المملكة العربية السعودية." 
+                    : "A leading multi-disciplinary industrial services organization providing turn-key engineering & construction solutions across KSA."}
+                </p>
+                <div className="flex flex-col gap-6">
+                  <div className="flex items-center gap-4 group">
+                    <ShieldCheck className="w-6 h-6 text-alfawad-primary transition-transform group-hover:scale-110" />
+                    <div className="flex flex-col">
+                      <span className="text-[10px] font-black uppercase tracking-widest text-black leading-none mb-1">{isAr ? "أعمال آمنة" : "Secure Business"}</span>
+                      <span className="text-[9px] font-bold uppercase tracking-widest text-gray-400 leading-none">{isAr ? "عمليات آمنة" : "Safe Operations"}</span>
                     </div>
+                  </div>
+                  <div className="flex items-center gap-4 group">
+                    <Globe className="w-6 h-6 text-alfawad-primary transition-transform group-hover:scale-110" />
+                    <div className="flex flex-col">
+                      <span className="text-[10px] font-black uppercase tracking-widest text-black leading-none mb-1">{isAr ? "تواجد محلي" : "Local Presence"}</span>
+                      <span className="text-[9px] font-bold uppercase tracking-widest text-gray-400 leading-none">{isAr ? "في جميع أنحاء المملكة" : "Kingdom Wide"}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Column 2: Quick Navigation */}
+              <div className="flex flex-col">
+                <h4 className="text-[12px] font-black uppercase tracking-[0.4em] text-black mb-10 pb-4 border-b-2 border-alfawad-primary w-max">
+                  {isAr ? "روابط سريعة" : "Navigation"}
+                </h4>
+                <div className="flex flex-col gap-4">
+                  {[
+                    { label: isAr ? "الرئيسية" : "Home", path: "/industrial" },
+                    { label: isAr ? "نظرة عامة" : "Corporate Overview", path: "/industrial/overview" },
+                    { label: isAr ? "مقدمة الشركة" : "Introduction", path: "/industrial/introduction" },
+                    { label: isAr ? "الرؤية والمهمة" : "Vision & Mission", path: "/industrial/vision-mission" },
+                    { label: isAr ? "اتصل بنا" : "Contact Us", path: "/industrial/contact" },
+                  ].map((link) => (
+                    <Link 
+                      key={link.path} 
+                      to={link.path} 
+                      className="text-[11px] font-black uppercase tracking-widest text-gray-400 hover:text-alfawad-primary transition-all flex items-center gap-3 group"
+                    >
+                      <ChevronRight className="w-3 h-3 text-alfawad-primary transition-transform group-hover:translate-x-1" />
+                      {link.label}
+                    </Link>
                   ))}
                 </div>
-                <div className="h-10 w-[1px] bg-gray-200" />
-                <div className="flex flex-col">
-                  <span className="text-[10px] font-black text-black uppercase tracking-[0.2em] leading-none mb-1 text-center md:text-left">ISO Certified</span>
-                  <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest text-center md:text-left leading-none">Global Standards</span>
+              </div>
+
+              {/* Column 3: Industrial Divisions */}
+              <div className="flex flex-col">
+                <h4 className="text-[12px] font-black uppercase tracking-[0.4em] text-black mb-10 pb-4 border-b-2 border-alfawad-primary w-max">
+                  {isAr ? "أقسامنا" : "Divisions"}
+                </h4>
+                <div className="flex flex-col gap-4">
+                  {[
+                    { label: isAr ? "خدمات المواد" : "Material Services", path: "/industrial/services/material-service" },
+                    { label: isAr ? "القوى العاملة الفنية" : "Technical Manpower", path: "/industrial/services/technical-manpower-service" },
+                    { label: isAr ? "المعدات الثقيلة" : "Heavy Equipment", path: "/industrial/services/heavy-equipment-service" },
+                    { label: isAr ? "دعم المشاريع" : "Project Support", path: "/industrial/services/project-support" },
+                    { label: isAr ? "إدارة المشاريع" : "Project Management", path: "/industrial/services/project-management" },
+                  ].map((link) => (
+                    <Link 
+                      key={link.path} 
+                      to={link.path} 
+                      className="text-[11px] font-black uppercase tracking-widest text-gray-400 hover:text-alfawad-primary transition-all flex items-center gap-3 group"
+                    >
+                      <ChevronRight className="w-3 h-3 text-alfawad-primary transition-transform group-hover:translate-x-1" />
+                      {link.label}
+                    </Link>
+                  ))}
                 </div>
-              </div> */}
+              </div>
+
             </div>
 
-            {/* Middle Row: Official Vendor Status */}
-            <div className="flex-1">
-              <div className="flex items-center gap-4 mb-12">
-                <h3 className="text-[12px] font-black uppercase tracking-[0.4em] text-black">{isAr ? "بائع صناعي معتمد" : "Registered Industrial Vendor"}</h3>
-                <div className="h-[2px] flex-1 bg-gray-50" />
-              </div>
-              
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6">
-                {VENDOR_DATA.map((vendor, i) => (
-                  <motion.div 
-                    key={i}
-                    whileHover={{ scale: 1.05 }}
-                    className="flex flex-col items-center group cursor-pointer"
-                  >
-                    <div className="w-full aspect-square bg-[#fcfcfc] border border-gray-100 rounded-3xl p-4 flex items-center justify-center mb-4 transition-all group-hover:border-alfawad-primary/20 group-hover:shadow-2xl group-hover:bg-white overflow-hidden">
-                      <img 
-                        src={vendor.src} 
-                        alt={vendor.name} 
-                        className="max-w-full max-h-full object-contain grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 scale-90 group-hover:scale-100" 
-                      />
-                    </div>
-                    <div className="flex flex-col items-center text-center">
-                      <span className="text-[8px] font-black text-gray-300 uppercase tracking-widest group-hover:text-alfawad-primary transition-colors leading-none mb-1">{isAr ? "رمز" : "Code"}</span>
-                      <span className="text-[14px] font-black text-black tracking-tighter">{vendor.code}</span>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-
-            {/* Bottom Row Area (Optional spacing) */}
-            <div className="mt-20 flex flex-col sm:flex-row items-center gap-10">
-               <div className="flex items-center gap-4">
-                  <ShieldCheck className="w-8 h-8 text-alfawad-primary" />
-                  <div className="flex flex-col">
-                    <span className="text-[10px] font-black uppercase tracking-widest text-black mb-1 leading-none">{isAr ? "أعمال آمنة" : "Secure Business"}</span>
-                    <span className="text-[9px] font-bold uppercase tracking-widest text-gray-400 leading-none">{isAr ? "عمليات آمنة" : "Safe Operations"}</span>
-                  </div>
+            <div className="mt-auto flex flex-wrap items-center gap-10 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all pt-10 border-t border-gray-50">
+               <div className="flex items-center gap-3">
+                  <Award className="w-6 h-6 text-alfawad-primary" />
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-black italic">Quality Management Excellence</span>
                </div>
-               <div className="flex items-center gap-4">
-                  <Globe className="w-8 h-8 text-alfawad-primary" />
-                  <div className="flex flex-col">
-                    <span className="text-[10px] font-black uppercase tracking-widest text-black mb-1 leading-none">{isAr ? "تواجد محلي" : "Local Presence"}</span>
-                    <span className="text-[9px] font-bold uppercase tracking-widest text-gray-400 leading-none">{isAr ? "في جميع أنحاء المملكة" : "Kingdom Wide"}</span>
-                  </div>
-               </div>
-               <div className="flex items-center gap-4">
-                  <Award className="w-8 h-8 text-alfawad-primary" />
-                  <div className="flex flex-col">
-                    <span className="text-[10px] font-black uppercase tracking-widest text-black mb-1 leading-none">{isAr ? "حائز على جوائز" : "Award Winning"}</span>
-                    <span className="text-[9px] font-bold uppercase tracking-widest text-gray-400 leading-none">{isAr ? "مركز التميز" : "Excellence Hub"}</span>
-                  </div>
+               <div className="flex items-center gap-3">
+                  <ShieldCheck className="w-6 h-6 text-alfawad-primary" />
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-black italic">HSE Integrated Standards</span>
                </div>
             </div>
           </div>
         </div>
 
         {/* Right Side: Contact Hub */}
-        <div className="lg:w-[40%] bg-black text-white relative pt-20 pb-16 px-6 sm:px-12 lg:px-20 overflow-hidden">
+        <div className="lg:w-[30%] bg-black text-white relative pt-20 pb-16 px-6 sm:px-12 lg:px-12 overflow-hidden">
           {/* Decorative Pattern & Gradients */}
           <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
             <div className="absolute -top-20 -right-20 w-80 h-80 bg-alfawad-primary rounded-full blur-[100px]" />
@@ -159,7 +159,7 @@ const AlfawadFooter = () => {
                   {isAr ? "المركز" : "Corporate"} <span className="text-alfawad-primary">{isAr ? "المشترك" : "Hub"}</span>
                 </h4>
                 <div className="space-y-10">
-                  <div className="group flex items-start gap-6">
+                  <div className="group flex flex-col sm:flex-row items-start gap-6">
                     <div className="w-14 h-14 rounded-3xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-alfawad-primary group-hover:text-black transition-all">
                       <MapPin className="w-6 h-6" />
                     </div>
@@ -171,7 +171,7 @@ const AlfawadFooter = () => {
                     </div>
                   </div>
 
-                  <div className="group flex items-start gap-6">
+                  <div className="group flex flex-col sm:flex-row items-start gap-6">
                     <div className="w-14 h-14 rounded-3xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-alfawad-primary group-hover:text-black transition-all">
                       <Phone className="w-6 h-6" />
                     </div>
@@ -181,35 +181,35 @@ const AlfawadFooter = () => {
                       <div className="grid gap-8">
                         <div className="flex flex-col">
                           <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">{isAr ? "أشرف البدن" : "Ashraf Al badan"}</span>
-                          <a href="tel:+966507077611" className="text-[13px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors" dir="ltr">+966 50 707 7611</a>
+                          <a href="tel:+966507077611" className="text-[13px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors break-all" dir="ltr">+966 50 707 7611</a>
                         </div>
 
                         <div className="flex flex-col">
                           <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">{isAr ? "أحمد سهيل" : "Ahamed suhail"}</span>
                           <div className="flex flex-col gap-1">
-                            <a href="tel:+966510304627" className="text-[13px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors" dir="ltr">+966 51 030 4627</a>
-                            <a href="tel:+966566567518" className="text-[13px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors" dir="ltr">+966 56 656 7518</a>
+                            <a href="tel:+966510304627" className="text-[13px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors break-all" dir="ltr">+966 51 030 4627</a>
+                            <a href="tel:+966566567518" className="text-[13px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors break-all" dir="ltr">+966 56 656 7518</a>
                           </div>
                         </div>
 
                         <div className="flex flex-col">
                           <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">{isAr ? "صفوان" : "Safwan"}</span>
-                          <a href="tel:+966583769845" className="text-[13px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors" dir="ltr">+966 58 376 9845</a>
+                          <a href="tel:+966583769845" className="text-[13px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors break-all" dir="ltr">+966 58 376 9845</a>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="group flex items-start gap-6">
+                  <div className="group flex flex-col sm:flex-row items-start gap-6">
                     <div className="w-14 h-14 rounded-3xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-alfawad-primary group-hover:text-black transition-all">
                       <Mail className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-4">
                       <span className="text-[10px] font-black uppercase tracking-[0.4em] text-alfawad-primary leading-none block">{isAr ? "رسائل البريد الإلكتروني" : "Corporate Emails"}</span>
                       <div className="flex flex-col gap-3">
-                        <a href="mailto:ashrafalbadan@lamiyaalkhaleej.com" className="text-[12px] font-bold uppercase tracking-widest text-white/50 hover:text-alfawad-primary transition-colors block">ashrafalbadan@lamiyaalkhaleej.com</a>
-                        <a href="mailto:ahamedsuhail@lamiyaalkhaleej.com" className="text-[12px] font-bold uppercase tracking-widest text-white/50 hover:text-alfawad-primary transition-colors block">ahamedsuhail@lamiyaalkhaleej.com</a>
-                        <a href="mailto:info@lamiyaalkhaleej.com" className="text-[12px] font-bold uppercase tracking-widest text-white/50 hover:text-alfawad-primary transition-colors block">info@lamiyaalkhaleej.com</a>
+                        <a href="mailto:ashrafalbadan@lamiyaalkhaleej.com" className="text-[12px] font-bold uppercase tracking-widest text-white/50 hover:text-alfawad-primary transition-colors block break-all">ashrafalbadan@lamiyaalkhaleej.com</a>
+                        <a href="mailto:ahamedsuhail@lamiyaalkhaleej.com" className="text-[12px] font-bold uppercase tracking-widest text-white/50 hover:text-alfawad-primary transition-colors block break-all">ahamedsuhail@lamiyaalkhaleej.com</a>
+                        <a href="mailto:info@lamiyaalkhaleej.com" className="text-[12px] font-bold uppercase tracking-widest text-white/50 hover:text-alfawad-primary transition-colors block break-all">info@lamiyaalkhaleej.com</a>
                       </div>
                     </div>
                   </div>

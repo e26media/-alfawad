@@ -386,9 +386,9 @@ export default function AlfawadHome() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-16 md:py-32 bg-[#f4f5f6]">
+      <section className="py-12 md:py-24 bg-[#f4f5f6]">
         <div className="container mx-auto px-4 lg:px-12 max-w-[1400px]">
-          <div className="mb-12 md:mb-20">
+          <div className="mb-10 md:mb-20">
             <span className="text-alfawad-primary font-black text-[12px] md:text-[14px] uppercase tracking-[0.4em] mb-3 md:mb-4 block">{t('industrial.why_us.subtitle')}</span>
             <h2 className="text-[26px] sm:text-[34px] md:text-[50px] font-black text-black leading-tight max-w-[600px] uppercase tracking-tighter">
               {t('industrial.why_us.title')}
@@ -419,12 +419,12 @@ export default function AlfawadHome() {
                 desc: t('industrial.why_us.features.safety_desc')
               },
             ].map((item, i) => (
-              <div key={i} className="bg-white p-8 md:p-12 h-full flex flex-col shadow-sm group relative transition-all duration-500 transform hover:-translate-y-2 border-b-4 border-transparent hover:border-alfawad-primary">
-                <div className="text-alfawad-primary mb-6 md:mb-8 group-hover:scale-110 transition-transform duration-500">
+              <div key={i} className="bg-white p-6 md:p-12 h-auto md:h-full flex flex-col shadow-sm group relative transition-all duration-500 transform hover:-translate-y-2 border-b-4 border-transparent hover:border-alfawad-primary">
+                <div className="text-alfawad-primary mb-4 md:mb-8 group-hover:scale-110 transition-transform duration-500">
                   {item.icon}
                 </div>
-                <h3 className="text-[20px] md:text-[24px] font-black text-black mb-4 md:mb-6 uppercase tracking-tighter">{item.title}</h3>
-                <p className="text-[#666666] text-[15px] md:text-[16px] leading-relaxed font-medium">
+                <h3 className="text-[20px] md:text-[24px] font-black text-black mb-3 md:mb-6 uppercase tracking-tighter">{item.title}</h3>
+                <p className="text-[#666666] text-[14px] md:text-[16px] leading-relaxed font-medium">
                   {item.desc}
                 </p>
               </div>

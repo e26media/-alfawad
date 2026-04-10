@@ -69,7 +69,7 @@ const Contact = () => {
 
               {contactInfo.map((info, i) => (
                 <AnimatedSection key={i} delay={i * 0.1}>
-                  <div className="bg-[#fcfcfc] p-10 flex items-start gap-8 border-l-8 border-transparent hover:border-alfawad-primary transition-all duration-500 hover:shadow-2xl group">
+                  <div className="bg-[#fcfcfc] p-10 flex flex-col sm:flex-row items-start gap-8 border-l-8 border-transparent hover:border-alfawad-primary transition-all duration-500 hover:shadow-2xl group">
                     <div className="w-14 h-14 bg-black text-white flex items-center justify-center flex-shrink-0 group-hover:bg-alfawad-primary transition-colors">
                       <info.icon className="w-6 h-6" />
                     </div>
@@ -82,7 +82,7 @@ const Contact = () => {
                                 <span className="text-[16px] font-black uppercase tracking-tighter text-black leading-tight">{c.name}</span>
                                 <div className="flex flex-col gap-0.5">
                                   {c.numbers.map(n => (
-                                    <a key={n} href={n.includes('@') ? `mailto:${n}` : `tel:${n.replace(/\s/g, '')}`} className="text-[11px] font-black uppercase tracking-widest text-alfawad-primary hover:text-black transition-colors">{n}</a>
+                                    <a key={n} href={n.includes('@') ? `mailto:${n}` : `tel:${n.replace(/\s/g, '')}`} className="text-[11px] font-black uppercase tracking-widest text-alfawad-primary hover:text-black transition-colors break-all">{n}</a>
                                   ))}
                                 </div>
                             </div>

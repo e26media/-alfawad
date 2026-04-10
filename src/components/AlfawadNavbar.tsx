@@ -3,6 +3,7 @@ import { ChevronDown, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
+import { LanguageToggleInline } from "./LanguageToggle";
 
 const ALFAWAD_LINKS = [
   { nameKey: "industrial.nav.home", path: "/alfawad" },
@@ -47,7 +48,7 @@ const AlfawadNavbar = () => {
   };
 
   return (
-    <nav className="bg-white text-black shadow-md sticky top-0 z-50">
+    <nav className="bg-white text-black shadow-md sticky top-9 z-50">
       <div className="container mx-auto px-4 lg:px-8 max-w-[1400px]">
         <div className="flex justify-between items-center h-24">
           
@@ -97,7 +98,7 @@ const AlfawadNavbar = () => {
             ))}
 
             {/* Social Icons Right */}
-            <div className="flex items-center gap-4 ml-6 pl-6 border-l border-gray-200">
+            <div className="flex items-center gap-4 ms-6 ps-6 border-s border-gray-200">
                <a href="#" className="text-gray-400 hover:text-blue-600 transition-colors"><span className="text-sm font-black">f</span></a>
                <a href="#" className="text-gray-400 hover:text-pink-500 transition-colors"><span className="text-sm font-black">IG</span></a>
                <a href="#" className="text-gray-400 hover:text-blue-700 transition-colors"><span className="text-sm font-black">IN</span></a>
@@ -105,19 +106,20 @@ const AlfawadNavbar = () => {
             </div>
           </div>
 
-          <div className="hidden lg:flex items-center ml-4">
+          <div className="hidden lg:flex items-center ms-4">
              <Link to="/" className="text-[10px] font-bold bg-gray-100 text-gray-500 px-3 py-1.5 rounded-full hover:bg-alfawad-primary hover:text-white transition-all uppercase">
                {t('industrial.nav.exit')}
              </Link>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden p-2 text-black hover:bg-gray-100 rounded-md"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              className="lg:hidden p-2 text-black hover:bg-gray-100 rounded-md"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -131,8 +133,11 @@ const AlfawadNavbar = () => {
             className="lg:hidden bg-alfawad-dark overflow-hidden"
           >
             <div className="px-4 py-4 flex flex-col gap-2">
+              <div className="flex justify-end mb-2">
+                <LanguageToggleInline />
+              </div>
               {ALFAWAD_LINKS.map((link) => (
-                <div key={link.name}>
+                <div key={link.nameKey}>
                   {link.dropdown ? (
                     <div>
                       <button

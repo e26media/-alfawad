@@ -33,7 +33,7 @@ const Contact = () => {
             {/* Contact Details Column */}
             <div className="w-full lg:w-1/3 flex flex-col gap-6">
 
-              <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 flex gap-6 items-start group hover:border-alfawad-primary transition-colors">
+              <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 flex flex-col sm:flex-row gap-6 items-start group hover:border-alfawad-primary transition-colors">
                 <div className="w-14 h-14 bg-red-50 rounded-full flex items-center justify-center text-alfawad-primary group-hover:bg-alfawad-primary group-hover:text-white transition-colors shrink-0">
                   <MapPin className="w-6 h-6" />
                 </div>
@@ -45,7 +45,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 flex gap-6 items-start group hover:border-alfawad-primary transition-colors">
+              <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 flex flex-col sm:flex-row gap-6 items-start group hover:border-alfawad-primary transition-colors">
                 <div className="w-14 h-14 bg-red-50 rounded-full flex items-center justify-center text-alfawad-primary group-hover:bg-alfawad-primary group-hover:text-white transition-colors shrink-0">
                   <Phone className="w-6 h-6" />
                 </div>
@@ -71,7 +71,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 flex gap-6 items-start group hover:border-alfawad-primary transition-colors">
+              <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 flex flex-col sm:flex-row gap-6 items-start group hover:border-alfawad-primary transition-colors">
                 <div className="w-14 h-14 bg-red-50 rounded-full flex items-center justify-center text-alfawad-primary group-hover:bg-alfawad-primary group-hover:text-white transition-colors shrink-0">
                   <Mail className="w-6 h-6" />
                 </div>
@@ -80,9 +80,9 @@ const Contact = () => {
                   <div className="flex flex-col gap-6">
                     <div className="flex flex-col">
                       {/* <span className="text-[16px] font-black uppercase tracking-tighter text-gray-900 leading-tight">General Support</span> */}
-                      <a href="mailto:info@lamiyaalkhaleej.com" className="text-[11px] font-black uppercase tracking-widest text-alfawad-primary hover:text-black transition-colors">info@lamiyaalkhaleej.com</a>
-                                         <a href="mailto:ashrafalbadan@lamiyaalkhaleej.com" className="text-[11px] font-black uppercase tracking-widest text-alfawad-primary hover:text-black transition-colors">ashrafalbadan@lamiyaalkhaleej.com</a>
-                      <a href="mailto:ahamedsuhail@lamiyaalkhaleej.com" className="text-[11px] font-black uppercase tracking-widest text-alfawad-primary hover:text-black transition-colors">ahamedsuhail@lamiyaalkhaleej.com</a>
+                      <a href="mailto:info@lamiyaalkhaleej.com" className="text-[11px] font-black uppercase tracking-widest text-alfawad-primary hover:text-black transition-colors break-all">info@lamiyaalkhaleej.com</a>
+                                         <a href="mailto:ashrafalbadan@lamiyaalkhaleej.com" className="text-[11px] font-black uppercase tracking-widest text-alfawad-primary hover:text-black transition-colors break-all">ashrafalbadan@lamiyaalkhaleej.com</a>
+                      <a href="mailto:ahamedsuhail@lamiyaalkhaleej.com" className="text-[11px] font-black uppercase tracking-widest text-alfawad-primary hover:text-black transition-colors break-all">ahamedsuhail@lamiyaalkhaleej.com</a>
 
                     </div>
                    
@@ -91,7 +91,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 flex gap-6 items-start group hover:border-alfawad-primary transition-colors">
+              <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 flex flex-col sm:flex-row gap-6 items-start group hover:border-alfawad-primary transition-colors">
                 <div className="w-14 h-14 bg-red-50 rounded-full flex items-center justify-center text-alfawad-primary group-hover:bg-alfawad-primary group-hover:text-white transition-colors shrink-0">
                   <Clock className="w-6 h-6" />
                 </div>

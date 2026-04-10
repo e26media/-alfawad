@@ -3,39 +3,14 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const mainlogo = laklogo;
 
-const navLinks = [
-  { label: "Home", path: "/industrial" },
-  {
-    label: "Overview", children: [
-      { label: "Introduction", path: "/industrial/introduction" },
-      { label: "Chairman Message", path: "/industrial/chairman-message" },
-      { label: "CEO Message", path: "/industrial/ceo-message" },
-      { label: "Vision & Mission", path: "/industrial/vision-mission" },
-      { label: "Quality Policy", path: "/industrial/quality-policy" },
-      { label: "Environment & Safety Policy", path: "/industrial/environment-safety" },
-    ]
-  },
-  {
-    label: "Our Services", children: [
-         { label: "Material Service", path: "/industrial/services/material-service" },
-      { label: "Technical Manpower Service", path: "/industrial/services/technical-manpower" },
-      { label: "Heavy Equipment Service", path: "/industrial/services/heavy-equipment" },
-      { label: "Project Support Service", path: "/industrial/services/project-support" },
-      { label: "Project Management Service", path: "/industrial/services/project-management" },
-   
-    ]
-  },
-  { label: "Our Brochure", path: "/industrial/brochure" },
-  // { label: "Clients", path: "/industrial/clients" },
-  { label: "Career", path: "/industrial/career" },
-  { label: "Enquiry", path: "/industrial/enquiry" },
-  { label: "Contact Us", path: "/industrial/contact" },
-];
-
 const AlfawadHeader = () => {
+  const { t, i18n } = useTranslation();
+  const isAr = i18n.language === "ar";
+
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -52,12 +27,44 @@ const AlfawadHeader = () => {
     setActiveDropdown(null);
   }, [location]);
 
+  // Nav links using translation keys
+  const navLinks = [
+    { labelKey: "industrial.nav.home", path: "/industrial" },
+    {
+      labelKey: "industrial.nav.overview",
+      children: [
+        { labelKey: "industrial.nav.introduction", path: "/industrial/introduction" },
+        { labelKey: "industrial.nav.chairman", path: "/industrial/chairman-message" },
+        { labelKey: "industrial.nav.vision", path: "/industrial/vision-mission" },
+        { labelKey: "industrial.nav.quality", path: "/industrial/quality-policy" },
+        { labelKey: "industrial.nav.env_safety", path: "/industrial/environment-safety" },
+      ],
+    },
+    {
+      labelKey: "industrial.nav.services",
+      children: [
+        { labelKey: "industrial.nav.material", path: "/industrial/services/material-service" },
+        { labelKey: "industrial.nav.manpower", path: "/industrial/services/technical-manpower" },
+        { labelKey: "industrial.nav.equipment", path: "/industrial/services/heavy-equipment" },
+        { labelKey: "industrial.nav.support", path: "/industrial/services/project-support" },
+        { labelKey: "industrial.nav.management", path: "/industrial/services/project-management" },
+      ],
+    },
+    { labelKey: "industrial.nav.brochure", path: "/industrial/brochure" },
+    { labelKey: "industrial.nav.career", path: "/industrial/career" },
+    { labelKey: "industrial.nav.enquiry", path: "/industrial/enquiry" },
+    { labelKey: "industrial.nav.contact", path: "/industrial/contact" },
+  ];
+
   return (
-    <header className="fixed  left-0 right-0 z-50 transition-all duration-500 font-muli">
-      <div 
+    <header
+      className="fixed top-9 left-0 right-0 z-50 transition-all duration-500 font-muli"
+      dir={isAr ? "rtl" : "ltr"}
+    >
+      <div
         className={`w-full transition-all duration-500 border-b border-alfawad-primary/10 ${
-          scrolled 
-            ? "bg-white/95 backdrop-blur-xl shadow-xl py-2" 
+          scrolled
+            ? "bg-white/95 backdrop-blur-xl shadow-xl py-2"
             : "bg-white/90 backdrop-blur-md shadow-lg py-3"
         }`}
       >
@@ -65,50 +72,56 @@ const AlfawadHeader = () => {
           {/* Logo Section */}
           <div className="flex-shrink-0">
             <Link to="/industrial" className="flex items-center transition-transform duration-500 hover:scale-105">
-              <img 
-                src={mainlogo} 
-                alt="LAMIYA AL KHALEEJ AL ITTEHAD" 
+              <img
+                src={mainlogo}
+                alt="LAMIYA AL KHALEEJ AL ITTEHAD"
                 className={`transition-all duration-500 ${scrolled ? "h-9 md:h-11" : "h-11 md:h-13"} w-auto object-contain`}
               />
             </Link>
           </div>
 
-          {/* Desktop Navigation - Centered */}
+          {/* Desktop Navigation */}
           <nav className="hidden lg:flex flex-1 items-center justify-center gap-x-0.5 xl:gap-x-1.5 px-6">
             {navLinks.map((link) => (
-              <div key={link.label} className="relative group">
+              <div key={link.labelKey} className="relative group">
                 {link.children ? (
-                  <button className={`flex items-center gap-1.5 px-5 py-2.5 rounded-xl text-[12px] xl:text-[13px] font-bold uppercase tracking-wider transition-all duration-300 ${
-                    location.pathname.includes('/services') ? "text-alfawad-primary bg-alfawad-primary/5" : "text-gray-800 hover:text-black hover:bg-gray-50/50"
-                  }`}>
-                    {link.label} 
+                  <button
+                    className={`flex items-center gap-1.5 px-5 py-2.5 rounded-xl text-[12px] xl:text-[13px] font-bold uppercase tracking-wider transition-all duration-300 ${
+                      location.pathname.includes("/services")
+                        ? "text-alfawad-primary bg-alfawad-primary/5"
+                        : "text-gray-800 hover:text-black hover:bg-gray-50/50"
+                    }`}
+                  >
+                    {t(link.labelKey)}
                     <ChevronDown className="w-3.5 h-3.5 transition-transform group-hover:rotate-180" strokeWidth={2} />
                   </button>
                 ) : (
                   <Link
                     to={link.path!}
                     className={`px-5 py-2.5 rounded-xl text-[12px] xl:text-[13px] font-bold uppercase tracking-wider transition-all duration-300 block ${
-                      location.pathname === link.path 
-                        ? "text-alfawad-primary bg-alfawad-primary/10 shadow-sm" 
+                      location.pathname === link.path
+                        ? "text-alfawad-primary bg-alfawad-primary/10 shadow-sm"
                         : "text-gray-800 hover:text-black hover:bg-gray-50/50"
                     }`}
                   >
-                    {link.label}
+                    {t(link.labelKey)}
                   </Link>
                 )}
 
-                {/* Dropdown Menu */}
+                {/* Dropdown */}
                 {link.children && (
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 transform translate-y-2 group-hover:translate-y-0">
+                  <div
+                    className={`absolute top-full ${isAr ? "right-0" : "left-1/2 -translate-x-1/2"} pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 transform translate-y-2 group-hover:translate-y-0`}
+                  >
                     <div className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-[0_30px_70px_rgba(0,0,0,0.2)] border border-gray-100/50 py-4 min-w-[280px] overflow-hidden">
                       {link.children.map((child) => (
                         <Link
                           key={child.path}
                           to={child.path}
-                          className="px-8 py-3.5 text-[11px] font-black text-gray-700 hover:text-alfawad-primary hover:bg-gray-50 transition-all border-b border-gray-50 last:border-0 uppercase tracking-widest flex items-center justify-between"
+                          className={`px-8 py-3.5 text-[11px] font-black text-gray-700 hover:text-alfawad-primary hover:bg-gray-50 transition-all border-b border-gray-50 last:border-0 uppercase tracking-widest flex items-center justify-between ${isAr ? "flex-row-reverse" : ""}`}
                         >
-                          {child.label}
-                          <span className="opacity-0 group-hover:opacity-100 transition-all translate-x-2 group-hover:translate-x-0">&rarr;</span>
+                          {t(child.labelKey)}
+                          <span className="opacity-40 text-xs">{isAr ? "←" : "→"}</span>
                         </Link>
                       ))}
                     </div>
@@ -125,18 +138,18 @@ const AlfawadHeader = () => {
             aria-label="Toggle mobile menu"
           >
             <div className="relative w-6 h-6">
-               <motion.div
-                  animate={{ rotate: mobileOpen ? 45 : 0, y: mobileOpen ? 0 : -6 }}
-                  className="absolute top-1/2 left-0 w-6 h-0.5 bg-white origin-center"
-               />
-               <motion.div
-                  animate={{ opacity: mobileOpen ? 0 : 1 }}
-                  className="absolute top-1/2 left-0 w-6 h-0.5 bg-white -translate-y-1/2"
-               />
-               <motion.div
-                  animate={{ rotate: mobileOpen ? -45 : 0, y: mobileOpen ? 0 : 6 }}
-                  className="absolute top-1/2 left-0 w-6 h-0.5 bg-white origin-center"
-               />
+              <motion.div
+                animate={{ rotate: mobileOpen ? 45 : 0, y: mobileOpen ? 0 : -6 }}
+                className="absolute top-1/2 left-0 w-6 h-0.5 bg-white origin-center"
+              />
+              <motion.div
+                animate={{ opacity: mobileOpen ? 0 : 1 }}
+                className="absolute top-1/2 left-0 w-6 h-0.5 bg-white -translate-y-1/2"
+              />
+              <motion.div
+                animate={{ rotate: mobileOpen ? -45 : 0, y: mobileOpen ? 0 : 6 }}
+                className="absolute top-1/2 left-0 w-6 h-0.5 bg-white origin-center"
+              />
             </div>
           </button>
         </div>
@@ -154,26 +167,29 @@ const AlfawadHeader = () => {
               className="fixed inset-0 bg-black/60 backdrop-blur-sm z-30 lg:hidden"
             />
             <motion.div
-              initial={{ x: "100%" }}
+              initial={{ x: isAr ? "-100%" : "100%" }}
               animate={{ x: 0 }}
-              exit={{ x: "100%" }}
+              exit={{ x: isAr ? "-100%" : "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="lg:hidden fixed right-0 top-0 bottom-0 w-[85%] max-w-[400px] bg-white z-40 shadow-[-10px_0_50px_rgba(0,0,0,0.1)] flex flex-col pt-[80px]"
+              dir={isAr ? "rtl" : "ltr"}
+              className={`lg:hidden fixed ${isAr ? "left-0" : "right-0"} top-0 bottom-0 w-[85%] max-w-[400px] bg-white z-40 shadow-[-10px_0_50px_rgba(0,0,0,0.1)] flex flex-col pt-[80px]`}
             >
               <div className="flex flex-col h-full overflow-y-auto px-8 py-10 gap-1">
                 {navLinks.map((link) => (
-                  <div key={link.label} className="w-full">
+                  <div key={link.labelKey} className="w-full">
                     {link.children ? (
                       <>
                         <button
-                          onClick={() => setActiveDropdown(activeDropdown === link.label ? null : link.label)}
+                          onClick={() => setActiveDropdown(activeDropdown === link.labelKey ? null : link.labelKey)}
                           className="w-full flex items-center justify-between py-5 text-[15px] font-black text-black border-b border-gray-50 uppercase tracking-widest"
                         >
-                          {link.label}
-                          <ChevronDown className={`w-5 h-5 transition-transform ${activeDropdown === link.label ? "rotate-180 text-alfawad-primary" : ""}`} />
+                          {t(link.labelKey)}
+                          <ChevronDown
+                            className={`w-5 h-5 transition-transform ${activeDropdown === link.labelKey ? "rotate-180 text-alfawad-primary" : ""}`}
+                          />
                         </button>
                         <AnimatePresence>
-                          {activeDropdown === link.label && (
+                          {activeDropdown === link.labelKey && (
                             <motion.div
                               initial={{ height: 0, opacity: 0 }}
                               animate={{ height: "auto", opacity: 1 }}
@@ -186,7 +202,7 @@ const AlfawadHeader = () => {
                                   to={child.path}
                                   className="block px-6 py-4 text-[13px] font-bold text-gray-500 hover:text-alfawad-primary uppercase tracking-widest border-b border-white last:border-0"
                                 >
-                                  {child.label}
+                                  {t(child.labelKey)}
                                 </Link>
                               ))}
                             </motion.div>
@@ -200,19 +216,24 @@ const AlfawadHeader = () => {
                           location.pathname === link.path ? "text-alfawad-primary" : "text-black hover:text-alfawad-primary"
                         }`}
                       >
-                        {link.label}
+                        {t(link.labelKey)}
                       </Link>
                     )}
                   </div>
                 ))}
-                
+
                 <div className="mt-12 flex flex-col gap-8 pb-10">
-                  <Link to="/industrial/enquiry" className="bg-black text-white py-5 rounded-full text-center font-black uppercase tracking-[0.2em] shadow-xl active:scale-95 transition-all">
-                    Request A Quote
+                  <Link
+                    to="/industrial/enquiry"
+                    className="bg-black text-white py-5 rounded-full text-center font-black uppercase tracking-[0.2em] shadow-xl active:scale-95 transition-all"
+                  >
+                    {isAr ? "طلب عرض سعر" : "Request A Quote"}
                   </Link>
-                  
+
                   <div className="flex flex-col gap-8">
-                    <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest text-center">Direct Support</p>
+                    <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest text-center">
+                      {isAr ? "الدعم المباشر" : "Direct Support"}
+                    </p>
                     <div className="flex flex-col gap-6">
                       <div className="flex flex-col items-center text-center">
                         <span className="text-[14px] font-black uppercase tracking-tighter text-black leading-tight">Ashraf Al badan</span>
