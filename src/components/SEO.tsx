@@ -6,7 +6,10 @@ interface SEOProps {
   description: string;
 }
 
-const SEO = ({ title, description }: SEOProps) => {
+const SEO = ({ 
+  title = "Lamiya Al Khaleej Al Ittehad | General Contracting & Residential Services", 
+  description = "Lamiya Al Khaleej Al Ittehad Establishment for General Contracting provides reliable residential care and professional contracting services across Saudi Arabia." 
+}: SEOProps) => {
   useEffect(() => {
     document.title = title;
     const metaDescription = document.querySelector('meta[name="description"]');

@@ -43,7 +43,7 @@ export default function TopBarToggle() {
           }`}
         >
           <span className="hidden sm:block">{t('nav.cleaning_services', 'Cleaning & Maintenance')}</span>
-          <span className="block sm:hidden">{t('nav.cleaning', 'Cleaning')}</span>
+          <span className="block sm:hidden">{t('nav.cleaning', 'Cleaning & Maintenance')}</span>
         </Link>
       </div>
     </motion.div>

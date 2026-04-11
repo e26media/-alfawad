@@ -179,10 +179,7 @@ const AlfawadFooter = () => {
                       <span className="text-[10px] font-black uppercase tracking-[0.4em] text-alfawad-primary leading-none block">{isAr ? "خطوط مباشرة" : "Direct Lines"}</span>
                       
                       <div className="grid gap-8">
-                        <div className="flex flex-col">
-                          <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">{isAr ? "أشرف البدن" : "Ashraf Al badan"}</span>
-                          <a href="tel:+966507077611" className="text-[13px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors break-all" dir="ltr">+966 50 707 7611</a>
-                        </div>
+                       
 
                         <div className="flex flex-col">
                           <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">{isAr ? "أحمد سهيل" : "Ahamed suhail"}</span>
@@ -195,6 +192,11 @@ const AlfawadFooter = () => {
                         <div className="flex flex-col">
                           <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">{isAr ? "صفوان" : "Safwan"}</span>
                           <a href="tel:+966583769845" className="text-[13px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors break-all" dir="ltr">+966 58 376 9845</a>
+                        </div>
+
+                         <div className="flex flex-col">
+                          <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">{isAr ? "أشرف البدن" : "Ashraf Al badan"}</span>
+                          <a href="tel:+966507077611" className="text-[13px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors break-all" dir="ltr">+966 50 707 7611</a>
                         </div>
                       </div>
                     </div>

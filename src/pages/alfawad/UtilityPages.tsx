@@ -251,7 +251,7 @@ export const Career = () => {
           <div className="text-center flex flex-col items-center">
             <span className="text-alfawad-primary font-black text-[14px] uppercase tracking-[0.4em] mb-4">{isAr ? "بناء المستقبل" : "Building Futures"}</span>
             <h2 className="text-[36px] md:text-[55px] font-black text-black uppercase tracking-tighter leading-none mb-6">{isAr ? "تقدم في حياتك المهنية" : "Drive Your Career Forward"}</h2>
-            <p className="text-[#666666] text-xl font-medium max-w-3xl leading-relaxed">{isAr ? "تبحث مؤسسة لمياء الخليج دائمًا عن محترفين يسعون للتميز." : "Lamiya alkhaleej alittihad establishment for general contracting is constantly looking for dedicated professionals who thrive on challenge and operational excellence."}</p>
+            <p className="text-[#666666] text-xl font-medium max-w-3xl leading-relaxed">{isAr ? "تبحث مؤسسة لمياء الخليج دائمًا عن محترفين يسعون للتميز." : "Lamiya alkhaleej alittehad establishment for general contracting is constantly looking for dedicated professionals who thrive on challenge and operational excellence."}</p>
           </div>
 
           <div className="bg-black text-white p-12 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 border-l-[12px] border-alfawad-primary">
@@ -301,7 +301,7 @@ export const Career = () => {
               <p className="text-white/60 font-bold leading-relaxed">
                 {isAr ? "تجنب الانتظار. أرسل سيرتك الذاتية الشاملة مباشرة." : "Avoid the wait. Forward your comprehensive CV packet directly to our strategic human resources mailbox."}
               </p>
-              <a href="mailto:info@lamiyaalkhaleej.com" className="text-alfawad-primary font-black text-[22px] tracking-tight hover:text-white transition-colors border-b-2 border-alfawad-primary pb-1">info@lamiyaalkhaleej.com</a>
+              <a href="mailto:info@lamiyaalkhaleej.com" className="text-alfawad-primary font-black text-[14px] sm:text-[20px]  tracking-tight hover:text-white transition-colors border-b-2 border-alfawad-primary pb-1">info@lamiyaalkhaleej.com</a>
             </div>
           </div>
         </div>

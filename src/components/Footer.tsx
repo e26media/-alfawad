@@ -24,7 +24,7 @@ const Footer = () => {
           </div>
           <div className="text-center relative z-10 transform -rotate-2">
             <a href="tel:+966507077611" className="bg-black text-white px-10 py-6 font-black text-2xl md:text-4xl hover:bg-white hover:text-black transition-all tracking-tighter uppercase inline-block shadow-2xl" dir="ltr">
-              +966 50 707 7611
+            +966 50 707 7611
             </a>
             <div className="mt-6 flex flex-col items-center gap-2">
               <a href="mailto:info@lamiyaalkhaleej.com" className="text-black/80 text-[10px] font-black uppercase tracking-[0.2em] hover:text-white transition-colors break-all">info@lamiyaalkhaleej.com</a>
@@ -124,10 +124,7 @@ const Footer = () => {
                   <span className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-600">{isAr ? "خطوط مباشرة" : "Direct Lines"}</span>
                   
                   <div className="flex flex-col gap-5">
-                    <div className="flex flex-col">
-                      <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">{isAr ? "أشرف البدن" : "Ashraf Al badan"}</span>
-                      <a href="tel:+966507077611" className="text-[12px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors break-all" dir="ltr">+966 50 707 7611</a>
-                    </div>
+                    
 
                     <div className="flex flex-col">
                       <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">{isAr ? "أحمد سهيل" : "Ahamed suhail"}</span>
@@ -136,10 +133,15 @@ const Footer = () => {
                         <a href="tel:+966566567518" className="text-[12px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors break-all" dir="ltr">+966 56 656 7518</a>
                       </div>
                     </div>
+                    
 
                     <div className="flex flex-col">
                       <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">{isAr ? "صفوان" : "Safwan"}</span>
                       <a href="tel:+966583769845" className="text-[12px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors break-all" dir="ltr">+966 58 376 9845</a>
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">{isAr ? "أشرف البدن" : "Ashraf Al badan"}</span>
+                      <a href="tel:+966507077611" className="text-[12px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors break-all" dir="ltr">+966 50 707 7611</a>
                     </div>
                   </div>
                 </div>

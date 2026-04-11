@@ -83,7 +83,7 @@ const CEOMessage = () => {
                         <div className="flex flex-col gap-1">
                           <div className="text-[28px] font-black uppercase tracking-tighter text-black leading-none">{isAr ? "محمد نعمان حسين" : "Mohammed Nouman Hussain"}</div>
                           <div className="text-alfawad-primary font-black uppercase tracking-widest text-[12px] mt-2">{isAr ? "الرئيس التنفيذي" : "Chief Executive Officer"}</div>
-                          <div className="text-gray-400 font-bold uppercase tracking-widest text-[10px]">{isAr ? "مؤسسة لمياء الخليج الاتحاد للمقاولات العامة" : "Lamiya alkhaleej alittihad establishment for general contracting"}</div>
+                          <div className="text-gray-400 font-bold uppercase tracking-widest text-[10px]">{isAr ? "مؤسسة لمياء الخليج الاتحاد للمقاولات العامة" : "Lamiya alkhaleej alittehad establishment for general contracting"}</div>
                         </div>
                         
                         {/* Decorative Signature Placeholder */}

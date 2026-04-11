@@ -116,10 +116,7 @@ const Booking = () => {
                       <span className="text-[10px] font-black uppercase tracking-[0.4em] text-alfawad-primary leading-none">Support Lines</span>
                       
                       <div className="flex flex-col gap-6">
-                        <div className="flex flex-col">
-                          <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">Ashraf Al badan</span>
-                          <a href="tel:+966507077611" className="text-[12px] font-bold uppercase tracking-widest text-alfawad-primary/60 hover:text-alfawad-primary transition-colors">+966 50 707 7611</a>
-                        </div>
+                      
 
                         <div className="flex flex-col">
                           <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">Ahamed suhail</span>
@@ -132,6 +129,10 @@ const Booking = () => {
                         <div className="flex flex-col">
                           <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">Safwan</span>
                           <a href="tel:+966583769845" className="text-[12px] font-bold uppercase tracking-widest text-alfawad-primary/60 hover:text-alfawad-primary transition-colors">+966 58 376 9845</a>
+                        </div>
+                          <div className="flex flex-col">
+                          <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">Ashraf Al badan</span>
+                          <a href="tel:+966507077611" className="text-[12px] font-bold uppercase tracking-widest text-alfawad-primary/60 hover:text-alfawad-primary transition-colors">+966 50 707 7611</a>
                         </div>
                       </div>
                     </div>

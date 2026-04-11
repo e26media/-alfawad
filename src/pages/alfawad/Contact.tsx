@@ -52,10 +52,7 @@ const Contact = () => {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 uppercase tracking-widest mb-2">{isAr ? "الهواتف" : "Phones"}</h3>
                   <div className="flex flex-col gap-6">
-                    <div className="flex flex-col">
-                      <span className="text-[18px] font-black uppercase tracking-tighter text-gray-900 leading-tight">{isAr ? "أشرف البدن" : "Ashraf Al badan"}</span>
-                      <a href="tel:+966507077611" className="text-[12px] font-black uppercase tracking-widest text-alfawad-primary hover:text-black transition-colors">+966 50 707 7611</a>
-                    </div>
+                  
                     <div className="flex flex-col">
                       <span className="text-[18px] font-black uppercase tracking-tighter text-gray-900 leading-tight">{isAr ? "أحمد سهيل" : "Ahamed suhail"}</span>
                       <div className="flex flex-col gap-1">
@@ -66,6 +63,10 @@ const Contact = () => {
                     <div className="flex flex-col">
                       <span className="text-[18px] font-black uppercase tracking-tighter text-gray-900 leading-tight">{isAr ? "صفوان" : "Safwan"}</span>
                       <a href="tel:+966583769845" className="text-[12px] font-black uppercase tracking-widest text-alfawad-primary hover:text-black transition-colors">+966 58 376 9845</a>
+                    </div>
+                      <div className="flex flex-col">
+                      <span className="text-[18px] font-black uppercase tracking-tighter text-gray-900 leading-tight">{isAr ? "أشرف البدن" : "Ashraf Al badan"}</span>
+                      <a href="tel:+966507077611" className="text-[12px] font-black uppercase tracking-widest text-alfawad-primary hover:text-black transition-colors">+966 50 707 7611</a>
                     </div>
                   </div>
                 </div>
@@ -81,7 +82,9 @@ const Contact = () => {
                     <div className="flex flex-col">
                       {/* <span className="text-[16px] font-black uppercase tracking-tighter text-gray-900 leading-tight">General Support</span> */}
                       <a href="mailto:info@lamiyaalkhaleej.com" className="text-[11px] font-black uppercase tracking-widest text-alfawad-primary hover:text-black transition-colors break-all">info@lamiyaalkhaleej.com</a>
+                      <br/>
                                          <a href="mailto:ashrafalbadan@lamiyaalkhaleej.com" className="text-[11px] font-black uppercase tracking-widest text-alfawad-primary hover:text-black transition-colors break-all">ashrafalbadan@lamiyaalkhaleej.com</a>
+                                         <br/>
                       <a href="mailto:ahamedsuhail@lamiyaalkhaleej.com" className="text-[11px] font-black uppercase tracking-widest text-alfawad-primary hover:text-black transition-colors break-all">ahamedsuhail@lamiyaalkhaleej.com</a>
 
                     </div>
@@ -162,7 +165,7 @@ const Contact = () => {
                   allowFullScreen={false}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Lamiya alkhaleej alittihad establishment for general contractingHeadquarters Jubail"
+                  title="Lamiya alkhaleej alittehad establishment for general contractingHeadquarters Jubail"
                 ></iframe>
               </div>
 

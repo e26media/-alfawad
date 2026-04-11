@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ChevronRight, Shield, Award, BarChart, Settings, Users } from "lucide-react";
 import OverviewSidebar from "../../components/alfawad/OverviewSidebar";
+import SEO from "@/components/SEO";
 import { useTranslation } from "react-i18next";
 
 const Overview = () => {
@@ -9,6 +10,10 @@ const Overview = () => {
 
   return (
     <div className="flex flex-col min-h-screen bg-white font-muli">
+      <SEO 
+        title={isAr ? "نظرة عامة على الشركة | الفواد" : "Corporate Overview | Al Fawad"}
+        description={isAr ? "نظرة عامة على خدمات شركة الفواد الصناعية والمقاولات." : "A comprehensive overview of Al Fawad's industrial services, engineering, and construction capabilities in Saudi Arabia."}
+      />
       
       {/* Premium Header Banner Section - Refined for Vision 2030 Design */}
       <section className="relative w-full h-[450px] md:h-[550px] overflow-hidden flex items-center">

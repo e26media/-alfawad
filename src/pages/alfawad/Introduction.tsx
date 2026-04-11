@@ -54,7 +54,7 @@ const Introduction = () => {
                   </div>
 
                   <p className="text-[18px] md:text-[20px] font-bold text-gray-900 leading-relaxed italic border-b border-gray-100 pb-8">
-                    {isAr ? `"مؤسسة لمياء الخليج الاتحاد للمقاولات العامة هي مؤسسة مقاولات متنامية وموثوقة في المملكة العربية السعودية، متخصصة في خدمات الدعم الصناعي والإنشائي."` : `"Lamiya alkhaleej alittihad establishment for general contracting is a growing and trusted contracting organization in Saudi Arabia specializing in industrial and construction support services."`}
+                    {isAr ? `"مؤسسة لمياء الخليج الاتحاد للمقاولات العامة هي مؤسسة مقاولات متنامية وموثوقة في المملكة العربية السعودية، متخصصة في خدمات الدعم الصناعي والإنشائي."` : `"Lamiya alkhaleej alittehad establishment for general contracting is a growing and trusted contracting organization in Saudi Arabia specializing in industrial and construction support services."`}
                   </p>
 
                   <div className="text-[#666666] leading-[36px] text-[18px] font-medium flex flex-col gap-6">
@@ -67,7 +67,7 @@ const Introduction = () => {
                     </p>
 
                     <p>
-                      {isAr ? "تشمل مناطق خدماتنا بشكل رئيسي المنطقة الشرقية (الخبر، الجبيل، الدمام) والمنطقة الوسطى (الرياض). من خلال قاعدة عمليات قوية وقوى عاملة ذات خبرة، ندعم المشاريع في المصانع الصناعية والمصافي والمنشآت البتروكيماوية وتطوير البنية التحتية." : "Our service areas mainly include Eastern Province (Al Khobar, Jubail, Dammam) and Central Region (Riyadh). With a strong operational base and experienced workforce, we support projects in industrial plants, refineries, petrochemical zones, infrastructure developments, and commercial construction sites."}
+                      {isAr ? "تشمل مناطق خدمتنا بشكل رئيسي المنطقة الشرقية والمنطقة الوسطى، وتتوفر خدماتنا في جميع مناطق المملكة العربية السعودية (KSA).  بفضل قاعدة تشغيلية قوية وقوة عاملة ذات خبرة، ندعم المشاريع في المصانع الصناعية، والمصافي، ومناطق البتروكيماويات، وتطوير البنية التحتية، ومواقع البناء التجارية." : "Our service areas mainly include the Eastern Province and the Central Region, and our services are available across all regions of Saudi Arabia (KSA). With a strong operational base and an experienced workforce, we support projects across industrial plants, refineries, petrochemical zones, infrastructure developments, and commercial construction sites"}
                     </p>
                   </div>
 

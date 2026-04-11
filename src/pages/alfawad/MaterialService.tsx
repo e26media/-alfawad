@@ -47,7 +47,7 @@ const MaterialService = () => {
   const productRanges = [
     "Pipes, Valves & Fittings", "Fin Tubes", "Grinding Balls", "Ceramic balls (Grinding)",
     "Pumps & Vacuum Pumps", "Fasteners", "Process Equipment", "Electrical Cables",
-    "Scaffolding Items", "Connectors", "Consumables", "Safety Glasses",
+    "Scaffolding Items", "Connectors", "HK Consumables", "Safety Glasses",
     "Hard Hats", "Leather Gloves", "Chemical Resistant Gloves", "Coveralls",
     "Safety Signs and Label", "Hearing Protection"
   ];

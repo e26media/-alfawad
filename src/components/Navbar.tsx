@@ -49,7 +49,7 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-9 left-0 right-0 z-50 transition-all duration-500 font-muli bg-[#fff]"
+      className="fixed top-14 left-0 right-0 z-50 transition-all duration-500 font-muli bg-[#fff]"
     >
       <div 
         className={`w-full transition-all duration-500 border-b border-gray-100/50 ${
@@ -202,10 +202,7 @@ const Navbar = () => {
                   <div className="flex flex-col gap-8">
                     <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest text-center">Direct Support</p>
                     <div className="flex flex-col gap-6">
-                      <div className="flex flex-col items-center text-center">
-                        <span className="text-[14px] font-black uppercase tracking-tighter text-black leading-tight">Ashraf Al badan</span>
-                        <a href="tel:+966507077611" className="text-[11px] font-bold text-alfawad-primary uppercase tracking-widest">+966 50 707 7611</a>
-                      </div>
+                     
                       <div className="flex flex-col items-center text-center">
                         <span className="text-[14px] font-black uppercase tracking-tighter text-black leading-tight">Ahamed suhail</span>
                         <div className="flex flex-col gap-1 items-center">
@@ -216,6 +213,10 @@ const Navbar = () => {
                       <div className="flex flex-col items-center text-center">
                         <span className="text-[14px] font-black uppercase tracking-tighter text-black leading-tight">Safwan</span>
                         <a href="tel:+966583769845" className="text-[11px] font-bold text-alfawad-primary uppercase tracking-widest">+966 58 376 9845</a>
+                      </div>
+                       <div className="flex flex-col items-center text-center">
+                        <span className="text-[14px] font-black uppercase tracking-tighter text-black leading-tight">Ashraf Al badan</span>
+                        <a href="tel:+966507077611" className="text-[11px] font-bold text-alfawad-primary uppercase tracking-widest">+966 50 707 7611</a>
                       </div>
                     </div>
                     <div className="flex flex-col gap-3 items-center justify-center mt-6 pt-6 border-t border-gray-100 w-full">

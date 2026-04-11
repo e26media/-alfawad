@@ -110,7 +110,7 @@ const Index = () => {
             </div>
 
             {/* Premium Logo on Right Side - Responsive View */}
-            <div className="flex items-center justify-center p-6 md:p-12 bg-white/10 backdrop-blur-xl border border-white/20 rounded-[2.5rem] md:rounded-[4rem] shadow-[0_30px_100px_rgba(0,0,0,0.2)] hover:scale-105 transition-all duration-700 group relative overflow-hidden">
+            <div className="flex items-center justify-center p-6 md:p-12  rounded-[2.5rem] md:rounded-[4rem]  hover:scale-105 transition-all duration-700 group relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-tr from-alfawad-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               <motion.img 
                 initial={{ scale: 0.8, opacity: 0 }}
@@ -286,22 +286,38 @@ const Index = () => {
             </AnimatedSection>
 
             <AnimatedSection delay={0.3}>
-              <div className="relative">
-                <div className="aspect-square bg-cream relative z-10 p-12 overflow-hidden group">
-                  <div className="absolute inset-0 bg-alfawad-primary opacity-0 group-hover:opacity-10 transition-opacity" />
-                  <div className="relative z-20 h-full flex flex-col justify-center">
-                    <Star className="w-16 h-16 text-alfawad-primary mb-10 fill-alfawad-primary" />
-                    <h3 className="text-4xl font-black text-black uppercase tracking-tighter mb-10 leading-tight">{t('cleaning.why_us.standards_title')}</h3>
-                    <p className="text-gray-600 font-bold leading-relaxed mb-10">{t('cleaning.why_us.standards_desc')}</p>
-                    <div className="flex gap-4">
-                      <div className="px-6 py-3 bg-black text-white text-[10px] font-black uppercase tracking-widest">{t('cleaning.why_us.iso')}</div>
-                      <div className="px-6 py-3 bg-white text-black border border-black/10 text-[10px] font-black uppercase tracking-widest">{t('cleaning.why_us.premium')}</div>
-                    </div>
-                  </div>
-                </div>
-                <div className="absolute -top-10 -right-10 w-64 h-64 border-[20px] border-alfawad-primary/10 -z-0" />
-              </div>
-            </AnimatedSection>
+  <div className="relative">
+    <div className="aspect-square bg-cream relative z-10 p-6 md:p-12 overflow-hidden group">
+      <div className="absolute inset-0 bg-alfawad-primary opacity-0 group-hover:opacity-10 transition-opacity" />
+
+      <div className="relative z-20 h-full flex flex-col justify-center">
+        
+        <Star className="w-10 h-10 md:w-16 md:h-16 text-alfawad-primary mb-6 md:mb-10 fill-alfawad-primary" />
+        
+        <h3 className="text-[20px] md:text-4xl font-black text-black uppercase tracking-tight md:tracking-tighter mb-4 md:mb-10 leading-tight">
+          {t('cleaning.why_us.standards_title')}
+        </h3>
+        
+        <p className="text-[14px] md:text-base text-gray-600 font-bold leading-relaxed mb-6 md:mb-10">
+          {t('cleaning.why_us.standards_desc')}
+        </p>
+        
+        <div className="flex gap-2 md:gap-4 flex-wrap">
+          <div className="px-3 py-2 md:px-6 md:py-3 bg-black text-white text-[9px] md:text-[10px] font-black uppercase tracking-wider md:tracking-widest">
+            {t('cleaning.why_us.iso')}
+          </div>
+          
+          <div className="px-3 py-2 md:px-6 md:py-3 bg-white text-black border border-black/10 text-[9px] md:text-[10px] font-black uppercase tracking-wider md:tracking-widest">
+            {t('cleaning.why_us.premium')}
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div className="absolute -top-6 -right-6 md:-top-10 md:-right-10 w-40 h-40 md:w-64 md:h-64 border-[12px] md:border-[20px] border-alfawad-primary/10 -z-0" />
+  </div>
+</AnimatedSection>
           </div>
         </div>
       </section>

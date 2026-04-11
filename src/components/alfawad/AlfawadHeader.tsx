@@ -35,6 +35,7 @@ const AlfawadHeader = () => {
       children: [
         { labelKey: "industrial.nav.introduction", path: "/industrial/introduction" },
         { labelKey: "industrial.nav.chairman", path: "/industrial/chairman-message" },
+        { labelKey: "industrial.nav.ceo", path: "/industrial/ceo-message" },
         { labelKey: "industrial.nav.vision", path: "/industrial/vision-mission" },
         { labelKey: "industrial.nav.quality", path: "/industrial/quality-policy" },
         { labelKey: "industrial.nav.env_safety", path: "/industrial/environment-safety" },
@@ -58,7 +59,7 @@ const AlfawadHeader = () => {
 
   return (
     <header
-      className="fixed top-9 left-0 right-0 z-50 transition-all duration-500 font-muli"
+      className="fixed top-12 left-0 right-0 z-50 transition-all duration-500 font-muli"
       dir={isAr ? "rtl" : "ltr"}
     >
       <div
@@ -235,10 +236,7 @@ const AlfawadHeader = () => {
                       {isAr ? "الدعم المباشر" : "Direct Support"}
                     </p>
                     <div className="flex flex-col gap-6">
-                      <div className="flex flex-col items-center text-center">
-                        <span className="text-[14px] font-black uppercase tracking-tighter text-black leading-tight">Ashraf Al badan</span>
-                        <a href="tel:+966507077611" className="text-[11px] font-bold text-alfawad-primary uppercase tracking-widest">+966 50 707 7611</a>
-                      </div>
+                    
                       <div className="flex flex-col items-center text-center">
                         <span className="text-[14px] font-black uppercase tracking-tighter text-black leading-tight">Ahamed suhail</span>
                         <div className="flex flex-col gap-1 items-center">
@@ -249,6 +247,11 @@ const AlfawadHeader = () => {
                       <div className="flex flex-col items-center text-center">
                         <span className="text-[14px] font-black uppercase tracking-tighter text-black leading-tight">Safwan</span>
                         <a href="tel:+966583769845" className="text-[11px] font-bold text-alfawad-primary uppercase tracking-widest">+966 58 376 9845</a>
+                      </div>
+
+                        <div className="flex flex-col items-center text-center">
+                        <span className="text-[14px] font-black uppercase tracking-tighter text-black leading-tight">Ashraf Al badan</span>
+                        <a href="tel:+966507077611" className="text-[11px] font-bold text-alfawad-primary uppercase tracking-widest">+966 50 707 7611</a>
                       </div>
                     </div>
                     <div className="flex flex-col gap-3 items-center justify-center mt-6 pt-6 border-t border-gray-100 w-full">

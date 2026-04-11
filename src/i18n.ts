@@ -82,6 +82,7 @@ const resources = {
           "overview": "Overview",
           "introduction": "Introduction",
           "chairman": "Chairman Message",
+          "ceo": "CEO Message",
           "vision": "Vision & Mission",
           "quality": "Quality Policy",
           "env_safety": "Environment & Safety Policy",
@@ -105,7 +106,7 @@ const resources = {
           "cta": "GET IN TOUCH"
         },
         "intro": {
-          "title_main": "Lamiya Al Khaleej Al Ittihad Establishment For General Contracting",
+          "title_main": "Lamiya Al Khaleej Al Ittehad Establishment For General Contracting",
           "title_sub": "LEADING SAUDI-BASED CONTRACTING FIRM",
           "desc": "LAMIYA AL KHALEEJ AL ITTEHAD General Contracting is a leading Saudi-based contracting and industrial support services provider delivering reliable manpower, equipment rental, construction support, material supply, and project management services across the Kingdom of Saudi Arabia.",
           "story": "Know Our Story"
@@ -235,6 +236,7 @@ const resources = {
           "overview": "نظرة عامة",
           "introduction": "مقدمة",
           "chairman": "رسالة رئيس مجلس الإدارة",
+          "ceo": "رسالة الرئيس التنفيذي",
           "vision": "الرؤية والرسالة",
           "quality": "سياسة الجودة",
           "env_safety": "سياسة البيئة والسلامة",

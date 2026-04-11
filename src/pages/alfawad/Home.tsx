@@ -4,6 +4,7 @@ import { ChevronRight, Settings, Users, Truck, Wrench, Shield, CheckCircle } fro
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { AlfawadNews } from "../../components/alfawad/AlfawadNews";
+import SEO from "@/components/SEO";
 import laklogo from "@/assets/laklogo.png";
 // import HeroToggleBtn from "@/components/ui/HeroToggleBtn";
 
@@ -67,6 +68,10 @@ export default function AlfawadHome() {
 
   return (
     <div className="flex flex-col min-h-screen font-muli bg-[#f4f5f6] overflow-x-hidden">
+      <SEO 
+        title={isAr ? "الفواد للمقاولات العامة | لمياء الخليج" : "Industrial Contracting | Lamiya Al Khaleej Al Ittehad"}
+        description={isAr ? "شركة مقاولات سعودية رائدة تقدم عمالة فنية ومعدات ثقيلة." : "Leading Saudi-based contracting firm providing technical manpower, heavy equipment, and project management."}
+      />
 
       {/* Hero Section */}
       <section className="relative w-full h-[600px] sm:h-[650px] md:h-[90vh] min-h-[500px] bg-white overflow-hidden flex items-center pt-20 sm:pt-28 md:pt-40">
@@ -122,15 +127,16 @@ export default function AlfawadHome() {
           </div>
 
           {/* Premium Logo on Right Side - Responsive View */}
-          <div className="flex items-center justify-center p-6 md:p-12 bg-white/10 backdrop-blur-xl border border-white/20 rounded-[2.5rem] md:rounded-[4rem] shadow-[0_30px_100px_rgba(0,0,0,0.2)] hover:scale-105 transition-all duration-700 group relative overflow-hidden mt-10 md:mt-0">
-            <div className="absolute inset-0 bg-gradient-to-tr from-alfawad-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+          <div className="flex items-center justify-center p-6 md:p-12  md:rounded-[4rem]  hover:scale-105 transition-all duration-700 group relative overflow-hidden mt-10 md:mt-0">
+            <div className="absolute inset-0 bg-gradient-to-tr from-alfawad-primary/10 to-transparent opacity-0 transition-opacity duration-700" />
             <motion.img 
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1, delay: 0.5 }}
+              
               src={laklogo} 
               alt="Lamiya Logo" 
-              className="w-32 sm:w-48 md:w-80 h-auto object-contain drop-shadow-[0_0_30px_rgba(255,255,255,0.4)] relative z-10" 
+              className=" w-32 sm:w-48 md:w-80 h-auto object-contain drop-shadow-[20px_10px_30px_rgba(255,255,255,0.4)] relative z-10" 
             />
           </div>
         </div>
