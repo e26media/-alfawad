@@ -56,7 +56,7 @@ const AlfawadNavbar = () => {
           <Link to="/alfawad" className="flex items-center gap-3">
             <img 
               src="/src/assets/mainlogo.jpg" 
-              alt="LAMIYA AL KHALEEJ AL ITTEHAD" 
+              alt="LAMIYA AL KHALEEJ AL ITTIHAD" 
               className="h-16 md:h-20 w-auto object-contain brightness-110" 
             />
           </Link>

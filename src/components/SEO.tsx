@@ -7,8 +7,8 @@ interface SEOProps {
 }
 
 const SEO = ({ 
-  title = "Lamiya Al Khaleej Al Ittehad | General Contracting & Residential Services", 
-  description = "Lamiya Al Khaleej Al Ittehad Establishment for General Contracting provides reliable residential care and professional contracting services across Saudi Arabia." 
+  title = "Lamiya Al Khaleej Al Ittihad | General Contracting & Residential Services", 
+  description = "Lamiya Al Khaleej Al Ittihad Establishment for General Contracting provides reliable residential care and professional contracting services across Saudi Arabia." 
 }: SEOProps) => {
   useEffect(() => {
     document.title = title;

@@ -75,7 +75,7 @@ const AlfawadHeader = () => {
             <Link to="/industrial" className="flex items-center transition-transform duration-500 hover:scale-105">
               <img
                 src={mainlogo}
-                alt="LAMIYA AL KHALEEJ AL ITTEHAD"
+                alt="LAMIYA AL KHALEEJ AL ITTIHAD"
                 className={`transition-all duration-500 ${scrolled ? "h-9 md:h-11" : "h-11 md:h-13"} w-auto object-contain`}
               />
             </Link>

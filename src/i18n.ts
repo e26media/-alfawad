@@ -18,7 +18,7 @@ const resources = {
         "pesticide": "Pesticide Services"
       },
       "hero": {
-        "title": "Lamiya Al Khaleej Al Ittehad",
+        "title": "Lamiya Al Khaleej Al Ittihad",
         "subtitle": "Professional residential care.",
         "description": "Your trusted partner for complete cleaning, sanitization, AC services, pest control, and facility maintenance solutions across the Kingdom of Saudi Arabia.",
         "book_btn": "Book Free Visit",
@@ -33,10 +33,10 @@ const resources = {
           "coverage": "Coverage Across KSA"
         },
         "welcome": {
-          "title_small": "Welcome to Lamiya Al Khaleej Al Ittehad",
+          "title_small": "Welcome to Lamiya Al Khaleej Al Ittihad",
           "title_main": "Your Trusted Partner for <span className=\"text-alfawad-primary\">Total Hygiene</span> Solutions",
           "quote": "\"We believe that a clean environment is not only about appearance but also about health, safety, comfort, and productivity.\"",
-          "p1": "Welcome to Lamiya Al Khaleej Al Ittehad Company, your trusted partner for complete cleaning, sanitization, AC services, pest control, and facility maintenance solutions across the Kingdom of Saudi Arabia. We specialize in delivering high-quality hygiene and maintenance services for homes, villas, apartments, offices, shops, restaurants, warehouses, hospitals, and commercial buildings.",
+          "p1": "Welcome to Lamiya Al Khaleej Al Ittihad Company, your trusted partner for complete cleaning, sanitization, AC services, pest control, and facility maintenance solutions across the Kingdom of Saudi Arabia. We specialize in delivering high-quality hygiene and maintenance services for homes, villas, apartments, offices, shops, restaurants, warehouses, hospitals, and commercial buildings.",
           "p2": "Our company is built on a strong reputation for professionalism, reliability, and premium customer support. We use advanced cleaning methods, professional-grade equipment, eco-friendly chemicals, and trained technicians to deliver exceptional results every time.",
           "read_story": "Read Our Full Story"
         },
@@ -71,7 +71,7 @@ const resources = {
         },
         "cta": {
           "title": "Ready for a <br className=\"hidden md:block\" /> <span className=\"text-alfawad-primary\">Cleaner</span> Space?",
-          "desc": "Book your free inspection visit today and experience the professional difference of Lamiya Al Khaleej Al Ittehad Company.",
+          "desc": "Book your free inspection visit today and experience the professional difference of Lamiya Al Khaleej Al Ittihad Company.",
           "btn": "Book Your Free Visit Now"
         }
       },
@@ -100,15 +100,15 @@ const resources = {
           "exit": "Exit Alfawad"
         },
         "hero": {
-          "title": "Lamiya Al Khaleej Al Ittehad",
+          "title": "Lamiya Al Khaleej Al Ittihad",
           "subtitle": "General Contracting",
           "description": "Trusted Contracting & Industrial Service Provider in Saudi Arabia",
           "cta": "GET IN TOUCH"
         },
         "intro": {
-          "title_main": "Lamiya Al Khaleej Al Ittehad Establishment For General Contracting",
+          "title_main": "Lamiya Al Khaleej Al Ittihad Establishment For General Contracting",
           "title_sub": "LEADING SAUDI-BASED CONTRACTING FIRM",
-          "desc": "LAMIYA AL KHALEEJ AL ITTEHAD General Contracting is a leading Saudi-based contracting and industrial support services provider delivering reliable manpower, equipment rental, construction support, material supply, and project management services across the Kingdom of Saudi Arabia.",
+          "desc": "LAMIYA AL KHALEEJ AL ITTIHAD General Contracting is a leading Saudi-based contracting and industrial support services provider delivering reliable manpower, equipment rental, construction support, material supply, and project management services across the Kingdom of Saudi Arabia.",
           "story": "Know Our Story"
         },
         "leadership": {

@@ -61,7 +61,7 @@ const Navbar = () => {
         <div className="container mx-auto px-4 lg:px-8 flex items-center justify-between">
           <div className="flex items-center">
             <Link to="/cleaning" className="flex-shrink-0 transition-transform hover:scale-105">
-              <img src={logo} alt="LAMIYA AL KHALEEJ AL ITTEHAD" className={`transition-all duration-500 ${scrolled ? "h-9 sm:h-11" : "h-11 sm:h-13"} w-auto object-contain px-2`} />
+              <img src={logo} alt="LAMIYA AL KHALEEJ AL ITTIHAD" className={`transition-all duration-500 ${scrolled ? "h-9 sm:h-11" : "h-11 sm:h-13"} w-auto object-contain px-2`} />
             </Link>
           </div>
 
