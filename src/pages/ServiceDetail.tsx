@@ -34,7 +34,7 @@ const ServiceDetail = () => {
   return (
     <div className="pt-32 md:pt-40 font-muli bg-white overflow-x-hidden">
       <SEO
-        title={isAr ? (service.targetAr || service.title) : (service.metaTitle || `${service.title} |Lamiya Al Khaleej Al Ittehad  Company`)}
+        title={isAr ? (service.targetAr || service.title) : (service.metaTitle || `${service.title} |Lamiya Al Khaleej Al Ittihad  Company`)}
         description={isAr ? (service.descAr || service.longDescription) : (service.metaDescription || service.longDescription)}
       />
 

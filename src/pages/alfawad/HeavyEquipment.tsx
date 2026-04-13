@@ -72,7 +72,7 @@ const HeavyEquipment = () => {
 
                   <div className="text-[#666666] leading-[36px] text-[18px] font-medium flex flex-col gap-6">
                     <p>
-                      {isAr ? "توفر شركة لمياء الخليج حلولاً موثوقة لتأجير المعدات." : "Lamiya Al Khaleej Al Ittehad  General Contracting provides reliable equipment rental solutions with a focus on machine performance and operator safety. All our equipment units are well-maintained and comply with industrial safety standards, ensuring smooth operations on-site."}
+                      {isAr ? "توفر شركة لمياء الخليج حلولاً موثوقة لتأجير المعدات." : "Lamiya Al Khaleej Al Ittihad  General Contracting provides reliable equipment rental solutions with a focus on machine performance and operator safety. All our equipment units are well-maintained and comply with industrial safety standards, ensuring smooth operations on-site."}
                     </p>
                     <p>
                       {isAr ? "نحن نقدم المعدات للإيجار قصير الأجل (يومي / أسبوعي)." : "We provide equipment for both short-term rental (daily/weekly) and long-term project leasing. Our experienced operators ensure that the equipment is utilized efficiently and safely while following site-specific HSE guidelines."}

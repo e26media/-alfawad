@@ -54,7 +54,7 @@ const QualityPolicy = () => {
                   </div>
 
                   <p className="text-[20px] md:text-[22px] font-bold text-black leading-relaxed italic border-b border-gray-100 pb-8">
-                    {isAr ? "في لمياء الخليج الاتحاد، الجودة ليست مجرد قسم، بل هي ثقافة." : "At Lamiya Al Khaleej Al Ittehad  General Contracting, quality is not just a department—it is a culture."}
+                    {isAr ? "في لمياء الخليج الاتحاد، الجودة ليست مجرد قسم، بل هي ثقافة." : "At Lamiya Al Khaleej Al Ittihad  General Contracting, quality is not just a department—it is a culture."}
                   </p>
 
                   <div className="text-[#666666] leading-[36px] text-[18px] font-medium flex flex-col gap-6">

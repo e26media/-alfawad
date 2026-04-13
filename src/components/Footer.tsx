@@ -135,10 +135,7 @@ const Footer = () => {
                     </div>
                     
 
-                    <div className="flex flex-col">
-                      <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">{isAr ? "صفوان" : "Safwan"}</span>
-                      <a href="tel:+966583769845" className="text-[12px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors break-all" dir="ltr">+966 58 376 9845</a>
-                    </div>
+                    
                     <div className="flex flex-col">
                       <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">{isAr ? "أشرف البدن" : "Ashraf Al badan"}</span>
                       <a href="tel:+966507077611" className="text-[12px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors break-all" dir="ltr">+966 50 707 7611</a>

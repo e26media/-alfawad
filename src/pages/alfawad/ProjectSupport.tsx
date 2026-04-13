@@ -62,7 +62,7 @@ const ProjectSupport = () => {
 
                   <div className="text-[#666666] leading-[36px] text-[18px] font-medium flex flex-col gap-6">
                     <p>
-                      {isAr ? "تقدم لمياء الخليج خدمات دعم بناء متعددة التخصصات. نحن نساعد المقاولين الأساسيين من خلال تنفيذ المشاريع بدقة." : "Lamiya Al Khaleej Al Ittehad  General Contracting offers multi-disciplinary construction support services. We assist primary contractors and industrial clients by executing specific project scopes with precision and reliability."}
+                      {isAr ? "تقدم لمياء الخليج خدمات دعم بناء متعددة التخصصات. نحن نساعد المقاولين الأساسيين من خلال تنفيذ المشاريع بدقة." : "Lamiya Al Khaleej Al Ittihad  General Contracting offers multi-disciplinary construction support services. We assist primary contractors and industrial clients by executing specific project scopes with precision and reliability."}
                     </p>
                   </div>
 

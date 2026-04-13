@@ -24,7 +24,7 @@ const Contact = () => {
             <h2 className="text-4xl font-black text-gray-900 mt-2 uppercase">{isAr ? "نحن هنا للمساعدة" : "We're Here To Help"}</h2>
             <div className="w-24 h-1 bg-alfawad-primary mx-auto mt-6" />
             <p className="text-gray-600 mt-6 text-lg">
-              {isAr ? "سواء كنت بحاجة إلى إدارة المشاريع أو الدعم أو توفير العمالة الفنية. تواصل مع لمياء الخليج اليوم." : "Whether you need strategic project management, emergency project support, or specialized technical manpower. Reach out to Lamiya Al Khaleej Al Ittehad  General Contracting today."}
+              {isAr ? "سواء كنت بحاجة إلى إدارة المشاريع أو الدعم أو توفير العمالة الفنية. تواصل مع لمياء الخليج اليوم." : "Whether you need strategic project management, emergency project support, or specialized technical manpower. Reach out to Lamiya Al Khaleej Al Ittihad  General Contracting today."}
             </p>
           </div>
 
@@ -60,10 +60,7 @@ const Contact = () => {
                         <a href="tel:+966566567518" className="text-[12px] font-black uppercase tracking-widest text-alfawad-primary hover:text-black transition-colors">+966 56 656 7518</a>
                       </div>
                     </div>
-                    <div className="flex flex-col">
-                      <span className="text-[18px] font-black uppercase tracking-tighter text-gray-900 leading-tight">{isAr ? "صفوان" : "Safwan"}</span>
-                      <a href="tel:+966583769845" className="text-[12px] font-black uppercase tracking-widest text-alfawad-primary hover:text-black transition-colors">+966 58 376 9845</a>
-                    </div>
+                   
                       <div className="flex flex-col">
                       <span className="text-[18px] font-black uppercase tracking-tighter text-gray-900 leading-tight">{isAr ? "أشرف البدن" : "Ashraf Al badan"}</span>
                       <a href="tel:+966507077611" className="text-[12px] font-black uppercase tracking-widest text-alfawad-primary hover:text-black transition-colors">+966 50 707 7611</a>
@@ -165,7 +162,7 @@ const Contact = () => {
                   allowFullScreen={false}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Lamiya alkhaleej alittehad establishment for general contractingHeadquarters Jubail"
+                  title="Lamiya alkhaleej al ittihad establishment for general contractingHeadquarters Jubail"
                 ></iframe>
               </div>
 

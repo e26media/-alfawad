@@ -57,7 +57,7 @@ const EnvironmentSafety = () => {
                        <ShieldAlert className="w-20 h-20 text-alfawad-primary shrink-0" />
                        <div className="text-white flex-1">
                           <p className="text-[18px] md:text-[22px] font-bold leading-relaxed italic border-b border-white/10 pb-6 mb-6">
-                             {isAr ? `"تؤمن مؤسسة لمياء الخليج بأن السلامة هي أساس النجاح."` : `"Lamiya alkhaleej alittehad establishment for general contracting  believes that safety is the foundation of success."`}
+                             {isAr ? `"تؤمن مؤسسة لمياء الخليج بأن السلامة هي أساس النجاح."` : `"Lamiya alkhaleej al ittihad establishment for general contracting  believes that safety is the foundation of success."`}
                           </p>
                           <p className="text-white/60 font-bold uppercase tracking-widest text-sm">{isAr ? "التزامنا بالسلامة" : "Our Safety Commitment"}</p>
                        </div>

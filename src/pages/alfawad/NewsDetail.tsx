@@ -101,7 +101,7 @@ const NewsDetail = () => {
                     </p>
 
                     <p>
-                      {isAr ? "كجزء من التزامنا بالشفافية والتميز، نشارك هذه التحديثات لإبقاء عملائنا وشركائنا على علم بالتقدم الذي نحرزه في القطاع الصناعي." : "As part of our commitment to transparency and excellence, we share these updates to keep our clients and partners informed about the strategic progress we are making in the industrial sector. Our dedicated teams work tirelessly to ensure that every project phase aligns with the high standards expected from Lamiya Al Khaleej Al Ittehad General Contracting."}
+                      {isAr ? "كجزء من التزامنا بالشفافية والتميز، نشارك هذه التحديثات لإبقاء عملائنا وشركائنا على علم بالتقدم الذي نحرزه في القطاع الصناعي." : "As part of our commitment to transparency and excellence, we share these updates to keep our clients and partners informed about the strategic progress we are making in the industrial sector. Our dedicated teams work tirelessly to ensure that every project phase aligns with the high standards expected from Lamiya Al Khaleej Al Ittihad General Contracting."}
                     </p>
                   </div>
 

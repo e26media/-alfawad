@@ -59,7 +59,7 @@ const TechnicalManpower = () => {
 
                   <div className="text-[#666666] leading-[28px] md:leading-[36px] text-[16px] md:text-[18px] font-medium flex flex-col gap-4 md:gap-6">
                     <p>
-                      {isAr ? "نحن في لمياء الخليج شريك موثوق للاستعانة بمصادر خارجية للقوى العاملة." : "Lamiya Al Khaleej Al Ittehad  General Contracting is a trusted partner for manpower outsourcing. we provide a wide range of technical and non-technical workforce categories to support large-scale industrial projects, shutdowns, maintenance work, and construction activities."}
+                      {isAr ? "نحن في لمياء الخليج شريك موثوق للاستعانة بمصادر خارجية للقوى العاملة." : "Lamiya Al Khaleej Al Ittihad  General Contracting is a trusted partner for manpower outsourcing. we provide a wide range of technical and non-technical workforce categories to support large-scale industrial projects, shutdowns, maintenance work, and construction activities."}
                     </p>
                     <p>
                       {isAr ? "ندرك أن نجاح أي مشروع يعتمد على جودة العاملين فيه." : "We understand that the success of any project depends on the quality of its people. That's why we ensure all our personnel are properly vetted, trained, and compliant with site safety requirements. Our flexible mobilization strategy allows us to provide manpower for both short-term and long-term needs."}

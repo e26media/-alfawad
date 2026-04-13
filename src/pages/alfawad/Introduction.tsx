@@ -54,7 +54,7 @@ const Introduction = () => {
                   </div>
 
                   <p className="text-[18px] md:text-[20px] font-bold text-gray-900 leading-relaxed italic border-b border-gray-100 pb-8">
-                    {isAr ? `"مؤسسة لمياء الخليج الاتحاد للمقاولات العامة هي مؤسسة مقاولات متنامية وموثوقة في المملكة العربية السعودية، متخصصة في خدمات الدعم الصناعي والإنشائي."` : `"Lamiya alkhaleej alittehad establishment for general contracting is a growing and trusted contracting organization in Saudi Arabia specializing in industrial and construction support services."`}
+                    {isAr ? `"مؤسسة لمياء الخليج الاتحاد للمقاولات العامة هي مؤسسة مقاولات متنامية وموثوقة في المملكة العربية السعودية، متخصصة في خدمات الدعم الصناعي والإنشائي."` : `"Lamiya alkhaleej alittihad establishment for general contracting is a growing and trusted contracting organization in Saudi Arabia specializing in industrial and construction support services."`}
                   </p>
 
                   <div className="text-[#666666] leading-[36px] text-[18px] font-medium flex flex-col gap-6">

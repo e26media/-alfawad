@@ -75,7 +75,7 @@ const Clients = () => {
               {isAr ? "العملاء" : "Clients"} <span className="text-alfawad-primary">{isAr ? "الذين نخدمهم" : "We Serve"}</span>
             </h2>
             <p className="text-gray-500 text-lg font-medium leading-relaxed max-w-3xl">
-              {isAr ? "في شركة لمياء الخليج الاتحاد، نقيس نجاحنا برضا العملاء. نحن نفخر بخدمة مجموعة واسعة من العملاء، بما في ذلك العملاء السكنيين والشركات التجارية الرائدة في جميع أنحاء المملكة." : "At Lamiya Al Khaleej Al Ittehad  Company, our success is measured by customer satisfaction. We proudly serve a wide range of clients, including residential customers and leading commercial businesses across the Kingdom."}
+              {isAr ? "في شركة لمياء الخليج الاتحاد، نقيس نجاحنا برضا العملاء. نحن نفخر بخدمة مجموعة واسعة من العملاء، بما في ذلك العملاء السكنيين والشركات التجارية الرائدة في جميع أنحاء المملكة." : "At Lamiya Al Khaleej Al Ittihad  Company, our success is measured by customer satisfaction. We proudly serve a wide range of clients, including residential customers and leading commercial businesses across the Kingdom."}
             </p>
           </div>
         </AnimatedSection>

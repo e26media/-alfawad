@@ -68,7 +68,7 @@ const CEOMessage = () => {
 
                         <div className="text-[#666666] leading-[36px] text-[18px] font-medium flex flex-col gap-8 max-w-4xl">
                           <p>
-                            {isAr ? "إنه لمن دواعي سروري قيادة هذا الفريق المتفاني. تم تحديد رحلتنا من خلال قدرتنا على التكيف مع الاحتياجات المتغيرة للقطاع الصناعي دون المساس بقيمنا." : "It is my privilege to lead such a dedicated team at Lamiya Al Khaleej Al Ittehad. Our journey has been defined by our ability to adapt to the changing needs of the industrial sector while never compromising on our core values."}
+                            {isAr ? "إنه لمن دواعي سروري قيادة هذا الفريق المتفاني. تم تحديد رحلتنا من خلال قدرتنا على التكيف مع الاحتياجات المتغيرة للقطاع الصناعي دون المساس بقيمنا." : "It is my privilege to lead such a dedicated team at Lamiya Al Khaleej Al Ittihad. Our journey has been defined by our ability to adapt to the changing needs of the industrial sector while never compromising on our core values."}
                           </p>
                           <p>
                             {isAr ? "نحن نركز على الكفاءة التشغيلية ونشر القوى العاملة التقنية المتقدمة والمعدات. ونهدف إلى أن نكون الشريك الأكثر موثوقية للاعبين الصناعيين الكبار في المملكة." : "We focus on operational efficiency and the deployment of advanced technical manpower and equipment. By prioritizing local talent development and international best practices, we aim to be the most trusted partner for major industrial players in the Kingdom."}
@@ -83,7 +83,7 @@ const CEOMessage = () => {
                         <div className="flex flex-col gap-1">
                           <div className="text-[28px] font-black uppercase tracking-tighter text-black leading-none">{isAr ? "محمد نعمان حسين" : "Mohammed Nouman Hussain"}</div>
                           <div className="text-alfawad-primary font-black uppercase tracking-widest text-[12px] mt-2">{isAr ? "الرئيس التنفيذي" : "Chief Executive Officer"}</div>
-                          <div className="text-gray-400 font-bold uppercase tracking-widest text-[10px]">{isAr ? "مؤسسة لمياء الخليج الاتحاد للمقاولات العامة" : "Lamiya alkhaleej alittehad establishment for general contracting"}</div>
+                          <div className="text-gray-400 font-bold uppercase tracking-widest text-[10px]">{isAr ? "مؤسسة لمياء الخليج الاتحاد للمقاولات العامة" : "Lamiya alkhaleej alittihad establishment for general contracting"}</div>
                         </div>
                         
                         {/* Decorative Signature Placeholder */}

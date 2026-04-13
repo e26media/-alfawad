@@ -62,8 +62,8 @@ const Services = () => {
   return (
   <div className="pt-32 md:pt-40 font-muli bg-white overflow-x-hidden">
     <SEO
-      title={isAr ? "خدماتنا | شركة لمياء الخليج الاتحاد" : "Our Services |Lamiya Al Khaleej Al Ittehad  Company - Cleaning & Maintenance in KSA"}
-      description={isAr ? "نقدم مجموعة واسعة من الخدمات المهنية السكنية والتجارية في السعودية." : "At Lamiya Al Khaleej Al Ittehad  Company, we offer a wide range of professional services designed for both residential and commercial customers. Complete cleaning & maintenance solutions in KSA."}
+      title={isAr ? "خدماتنا | شركة لمياء الخليج الاتحاد" : "Our Services |Lamiya Al Khaleej Al Ittihad  Company - Cleaning & Maintenance in KSA"}
+      description={isAr ? "نقدم مجموعة واسعة من الخدمات المهنية السكنية والتجارية في السعودية." : "At Lamiya Al Khaleej Al Ittihad  Company, we offer a wide range of professional services designed for both residential and commercial customers. Complete cleaning & maintenance solutions in KSA."}
     />
 
     {/* Hero Section */}

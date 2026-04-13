@@ -104,7 +104,7 @@ const MaterialService = () => {
 
                   <div className="text-[#666666] leading-[36px] text-[18px] font-medium flex flex-col gap-6">
                     <p>
-                      {isAr ? "توفر شركة لمياء الخليج حلول توريد المواد الفعالة." : "Lamiya Al Khaleej Al Ittehad General Contracting provides efficient material supply solutions. We understand that timely material delivery is critical for project success, which is why we maintain a reliable supplier network and logistics support."}
+                      {isAr ? "توفر شركة لمياء الخليج حلول توريد المواد الفعالة." : "Lamiya Al Khaleej Al Ittihad General Contracting provides efficient material supply solutions. We understand that timely material delivery is critical for project success, which is why we maintain a reliable supplier network and logistics support."}
                     </p>
                   </div>
 

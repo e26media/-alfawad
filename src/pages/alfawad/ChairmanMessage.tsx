@@ -63,7 +63,7 @@ const ChairmanMessage = () => {
 
                       <div className="relative z-10">
                         <p className="text-[24px] md:text-[32px] font-black text-black leading-tight italic mb-12 tracking-tighter">
-                          {isAr ? `"مرحباً بكم في مؤسسة لمياء الخليج الاتحاد للمقاولات العامة. نحن فخورون بأن نكون مزود خدمة متنامٍ في المملكة العربية السعودية يقدم خدمات مقاولات ودعم صناعي عالية الجودة."` : `"Welcome to Lamiya Al Khaleej Al Ittehad General Contracting. We are proud to be a growing service provider in Saudi Arabia delivering high-quality contracting and industrial support services."`}
+                          {isAr ? `"مرحباً بكم في مؤسسة لمياء الخليج الاتحاد للمقاولات العامة. نحن فخورون بأن نكون مزود خدمة متنامٍ في المملكة العربية السعودية يقدم خدمات مقاولات ودعم صناعي عالية الجودة."` : `"Welcome to Lamiya Al Khaleej Al Ittihad General Contracting. We are proud to be a growing service provider in Saudi Arabia delivering high-quality contracting and industrial support services."`}
                         </p>
 
                         <div className="text-[#666666] leading-[36px] text-[18px] font-medium flex flex-col gap-8 max-w-4xl">
@@ -83,7 +83,7 @@ const ChairmanMessage = () => {
                         <div className="flex flex-col gap-1">
                           <div className="text-[28px] font-black uppercase tracking-tighter text-black leading-none">{isAr ? "أشرف البدن" : "Ashraf Al Badan"}</div>
                           <div className="text-alfawad-primary font-black uppercase tracking-widest text-[12px] mt-2">{isAr ? "رئيس مجلس الإدارة / العضو المنتدب" : "Chairman / Managing Director"}</div>
-                          <div className="text-gray-400 font-bold uppercase tracking-widest text-[10px]">{isAr ? "مؤسسة لمياء الخليج الاتحاد للمقاولات العامة" : "Lamiya alkhaleej alittehad establishment for general contracting"}</div>
+                          <div className="text-gray-400 font-bold uppercase tracking-widest text-[10px]">{isAr ? "مؤسسة لمياء الخليج الاتحاد للمقاولات العامة" : "Lamiya alkhaleej alittihad establishment for general contracting"}</div>
                         </div>
                         
                         {/* Decorative Signature Placeholder */}

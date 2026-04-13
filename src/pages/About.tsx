@@ -14,8 +14,8 @@ const About = () => {
   return (
   <div className="pt-32 md:pt-40 font-muli bg-white overflow-x-hidden">
     <SEO
-      title={isAr ? "من نحن | شركة لمياء الخليج الاتحاد - +5 سنوات من التميز" : "About Us | Lamiya Al Khaleej Al Ittehad  Company - 5+ Years of Excellence"}
-      description={isAr ? "تعرف على شركة لمياء الخليج، رائدة النظافة في السعودية." : "Learn about Lamiya Al Khaleej Al Ittehad  Company, a leading professional cleaning and sanitization provider in KSA with 5+ years of experience and international standards."}
+      title={isAr ? "من نحن | شركة لمياء الخليج الاتحاد - +5 سنوات من التميز" : "About Us | Lamiya Al Khaleej Al Ittihad  Company - 5+ Years of Excellence"}
+      description={isAr ? "تعرف على شركة لمياء الخليج، رائدة النظافة في السعودية." : "Learn about Lamiya Al Khaleej Al Ittihad  Company, a leading professional cleaning and sanitization provider in KSA with 5+ years of experience and international standards."}
     />
 
     {/* Page Header */}

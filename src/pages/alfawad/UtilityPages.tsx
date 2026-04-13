@@ -31,7 +31,7 @@ export const Brochure = () => {
     </section>
 
     <section className="py-24 bg-[#f4f5f6]">
-      <div className="container mx-auto px-4 lg:px-12 max-w-[1000px]">
+      <div className="container mx-auto px-0 lg:px-12 max-w-[1000px]">
         <div className="bg-white p-12 md:p-20 shadow-xl border border-gray-100 flex flex-col items-center text-center gap-10 relative overflow-hidden group">
           <div className="absolute top-0 right-0 w-32 h-32 bg-alfawad-primary/5 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-150" />
           <div className="w-24 h-24 bg-gray-900 rounded-full flex items-center justify-center text-alfawad-primary shadow-2xl">
@@ -43,9 +43,9 @@ export const Brochure = () => {
               {isAr ? "احصل على نظرة شاملة على قدراتنا المتعددة وأسطولنا الحديث وفلسفات إدارة المشاريع." : "Get a comprehensive overview of our multi-disciplinary capabilities, modern fleet strength, and specialized project management philosophies in our official corporate brochure."}
             </p>
           </div>
-          <button className="flex items-center gap-4 bg-black hover:bg-alfawad-primary text-white font-black uppercase tracking-widest py-6 px-12 rounded mt-4 transition-all shadow-2xl hover:-translate-y-1">
-            <Download className="w-6 h-6" />{isAr ? "تحميل الكتيب" : "Lamiya Al Khaleej Al Ittehad  PROFILE 2026 (PDF)"}
-          </button>
+          <a href="/lamiya-profile.pdf" download target="_blank" className="flex items-center justify-center gap-4 bg-black hover:bg-alfawad-primary text-white font-black uppercase tracking-widest py-6 px-8 md:px-12 rounded mt-4 transition-all shadow-2xl hover:-translate-y-1 w-full md:w-auto text-sm md:text-base">
+            <Download className="w-8 h-8 md:w-6 md:h-6 shrink-0" /><span>{isAr ? "تحميل الكتيب" : "Lamiya Al Khaleej Al Ittihad  PROFILE 2026 (PDF)"}</span>
+          </a>
         </div>
       </div>
     </section>
@@ -251,7 +251,7 @@ export const Career = () => {
           <div className="text-center flex flex-col items-center">
             <span className="text-alfawad-primary font-black text-[14px] uppercase tracking-[0.4em] mb-4">{isAr ? "بناء المستقبل" : "Building Futures"}</span>
             <h2 className="text-[36px] md:text-[55px] font-black text-black uppercase tracking-tighter leading-none mb-6">{isAr ? "تقدم في حياتك المهنية" : "Drive Your Career Forward"}</h2>
-            <p className="text-[#666666] text-xl font-medium max-w-3xl leading-relaxed">{isAr ? "تبحث مؤسسة لمياء الخليج دائمًا عن محترفين يسعون للتميز." : "Lamiya alkhaleej alittehad establishment for general contracting is constantly looking for dedicated professionals who thrive on challenge and operational excellence."}</p>
+            <p className="text-[#666666] text-xl font-medium max-w-3xl leading-relaxed">{isAr ? "تبحث مؤسسة لمياء الخليج دائمًا عن محترفين يسعون للتميز." : "Lamiya alkhaleej alittihad establishment for general contracting is constantly looking for dedicated professionals who thrive on challenge and operational excellence."}</p>
           </div>
 
           <div className="bg-black text-white p-12 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 border-l-[12px] border-alfawad-primary">

@@ -20,7 +20,6 @@ const Contact = () => {
       contacts: [
        
         { name: isAr ? "أحمد سهيل" : "Ahamed suhail", numbers: ["+966 51 030 4627", "+966 56 656 7518"] },
-        { name: isAr ? "صفوان" : "Safwan", numbers: ["+966 58 376 9845"] },
         { name: isAr ? "أشرف البدن" : "Ashraf Al badan", numbers: ["+966 50 707 7611"] }
       ]
     },
@@ -41,8 +40,8 @@ const Contact = () => {
   return (
     <div className="pt-32 md:pt-40 font-muli bg-white overflow-x-hidden">
       <SEO 
-        title={isAr ? "اتصل بنا | شركة لمياء الخليج" : "Contact Us | Lamiya Al Khaleej Al Ittehad Company - Professional Support in KSA"}
-        description={isAr ? "احجز خدمات تنظيف احترافية في السعودية" : "Get in touch with Lamiya Al Khaleej Al Ittehad Company for fast booking and professional support for cleaning, AC, and pest control services across Saudi Arabia."}
+        title={isAr ? "اتصل بنا | شركة لمياء الخليج" : "Contact Us | Lamiya Al Khaleej Al Ittihad Company - Professional Support in KSA"}
+        description={isAr ? "احجز خدمات تنظيف احترافية في السعودية" : "Get in touch with Lamiya Al Khaleej Al Ittihad Company for fast booking and professional support for cleaning, AC, and pest control services across Saudi Arabia."}
       />
 
       {/* Header */}

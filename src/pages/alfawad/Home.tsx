@@ -69,7 +69,7 @@ export default function AlfawadHome() {
   return (
     <div className="flex flex-col min-h-screen font-muli bg-[#f4f5f6] overflow-x-hidden">
       <SEO 
-        title={isAr ? "الفواد للمقاولات العامة | لمياء الخليج" : "Industrial Contracting | Lamiya Al Khaleej Al Ittehad"}
+        title={isAr ? "الفواد للمقاولات العامة | لمياء الخليج" : "Industrial Contracting | Lamiya Al Khaleej Al Ittihad"}
         description={isAr ? "شركة مقاولات سعودية رائدة تقدم عمالة فنية ومعدات ثقيلة." : "Leading Saudi-based contracting firm providing technical manpower, heavy equipment, and project management."}
       />
 
@@ -136,7 +136,7 @@ export default function AlfawadHome() {
               
               src={laklogo} 
               alt="Lamiya Logo" 
-              className=" w-32 sm:w-48 md:w-80 h-auto object-contain drop-shadow-[20px_10px_30px_rgba(255,255,255,0.4)] relative z-10" 
+              className=" w-42 sm:w-48 md:w-80 h-auto object-contain drop-shadow-[20px_10px_30px_rgba(255,255,255,0.4)] relative z-10" 
             />
           </div>
         </div>

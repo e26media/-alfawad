@@ -52,9 +52,9 @@ const OverviewSidebar = () => {
         <div className="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-bl-full transition-transform group-hover:scale-150" />
         <h4 className="text-xl font-black uppercase tracking-tighter relative z-10 leading-none">{isAr ? "تنزيل" : "Download"} <br/> {isAr ? "الملف التعريفي" : "Corporate Profile"}</h4>
         <p className="text-white/80 text-sm font-bold relative z-10 leading-relaxed uppercase tracking-wider">{isAr ? "احصل على الكتالوج الكامل" : "Get our complete catalog"}</p>
-        <button className="bg-black text-white px-8 py-4 font-black uppercase text-xs tracking-widest w-full transition-all hover:bg-white hover:text-black relative z-10 shadow-lg hover:-translate-y-1">
+        <a href="/lamiya-profile.pdf" download target="_blank" className="bg-black text-white px-8 py-4 font-black uppercase text-xs tracking-widest w-full transition-all hover:bg-white hover:text-black relative z-10 shadow-lg hover:-translate-y-1 block text-center">
           {isAr ? "تحميل PDF" : "Download PDF"}
-        </button>
+        </a>
       </div>
     </div>
   );

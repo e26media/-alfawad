@@ -39,13 +39,13 @@ const clientLogos = [
 
 const testimonials = [
   {
-    name: "Mohammed Sabra", text: "I usedLamiya Al Khaleej Al Ittehad  for the first time and I would used their service again. The team was quick in responding, punctual and professional. The quality of work they did was super and they made sure the place was super clean when they finished the job.",
+    name: "Mohammed Sabra", text: "I usedLamiya Al Khaleej Al Ittihad  for the first time and I would used their service again. The team was quick in responding, punctual and professional. The quality of work they did was super and they made sure the place was super clean when they finished the job.",
   },
   {
-    name: "Hoda Zah", text: "I will definitely be requesting my annual ac duct cleaning fromLamiya Al Khaleej Al Ittehad ! They explained each step, showed before and after pictures and left the place spotless. I highly recommend this service especially for new homes!",
+    name: "Hoda Zah", text: "I will definitely be requesting my annual ac duct cleaning fromLamiya Al Khaleej Al Ittihad ! They explained each step, showed before and after pictures and left the place spotless. I highly recommend this service especially for new homes!",
   },
   {
-    name: "Muhammad Faisal Hussain", text: "Had my sofa and curtains deep cleaned and disinfected fromLamiya Al Khaleej Al Ittehad . Professional staff and the service was top quality. Will definitely recommend others to take their services.",
+    name: "Muhammad Faisal Hussain", text: "Had my sofa and curtains deep cleaned and disinfected fromLamiya Al Khaleej Al Ittihad . Professional staff and the service was top quality. Will definitely recommend others to take their services.",
   },
 ];
 
@@ -81,6 +81,20 @@ const Index = () => {
                 <span className="inline-block px-4 py-1 bg-alfawad-primary/20 text-alfawad-primary text-[10px] font-black uppercase tracking-[0.4em] mb-6 border-l-4 border-alfawad-primary">
                   {t('hero.badge')}
                 </span>
+
+                {/* Premium Logo on Right Side - Responsive View */}
+            <div className="flex items-center justify-center p-6 md:p-12  rounded-[2.5rem] md:rounded-[4rem]  hover:scale-105 transition-all duration-700 group relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-tr from-alfawad-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              <motion.img 
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 1, delay: 0.5 }}
+                src={laklogo} 
+                alt="Lamiya Logo" 
+                className="w-32 sm:w-48 md:w-80 h-auto object-contain drop-shadow-[0_0_30px_rgba(255,255,255,0.4)] relative z-10" 
+              />
+            </div>
+            
                 <h1 className="text-4xl md:text-6xl lg:text-8xl font-black leading-[0.95] mb-8 text-white uppercase tracking-tighter drop-shadow-2xl">
                   {t('hero.title')}  <br />
                   <span className="text-alfawad-primary opacity-90">{t('hero.subtitle')}</span>
@@ -109,18 +123,7 @@ const Index = () => {
           </div> */}
             </div>
 
-            {/* Premium Logo on Right Side - Responsive View */}
-            <div className="flex items-center justify-center p-6 md:p-12  rounded-[2.5rem] md:rounded-[4rem]  hover:scale-105 transition-all duration-700 group relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-tr from-alfawad-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-              <motion.img 
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 1, delay: 0.5 }}
-                src={laklogo} 
-                alt="Lamiya Logo" 
-                className="w-32 sm:w-48 md:w-80 h-auto object-contain drop-shadow-[0_0_30px_rgba(255,255,255,0.4)] relative z-10" 
-              />
-            </div>
+            
           </div>
         </div>
 
