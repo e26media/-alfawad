@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { AlfawadNews } from "../../components/alfawad/AlfawadNews";
 import SEO from "@/components/SEO";
-import laklogo from "@/assets/laklogo.png";
+import laklogo from "@/assets/Lamia-logo.png";
 // import HeroToggleBtn from "@/components/ui/HeroToggleBtn";
 
 export default function AlfawadHome() {

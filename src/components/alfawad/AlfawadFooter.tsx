@@ -49,7 +49,7 @@ const AlfawadFooter = () => {
               {/* Column 1: Identity */}
               <div className="flex flex-col gap-10">
                 <Link to="/industrial" className="block w-full max-w-[240px]">
-                  <img src={laklogo} alt="LAMIYA AL KHALEEJ AL ITTEHAD" className="w-full h-auto object-contain" />
+                  <img src={laklogo} alt="LAMIYA AL KHALEEJ AL ITTIHAD" className="w-full h-auto object-contain" />
                 </Link>
                 <p className="text-[14px] leading-relaxed text-gray-400 font-medium uppercase tracking-wider">
                   {isAr 
@@ -221,7 +221,7 @@ const AlfawadFooter = () => {
                <div className="flex flex-col sm:flex-row justify-between items-center gap-8 border-t border-white/5 pt-12">
                   
                   <p className="text-[9px] font-black uppercase tracking-[0.5em] text-white/20">
-                    &copy; {new Date().getFullYear()} {isAr ? "لمياء الخليج الاتحاد. جميع الحقوق محفوظة." : "LAMIYA AL KHALEEJ AL ITTEHAD. All Rights Reserved."}
+                    &copy; {new Date().getFullYear()} {isAr ? "لمياء الخليج الاتحاد. جميع الحقوق محفوظة." : "LAMIYA AL KHALEEJ AL ITTIHAD. All Rights Reserved."}
                   </p>
                  
                </div>

@@ -9,7 +9,7 @@ import { heroServices, popularServices } from "@/lib/services";
 import heroBg from "@/assets/hero-bg.jpg";
 import SEO from "@/components/SEO";
 import HeroToggleBtn from "@/components/ui/HeroToggleBtn";
-import laklogo from "@/assets/laklogo.png";
+import laklogo from "@/assets/Lamia-logo.png";
 
 const clientLogos = [
   "https://cleanproksa.com/wp-content/uploads/2025/02/Image-1.png",

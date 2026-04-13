@@ -24,7 +24,7 @@ const Footer = () => {
           </div>
           <div className="text-center relative z-10 transform -rotate-2">
             <a href="tel:+966507077611" className="bg-black text-white px-10 py-6 font-black text-2xl md:text-4xl hover:bg-white hover:text-black transition-all tracking-tighter uppercase inline-block shadow-2xl" dir="ltr">
-            +966 50 707 7611
+              +966 50 707 7611
             </a>
             <div className="mt-6 flex flex-col items-center gap-2">
               <a href="mailto:info@lamiyaalkhaleej.com" className="text-black/80 text-[10px] font-black uppercase tracking-[0.2em] hover:text-white transition-colors break-all">info@lamiyaalkhaleej.com</a>
@@ -52,11 +52,11 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-24">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-24 items-start">
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
-            <img src={logoWhite} alt="LAMIYA AL KHALEEJ AL ITTEHAD Logo" className="h-24 mb-10 transform filter bg-white/10 p-2 rounded-xl" />
+            <img src={logoWhite} alt="LAMIYA AL KHALEEJ AL ITTIHAD Logo" className="h-24 mb-10 transform filter bg-white/10 p-2 rounded-xl" />
             <p className="text-[14px] leading-[28px] opacity-40 font-medium max-w-md tracking-[0.05em]">
-              {isAr ? 
-                "بخبرة تزيد عن 5 سنوات، تقدم شركة لمياء الخليج الاتحاد خدمات التنظيف والتكييف ومكافحة الحشرات الفاخرة التجارية والسكنية في جميع أنحاء المملكة العربية السعودية." : 
-                "With 5+ years experience, Lamiya Al Khaleej Al Ittehad Company offers premier commercial and residential cleaning, AC, and pest control services across the Kingdom of Saudi Arabia."}
+              {isAr ?
+                "بخبرة تزيد عن 5 سنوات، تقدم شركة لمياء الخليج الاتحاد خدمات التنظيف والتكييف ومكافحة الحشرات الفاخرة التجارية والسكنية في جميع أنحاء المملكة العربية السعودية." :
+                "With 5+ years experience, Lamiya Al Khaleej Al Ittihad Company offers premier commercial and residential cleaning, AC, and pest control services across the Kingdom of Saudi Arabia."}
             </p>
             <div className="flex gap-4 mt-12">
               <a href="#" className="w-12 h-12 rounded-none border border-white/10 flex items-center justify-center hover:bg-alfawad-primary hover:border-alfawad-primary hover:text-black transition-all">
@@ -122,9 +122,9 @@ const Footer = () => {
                 </div>
                 <div className="flex flex-col gap-6">
                   <span className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-600">{isAr ? "خطوط مباشرة" : "Direct Lines"}</span>
-                  
+
                   <div className="flex flex-col gap-5">
-                    
+
 
                     <div className="flex flex-col">
                       <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">{isAr ? "أحمد سهيل" : "Ahamed suhail"}</span>
@@ -133,9 +133,9 @@ const Footer = () => {
                         <a href="tel:+966566567518" className="text-[12px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors break-all" dir="ltr">+966 56 656 7518</a>
                       </div>
                     </div>
-                    
 
-                    
+
+
                     <div className="flex flex-col">
                       <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">{isAr ? "أشرف البدن" : "Ashraf Al badan"}</span>
                       <a href="tel:+966507077611" className="text-[12px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors break-all" dir="ltr">+966 50 707 7611</a>
@@ -143,7 +143,7 @@ const Footer = () => {
                   </div>
                 </div>
               </li>
-             
+
               <li className="flex flex-col sm:flex-row items-center sm:items-start gap-6 group">
                 <div className="w-12 h-12 bg-white/5 flex items-center justify-center flex-shrink-0 group-hover:bg-alfawad-primary group-hover:text-black transition-all">
                   <MapPin className="w-5 h-5" />
@@ -163,7 +163,7 @@ const Footer = () => {
         <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-alfawad-primary/50 to-transparent" />
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
           <p className="text-[10px] font-black uppercase tracking-[0.6em] text-gray-700">
-            © {new Date().getFullYear()} {isAr ? "لمياء الخليج الاتحاد. جميع الحقوق محفوظة." : "LAMIYA AL KHALEEJ AL ITTEHAD. All Rights Reserved."}
+            © {new Date().getFullYear()} {isAr ? "لمياء الخليج الاتحاد. جميع الحقوق محفوظة." : "LAMIYA AL KHALEEJ AL ITTIHAD. All Rights Reserved."}
           </p>
           {/* <div className="flex items-center gap-6">
             <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-gray-700">
