@@ -63,11 +63,10 @@ const AlfawadHeader = () => {
       dir={isAr ? "rtl" : "ltr"}
     >
       <div
-        className={`w-full transition-all duration-500 border-b border-alfawad-primary/10 ${
-          scrolled
+        className={`w-full transition-all duration-500 border-b border-alfawad-primary/10 ${scrolled
             ? "bg-white/95 backdrop-blur-xl shadow-xl py-2"
             : "bg-white/90 backdrop-blur-md shadow-lg py-3"
-        }`}
+          }`}
       >
         <div className="container mx-auto px-4 lg:px-8 flex items-center justify-between">
           {/* Logo Section */}
@@ -76,7 +75,7 @@ const AlfawadHeader = () => {
               <img
                 src={mainlogo}
                 alt="LAMIYA AL KHALEEJ AL ITTIHAD"
-                className={`transition-all duration-500 ${scrolled ? "h-9 md:h-11" : "h-11 md:h-13"} w-auto object-contain`}
+                className={`transition-all duration-500 h-20   w-auto object-contain`}
               />
             </Link>
           </div>
@@ -87,11 +86,10 @@ const AlfawadHeader = () => {
               <div key={link.labelKey} className="relative group">
                 {link.children ? (
                   <button
-                    className={`flex items-center gap-1.5 px-5 py-2.5 rounded-xl text-[12px] xl:text-[13px] font-bold uppercase tracking-wider transition-all duration-300 ${
-                      location.pathname.includes("/services")
+                    className={`flex items-center gap-1.5 px-5 py-2.5 rounded-xl text-[12px] xl:text-[13px] font-bold uppercase tracking-wider transition-all duration-300 ${location.pathname.includes("/services")
                         ? "text-alfawad-primary bg-alfawad-primary/5"
                         : "text-gray-800 hover:text-black hover:bg-gray-50/50"
-                    }`}
+                      }`}
                   >
                     {t(link.labelKey)}
                     <ChevronDown className="w-3.5 h-3.5 transition-transform group-hover:rotate-180" strokeWidth={2} />
@@ -99,11 +97,10 @@ const AlfawadHeader = () => {
                 ) : (
                   <Link
                     to={link.path!}
-                    className={`px-5 py-2.5 rounded-xl text-[12px] xl:text-[13px] font-bold uppercase tracking-wider transition-all duration-300 block ${
-                      location.pathname === link.path
+                    className={`px-5 py-2.5 rounded-xl text-[12px] xl:text-[13px] font-bold uppercase tracking-wider transition-all duration-300 block ${location.pathname === link.path
                         ? "text-alfawad-primary bg-alfawad-primary/10 shadow-sm"
                         : "text-gray-800 hover:text-black hover:bg-gray-50/50"
-                    }`}
+                      }`}
                   >
                     {t(link.labelKey)}
                   </Link>
@@ -213,9 +210,8 @@ const AlfawadHeader = () => {
                     ) : (
                       <Link
                         to={link.path!}
-                        className={`block py-5 text-[15px] font-black border-b border-gray-50 transition-colors uppercase tracking-widest ${
-                          location.pathname === link.path ? "text-alfawad-primary" : "text-black hover:text-alfawad-primary"
-                        }`}
+                        className={`block py-5 text-[15px] font-black border-b border-gray-50 transition-colors uppercase tracking-widest ${location.pathname === link.path ? "text-alfawad-primary" : "text-black hover:text-alfawad-primary"
+                          }`}
                       >
                         {t(link.labelKey)}
                       </Link>
@@ -236,7 +232,7 @@ const AlfawadHeader = () => {
                       {isAr ? "الدعم المباشر" : "Direct Support"}
                     </p>
                     <div className="flex flex-col gap-6">
-                    
+
                       <div className="flex flex-col items-center text-center">
                         <span className="text-[14px] font-black uppercase tracking-tighter text-black leading-tight">Ahamed suhail</span>
                         <div className="flex flex-col gap-1 items-center">
@@ -245,11 +241,6 @@ const AlfawadHeader = () => {
                         </div>
                       </div>
                       <div className="flex flex-col items-center text-center">
-                        <span className="text-[14px] font-black uppercase tracking-tighter text-black leading-tight">Safwan</span>
-                        <a href="tel:+966583769845" className="text-[11px] font-bold text-alfawad-primary uppercase tracking-widest">+966 58 376 9845</a>
-                      </div>
-
-                        <div className="flex flex-col items-center text-center">
                         <span className="text-[14px] font-black uppercase tracking-tighter text-black leading-tight">Ashraf Al badan</span>
                         <a href="tel:+966507077611" className="text-[11px] font-bold text-alfawad-primary uppercase tracking-widest">+966 50 707 7611</a>
                       </div>

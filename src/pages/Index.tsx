@@ -60,7 +60,7 @@ const Index = () => {
         description="Lamiya Al Khaleej Company provides deep cleaning, sanitization, AC cleaning, duct cleaning, pest control, and water tank disinfection services across Saudi Arabia."
       />
       {/* Hero Section */}
-      <section className="relative min-h-[600px] md:min-h-[85vh] flex items-center overflow-hidden mt-5">
+      <section className="relative top-10 min-h-[600px] md:min-h-[85vh] flex items-center overflow-hidden mt-5">
         <div className="absolute inset-0 overflow-hidden">
           <img
             src={heroBg}
@@ -71,8 +71,8 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
         </div>
         <div className="container mx-auto px-4 pt-32 md:pt-48 pb-[13rem] relative z-10">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-            <div className="max-w-4xl">
+          <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+            <div className="max-w-4xl text-center md:text-left">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -82,27 +82,14 @@ const Index = () => {
                   {t('hero.badge')}
                 </span>
 
-                {/* Premium Logo on Right Side - Responsive View */}
-            <div className="flex items-center justify-center p-6 md:p-12  rounded-[2.5rem] md:rounded-[4rem]  hover:scale-105 transition-all duration-700 group relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-tr from-alfawad-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-              <motion.img 
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 1, delay: 0.5 }}
-                src={laklogo} 
-                alt="Lamiya Logo" 
-                className="w-32 sm:w-48 md:w-80 h-auto object-contain drop-shadow-[0_0_30px_rgba(255,255,255,0.4)] relative z-10" 
-              />
-            </div>
-            
                 <h1 className="text-4xl md:text-6xl lg:text-8xl font-black leading-[0.95] mb-8 text-white uppercase tracking-tighter drop-shadow-2xl">
                   {t('hero.title')}  <br />
                   <span className="text-alfawad-primary opacity-90">{t('hero.subtitle')}</span>
                 </h1>
-                <p className="text-lg md:text-xl text-white/80 mb-12 max-w-2xl font-medium leading-relaxed">
+                <p className="text-lg md:text-xl text-white/80 mb-12 max-w-2xl font-medium leading-relaxed mx-auto md:mx-0">
                   {t('hero.description')}
                 </p>
-                <div className="flex flex-wrap gap-6">
+                <div className="flex flex-wrap gap-6 justify-center md:justify-start">
                   <Link
                     to="/booking"
                     className="bg-alfawad-primary hover:bg-white text-white hover:text-black px-12 py-5 font-black uppercase tracking-widest inline-flex items-center justify-center gap-3 transition-all text-sm shadow-[0_20px_50px_rgba(182,138,65,0.3)] hover:-translate-y-1"
@@ -117,13 +104,20 @@ const Index = () => {
                   </Link>
                 </div>
               </motion.div>
-          {/* Top Hero Toggle - Commented out */}
-          {/* <div className="absolute top-20 sm:top-24  left-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
-            <HeroToggleBtn />
-          </div> */}
             </div>
 
-            
+            {/* Premium Logo Column */}
+            <div className="flex items-center justify-center p-6 md:p-12 rounded-[1.5rem] md:rounded-[4rem] hover:scale-105 transition-all duration-700 group relative overflow-hidden bg-black/35">
+              <div className="bg-black/35  absolute inset-0 bg-gradient-to-tr from-alfawad-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              <motion.img 
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 1, delay: 0.5 }}
+                src={laklogo} 
+                alt="Lamiya Logo" 
+                className="w-[14rem] sm:w-48 md:w-80 h-auto object-contain drop-shadow-[0_0_30px_rgba(255,255,255,0.4)] relative z-10" 
+              />
+            </div>
           </div>
         </div>
 

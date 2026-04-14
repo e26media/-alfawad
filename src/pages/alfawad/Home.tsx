@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import { AlfawadNews } from "../../components/alfawad/AlfawadNews";
 import SEO from "@/components/SEO";
 import laklogo from "@/assets/Lamia-logo.png";
+import laklogo1 from "@/assets/navbarlogo.png";
 // import HeroToggleBtn from "@/components/ui/HeroToggleBtn";
 
 export default function AlfawadHome() {
@@ -74,7 +75,7 @@ export default function AlfawadHome() {
       />
 
       {/* Hero Section */}
-      <section className="relative w-full h-[600px] sm:h-[650px] md:h-[90vh] min-h-[500px] bg-white overflow-hidden flex items-center pt-20 sm:pt-28 md:pt-40">
+      <section className="relative top-10 w-full h-[600px] sm:h-[650px] md:h-[90vh] min-h-[500px] bg-white overflow-hidden flex items-center pt-20 sm:pt-28 md:pt-40">
         {/* Main Background Images */}
         {HERO_SLIDES.map((slide, index) => (
           <div
@@ -92,7 +93,7 @@ export default function AlfawadHome() {
           </div>
         ))}
 
-        <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] relative z-10 flex flex-col md:flex-row h-full items-center justify-between py-12 md:py-0">
+        <div className="container mx-auto px-4 lg:px-12 max-w-[1400px] relative z-10 flex flex-col-reverse md:flex-row h-full items-center justify-between py-12 md:py-0">
           <div className="flex flex-col gap-2 max-w-2xl mt-8 sm:mt-10 md:mt-20">
             
             {HERO_SLIDES.map((slide, index) => (
@@ -111,12 +112,14 @@ export default function AlfawadHome() {
                 </p>
 
                 <div className="mt-8 md:mt-12 flex items-center">
-                  <Link to="/contact" className="bg-alfawad-primary hover:bg-black text-white px-8 sm:px-10 py-3 sm:py-4 font-black uppercase tracking-widest flex items-center justify-center gap-3 transition-all text-xs sm:text-base w-full sm:w-auto shadow-lg hover:-translate-y-1">
+                  <Link to="/industrial/contact" className="bg-alfawad-primary hover:bg-black text-white px-8 sm:px-10 py-3 sm:py-4 font-black uppercase tracking-widest flex items-center justify-center gap-3 transition-all text-xs sm:text-base w-full sm:w-auto shadow-lg hover:-translate-y-1">
                     {t('industrial.hero.cta')} <span className="text-xl leading-none">&rarr;</span>
                   </Link>
                 </div>
               </div>
+              
             ))}
+            
 
             {/* <div className="mt-8 sm:mt-12 md:mt-[80px] flex flex-col border-l-4 border-alfawad-primary pl-4 md:pl-6">
               <span className="text-[12px] md:text-[20px] font-bold text-gray-900 mb-1 leading-tight">مؤسسة لمياء الخليج للمقاولات العامة</span>
@@ -127,18 +130,17 @@ export default function AlfawadHome() {
           </div>
 
           {/* Premium Logo on Right Side - Responsive View */}
-          <div className="flex items-center justify-center p-6 md:p-12  md:rounded-[4rem]  hover:scale-105 transition-all duration-700 group relative overflow-hidden mt-10 md:mt-0">
-            <div className="absolute inset-0 bg-gradient-to-tr from-alfawad-primary/10 to-transparent opacity-0 transition-opacity duration-700" />
-            <motion.img 
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 1, delay: 0.5 }}
-              
-              src={laklogo} 
-              alt="Lamiya Logo" 
-              className=" w-42 sm:w-48 md:w-80 h-auto object-contain drop-shadow-[20px_10px_30px_rgba(255,255,255,0.4)] relative z-10" 
-            />
-          </div>
+          <div className="flex items-center justify-center p-6 md:p-12 rounded-[1.5rem] md:rounded-[3rem] hover:scale-105 transition-all duration-700 group relative overflow-hidden bg-black/35">
+              <div className="bg-black/35  absolute inset-0 bg-gradient-to-tr from-alfawad-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 " />
+              <motion.img 
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 1, delay: 0.5 }}
+                src={laklogo} 
+                alt="Lamiya Logo" 
+                className="w-[14rem] sm:w-48 md:w-80 h-auto object-contain drop-shadow-[0_0_30px_rgba(255,255,255,0.4)] relative z-10" 
+              />
+            </div>
         </div>
 
         {/* Slider Navigation Dots */}

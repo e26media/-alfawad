@@ -60,8 +60,9 @@ const Navbar = () => {
       >
         <div className="container mx-auto px-4 lg:px-8 flex items-center justify-between">
           <div className="flex items-center">
-            <Link to="/cleaning" className="flex-shrink-0 transition-transform hover:scale-105">
-              <img src={logo} alt="LAMIYA AL KHALEEJ AL ITTIHAD" className={`transition-all duration-500 ${scrolled ? "h-9 sm:h-11" : "h-11 sm:h-13"} w-auto object-contain px-2`} />
+            <Link to="/cleaning" className="flex-shrink-0 transition-transform hover:scale-105"> 
+              <img src={logo} alt="LAMIYA AL KHALEEJ AL ITTIHAD" className={`transition-all duration-500 h-20 w-auto object-contain px-2`} />
+              {/* <img src={logo} alt="LAMIYA AL KHALEEJ AL ITTIHAD" className={`transition-all duration-500 h-20 ${scrolled ? "h-9 sm:h-11" : "h-11 sm:h-13"} w-auto object-contain px-2`} /> */}
             </Link>
           </div>
 
@@ -119,11 +120,25 @@ const Navbar = () => {
             </Link>
 
             <button
-              onClick={() => setMobileOpen(!mobileOpen)}
-              className="lg:hidden p-2.5 rounded-xl bg-gray-50 hover:bg-black hover:text-white transition-all border border-gray-100"
-            >
-              {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-            </button>
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="lg:hidden w-10 h-10 sm:w-12 sm:h-12 bg-black text-white rounded-xl flex items-center justify-center transition-all active:scale-95 z-50 overflow-hidden"
+            aria-label="Toggle mobile menu"
+          >
+            <div className="relative w-6 h-6">
+              <motion.div
+                animate={{ rotate: mobileOpen ? 45 : 0, y: mobileOpen ? 0 : -6 }}
+                className="absolute top-1/2 left-0 w-6 h-0.5 bg-white origin-center"
+              />
+              <motion.div
+                animate={{ opacity: mobileOpen ? 0 : 1 }}
+                className="absolute top-1/2 left-0 w-6 h-0.5 bg-white -translate-y-1/2"
+              />
+              <motion.div
+                animate={{ rotate: mobileOpen ? -45 : 0, y: mobileOpen ? 0 : 6 }}
+                className="absolute top-1/2 left-0 w-6 h-0.5 bg-white origin-center"
+              />
+            </div>
+          </button>
           </div>
         </div>
       </div>
@@ -209,10 +224,6 @@ const Navbar = () => {
                           <a href="tel:+966510304627" className="text-[11px] font-bold text-alfawad-primary uppercase tracking-widest">+966 51 030 4627</a>
                           <a href="tel:+966566567518" className="text-[11px] font-bold text-alfawad-primary uppercase tracking-widest">+966 56 656 7518</a>
                         </div>
-                      </div>
-                      <div className="flex flex-col items-center text-center">
-                        <span className="text-[14px] font-black uppercase tracking-tighter text-black leading-tight">Safwan</span>
-                        <a href="tel:+966583769845" className="text-[11px] font-bold text-alfawad-primary uppercase tracking-widest">+966 58 376 9845</a>
                       </div>
                        <div className="flex flex-col items-center text-center">
                         <span className="text-[14px] font-black uppercase tracking-tighter text-black leading-tight">Ashraf Al badan</span>
