@@ -66,23 +66,46 @@ const TechnicalManpower = () => {
                     </p>
                   </div>
 
-                  <h3 className="text-2xl font-black text-black uppercase tracking-tighter mt-4">{isAr ? "فئات القوى العاملة الماهرة" : "Our Skilled Workforce Categories"}</h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 mt-4">
-                    {[
-                      { title: isAr ? "المهندسون والمشرفون" : "Engineers & Supervisors", desc: isAr ? "يغطي جميع الأقسام الهندسية." : "Civil, Mechanical, Electrical, and Instrumentation categories." },
-                      { title: isAr ? "مسؤولو السلامة والصحة" : "HSE Officers / Safety Officers", desc: isAr ? "محترفون لضمان الامتثال في الموقع." : "Qualified safety professionals for site compliance." },
-                      { title: isAr ? "فنيون" : "Technicians", desc: isAr ? "فنيو الأعمال الميكانيكية والكهربائية." : "Mechanical, Electrical, HVAC, and Instrument technicians." },
-                      { title: isAr ? "اللحامين وعمال التشكيل" : "Welders & Fabricators", desc: isAr ? "فئات معتمدة متعددة." : "Multiple certified categories for industrial piping and structural work." },
-                      { title: isAr ? "مركبو الأنابيب" : "Pipe Fitters & Millwrights", desc: isAr ? "عاملون مهرة للأعمال الخاصة بالمصانع." : "Highly skilled fitters for industrial plant mechanical works." },
-                      { title: isAr ? "كهربائيون وسباكون" : "Electricians & Plumbers", desc: isAr ? "محترفون مؤهلون وتغطية شاملة." : "Qualified professionals for industrial and commercial projects." },
-                      { title: isAr ? "المشغلين" : "Operators", desc: isAr ? "مشغلو المعدات الثقيلة والرافعات." : "Heavy equipment and crane operators with valid licenses." },
-                      { title: isAr ? "العمالة الماهرة والمقاولات" : "Skilled & General Labor", desc: isAr ? "موظفو دعم مختلفين." : "Support staff for various site activities." },
-                    ].map((item, i) => (
-                      <div key={i} className="flex flex-col gap-2 md:gap-3 bg-gray-50/50 p-6 md:p-8 border-l-4 border-alfawad-primary transition-all duration-500 h-full">
-                        <h3 className="text-lg md:text-xl font-black text-black uppercase transition-colors">{item.title}</h3>
-                        <p className="text-gray-500  text-[13px] md:text-sm leading-relaxed transition-colors">{item.desc}</p>
-                      </div>
-                    ))}
+                  <div className="mt-12 bg-[#f8f9fa] p-8 md:p-12 border border-gray-100 relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-alfawad-primary/5 -mr-32 -mt-32 rounded-full" />
+                    <h3 className="text-[24px] md:text-[28px] font-black text-black uppercase tracking-tighter mb-8 relative z-10 border-b-4 border-alfawad-primary inline-block">
+                      {isAr ? "فئات القوى العاملة" : "Workforce Categories"}
+                    </h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
+                      {[
+                        { en: "Civil Engineer", ar: "مهندس مدني" },
+                        { en: "Planning Engineer", ar: "مهندس تخطيط" },
+                        { en: "Piping Engineer", ar: "مهندس أنابيب" },
+                        { en: "Rotating Equipment Eng", ar: "مهندس معدات دوارة" },
+                        { en: "Site Supervisor", ar: "مشرف موقع" },
+                        { en: "Officers", ar: "مسؤولين" },
+                        { en: "Executive Secretaries", ar: "سكرتارية تنفيذية" },
+                        { en: "Documents Controller", ar: "مراقب مستندات" },
+                        { en: "Computer Programmers", ar: "مبرمج كمبيوتر" },
+                        { en: "Schedulers", ar: "مجدولين" },
+                        { en: "Mechanical Engineer", ar: "مهندس ميكانيكي" },
+                        { en: "Electrical Engineer", ar: "مهندس كهربائي" },
+                        { en: "Inspector", ar: "مفتش" },
+                        { en: "Project Superintendent", ar: "مشرف مشروع" },
+                        { en: "Safety Engineers", ar: "مهندس سلامة" },
+                        { en: "Auto-Cad Operator", ar: "رسام أوتوكاد" },
+                        { en: "Accountant", ar: "محاسب" },
+                        { en: "Computer Operator", ar: "مشغل كمبيوتر" },
+                        { en: "System Administrators", ar: "مسؤول أنظمة" },
+                        { en: "Project Controllers", ar: "مراقب مشروع" },
+                        { en: "Riggers", ar: "فنيو رفع" },
+                        { en: "Operators (Crane, Forklift)", ar: "مشغلين (كرين، فوركليفت)" },
+                        { en: "Skilled Labours", ar: "عمالة ماهرة" },
+                        { en: "Semi-skilled Labours", ar: "عمالة شبه ماهرة" }
+                      ].map((item, i) => (
+                        <div key={i} className={`flex items-center gap-3 group ${isAr ? "flex-row-reverse text-right" : ""}`}>
+                          <div className="w-2 h-2 rounded-full bg-alfawad-primary group-hover:scale-150 transition-transform duration-300 flex-shrink-0" />
+                          <span className="text-gray-700 font-bold uppercase text-[13px] tracking-tight group-hover:text-black transition-colors">
+                            {isAr ? item.ar : item.en}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
 
                   {/* <div className="mt-8 md:mt-12 bg-[#1c1c1c] p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 md:gap-10 rounded-sm">
