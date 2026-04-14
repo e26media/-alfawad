@@ -13,19 +13,19 @@ const Contact = () => {
   const isAr = i18n.language === 'ar';
 
   const contactInfo = [
-    { 
-      icon: Smartphone, 
-      label: isAr ? "خطوط مباشرة" : "Direct Lines", 
+    {
+      icon: Smartphone,
+      label: isAr ? "خطوط مباشرة" : "Direct Lines",
       isMulti: true,
       contacts: [
-       
+
         { name: isAr ? "أحمد سهيل" : "Ahamed suhail", numbers: ["+966 51 030 4627", "+966 56 656 7518"] },
         { name: isAr ? "أشرف البدن" : "Ashraf Al badan", numbers: ["+966 50 707 7611"] }
       ]
     },
-    { 
-      icon: Mail, 
-      label: isAr ? "عناوين البريد الإلكتروني" : "Email Addresses", 
+    {
+      icon: Mail,
+      label: isAr ? "عناوين البريد الإلكتروني" : "Email Addresses",
       isMulti: true,
       contacts: [
         { numbers: ["info@lamiyaalkhaleej.com"] },
@@ -33,13 +33,13 @@ const Contact = () => {
         { numbers: ["ahamedsuhail@lamiyaalkhaleej.com"] }
       ]
     },
-    { icon: Globe, label: isAr ? "المكتب الرئيسي" : "Head Office", value: isAr ? "الجبيل، السعودية" : "Al Jubail, KSA" },
+    { icon: Globe, label: isAr ? "المكتب الرئيسي" : "Head Office", value: isAr ? "4444، شارع مكة المكرمة، حي الصفاة، 8202، 35514، الجبيل، المملكة العربية السعودية" : "4444, Makkah Almukarama St, Al Safat Dist., 8202, 35514, Al Jubail, Kingdom of Saudi Arabia" },
     { icon: Clock, label: isAr ? "ساعات العمل" : "Business Hours", value: isAr ? "السبت-الخميس: 8:00 ص - 10:00 م، الجمعة: بموعد" : "Sat–Thu: 8:00 AM – 10:00 PM, Fri: Appointment Based" },
   ];
 
   return (
     <div className="pt-32 md:pt-40 font-muli bg-white overflow-x-hidden">
-      <SEO 
+      <SEO
         title={isAr ? "اتصل بنا | شركة لمياء الخليج" : "Contact Us | Lamiya Al Khaleej Al Ittihad Company - Professional Support in KSA"}
         description={isAr ? "احجز خدمات تنظيف احترافية في السعودية" : "Get in touch with Lamiya Al Khaleej Al Ittihad Company for fast booking and professional support for cleaning, AC, and pest control services across Saudi Arabia."}
       />
@@ -79,17 +79,17 @@ const Contact = () => {
                         <div className="flex flex-col gap-6 mt-4">
                           {info.contacts?.map((c, idx) => (
                             <div key={idx} className="flex flex-col">
-                                <span className="text-[16px] font-black uppercase tracking-tighter text-black leading-tight">{c.name}</span>
-                                <div className="flex flex-col gap-0.5">
-                                  {c.numbers.map(n => (
-                                    <a key={n} href={n.includes('@') ? `mailto:${n}` : `tel:${n.replace(/\s/g, '')}`} className="text-[11px] font-black uppercase tracking-widest text-alfawad-primary hover:text-black transition-colors break-all">{n}</a>
-                                  ))}
-                                </div>
+                              <span className="text-[16px] font-black uppercase tracking-tighter text-black leading-tight">{c.name}</span>
+                              <div className="flex flex-col gap-0.5">
+                                {c.numbers.map(n => (
+                                  <a key={n} href={n.includes('@') ? `mailto:${n}` : `tel:${n.replace(/\s/g, '')}`} className="text-[11px] font-black uppercase tracking-widest text-alfawad-primary hover:text-black transition-colors break-all">{n}</a>
+                                ))}
+                              </div>
                             </div>
                           ))}
                         </div>
                       ) : (
-                         (info as any).href ? (
+                        (info as any).href ? (
                           <a href={(info as any).href} className="text-lg font-black text-black uppercase tracking-tighter hover:text-alfawad-primary transition-colors">{(info as any).value}</a>
                         ) : (
                           <div className="text-lg font-black text-black uppercase tracking-tighter leading-tight">{(info as any).value}</div>

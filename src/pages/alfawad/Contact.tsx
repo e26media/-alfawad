@@ -40,7 +40,7 @@ const Contact = () => {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 uppercase tracking-widest mb-2">{isAr ? "المكتب الرئيسي" : "Head Office"}</h3>
                   <p className="text-gray-600 leading-relaxed font-medium">
-                   {isAr ? "الجبيل، المملكة العربية السعودية" : "Al Jubail, KSA"}
+                    {isAr ? "4444، شارع مكة المكرمة، حي الصفاة، 8202، 35514، الجبيل، المملكة العربية السعودية" : "4444, Makkah Almukarama St, Al Safat Dist., 8202, 35514, Al Jubail, Kingdom of Saudi Arabia"}
                   </p>
                 </div>
               </div>
@@ -52,7 +52,7 @@ const Contact = () => {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 uppercase tracking-widest mb-2">{isAr ? "الهواتف" : "Phones"}</h3>
                   <div className="flex flex-col gap-6">
-                  
+
                     <div className="flex flex-col">
                       <span className="text-[18px] font-black uppercase tracking-tighter text-gray-900 leading-tight">{isAr ? "أحمد سهيل" : "Ahamed suhail"}</span>
                       <div className="flex flex-col gap-1">
@@ -60,8 +60,8 @@ const Contact = () => {
                         <a href="tel:+966566567518" className="text-[12px] font-black uppercase tracking-widest text-alfawad-primary hover:text-black transition-colors">+966 56 656 7518</a>
                       </div>
                     </div>
-                   
-                      <div className="flex flex-col">
+
+                    <div className="flex flex-col">
                       <span className="text-[18px] font-black uppercase tracking-tighter text-gray-900 leading-tight">{isAr ? "أشرف البدن" : "Ashraf Al badan"}</span>
                       <a href="tel:+966507077611" className="text-[12px] font-black uppercase tracking-widest text-alfawad-primary hover:text-black transition-colors">+966 50 707 7611</a>
                     </div>
@@ -79,14 +79,14 @@ const Contact = () => {
                     <div className="flex flex-col">
                       {/* <span className="text-[16px] font-black uppercase tracking-tighter text-gray-900 leading-tight">General Support</span> */}
                       <a href="mailto:info@lamiyaalkhaleej.com" className="text-[11px] font-black uppercase tracking-widest text-alfawad-primary hover:text-black transition-colors break-all">info@lamiyaalkhaleej.com</a>
-                      <br/>
-                                         <a href="mailto:ashrafalbadan@lamiyaalkhaleej.com" className="text-[11px] font-black uppercase tracking-widest text-alfawad-primary hover:text-black transition-colors break-all">ashrafalbadan@lamiyaalkhaleej.com</a>
-                                         <br/>
+                      <br />
+                      <a href="mailto:ashrafalbadan@lamiyaalkhaleej.com" className="text-[11px] font-black uppercase tracking-widest text-alfawad-primary hover:text-black transition-colors break-all">ashrafalbadan@lamiyaalkhaleej.com</a>
+                      <br />
                       <a href="mailto:ahamedsuhail@lamiyaalkhaleej.com" className="text-[11px] font-black uppercase tracking-widest text-alfawad-primary hover:text-black transition-colors break-all">ahamedsuhail@lamiyaalkhaleej.com</a>
 
                     </div>
-                   
-                  
+
+
                   </div>
                 </div>
               </div>

@@ -150,7 +150,7 @@ const Footer = () => {
                 </div>
                 <div className="flex flex-col">
                   <span className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-600 mb-2">{isAr ? "موقع المكتب" : "Office Location"}</span>
-                  <span className="text-[11px] font-bold opacity-30 leading-loose uppercase tracking-[0.1em] group-hover:opacity-100 transition-opacity">{isAr ? "الجبيل، المملكة العربية السعودية" : "Al Jubail, KSA"} </span>
+                  <span className="text-[11px] font-bold opacity-30 leading-loose uppercase tracking-[0.1em] group-hover:opacity-100 transition-opacity">{isAr ? "4444، شارع مكة المكرمة، حي الصفاة، 8202، 35514، الجبيل، المملكة العربية السعودية" : "4444, Makkah Almukarama St, Al Safat Dist., 8202, 35514, Al Jubail, Kingdom of Saudi Arabia"} </span>
                 </div>
               </li>
             </ul>

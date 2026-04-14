@@ -40,20 +40,20 @@ const AlfawadFooter = () => {
       </div>
 
       <div className="flex flex-col lg:flex-row min-h-[600px] bg-white">
-        
+
         {/* Left Side: Professional Navigation & Identity */}
         <div className="lg:w-[70%] pt-20 pb-16 px-6 sm:px-12 lg:pl-24 lg:pr-16 relative bg-white border-b lg:border-b-0 lg:border-r border-gray-100">
           <div className="flex flex-col h-full">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mb-20">
-              
+
               {/* Column 1: Identity */}
               <div className="flex flex-col gap-10">
                 <Link to="/industrial" className="block w-full max-w-[240px]">
                   <img src={laklogo} alt="LAMIYA AL KHALEEJ AL ITTIHAD" className="w-full h-auto object-contain" />
                 </Link>
                 <p className="text-[14px] leading-relaxed text-gray-400 font-medium uppercase tracking-wider">
-                  {isAr 
-                    ? "الرائدة في تقديم خدمات الدعم الصناعي والإنشائي المتكاملة عبر المملكة العربية السعودية." 
+                  {isAr
+                    ? "الرائدة في تقديم خدمات الدعم الصناعي والإنشائي المتكاملة عبر المملكة العربية السعودية."
                     : "A leading multi-disciplinary industrial services organization providing turn-key engineering & construction solutions across KSA."}
                 </p>
                 <div className="flex flex-col gap-6">
@@ -87,9 +87,9 @@ const AlfawadFooter = () => {
                     { label: isAr ? "الرؤية والمهمة" : "Vision & Mission", path: "/industrial/vision-mission" },
                     { label: isAr ? "اتصل بنا" : "Contact Us", path: "/industrial/contact" },
                   ].map((link) => (
-                    <Link 
-                      key={link.path} 
-                      to={link.path} 
+                    <Link
+                      key={link.path}
+                      to={link.path}
                       className="text-[11px] font-black uppercase tracking-widest text-gray-400 hover:text-alfawad-primary transition-all flex items-center gap-3 group"
                     >
                       <ChevronRight className="w-3 h-3 text-alfawad-primary transition-transform group-hover:translate-x-1" />
@@ -112,9 +112,9 @@ const AlfawadFooter = () => {
                     { label: isAr ? "دعم المشاريع" : "Project Support", path: "/industrial/services/project-support" },
                     { label: isAr ? "إدارة المشاريع" : "Project Management", path: "/industrial/services/project-management" },
                   ].map((link) => (
-                    <Link 
-                      key={link.path} 
-                      to={link.path} 
+                    <Link
+                      key={link.path}
+                      to={link.path}
                       className="text-[11px] font-black uppercase tracking-widest text-gray-400 hover:text-alfawad-primary transition-all flex items-center gap-3 group"
                     >
                       <ChevronRight className="w-3 h-3 text-alfawad-primary transition-transform group-hover:translate-x-1" />
@@ -127,14 +127,14 @@ const AlfawadFooter = () => {
             </div>
 
             <div className="mt-auto flex flex-wrap items-center gap-10 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all pt-10 border-t border-gray-50">
-               <div className="flex items-center gap-3">
-                  <Award className="w-6 h-6 text-alfawad-primary" />
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-black italic">Quality Management Excellence</span>
-               </div>
-               <div className="flex items-center gap-3">
-                  <ShieldCheck className="w-6 h-6 text-alfawad-primary" />
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-black italic">HSE Integrated Standards</span>
-               </div>
+              <div className="flex items-center gap-3">
+                <Award className="w-6 h-6 text-alfawad-primary" />
+                <span className="text-[10px] font-bold uppercase tracking-widest text-black italic">Quality Management Excellence</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <ShieldCheck className="w-6 h-6 text-alfawad-primary" />
+                <span className="text-[10px] font-bold uppercase tracking-widest text-black italic">HSE Integrated Standards</span>
+              </div>
             </div>
           </div>
         </div>
@@ -149,9 +149,9 @@ const AlfawadFooter = () => {
 
           <div className="relative z-10 h-full flex flex-col">
             <div className="grid sm:grid-cols-2 lg:grid-cols-1 gap-16">
-              
+
               {/* Specialized Solutions */}
-        
+
 
               {/* Contact Data */}
               <div>
@@ -166,7 +166,7 @@ const AlfawadFooter = () => {
                     <div>
                       <span className="text-[10px] font-black uppercase tracking-[0.4em] text-alfawad-primary leading-none block mb-2">{isAr ? "الموقع" : "Location"}</span>
                       <p className="text-[14px] font-bold uppercase tracking-widest leading-relaxed text-white/50">
-                        {isAr ? "الجبيل، المملكة العربية السعودية" : "Al Jubail, KSA"}
+                        {isAr ? "4444، شارع مكة المكرمة، حي الصفاة، 8202، 35514، الجبيل، المملكة العربية السعودية" : "4444, Makkah Almukarama St, Al Safat Dist., 8202, 35514, Al Jubail, Kingdom of Saudi Arabia"}
                       </p>
                     </div>
                   </div>
@@ -177,9 +177,9 @@ const AlfawadFooter = () => {
                     </div>
                     <div className="space-y-6">
                       <span className="text-[10px] font-black uppercase tracking-[0.4em] text-alfawad-primary leading-none block">{isAr ? "خطوط مباشرة" : "Direct Lines"}</span>
-                      
+
                       <div className="grid gap-8">
-                       
+
 
                         <div className="flex flex-col">
                           <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">{isAr ? "أحمد سهيل" : "Ahamed suhail"}</span>
@@ -189,9 +189,9 @@ const AlfawadFooter = () => {
                           </div>
                         </div>
 
-                       
 
-                         <div className="flex flex-col">
+
+                        <div className="flex flex-col">
                           <span className="text-[18px] font-black uppercase tracking-tighter text-white leading-tight">{isAr ? "أشرف البدن" : "Ashraf Al badan"}</span>
                           <a href="tel:+966507077611" className="text-[13px] font-bold uppercase tracking-widest text-alfawad-primary hover:text-white transition-colors break-all" dir="ltr">+966 50 707 7611</a>
                         </div>
@@ -218,13 +218,13 @@ const AlfawadFooter = () => {
 
             {/* Terminal Info */}
             <div className="mt-auto pt-24">
-               <div className="flex flex-col sm:flex-row justify-between items-center gap-8 border-t border-white/5 pt-12">
-                  
-                  <p className="text-[9px] font-black uppercase tracking-[0.5em] text-white/20">
-                    &copy; {new Date().getFullYear()} {isAr ? "لمياء الخليج الاتحاد. جميع الحقوق محفوظة." : "LAMIYA AL KHALEEJ AL ITTIHAD. All Rights Reserved."}
-                  </p>
-                 
-               </div>
+              <div className="flex flex-col sm:flex-row justify-between items-center gap-8 border-t border-white/5 pt-12">
+
+                <p className="text-[9px] font-black uppercase tracking-[0.5em] text-white/20">
+                  &copy; {new Date().getFullYear()} {isAr ? "لمياء الخليج الاتحاد. جميع الحقوق محفوظة." : "LAMIYA AL KHALEEJ AL ITTIHAD. All Rights Reserved."}
+                </p>
+
+              </div>
             </div>
           </div>
         </div>
